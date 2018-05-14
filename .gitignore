@@ -1,0 +1,7 @@
+/node_modules
+/build
+/staticfiles
+
+*.pyc
+*.sqlite3
+package-lock.json
