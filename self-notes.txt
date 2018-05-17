@@ -21,11 +21,3 @@ We suggest that you begin by typing:
 Happy hacking!
 
 ...
-Data structure...
-
-CoreDescription
-- Smear Slides
-- Grain Size
-- Location
-- Multi Sensor Core Logger
-- Age Dates
