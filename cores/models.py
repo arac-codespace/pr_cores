@@ -17,11 +17,11 @@ class Survey(models.Model):
 
 class Sample(models.Model):
     sample_no = models.CharField(max_length=25, verbose_name="Sample No.")
-    lat = models.DecimalField(max_digits=10, decimal_places=8, verbose_name="Latitude", blank=True)
-    lng = models.DecimalField(max_digits=11, decimal_places=8, verbose_name="Longitude", blank=True)
+    lat = models.DecimalField(max_digits=10, decimal_places=8, verbose_name="Latitude", blank=True, null=True)
+    lng = models.DecimalField(max_digits=11, decimal_places=8, verbose_name="Longitude", blank=True, null=True)
     survey = models.ForeignKey(Survey, null=True, on_delete=models.SET_NULL, verbose_name="Survey No.")
-    date_coll = models.DateField(verbose_name="Date Collected", blank=True)
-    collected_by = models.CharField(max_length=25, null=True, verbose_name="Collected By", blank=True)
+    date_coll = models.DateField(verbose_name="Date Collected", blank=True, null=True)
+    collected_by = models.CharField(max_length=25, verbose_name="Collected By", blank=True)
 
     class Meta:
         abstract = True
@@ -29,12 +29,12 @@ class Sample(models.Model):
 
 class Core(Sample):
     core_type = models.CharField(max_length=25, verbose_name="Core Type", blank=True)
-    total_length = models.DecimalField(max_digits=8, decimal_places=3, verbose_name="Total Length", blank=True)
-    depth = models.DecimalField(max_digits=8, decimal_places=3, blank=True)
+    total_length = models.DecimalField(max_digits=8, decimal_places=3, verbose_name="Total Length", blank=True, null=True)
+    depth = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
     core_condition = models.CharField(max_length=25, verbose_name="Core Condition", blank=True)
     described_by = models.CharField(max_length=25, verbose_name="Described By", blank=True)
     physiographic_location = models.CharField(max_length=25, verbose_name="Location", blank=True)
-    date_described = models.DateField(verbose_name="Date Described", blank=True)
+    date_described = models.DateField(verbose_name="Date Described", blank=True, null=True)
     # description = models.TextField()
 
     def __str__(self):

@@ -12,3 +12,7 @@ class ListCores(generics.ListCreateAPIView):
 class CoreDetails(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Core.objects.all()
     serializer_class = serializers.CoreSerializer
+
+class ListSurveys(generics.ListCreateAPIView):
+    queryset = models.Survey.objects.all()
+    serializer_class = serializers.SurveySerializer
