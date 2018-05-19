@@ -14,6 +14,29 @@
 https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
 https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/
 
+DjangoRestFramework
+https://wsvincent.com/django-rest-framework-react-tutorial/
+
+django-nested-admin
+https://www.bedjango.com/blog/how-use-django-nested-admin/
+
+Data publication source
+https://pubs.usgs.gov/of/2014/1227/ofr2014-1227-data_catalog.html
+
+Conrad rc08 and 09
+https://www.ngdc.noaa.gov/geosamples/showsample.jsp?imlgs=imlgs0059479&fac=LDEO&cru=RC08&smp=115&dev=core,%20piston&inst=LDEO
+https://www.ngdc.noaa.gov/nndc/struts/results?op_28=eq&t=101477&s=1&d=2&v_28=01015008
+https://www.ngdc.noaa.gov/mgg/geology/data/robert_d._conrad/rc08/115/rc08_115pc_description.pdf
+https://www.ngdc.noaa.gov/mgg/geology/data/robert_d._conrad/rc09/ - Archived samples
+
+SJ008
+https://www.ngdc.noaa.gov/geosamples/leg.jsp?leg=SJ008
+
+Sample Map and other
+https://maps.ngdc.noaa.gov/viewers/sample_index/index.html?institution=DSDP
+https://www.ngdc.noaa.gov/geosamples/listsamples.jsp look for conrad rc0808 or 09 cruise
+
+
 - CoreDescription
   - Smear Slides
   - Grain Size

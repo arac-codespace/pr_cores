@@ -1,0 +1,2 @@
+django-nested-admin==3.0.21
+djangorestframework==3.7.7
