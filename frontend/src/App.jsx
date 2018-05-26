@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-        	<p>Wow, this is actually working...</p>
+        	<p>Wow, this is actually working...???</p>
           <CoreVis/>
         </div>
       </div>

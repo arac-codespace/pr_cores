@@ -1,7 +1,12 @@
 /node_modules
 /build
 /staticfiles
+/bundles
 
 *.pyc
 *.sqlite3
 package-lock.json
+
+# do not include webpack stats
+webpack-stats.dev.json
+webpack-stats.prod.json

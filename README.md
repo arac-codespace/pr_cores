@@ -11,6 +11,9 @@
 - Do stuff with it...
 
 # References:
+
+Setup React + Django etc
+http://v1k45.com/blog/modern-django-part-1-setting-up-django-and-react/
 https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
 https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/
 
