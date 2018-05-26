@@ -46,7 +46,10 @@ class SurveySerializer(serializers.ModelSerializer):
             'survey_no',
             'field_activity',
             'ship',
+            'core_quant',
             'core_set',
-            'bag_set'
+            'bag_quant',
+            'bag_set',
+            'total_samples'
         )
-        depth = 1
+        depth = 0

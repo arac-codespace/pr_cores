@@ -14,6 +14,17 @@ class Survey(models.Model):
         verbose_name = "Survey"
         verbose_name_plural = "Surveys"
 
+    def core_quant(self):
+        return self.core_set.count()
+
+    def bag_quant(self):
+        return self.bag_set.count()
+
+    def total_samples(self):
+        total_samples = self.core_quant() + self.bag_quant()
+
+        return total_samples
+
 
 class Sample(models.Model):
     sample_no = models.CharField(max_length=25, verbose_name="Sample No.")

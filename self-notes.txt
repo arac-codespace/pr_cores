@@ -21,3 +21,25 @@ We suggest that you begin by typing:
 Happy hacking!
 
 ...
+
+Setup react + django api so it should work in prod and env.  
+Btw, if you want to test production settings, just do;
+
+python manage.py runserver --settings=pr_cores.production_settings
+
+And tweak pertinent settings.
+
+
+Anyway, Database structure is done for now and the basic react + django
+setup is done.  Now I need to start working on the view and decide
+whether or not I should implement redux...
+
+Site setup will probably include...
+Samples view which will list all bagged and core samples.
+From samples, navigate to cores and bag index, or click an id to
+navigate to sample details.
+
+I'll probably need to add a publication model wherein I can include the
+ids of all samples and info about the publication.  In theory, I might
+be able to do a reverse lookup (from sample to publication) and add related
+publication details into the sample page...
