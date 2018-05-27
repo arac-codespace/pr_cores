@@ -27,7 +27,6 @@ class CoresContainer extends Component {
     let cores = this.state.cores;
     return (
       <div>        
-        <p>CoresContainer</p>
         <Cores cores={cores} />
       </div>
     );

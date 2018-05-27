@@ -25,9 +25,7 @@ class SurveysContainer extends Component {
   render() {
     let surveys = this.state.surveys
     return (
-      <div>
         <Surveys surveys = {surveys}/>
-      </div>
     );
   }
 }

@@ -74,30 +74,35 @@ const { classes } = jss.createStyleSheet(styles).attach();
 class NavBar extends React.Component {
 	render() {
 		return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <NavLink exact to="/" className={"navbar-brand"}>
-          <span>PRCores</span>
-        </NavLink>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <NavLink exact to="/" className={"nav-link"}>
-                <span>Home</span>
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink exact to="/cores" className={"nav-link"}>
-                <span>Cores</span>
-              </NavLink>                            
-            </li>
-            <li className="nav-item">
-              <NavLink exact to="/surveys" className={"nav-link"}>
-                <span>Surveys</span>
-              </NavLink>                            
-            </li>            
-          </ul>
-        </div>
-      </nav>      
+        <nav className={"col-12 navbar navbar-expand-lg navbar-dark bg-dark"}>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>      
+            
+          <NavLink exact to="/" className={"navbar-brand"}>
+            <span>PRCores</span>
+          </NavLink>
+
+          <div className="collapse navbar-collapse" id="navbarToggler">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <NavLink exact to="/" className={"nav-link"}>
+                  <span>Home</span>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink exact to="/cores" className={"nav-link"}>
+                  <span>Cores</span>
+                </NavLink>                            
+              </li>
+              <li className="nav-item">
+                <NavLink exact to="/surveys" className={"nav-link"}>
+                  <span>Surveys</span>
+                </NavLink>                            
+              </li>            
+            </ul>
+          </div>
+        </nav>      
 		)
 	}
 }
