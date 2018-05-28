@@ -52,4 +52,4 @@ class SurveySerializer(serializers.ModelSerializer):
             'bag_set',
             'total_samples'
         )
-        depth = 0
+        depth = 1

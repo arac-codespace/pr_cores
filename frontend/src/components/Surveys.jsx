@@ -1,8 +1,41 @@
 import React, { Component } from 'react';
-import GoogleMap from './GoogleMap'
+import GoogleMap from './GoogleMap';
+import MapButton from './MapButton';
 
-// import * as d3 from "d3";
+import jss from 'jss';
+import preset from 'jss-preset-default';
 
+// One time setup with default plugins and settings.
+jss.setup(preset());
+
+// MapButton zIndex: 999999
+const styles = {
+  menuContainer: {
+    width: "100%",
+    padding: "10px 29px",
+    // brings menu below button edge
+    // paddingTop:"40px",
+    height: "100%",
+    position: "absolute",
+    top: "0",
+    left: "0",
+    zIndex: "9999"
+  },
+  menu: {
+    backgroundColor: "rgba(255,255,255,0.85)",
+    width: "100%",
+    height: "100%",
+    padding: "45px 15px 15px 15px"
+    // paddingTop: "30px"
+  },
+  collapseArrow: {
+    float: "right"
+  }
+};
+
+
+
+const { classes } = jss.createStyleSheet(styles).attach();
 class Surveys extends Component {
 
   render() {
@@ -10,34 +43,56 @@ class Surveys extends Component {
     return (
       <div className="surveys col-12">
         <div className="row">
-          <div className = "col-12 col-lg-3">
-            <h3>Surveys</h3>
-            {surveys.map((survey, index) => (
-              <div key={survey.id + survey.survey_no}>    
-                <div id="survey-accordion">
-                  <div class="card">
-                    <div class="card-header">
-                      <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target={"#survey_"+survey.id}>
-                          {"Survey No: " + survey.survey_no}
-                        </button>
-                      </h5>
-                    </div>
+          <div className="col-12 col-lg-12">
+            <MapButton text={"Surveys"}/>
+            <div className={classes.menuContainer}>
+              <div className={classes.menu}>
+                {surveys.map((survey,index) => (
+                  <div key={"survey-" + survey.id} className="survey-details">
 
-                    <div id={"survey_"+survey.id} class="collapse" data-parent="#survey-accordion">
-                      <div class="card-body">
-                        <p>{"Ship: " + survey.ship}</p>
-                        <p>{"Samples collected: " + survey.total_samples}</p>
-                        <p>{"Core samples: " + survey.core_quant}</p>                                                
-                        <p>{"Bagged samples: " + survey.bag_quant}</p>
+                    <a data-toggle="collapse" href={"#collapseSurveyDetails"+survey.id}>
+                      <strong>
+                        {"Survey No: " + survey.survey_no}
+                      </strong>
+                      <span className={classes.collapseArrow}>^</span>
+                    </a>
+                    <div className="collapse" id={"collapseSurveyDetails"+survey.id}>
+                      <div className="card card-body">
+                        <p>{"Ship/Platform: " + survey.ship}</p>
+                        <p>{"Total Samples Collected: " + survey.total_samples}</p> 
+                        <a data-toggle="collapse" href={"#collapseSurveyCores"+survey.id}>
+                          <strong>                            
+                            {"Core Samples: " + survey.core_quant}
+                          </strong>
+                        </a>
+                        <div className="collapse" id={"collapseSurveyCores"+survey.id}>
+                          <div className="card card-body">                        
+                            {survey.core_set.map((core,index) => (
+                              <p key={core.id}>{core.sample_no}</p>
+                            ))}    
+                          </div>
+                        </div>                                                       
+                        <a data-toggle="collapse" href={"#collapseSurveyBagged"+survey.id}>
+                          <strong>                            
+                            {"Bagged Samples: " + survey.bag_quant}
+                          </strong>
+                        </a>
+                        <div className="collapse" id={"collapseSurveyBagged"+survey.id}>
+                          <div className="card card-body">                        
+                            {survey.bag_set.map((bag,index) => (
+                              <p key={bag.id}>{bag.sample_no}</p>
+                            ))}    
+                          </div>
+                        </div>
+                        {/*Point to url where map should show all samples
+                        as markers @ surveys/survey.id*/}
+                        <a href="#">See on map</a> 
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>          
-            ))}
-          </div>
-          <div className="col-12 col-lg-9">
+                ))}
+              </div>
+            </div>
             <GoogleMap/>      
           </div>
         </div>

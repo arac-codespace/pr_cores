@@ -13,7 +13,7 @@ class GoogleMap extends Component {
   render() {
     // let cores = this.props.cores;
     return (
-      <div style={{ height: '30rem', width: '100%' }}>
+      <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyBfcYkj8QmEw1rlgsOXeGkHoun0d0u7e8s'}}
           defaultCenter={this.props.center}
