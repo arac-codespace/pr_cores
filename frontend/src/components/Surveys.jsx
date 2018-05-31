@@ -32,7 +32,8 @@ const styles = {
     backgroundColor: "rgba(255,255,255,0.85)",
     width: "100%",
     height: "100%",
-    padding: "45px 15px 15px 15px"
+    padding: "45px 15px 15px 15px",
+    overflow: 'scroll',
     // paddingTop: "30px"
   },
   menuContainerActive: {
@@ -66,7 +67,8 @@ class Surveys extends Component {
   constructor() {
     super();
     this.state = {
-      isMenuOpen: false
+      isMenuOpen: false,
+      renderMarkers: true,
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
@@ -101,6 +103,7 @@ class Surveys extends Component {
     let surveys = this.props.surveys;
     let isMenuOpen = this.state.isMenuOpen;
     let handleClick = this.handleClick;
+    let renderMarkers = this.state.renderMarkers;
 
     // debugger;    
 
@@ -121,30 +124,36 @@ class Surveys extends Component {
                   <div key={"survey-" + survey.id} className="survey-details">
                     <Collapse title={"Survey No: " + survey.survey_no} collapseId={"SurveyDetails"+survey.id}>
                       <p>{"Ship/Platform: " + survey.ship}</p>
-                      <p>{"Total Samples Collected: " + survey.total_samples}</p> 
-                      <p>Survey Boundaries:</p> 
-                      <ul>
-                        <li>
-                          {"[NW:" + survey.get_boundary.nw.lat + ", " + survey.get_boundary.nw.lng + "]"}
-                        </li>
-                        <li>
-                          {"[SE: " + survey.get_boundary.se.lat + ", " + survey.get_boundary.se.lng + "]"}
-                        </li>
-                      </ul>
-                      <Collapse title={"Core Samples: " + survey.core_quant} collapseId={"SurveyCores"+survey.id}>
-                        <div>                          
-                          {survey.core_set.map((core,index) => (
-                            <p key={core.id}>{core.sample_no}</p>
-                          ))}                                 
-                        </div>
-                      </Collapse>                                                                               
-                      <Collapse title={"Bagged Samples: " + survey.bag_quant} collapseId={"SurveyBagbed"+survey.id}>
-                        <div>                          
-                          {survey.bag_set.map((bag,index) => (
-                            <p key={bag.id}>{bag.sample_no}</p>
-                          ))}                                 
-                        </div>
-                      </Collapse>
+                      <p>{"Total Samples Collected: " + survey.total_samples}</p>
+                      {survey.total_samples >= 1 ? 
+                        (
+                          <div className="coreInfo">
+                            <p>Survey Boundaries:</p> 
+                            <ul>
+                              <li>
+                                {"[NW:" + survey.get_boundary.nw.lat + ", " + survey.get_boundary.nw.lng + "]"}
+                              </li>
+                              <li>
+                                {"[SE: " + survey.get_boundary.se.lat + ", " + survey.get_boundary.se.lng + "]"}
+                              </li>
+                            </ul>
+                            <Collapse title={"Core Samples: " + survey.core_quant} collapseId={"SurveyCores"+survey.id}>
+                              <div>                          
+                                {survey.core_set.map((core,index) => (
+                                  <p key={core.id}>{core.sample_no}</p>
+                                ))}                                 
+                              </div>
+                            </Collapse>                                                                                                   
+                            <Collapse title={"Bagged Samples: " + survey.bag_quant} collapseId={"SurveyBagbed"+survey.id}>
+                              <div>                          
+                                {survey.bag_set.map((bag,index) => (
+                                  <p key={bag.id}>{bag.sample_no}</p>
+                                ))}                                 
+                              </div>
+                            </Collapse>
+                          </div>
+                        ):(<p>No Sample Info Available</p>)
+                      } 
                       {/*Point to url where map should show all samples
                       as markers @ surveys/survey.id*/}
                       <a href="#">See on map</a> 
@@ -153,7 +162,7 @@ class Surveys extends Component {
                 ))}
               </div>
             </div>
-            <GoogleMap center={center} zoom={zoom} dataset = {surveys}>
+            <GoogleMap center={center} zoom={zoom} dataset = {surveys} renderMarkers={renderMarkers}>
             </GoogleMap>      
           </div>
         </div>

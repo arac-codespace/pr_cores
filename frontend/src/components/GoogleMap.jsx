@@ -21,15 +21,28 @@ class GoogleMap extends Component {
   handleGoogleMapApi(google){
 
     let dataset = this.props.dataset;
-    dataset.map( (data) => (
+    let renderMarkers = this.props.renderMarkers;
+    dataset.map( (data) => {
 
-      // if boundaries exist...
-      this.renderBoundaries(google, data),
+      if (data.total_samples >=1) {        
+        // if boundaries exist...
+        // this.renderBoundaries(google, data)
 
-      data.core_set.map((core) => (
-        this.renderMarkers(google, core)
-      ))
-    ))
+        if (renderMarkers) {          
+          if (data.core_set.length >= 1) {          
+            data.core_set.map((core) => {
+              this.renderMarkers(google, core)
+            })
+          }
+          if (data.bag_set.length >=1) {
+            data.bag_set.map((bag) => {
+              this.renderMarkers(google, bag)
+            })
+          }
+        }
+      }
+
+    })
   }
 
   renderMarkers(google, data) {
@@ -37,8 +50,12 @@ class GoogleMap extends Component {
     let marker = new google.maps.Marker({
       position: myLatLng,
       map: google.map,
-      title: 'Hello World!'
+      title: data.sample_no,
     });
+    console.log("I should print a crapton of times...")
+    marker.addListener('click', function() {
+        alert("hello");
+    });    
   }
 
   // https://github.com/mgomes/ConvexHull

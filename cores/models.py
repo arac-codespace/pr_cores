@@ -27,24 +27,27 @@ class Survey(models.Model):
 
     # To get survey boundary...
     def get_boundary(self):
-        survey_cores = self.core_set.all()
-        cores_lat = []
-        cores_lng = []
-        for core in survey_cores:
-            cores_lat.append(core.lat)
-            cores_lng.append(core.lng)
-        # Get max values...
-        max_lat = max(cores_lat)
-        min_lat = min(cores_lat)
-        max_lng = max(cores_lng)
-        min_lng = min(cores_lng)
+        if self.core_set.all():
+            survey_cores = self.core_set.all()
+            cores_lat = []
+            cores_lng = []
+            for core in survey_cores:
+                cores_lat.append(core.lat)
+                cores_lng.append(core.lng)
+            # Get max values...
+            max_lat = max(cores_lat)
+            min_lat = min(cores_lat)
+            max_lng = max(cores_lng)
+            min_lng = min(cores_lng)
 
-        # Get NW and SE points...
-        nw_point = {'lat': max_lat, 'lng': min_lng}
-        se_point = {'lat': min_lat, 'lng': max_lng}
+            # Get NW and SE points...
+            nw_point = {'lat': max_lat, 'lng': min_lng}
+            se_point = {'lat': min_lat, 'lng': max_lng}
 
-        boundaries = {'nw': nw_point, 'se': se_point}
-        return boundaries
+            boundaries = {'nw': nw_point, 'se': se_point}
+            return boundaries
+        else:
+            return
 
 
 class Sample(models.Model):

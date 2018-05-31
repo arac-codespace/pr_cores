@@ -43,3 +43,12 @@ I'll probably need to add a publication model wherein I can include the
 ids of all samples and info about the publication.  In theory, I might
 be able to do a reverse lookup (from sample to publication) and add related
 publication details into the sample page...
+
+
+Anyway, in survey I'll have the initial map state show the polygon hull of
+the surveys only.  When the user clicks the polygon area, I'll open a
+modal window that will display info about the survey.
+
+If I want to keep using the menu window, I probably need an onClick that will
+turn on the menu.  Then I have to figure out how to arrange that
+mini-menu...
