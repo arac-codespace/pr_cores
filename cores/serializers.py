@@ -50,6 +50,7 @@ class SurveySerializer(serializers.ModelSerializer):
             'core_set',
             'bag_quant',
             'bag_set',
-            'total_samples'
+            'total_samples',
+            'get_boundary'
         )
         depth = 1

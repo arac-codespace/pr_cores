@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+
 import GoogleMap from './GoogleMap';
+import { fitBounds } from 'google-map-react/utils';
+
+
 import MapButton from './MapButton';
 import Collapse from './Collapse';
+import CorePin from './CorePin';
 
 import jss from 'jss';
 import preset from 'jss-preset-default';
@@ -36,6 +41,24 @@ const styles = {
   }
 };
 
+const bounds = {
+  nw: {
+    lat: 22,
+    lng: -75
+  },
+  se: {
+    lat: 13,
+    lng: -60
+  }
+};
+
+
+const size = {
+  width: 640, // Map width in pixels
+  height: 380, // Map height in pixels
+};
+
+const {center, zoom} = fitBounds(bounds, size);
 
 
 const { classes } = jss.createStyleSheet(styles).attach();
@@ -53,7 +76,6 @@ class Surveys extends Component {
 
 
   handleClick(){
-    console.log("hey")
     if (!this.state.isMenuOpen) {
       document.addEventListener('click', this.handleClickOutside, false);
     } else {
@@ -75,10 +97,12 @@ class Surveys extends Component {
   }
 
   render() {
+
     let surveys = this.props.surveys;
     let isMenuOpen = this.state.isMenuOpen;
-    console.log(isMenuOpen)
     let handleClick = this.handleClick;
+
+    // debugger;    
 
     let menuVisibility;
     if (isMenuOpen){
@@ -98,6 +122,15 @@ class Surveys extends Component {
                     <Collapse title={"Survey No: " + survey.survey_no} collapseId={"SurveyDetails"+survey.id}>
                       <p>{"Ship/Platform: " + survey.ship}</p>
                       <p>{"Total Samples Collected: " + survey.total_samples}</p> 
+                      <p>Survey Boundaries:</p> 
+                      <ul>
+                        <li>
+                          {"[NW:" + survey.get_boundary.nw.lat + ", " + survey.get_boundary.nw.lng + "]"}
+                        </li>
+                        <li>
+                          {"[SE: " + survey.get_boundary.se.lat + ", " + survey.get_boundary.se.lng + "]"}
+                        </li>
+                      </ul>
                       <Collapse title={"Core Samples: " + survey.core_quant} collapseId={"SurveyCores"+survey.id}>
                         <div>                          
                           {survey.core_set.map((core,index) => (
@@ -120,7 +153,8 @@ class Surveys extends Component {
                 ))}
               </div>
             </div>
-            <GoogleMap/>      
+            <GoogleMap center={center} zoom={zoom} dataset = {surveys}>
+            </GoogleMap>      
           </div>
         </div>
       </div>

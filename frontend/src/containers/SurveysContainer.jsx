@@ -7,6 +7,7 @@ class SurveysContainer extends Component {
     super();
     this.state = {
       surveys: [],
+      isLoaded: false
     };
   };
 
@@ -15,7 +16,8 @@ class SurveysContainer extends Component {
       const res = await fetch('/api/surveys');
       const surveys = await res.json();
       this.setState({
-        surveys
+        surveys: surveys,
+        isLoaded: true
       });
     } catch (e) {
       console.log(e);
@@ -24,9 +26,15 @@ class SurveysContainer extends Component {
 
   render() {
     let surveys = this.state.surveys
-    return (
+    if (this.state.isLoaded) {
+      return (
         <Surveys surveys = {surveys}/>
-    );
+      );
+    } else {
+      return (
+        <p>Loading...</p>
+      )
+    }
   }
 }
 
