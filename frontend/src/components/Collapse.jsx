@@ -17,13 +17,13 @@ class Collapse extends Component {
 		let collapseId = this.props.collapseId
 		return (
 			<div>	
-        <a data-toggle="collapse" href={"#collapse"+collapseId}>
+        <a data-toggle="collapse" href={"#"+collapseId} id={"collapse"+collapseId}>
           <strong>                            
             {title}
           </strong>
           <span className={classes.collapseArrow}>^</span>
         </a>
-        <div className="collapse" id={"collapse"+collapseId}>
+        <div className="collapse" id={collapseId}>
           <div className="card card-body">   
           	{this.props.children}                     
           </div>

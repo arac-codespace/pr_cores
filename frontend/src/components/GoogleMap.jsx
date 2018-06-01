@@ -3,6 +3,9 @@ import GoogleMapReact from 'google-map-react';
 import CorePin from './CorePin'
 
 import {chainHull_2D, sortPointX, sortPointY} from '../utils/convexHull.js'
+import {MarkerClusterer} from '../utils/MarkerClusterer.js'
+
+let gmarkers = [];
 
 class GoogleMap extends Component {
   static defaultProps = {
@@ -19,14 +22,13 @@ class GoogleMap extends Component {
   }
 
   handleGoogleMapApi(google){
-
     let dataset = this.props.dataset;
     let renderMarkers = this.props.renderMarkers;
+    let handleClick = this.props.handleClickSurveys;
     dataset.map( (data) => {
-
       if (data.total_samples >=1) {        
         // if boundaries exist...
-        // this.renderBoundaries(google, data)
+        this.renderBoundaries(google, data, handleClick)
 
         if (renderMarkers) {          
           if (data.core_set.length >= 1) {          
@@ -41,8 +43,24 @@ class GoogleMap extends Component {
           }
         }
       }
+    });
+    console.log(gmarkers);
+    this.clusterMarkers(google)
+  }
 
-    })
+  // http://htmlpreview.github.io/?https://raw.githubusercontent.com/mahnunchik/markerclustererplus/master/docs/reference.html
+  clusterMarkers(google){
+    let map = google.map;
+    let googleMaps = google.maps;
+    // console.log(gmarkers);
+    let options={
+      maxZoom: 7.5,
+      imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
+      averageCenter: true,
+      // zoomOnClick: false
+    }
+    let markerCluster = new MarkerClusterer(map, gmarkers, options)
+    
   }
 
   renderMarkers(google, data) {
@@ -51,23 +69,29 @@ class GoogleMap extends Component {
       position: myLatLng,
       map: google.map,
       title: data.sample_no,
+      zIndex: 999999 
     });
-    console.log("I should print a crapton of times...")
     marker.addListener('click', function() {
-        alert("hello");
-    });    
+      // marker.map.setZoom(8);
+      marker.map.setCenter(marker.getPosition());
+      console.log(marker.title);
+    }); 
+    gmarkers.push(marker);   
   }
 
   // https://github.com/mgomes/ConvexHull
-  renderBoundaries(google, data) {
-    var points = [];
-    var hullPoints = [];
-    var hullPoints_size;
+  renderBoundaries(google, data, handleClick) {
+    let points = [];
+    let hullPoints = [];
+    let hullPoints_size;
 
     data.core_set.map((place) => (      
       points.push(new google.maps.LatLng(place.lat, place.lng))
     ))
 
+    data.bag_set.map((place) => (
+      points.push(new google.maps.LatLng(place.lat, place.lng))
+    ))
     // Sort the points by X, then by Y (required by the algorithm)
     points.sort(sortPointY);
     points.sort(sortPointX);
@@ -77,15 +101,28 @@ class GoogleMap extends Component {
     
     let polyline = new google.maps.Polygon({
       map: google.map,
+      title: data.survey_no,
       paths:hullPoints, 
       fillColor:"#FF0000",
       strokeWidth:2, 
       fillOpacity:0.5, 
       strokeColor:"#0000FF",
-      strokeOpacity:0.5
+      strokeOpacity:0.5,
     });
+    polyline.addListener('click', function(e) {
+      // marker.map.setZoom(8)
+      console.log(e)
+      console.log(this)
+      console.log(polyline.title);
+      // Feed survey id to handle click so handleClick can
+      // trigger the collapse of collapseSurveyDetails:id
+      handleClick(data.id);
+    });     
   }
 
+  componentWillUnmount(){
+    gmarkers=[]
+  }
   render() {
     // let cores = this.props.cores;
     let dataset = this.props.dataset;

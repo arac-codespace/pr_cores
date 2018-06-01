@@ -55,8 +55,8 @@ const bounds = {
 
 
 const size = {
-  width: 640, // Map width in pixels
-  height: 380, // Map height in pixels
+  width: 1200, // Map width in pixels
+  height: 800, // Map height in pixels
 };
 
 const {center, zoom} = fitBounds(bounds, size);
@@ -70,43 +70,63 @@ class Surveys extends Component {
       isMenuOpen: false,
       renderMarkers: true,
     };
-    this.handleClick = this.handleClick.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleClickSurveys = this.handleClickSurveys.bind(this);
+    // this.handleClickSurveysOutside = this.handleClickSurveysOutside.bind(this);
 
   };
   // https://larsgraubner.com/handle-outside-clicks-react/
 
 
-  handleClick(){
-    if (!this.state.isMenuOpen) {
-      document.addEventListener('click', this.handleClickOutside, false);
-    } else {
-      document.removeEventListener('click', this.handleClickOutside, false);      
+  handleClickSurveys(target=null){
+    // console.log("handleClickSurveys")
+    // if (!this.state.isMenuOpen) {
+    //   document.addEventListener('click', this.handleClickSurveysOutside, false);
+    // } else {
+    //   document.removeEventListener('click', this.handleClickSurveysOutside, false);      
+    // }
+
+    let openElements = document.getElementsByClassName("collapse show")
+
+    if (openElements.length > 0) {
+      for(var i=0;i<openElements.length;i++){
+          openElements[i].classList.remove('show');
+      }      
     }
+
+    console.log(target);
+    // Target used when I want to show info after clicking marker/boundary...
+    if (target) {
+      let id = "SurveyDetails" + target;
+      let surveyCollapse = document.getElementById(id);
+      console.log(surveyCollapse);
+      if (!surveyCollapse.classList.contains('show')) {
+        surveyCollapse.classList.add('show');
+      }
+    }
+
 
     this.setState(prevState => ({
       isMenuOpen: !prevState.isMenuOpen
     }));
   }
 
-  handleClickOutside(e) {
-    // ignore clicks on the component itself
-    if (this.node.contains(e.target)) {
-      return;
-    }
+  // handleClickSurveysOutside(e) {
+  //   // ignore clicks on the component itself
+  //   if (this.node.contains(e.target)) {
+  //     return;
+  //   }
 
-    this.handleClick();    
-  }
+  //   this.handleClickSurveys();    
+  // }
 
   render() {
 
     let surveys = this.props.surveys;
     let isMenuOpen = this.state.isMenuOpen;
-    let handleClick = this.handleClick;
+    let handleClickSurveys = this.handleClickSurveys;
     let renderMarkers = this.state.renderMarkers;
 
-    // debugger;    
-
+    // debugger; 
     let menuVisibility;
     if (isMenuOpen){
       menuVisibility = classes.menuContainerActive
@@ -117,7 +137,7 @@ class Surveys extends Component {
       <div className="surveys col-12">
         <div className="row">
           <div className="col-12 col-lg-12">
-            <MapButton text={"Surveys"} handleClick={handleClick}/>
+            <MapButton text={"Surveys"} handleClickSurveys={handleClickSurveys}/>
             <div className={menuVisibility}>
               <div className={classes.menu} ref={node=>{this.node=node;}}>
                 {surveys.map((survey,index) => (
@@ -162,7 +182,7 @@ class Surveys extends Component {
                 ))}
               </div>
             </div>
-            <GoogleMap center={center} zoom={zoom} dataset = {surveys} renderMarkers={renderMarkers}>
+            <GoogleMap center={center} zoom={zoom} dataset = {surveys} renderMarkers={renderMarkers} handleClickSurveys={handleClickSurveys}>
             </GoogleMap>      
           </div>
         </div>

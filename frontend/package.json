@@ -34,6 +34,7 @@
     "jss": "^9.8.1",
     "jss-preset-default": "^4.5.0",
     "object-assign": "4.1.1",
+    "overlapping-marker-spiderfier": "^1.1.4",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
     "promise": "8.0.1",
