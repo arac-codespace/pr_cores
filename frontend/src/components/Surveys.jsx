@@ -18,7 +18,7 @@ jss.setup(preset());
 const styles = {
   menuContainer: {
     width: "100%",
-    padding: "10px 29px",
+    padding: "10px 15px",
     // brings menu below button edge
     // paddingTop:"40px",
     height: "100%",
@@ -32,13 +32,18 @@ const styles = {
     backgroundColor: "rgba(255,255,255,0.85)",
     width: "100%",
     height: "100%",
-    padding: "45px 15px 15px 15px",
-    overflow: 'scroll',
+    padding: "15px 15px 15px 15px",
+    overflow: 'auto',
+    marginTop:"32px",
     // paddingTop: "30px"
   },
   menuContainerActive: {
     extend: "menuContainer",
     display: "absolute",
+  },
+  colPadding: {
+    padding: 0,
+    overflow:"hidden"
   }
 };
 
@@ -85,8 +90,8 @@ class Surveys extends Component {
     //   document.removeEventListener('click', this.handleClickSurveysOutside, false);      
     // }
 
+    // if collapsed items are opened...
     let openElements = document.getElementsByClassName("collapse show")
-
     if (openElements.length > 0) {
       for(var i=0;i<openElements.length;i++){
           openElements[i].classList.remove('show');
@@ -95,6 +100,7 @@ class Surveys extends Component {
 
     console.log(target);
     // Target used when I want to show info after clicking marker/boundary...
+    // target is survey id
     if (target) {
       let id = "SurveyDetails" + target;
       let surveyCollapse = document.getElementById(id);
@@ -102,22 +108,21 @@ class Surveys extends Component {
       if (!surveyCollapse.classList.contains('show')) {
         surveyCollapse.classList.add('show');
       }
+      // If user clicks survey boundary, menu will only
+      // open and not toggle
+      this.setState({
+        isMenuOpen: true
+      })
+    } else {      
+      // The fact that there's no target means that
+      // user's not clicking a boundary.  So toggle
+      // by clicking btn is enabled...
+      this.setState(prevState => ({
+        isMenuOpen: !prevState.isMenuOpen
+      }));
     }
 
-
-    this.setState(prevState => ({
-      isMenuOpen: !prevState.isMenuOpen
-    }));
   }
-
-  // handleClickSurveysOutside(e) {
-  //   // ignore clicks on the component itself
-  //   if (this.node.contains(e.target)) {
-  //     return;
-  //   }
-
-  //   this.handleClickSurveys();    
-  // }
 
   render() {
 
@@ -136,9 +141,9 @@ class Surveys extends Component {
     return (
       <div className="surveys col-12">
         <div className="row">
-          <div className="col-12 col-lg-12">
+          <div className={"col-12 col-lg-12 " + classes.colPadding}>
             <MapButton text={"Surveys"} handleClickSurveys={handleClickSurveys}/>
-            <div className={menuVisibility}>
+            <div className={"col-lg-4 " + menuVisibility}>
               <div className={classes.menu} ref={node=>{this.node=node;}}>
                 {surveys.map((survey,index) => (
                   <div key={"survey-" + survey.id} className="survey-details">

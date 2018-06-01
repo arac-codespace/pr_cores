@@ -7,6 +7,9 @@ jss.setup(preset());
 const styles = {
 	collapseArrow: {
     float: "right"
+  },
+  details: {
+    marginTop: '8px'
   }
 };
 const { classes } = jss.createStyleSheet(styles).attach();
@@ -19,11 +22,11 @@ class Collapse extends Component {
 			<div>	
         <a data-toggle="collapse" href={"#"+collapseId} id={"collapse"+collapseId}>
           <strong>                            
-            {title}
+            {"|| "+title}
           </strong>
           <span className={classes.collapseArrow}>^</span>
         </a>
-        <div className="collapse" id={collapseId}>
+        <div className={"collapse " + classes.details} id={collapseId}>
           <div className="card card-body">   
           	{this.props.children}                     
           </div>
