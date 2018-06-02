@@ -44,7 +44,6 @@ class GoogleMap extends Component {
         }
       }
     });
-    console.log(gmarkers);
     this.clusterMarkers(google)
   }
 
@@ -65,11 +64,27 @@ class GoogleMap extends Component {
 
   renderMarkers(google, data) {
     let myLatLng = new google.maps.LatLng(data.lat, data.lng);
+    let symbol = {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 10,
+      fillColor: "blue",
+      fillOpacity: 1,
+      strokeColor: "red",
+      strokeWeight: 5,
+      labelOrigin: new google.maps.Point(0, -2),
+    };
+
     let marker = new google.maps.Marker({
       position: myLatLng,
       map: google.map,
       title: data.sample_no,
-      zIndex: 999999 
+      zIndex: 999999,
+      icon: symbol,
+      label: {
+        text: data.sample_no,
+        fontWeight: "bold",
+      },
+      clickable: false,
     });
     marker.addListener('click', function() {
       // marker.map.setZoom(8);
