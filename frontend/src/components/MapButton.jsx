@@ -24,9 +24,9 @@ const { classes } = jss.createStyleSheet(styles).attach();
 class MapButton extends Component {
   render() {
     let text = this.props.text;
-    let handleClickSurveys = this.props.handleClickSurveys;
+    let handleClick = this.props.handleClick;
     return (
-      <div className={classes.mapButtonContainer} onClick={()=> {handleClickSurveys()}}>
+      <div className={classes.mapButtonContainer} onClick={()=> {handleClick()}}>
         <button className={"btn btn-primary btn-sm " + classes.mapButton}>{text}</button>
       </div>
     );

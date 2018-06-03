@@ -28,26 +28,51 @@ class GoogleMap extends Component {
   handleGoogleMapApi(google){
     let dataset = this.props.dataset;
     let renderMarkers = this.props.renderMarkers;
-    let handleClick = this.props.handleClickSurveys;
-    dataset.map( (data) => {
-      if (data.total_samples >=1) {        
+    let handleClick = this.props.handleClick;
+    console.log(dataset);
+
+    // dataset.length > 1 = surveys
+    if (dataset.length >1) {
+      dataset.map( (data) => {
+        if (data.total_samples >=1) {        
+          // if boundaries exist...
+          this.renderBoundaries(google, data, handleClick)
+
+          if (renderMarkers) {          
+            if (data.core_set.length >= 1) {          
+              data.core_set.map((core) => {
+                this.renderMarkers(google, core)
+              })
+            }
+            if (data.bag_set.length >=1) {
+              data.bag_set.map((bag) => {
+                this.renderMarkers(google, bag)
+              })
+            }
+          }
+        }
+      });
+    } else {
+      // I'm on survey/:id
+     if (dataset.total_samples >=1) {        
         // if boundaries exist...
-        this.renderBoundaries(google, data, handleClick)
+        this.renderBoundaries(google, dataset, handleClick)
 
         if (renderMarkers) {          
-          if (data.core_set.length >= 1) {          
-            data.core_set.map((core) => {
+          if (dataset.core_set.length >= 1) {          
+            dataset.core_set.map((core) => {
               this.renderMarkers(google, core)
             })
           }
-          if (data.bag_set.length >=1) {
-            data.bag_set.map((bag) => {
+          if (dataset.bag_set.length >=1) {
+            dataset.bag_set.map((bag) => {
               this.renderMarkers(google, bag)
             })
           }
         }
       }
-    });
+    }
+
     this.clusterMarkers(google)
   }
 
@@ -88,7 +113,8 @@ class GoogleMap extends Component {
         text: data.sample_no,
         fontWeight: "bold",
       },
-      clickable: false,
+      clickable: true,
+      cursor: "help"
     });
     marker.addListener('click', function() {
       // marker.map.setZoom(8);

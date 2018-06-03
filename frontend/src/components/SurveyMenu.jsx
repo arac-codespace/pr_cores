@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import Collapse from './Collapse';
 import MenuContainer from './MenuContainer';
+import SampleTable from './SampleTable';
+
+import { NavLink } from 'react-router-dom'
 
 import jss from 'jss';
 import preset from 'jss-preset-default';
@@ -48,25 +51,19 @@ class SurveyMenu extends Component {
                       </li>
                     </ul>
                     <Collapse title={"Core Samples: " + survey.core_quant} collapseId={"SurveyCores"+survey.id}>
-                      <div>                          
-                        {survey.core_set.map((core,index) => (
-                          <p key={core.id}>{core.sample_no}</p>
-                        ))}                                 
-                      </div>
+                      <SampleTable samples={survey.core_set}/>
                     </Collapse>                                                                                                   
                     <Collapse title={"Bagged Samples: " + survey.bag_quant} collapseId={"SurveyBagbed"+survey.id}>
-                      <div>                          
-                        {survey.bag_set.map((bag,index) => (
-                          <p key={bag.id}>{bag.sample_no}</p>
-                        ))}                                 
-                      </div>
+                      <SampleTable samples={survey.bag_set}/>
                     </Collapse>
                   </div>
                 ):(<p>No Sample Info Available</p>)
               } 
               {/*Point to url where map should show all samples
               as markers @ surveys/survey.id*/}
-              <a href="#">See on map</a> 
+              <NavLink exact to={"surveys/" + survey.id}>
+                <span> See on map </span>
+              </NavLink> 
             </Collapse>
           </div>
         ))}

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-
 import GoogleMap from './GoogleMap';
 import { fitBounds } from 'google-map-react/utils';
 
 
 import MapButton from './MapButton';
-import SurveyMenu from './SurveyMenu';
+import SampleMenu from './SampleMenu';
 
 import jss from 'jss';
 import preset from 'jss-preset-default';
@@ -58,26 +57,20 @@ const {center, zoom} = fitBounds(bounds, size);
 
 
 const { classes } = jss.createStyleSheet(styles).attach();
-class Surveys extends Component {
+
+class SurveyDetails extends Component {
+
   constructor() {
     super();
     this.state = {
-      isSurveyMenuOpen: false,
+      isSampleMenuOpen: false,
       renderMarkers: true,
     };
-    this.handleClickSurveys = this.handleClickSurveys.bind(this);
-    // this.handleClickSurveysOutside = this.handleClickSurveysOutside.bind(this);
-
-  };
+    this.handleClickSamples = this.handleClickSamples.bind(this);
+  };	
 
   // https://larsgraubner.com/handle-outside-clicks-react/
-  handleClickSurveys(target=null){
-    // console.log("handleClickSurveys")
-    // if (!this.state.isSurveyMenuOpen) {
-    //   document.addEventListener('click', this.handleClickSurveysOutside, false);
-    // } else {
-    //   document.removeEventListener('click', this.handleClickSurveysOutside, false);      
-    // }
+  handleClickSamples(target=null){
 
     // if collapsed items are opened...
     let openElements = document.getElementsByClassName("collapse show")
@@ -98,48 +91,47 @@ class Surveys extends Component {
       // If user clicks survey boundary, menu will only
       // open and not toggle
       this.setState({
-        isSurveyMenuOpen: true
+        isSampleMenuOpen: true
       })
     } else {      
       // The fact that there's no target means that
       // user's not clicking a boundary.  So toggle
       // by clicking btn is enabled...
       this.setState(prevState => ({
-        isSurveyMenuOpen: !prevState.isSurveyMenuOpen
+        isSampleMenuOpen: !prevState.isSampleMenuOpen
       }));
     }
+  }  
 
-  }
 
-  render() {
-
-    let surveys = this.props.surveys;
-    let isSurveyMenuOpen = this.state.isSurveyMenuOpen;
-    let handleClickSurveys = this.handleClickSurveys;
+	render() {
+    let survey = this.props.survey;
+    let isSampleMenuOpen = this.state.isSampleMenuOpen;
+    let handleClickSamples = this.handleClickSamples;
     let renderMarkers = this.state.renderMarkers;
 
     // debugger; 
     let menuVisibility;
-    if (isSurveyMenuOpen){
+    if (isSampleMenuOpen){
       menuVisibility = classes.menuContainerActive
     } else {
       menuVisibility = classes.menuContainer
     }
     return (
-      <div className="surveys col-12">
+      <div className="survey col-12">
         <div className="row">
           <div className={"col-12 col-lg-12 " + classes.colPadding}>
-            <MapButton text={"Surveys"} handleClick={handleClickSurveys}/>
+            <MapButton text={"Info"} handleClick={handleClickSamples}/>
             <div className={"col-lg-4 " + menuVisibility}>
-              <SurveyMenu surveys={surveys}/>
+              <SampleMenu survey={survey}/>
             </div>           
-            <GoogleMap center={center} zoom={zoom} dataset = {surveys} renderMarkers={renderMarkers} handleClick={handleClickSurveys}>
+            <GoogleMap center={center} zoom={zoom} dataset = {survey} renderMarkers={renderMarkers} handleClick={handleClickSamples}>
             </GoogleMap>      
           </div>
         </div>
       </div>
     );
-  }
+	}
 }
 
-export default Surveys;
+export default SurveyDetails;
