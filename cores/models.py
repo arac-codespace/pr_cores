@@ -42,9 +42,11 @@ class Survey(models.Model):
 
             # Get NW and SE points...
             nw_point = {'lat': max_lat, 'lng': min_lng}
+            ne_point = {'lat': max_lat, 'lng': max_lng}
             se_point = {'lat': min_lat, 'lng': max_lng}
+            sw_point = {'lat': min_lat, 'lng': min_lng}
 
-            boundaries = {'nw': nw_point, 'se': se_point}
+            boundaries = {'nw': nw_point, 'ne': ne_point, 'se': se_point, 'sw': sw_point}
             return boundaries
         else:
             return

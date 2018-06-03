@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import CorePin from './CorePin'
+import CorePin from './CorePin';
 
-import {chainHull_2D, sortPointX, sortPointY} from '../utils/convexHull.js'
-import {MarkerClusterer} from '../utils/MarkerClusterer.js'
+// https://github.com/mgomes/ConvexHull
+import {chainHull_2D, sortPointX, sortPointY} from '../utils/convexHull.js';
+// https://github.com/googlemaps/v3-utility-library/
+import {MarkerClusterer} from '../utils/MarkerClusterer.js';
+import {MapLabel} from '../utils/MapLabel.js';
 
 let gmarkers = [];
 
@@ -19,6 +22,7 @@ class GoogleMap extends Component {
   constructor(){
     super();
     this.handleGoogleMapApi = this.handleGoogleMapApi.bind(this);
+    this.renderBoundaries = this.renderBoundaries.bind(this);
   }
 
   handleGoogleMapApi(google){
@@ -53,14 +57,14 @@ class GoogleMap extends Component {
     let googleMaps = google.maps;
     // console.log(gmarkers);
     let options={
-      maxZoom: 7.5,
+      maxZoom: 8,
       imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
       averageCenter: true,
       // zoomOnClick: false
     }
     let markerCluster = new MarkerClusterer(map, gmarkers, options)
     
-  }
+  };
 
   renderMarkers(google, data) {
     let myLatLng = new google.maps.LatLng(data.lat, data.lng);
@@ -114,25 +118,43 @@ class GoogleMap extends Component {
     // Returns: The number of hull points, which may differ the the hull points array’s size
     hullPoints_size = chainHull_2D(points, points.length, hullPoints); 
     
-    let polyline = new google.maps.Polygon({
+    let polygon = new google.maps.Polygon({
       map: google.map,
-      title: data.survey_no,
       paths:hullPoints, 
       fillColor:"#FF0000",
-      strokeWidth:2, 
+      strokeWidth: 2, 
       fillOpacity:0.5, 
       strokeColor:"#0000FF",
       strokeOpacity:0.5,
     });
-    polyline.addListener('click', function(e) {
-      // marker.map.setZoom(8)
-      console.log(e)
-      console.log(this)
-      console.log(polyline.title);
+
+    polygon.addListener('click', function(e) {
       // Feed survey id to handle click so handleClick can
       // trigger the collapse of collapseSurveyDetails:id
       handleClick(data.id);
-    });     
+    });
+
+    let bounds = new google.maps.LatLngBounds();
+    
+    polygon.getPath().forEach(function(path,index){
+      bounds.extend(path);
+    });
+
+    let polygonCenter = bounds.getCenter();
+
+    let opt_options = {
+      text: data.survey_no,
+      position: polygonCenter,
+      map: google.map,
+      fontSize: 16,
+      strokeWeight: 4,
+      align: 'right',
+      strokeColor: 'white',
+      fontWeight: 'bold',
+      fontColor: 'red',
+    }
+
+    let mapLabel = new MapLabel(opt_options);    
   }
 
   componentWillUnmount(){
