@@ -24,6 +24,8 @@ class CoreSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'sample_no',
+            'lat',
+            'lng',
             'survey',
             'core_type',
             'total_length',
@@ -32,12 +34,34 @@ class CoreSerializer(serializers.ModelSerializer):
             'described_by',
             'physiographic_location',
             'date_described',
+            'date_coll',
+            'collected_by',
             'strata_set'
         )
         depth = 1
 
 
+class SurveysSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = models.Survey
+        fields = (
+            'id',
+            'survey_no',
+            'field_activity',
+            'ship',
+            'core_quant',
+            'core_set',
+            'bag_quant',
+            'bag_set',
+            'total_samples',
+            'get_boundary'
+        )
+        depth = 1
+
+
 class SurveySerializer(serializers.ModelSerializer):
+    core_set = CoreSerializer(many=True)
 
     class Meta:
         model = models.Survey

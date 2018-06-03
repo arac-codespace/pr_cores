@@ -16,7 +16,7 @@ class CoreDetails(generics.RetrieveUpdateDestroyAPIView):
 
 class ListSurveys(generics.ListCreateAPIView):
     queryset = models.Survey.objects.all()
-    serializer_class = serializers.SurveySerializer
+    serializer_class = serializers.SurveysSerializer
 
 
 class SurveyDetails(generics.RetrieveUpdateDestroyAPIView):
