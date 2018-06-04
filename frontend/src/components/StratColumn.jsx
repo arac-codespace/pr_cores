@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Axes from './Axes'
 import * as d3 from 'd3';
 
 class StratColumn extends Component {
@@ -41,54 +41,33 @@ class StratColumn extends Component {
 	}
 	drawColumn(core){
 
-		let margin = {
+	  let strata_set = core.strata_set;
+		
+		let margins = {
 	    top: 50,
 	    right: 50,
 	    bottom: 50,
 	    left: 50
 	  };
 
-	  let strata_set = core.strata_set;
-
 	  let DIMENSIONX = 600;
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions
-	  let width = DIMENSIONX - margin.left - margin.right;
-	  let height = DIMENSIONY - margin.top - margin.bottom;	  
+	  let width = DIMENSIONX - margins.left - margins.right;
+	  let height = DIMENSIONY - margins.top - margins.bottom;	  
 
 	  // Canvas dimensions of svg element
-	  let canvasWidth = width + margin.left + margin.right;
-	  let canvasHeight = height + margin.top + margin.bottom;
+		let svgDimensions = {
+			width: width + margins.left + margins.right, 
+			height: height + margins.top + margins.bottom
+		};
 
-	  // The following is to find the proportion between the smallest layer
-	  // and the total thickness
-	  let minThickness = d3.min(strata_set, function(d) {
-	    return parseFloat(d.thickness);
-	  });
 
+	  //SCALES SETUP
 	  let totalThickness = d3.sum(strata_set, function(d) {
 	    return parseFloat(d.thickness);
 	  });
-
-	  // MINLAYERHEIGHT:Height == minThickness:totalThickness
-	  let minMaxProportionality = minThickness/totalThickness;
-
-	  // Finds the pixel height when height = DIMENSIONY...
-	  let currentMinHeight = minMaxProportionality*height;
-
-
-	  // If the currentMinHeight is less than MINLAYERHEIGHT, calculate a new
-	  // height that would result in the minThickness having a height of
-	  // MINLAYERHEIGHT
-	  let MINLAYERHEIGHT = 32;
-	  let dynHeight = MINLAYERHEIGHT/minMaxProportionality;
-	  let FIRSTLAYERINDEX = 0;
-
-	  // Sets height
-	  if (currentMinHeight < MINLAYERHEIGHT) {
-	    height = dynHeight;
-	  }
 
 	  // depth check...
 	  let RANGEBOUNDARY = 0;
@@ -101,22 +80,28 @@ class StratColumn extends Component {
 	  // Sets y-axis range
 	  y.range(yRange);
 
-	  // debugger;
-
 	  let DOMAINBOUNDARY = 0;
 
 	  // Sets upper domain to the max thickness.
 	  y.domain([totalThickness, DOMAINBOUNDARY]);
-	  // Defines the previous function to store previous thickness value up next
+
+	  //GENERATE layer-groups
+	  // Defines the previous attribute to store previous thickness value up next
 	  for (let i = 0; i < strata_set.length; i++) {
 	    let prevIndex = 1;
 	    strata_set[i].previous = strata_set[i-prevIndex];
 	  }
 
+	  // An array that returns the transform values of each layer-group
 	  let transformArray = this.buildTransformArray(y, strata_set);
 
-	  // LITHOLOGY Color!
+
+
+	  // GENERATE lithology bars
+	  // I'm creating each property bar separately/ with its 
+	  // own scale to allow for future customizations...
 	  let x2 = x.copy();
+
 	  // Control width and alignment of columns
 	  let X2PADDING = 0.5;
 	  let X2ALIGN = 0;
@@ -129,7 +114,6 @@ class StratColumn extends Component {
 
 		// Populating lithologyArray
 	  strata_set.map((d,i)=>{  	
-
 	  	let obj = {
 	  		width: x2.bandwidth(),
 	  		height: y(parseFloat(d.thickness)),
@@ -140,63 +124,30 @@ class StratColumn extends Component {
 	  	lithologyArray.push(obj);
 	  });
 
-
-	  // GET axis instructions...
-
-	  let TICKSIZE = 0;
-	  let XTRANSLATETOP = 0;
-	  let YTRANSLATETOP = 0;
-
-	  let axisGroup = {
-	  	transform: "translate(" + XTRANSLATETOP +", " + YTRANSLATETOP +")",
-	  	fill: "none",
-	  	fontSize: 10,
-	  	fontFamily: "sans-serif",
-	  	textAnchor: "middle",
-	  }
-	
-	  let axisPath = {
-	  	dWidth: width + 0.5,	
-	  	stroke: "red",
-	  }
-
-	  let tickXCoord = ((x2.bandwidth()/2) + x2("Lithology"));
-	  let tickYCoord = 0;
-	  let tickTransform = "translate(" + tickXCoord + ", " + tickYCoord + ")"
-
-	  let tickOpts = {
-	  	transform: tickTransform,
-	  }
+	  // Scales for axis creatiion...
+		let xScale = x2;
+		let yScale = y;
 
 	  return (
 
-	  	<svg className="column-svg" height={canvasHeight} width={canvasWidth}>
-	  		<g className="column-container" transform={"translate(" + margin.left + ", " + margin.top + ")"}>
+	  	<svg className="column-svg" height={svgDimensions.height} width={svgDimensions.width}>
+	  		<g className="column-container" transform={"translate(" + margins.left + ", " + margins.top + ")"}>
 	  			{lithologyArray.map((d,i) => (
 		  			<g className="layer-group" key={"layer-group-" + i}transform={d.transform}>
 		  					<rect className="bar" fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
 		  			</g>
 	  			))}
 
-	  			<g className="axis axis--x" 
-	  				 transform={axisGroup.transform} 
-	  				 fill={axisGroup.fill} 
-	  				 fontSize={axisGroup.fontSize} 
-	  				 fontFamily={axisGroup.fontFamily} 
-	  				 textAnchor={axisGroup.textAnchor}
-	  			>
-	  					<path className="domain" stroke={axisPath.stroke} d={"M0.5,0 V0.5 H" + axisPath.dWidth + "V0"}></path>
-							<g className="tick" opacity="1" transform={tickOpts.transform}>
-								<line stroke="#000" y2="-6"></line>
-							</g>	  					
-	  			</g>
+	  			<Axes
+	  				scales={{xScale, yScale}}
+	  				margins = {margins}
+	  				svgDimensions = {svgDimensions}
+	  			/>
 
 	  		</g>
 	  	</svg>
 	  );  
 	}
-
-
 
 	render() {
 		let core = this.props.core;

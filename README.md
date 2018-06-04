@@ -14,6 +14,11 @@
 
 Setup React + Django etc
 http://v1k45.com/blog/modern-django-part-1-setting-up-django-and-react/
+
+//D3
+https://github.com/freddyrangel/playing-with-react-and-d3
+https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274
+https://medium.com/@caspg/responsive-chart-with-react-and-d3v4-afd717e57583
 https://medium.com/@Elijah_Meeks/interactive-applications-with-react-d3-f76f7b3ebc71
 https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/
 
