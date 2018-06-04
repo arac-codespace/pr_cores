@@ -1,0 +1,26 @@
+{
+  "lithologies": [
+    {"name": "Foram Ooze"},
+    {"name": "Coarse Foram Ooze"},
+    {"name": "Clay"},
+    {"name": "Clay & Silt"},
+    {"name": "Silty Sand"},
+    {"name": "Sandy Silt"},
+    {"name": "Silt"},
+    {"name": "Fine Sand"},
+    {"name": "Gravel & Sand"},
+    {"name": "Sand"}
+],
+  "boundaries": [
+    {"name":"Distinct"},
+    {"name":"Diffuse"},
+    {"name":"Angular"},
+    {"name":"Irregular"}    
+  ],
+  "sample_ty[es": [
+    {"name": "Smear"},
+    {"name": "Grain Size"},
+    {"name": "Foram"}    
+  ]
+}
+

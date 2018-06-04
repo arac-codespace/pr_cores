@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Axes from './Axes'
 import * as d3 from 'd3';
 
+import ResponsiveWrapper from './ResponsiveWrapper';
+
+
 class StratColumn extends Component {
 
 	constructor(){
@@ -50,11 +53,11 @@ class StratColumn extends Component {
 	    left: 50
 	  };
 
-	  let DIMENSIONX = 600;
+	  // let DIMENSIONX = 600;
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions
-	  let width = DIMENSIONX - margins.left - margins.right;
+	  let width = Math.max(this.props.parentWidth, 0) - (margins.left + margins.right);
 	  let height = DIMENSIONY - margins.top - margins.bottom;	  
 
 	  // Canvas dimensions of svg element
@@ -103,7 +106,7 @@ class StratColumn extends Component {
 	  let x2 = x.copy();
 
 	  // Control width and alignment of columns
-	  let X2PADDING = 0.5;
+	  let X2PADDING = 0;
 	  let X2ALIGN = 0;
 	  x2.rangeRound([RANGEBOUNDARY, width])
 	  .domain(['Lithology']).padding(X2PADDING).align(X2ALIGN);
@@ -161,4 +164,4 @@ class StratColumn extends Component {
 	}
 }
 
-export default StratColumn;
+export default ResponsiveWrapper(StratColumn);
