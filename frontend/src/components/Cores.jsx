@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMap from './GoogleMap'
 
+import StratColumn from './StratColumn';
+
 // import * as d3 from "d3";
 
 class Cores extends Component {
@@ -8,11 +10,8 @@ class Cores extends Component {
   render() {
     let cores = this.props.cores;
     return (
-      <div>
-        <GoogleMap/>
-        {cores.map((core, index) => (
-          <p key={core.id}>{core.id + " " + core.sample_no}</p>
-        ))}
+      <div className="col-12">
+        <StratColumn core={cores[0]}/>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Collapse from './Collapse';
 import MenuContainer from './MenuContainer';
 import SampleTable from './SampleTable';
+import StratColumn from './StratColumn';
 
 import { NavLink } from 'react-router-dom'
 
@@ -41,6 +42,7 @@ class SampleMenu extends Component {
 
           <div key={"core-" + core.id} className="core-details">
             <Collapse title={"Sample No: " + core.sample_no} collapseId={"CoreDetails"+core.id}>
+            <StratColumn core={core}/>
               <p>{"Latitude: " + core.lat}</p>
               <p>{"Longitude: " + core.lng}</p>
               <p>{"Date Collected: " + core.date_coll}</p>

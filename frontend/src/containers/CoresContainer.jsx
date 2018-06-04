@@ -8,6 +8,7 @@ class CoresContainer extends Component {
     super();
     this.state = {
       cores: [],
+      isDataLoaded: false
     };
   };
 
@@ -16,7 +17,8 @@ class CoresContainer extends Component {
       const res = await fetch('/api/cores');
       const cores = await res.json();
       this.setState({
-        cores
+        cores,
+        isDataLoaded: true
       });
     } catch (e) {
       console.log(e);
@@ -25,11 +27,13 @@ class CoresContainer extends Component {
 
   render() {
     let cores = this.state.cores;
-    return (
-      <div>        
+    if (this.state.isDataLoaded){      
+      return (
         <Cores cores={cores} />
-      </div>
-    );
+      );
+    } else {
+      return (<p>Loading...</p>);
+    }
   }
 }
 
