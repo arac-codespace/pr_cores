@@ -670,7 +670,7 @@
 },
 {
     "model": "cores.strata",
-    "pk": 21,
+    "pk": 22,
     "fields": {
         "core": 2,
         "lithology": 3,        

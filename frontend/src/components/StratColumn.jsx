@@ -68,9 +68,9 @@ class StratColumn extends Component {
 
 
 	  //SCALES SETUP
-	  let totalThickness = d3.sum(strata_set, function(d) {
-	    return parseFloat(d.thickness);
-	  });
+	  // let totalThickness = d3.sum(strata_set, function(d) {
+	  //   return parseFloat(d.thickness);
+	  // });
 
 	  // depth check...
 	  let RANGEBOUNDARY = 0;
@@ -86,7 +86,7 @@ class StratColumn extends Component {
 	  let DOMAINBOUNDARY = 0;
 
 	  // Sets upper domain to the max thickness.
-	  y.domain([totalThickness, DOMAINBOUNDARY]);
+	  y.domain([core.total_length, DOMAINBOUNDARY]);
 
 	  //GENERATE layer-groups
 	  // Defines the previous attribute to store previous thickness value up next
@@ -116,7 +116,6 @@ class StratColumn extends Component {
 	  let lithologyArray = []
 
 	  function getLithColor(lithology){
-	  	console.log(lithology);
 	  	if (lithology === "Clay & Silt"){
 	  		return "green";
 	  	} else if (lithology === "Clay") {
@@ -128,6 +127,12 @@ class StratColumn extends Component {
 	  	}
 	  }
 
+	  function getTransform(lower_bound) {
+	  	let yCoord = y(lower_bound)
+	  	return 'translate(0,' + yCoord + ')';	  	
+
+	  }
+
 		// Populating lithologyArray
 	  strata_set.map((d,i)=>{  	
 	  	let obj = {
@@ -135,7 +140,7 @@ class StratColumn extends Component {
 	  		height: y(parseFloat(d.thickness)),
 	  		x: x2("Lithology"),
 	  		fill: getLithColor(d.lithology.name),
-	  		transform: transformArray[i],
+	  		transform: getTransform(d.lower_bound),
 	  	};
 	  	lithologyArray.push(obj);
 	  });
