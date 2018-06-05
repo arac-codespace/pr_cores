@@ -117,7 +117,10 @@ class StratColumn extends Component {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 	  function getLithColor(lithology){
@@ -134,6 +137,9 @@ class StratColumn extends Component {
 	  }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -145,7 +151,11 @@ class StratColumn extends Component {
 	  		x: x2("Lithology"),
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	  		fill: "black",
+=======
+	  		fill: getLithColor(d.lithology.name),
+>>>>>>> Stashed changes
 =======
 	  		fill: getLithColor(d.lithology.name),
 >>>>>>> Stashed changes
@@ -159,6 +169,11 @@ class StratColumn extends Component {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+	  console.log(lithologyArray)
+
+>>>>>>> Stashed changes
 =======
 	  console.log(lithologyArray)
 

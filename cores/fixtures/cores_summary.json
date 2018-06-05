@@ -444,9 +444,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "10YR 5/4",
         "thickness": "14",
+=======
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "14",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "0",
@@ -467,9 +473,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "10YR 5/2",
         "thickness": "23",
+=======
+        "lithology": 10,        
+        "lower_bound": "14",
+        "upper_bound": "37",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "14",
@@ -490,9 +502,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "10YR 5/2",
         "thickness": "13",
+=======
+        "lithology": 10,        
+        "lower_bound": "37",
+        "upper_bound": "50",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "37",
@@ -513,9 +531,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "122",
+=======
+        "lithology": 10,        
+        "lower_bound": "50",
+        "upper_bound": "172",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "50",
@@ -536,9 +560,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "2",
+=======
+        "lithology": 3,        
+        "lower_bound": "172",
+        "upper_bound": "174",
+>>>>>>> Stashed changes
 =======
         "lithology": 3,        
         "lower_bound": "172",
@@ -559,9 +589,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "3",
+=======
+        "lithology": 10,        
+        "lower_bound": "174",
+        "upper_bound": "177",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "174",
@@ -582,9 +618,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "2",
+=======
+        "lithology": 3,        
+        "lower_bound": "177",
+        "upper_bound": "179",
+>>>>>>> Stashed changes
 =======
         "lithology": 3,        
         "lower_bound": "177",
@@ -605,9 +647,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "23",
+=======
+        "lithology": 10,        
+        "lower_bound": "179",
+        "upper_bound": "202",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "179",
@@ -628,9 +676,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "1",
+=======
+        "lithology": 3,        
+        "lower_bound": "202",
+        "upper_bound": "203",
+>>>>>>> Stashed changes
 =======
         "lithology": 3,        
         "lower_bound": "202",
@@ -651,9 +705,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "4",
+=======
+        "lithology": 10,        
+        "lower_bound": "203",
+        "upper_bound": "207",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "203",
@@ -674,9 +734,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "3",
+=======
+        "lithology": 3,        
+        "lower_bound": "207",
+        "upper_bound": "210",
+>>>>>>> Stashed changes
 =======
         "lithology": 3,        
         "lower_bound": "207",
@@ -697,9 +763,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "5",
+=======
+        "lithology": 10,        
+        "lower_bound": "210",
+        "upper_bound": "215",
+>>>>>>> Stashed changes
 =======
         "lithology": 10,        
         "lower_bound": "210",
@@ -720,9 +792,15 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "3",
+=======
+        "lithology": 3,        
+        "lower_bound": "215",
+        "upper_bound": "218",
+>>>>>>> Stashed changes
 =======
         "lithology": 3,        
         "lower_bound": "215",
@@ -743,6 +821,7 @@
         "core": 1,
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "38",
@@ -751,6 +830,8 @@
 }
 ]
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         "lithology": 10,        
@@ -849,6 +930,9 @@
 }
 ]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

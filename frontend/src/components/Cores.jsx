@@ -13,7 +13,11 @@ class Cores extends Component {
       <div className="col-12">
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <StratColumn core={cores[0]}/>
+=======
+        <StratColumn core={cores[1]}/>
+>>>>>>> Stashed changes
 =======
         <StratColumn core={cores[1]}/>
 >>>>>>> Stashed changes

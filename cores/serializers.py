@@ -10,9 +10,12 @@ class StrataSerializer(serializers.ModelSerializer):
             'lithology',
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             'color',
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -20,6 +23,9 @@ class StrataSerializer(serializers.ModelSerializer):
             'upper_bound',
 >>>>>>> Stashed changes
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

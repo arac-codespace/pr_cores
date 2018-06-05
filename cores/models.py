@@ -100,9 +100,12 @@ class Strata(models.Model):
     core = models.ForeignKey(Core, blank=True, on_delete=models.CASCADE, verbose_name="Core No.")
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     color = models.CharField(max_length=25, blank=True)
 =======
 <<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
