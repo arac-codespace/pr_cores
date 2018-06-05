@@ -11,19 +11,7 @@ class Cores extends Component {
     let cores = this.props.cores;
     return (
       <div className="col-12">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        <StratColumn core={cores[0]}/>
-=======
         <StratColumn core={cores[1]}/>
->>>>>>> Stashed changes
-=======
-        <StratColumn core={cores[1]}/>
->>>>>>> Stashed changes
-=======
-        <StratColumn core={cores[1]}/>
->>>>>>> Stashed changes
       </div>
     );
   }

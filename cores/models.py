@@ -98,22 +98,8 @@ class Lithology(models.Model):
 class Strata(models.Model):
     # lithology = models.CharField(max_length=25)
     core = models.ForeignKey(Core, blank=True, on_delete=models.CASCADE, verbose_name="Core No.")
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    color = models.CharField(max_length=25, blank=True)
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    thickness = models.DecimalField(max_digits=8, decimal_places=3)
-=======
     lower_bound = models.DecimalField(max_digits=8, decimal_places=3)
     upper_bound = models.DecimalField(max_digits=8, decimal_places=3)
->>>>>>> Stashed changes
     description = models.TextField(blank=True)
     lithology = models.ForeignKey(Lithology, blank=True, null=True, on_delete=models.SET_NULL)
     # fossils

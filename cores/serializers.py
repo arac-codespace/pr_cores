@@ -8,27 +8,8 @@ class StrataSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'lithology',
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            'color',
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
             'lower_bound',
             'upper_bound',
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             'thickness',
             'description',
             'fossils_set',
