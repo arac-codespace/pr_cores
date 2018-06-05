@@ -1,0 +1,594 @@
+[
+{
+    "model": "cores.survey",
+    "pk": 1,
+    "fields": {
+        "survey_no": "SJ008",
+        "field_activity": "08008",
+        "ship": "James Comrad"
+    }
+},
+{
+    "model": "cores.survey",
+    "pk": 2,
+    "fields": {
+        "survey_no": "Dummy Survey #2",
+        "field_activity": "Dummy",
+        "ship": "Falcon One"
+    }
+},    
+{ 
+    "model": "cores.core",    
+    "pk": 1,       
+    "fields": {        
+        "sample_no": "SJ8-5GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "256.000",
+        "lat": "18.97788000",
+        "lng": "-66.91508000",
+        "depth": "4076.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-06-16",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "PR Trench South Wall; NW Puerto Rico"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 2,       
+    "fields": {        
+        "sample_no": "SJ8-7GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "205.500",
+        "lat": "19.17558000",
+        "lng": "-66.79490000",
+        "depth": "7053.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-06-16",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "PR Trench South Wall/Slope"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 3,       
+    "fields": {        
+        "sample_no": "SJ8-8GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "238.000",
+        "lat": "17.73450000",
+        "lng": "-67.04005000",
+        "depth": "1890.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-06-17",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "SW Puerto Rico Slope (Muertos Acc. Prism)"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 4,       
+    "fields": {        
+        "sample_no": "SJ8-9GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "171.000",
+        "lat": "17.55293000",
+        "lng": "-67.07950000",
+        "depth": "3838.000",
+        "core_condition": "Excellent; continuous",
+        "date_described": "2009-05-20",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "SW Puerto Rico Slope (Muertos Acc. Prism)"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 5,       
+    "fields": {        
+        "sample_no": "SJ8-10GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "29.000",
+        "lat": "17.80337000",
+        "lng": "-66.02543000",
+        "depth": "1356.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-07-14",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Whiting Basin; SW Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 6,       
+    "fields": {        
+        "sample_no": "SJ8-12GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "13.500",
+        "lat": "17.86287000",
+        "lng": "-65.75607000",
+        "depth": "1984.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-07-14",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Whiting Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 7,       
+    "fields": {        
+        "sample_no": "SJ8-13GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "124.000",
+        "lat": "17.94822000",
+        "lng": "-65.70995000",
+        "depth": "1938.000",
+        "core_condition": "Undefined",
+        "date_described": "2009-05-29",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Whiting Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 8,       
+    "fields": {        
+        "sample_no": "SJ8-17GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "162.500",
+        "lat": "17.91391700",
+        "lng": "-65.14962000",
+        "depth": "4527.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-06-12",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Virgin Islands Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 9,       
+    "fields": {        
+        "sample_no": "SJ8-18GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "102.500",
+        "lat": "17.94213000",
+        "lng": "-65.10473000",
+        "depth": "4530.000",
+        "core_condition": "Undefined",
+        "date_described": "2009-05-29",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Virgin Islands Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 10,       
+    "fields": {        
+        "sample_no": "SJ8-20GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "70.000",
+        "lat": "17.93717000",
+        "lng": "-64.90448000",
+        "depth": "4418.000",
+        "core_condition": "Undefined",
+        "date_described": "2009-05-29",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Virgin Islands Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 11,       
+    "fields": {        
+        "sample_no": "SJ8-21GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "203.000",
+        "lat": "17.89727000",
+        "lng": "-64.82283000",
+        "depth": "4318.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-05-18",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Virgin Islands Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 12,       
+    "fields": {        
+        "sample_no": "SJ8-22GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "223.000",
+        "lat": "17.85153000",
+        "lng": "-65.02062000",
+        "depth": "4510.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-06-12",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Virgin Islands Basin"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 13,       
+    "fields": {        
+        "sample_no": "SJ8-23GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "28.500",
+        "lat": "17.67343000",
+        "lng": "-65.21032000",
+        "depth": "1937.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-07-14",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Virgin Islands Basin - St. Croix West Slope"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 14,       
+    "fields": {        
+        "sample_no": "SJ8-24GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "34.000",
+        "lat": "17.70797000",
+        "lng": "-65.24922000",
+        "depth": "1838.000",
+        "core_condition": "Good - Core liner split at 14cm",
+        "date_described": "2009-07-14",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Virgin Islands Basin - St. Croix West Slope/Ridge"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 15,       
+    "fields": {        
+        "sample_no": "SJ8-28GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "19.000",
+        "lat": "19.09530000",
+        "lng": "-65.79613000",
+        "depth": "6167.000",
+        "core_condition": "Fair - Disturbed during cutter and catcher removal.",
+        "date_described": "2009-07-22",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "NE Amphitheater, PR Trench South Wall"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 16,       
+    "fields": {        
+        "sample_no": "SJ8-31GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "12.500",
+        "lat": "18.81205000",
+        "lng": "-66.41020000",
+        "depth": "2700.000",
+        "core_condition": "Fair - half archived, half bagged in sections",
+        "date_described": "2009-07-23",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Top of Arecibo Amphitheater, PR Trench South Wall"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 17,       
+    "fields": {        
+        "sample_no": "SJ8-33GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "142.000",
+        "lat": "18.91687000",
+        "lng": "-66.58510000",
+        "depth": "4897.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-05-29",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Arecibo Amphitheater, PR Trench South Wall"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 18,       
+    "fields": {        
+        "sample_no": "SJ8-34GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "28.000",
+        "lat": "18.94140000",
+        "lng": "-66.52183000",
+        "depth": "5050.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-07-23",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Arecibo Amphitheater, PR Trench South Slope"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 19,       
+    "fields": {        
+        "sample_no": "SJ8-38GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "247.500",
+        "lat": "18.88277000",
+        "lng": "-66.65935000",
+        "depth": "4541.000",
+        "core_condition": "Excellent",
+        "date_described": "2009-07-14",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Arecibo Amphitheater, PR Trench South Slope"
+    }
+},
+{ 
+    "model": "cores.core",    
+    "pk": 20,       
+    "fields": {        
+        "sample_no": "SJ8-40GGC",
+        "survey": 1,
+        "core_type": "Gravity",
+        "total_length": "34.500",
+        "lat": "18.86037000",
+        "lng": "-66.47972000",
+        "depth": "3880.000",
+        "core_condition": "Good - Core liner split at 26cm",
+        "date_described": "2009-07-14",
+        "described_by": "J. Chaytor",
+        "physiographic_location": "Arecibo Amphitheater, PR Trench South Slope"
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 1,
+    "fields": {
+        "name": "Sand",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 2,
+    "fields": {
+        "name": "Gravel & Sand",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 3,
+    "fields": {
+        "name": "Fine Sand",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 4,
+    "fields": {
+        "name": "Sandy Silt",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 5,
+    "fields": {
+        "name": "Silt",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 6,
+    "fields": {
+        "name": "Silty Sand",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 7,
+    "fields": {
+        "name": "Clay & Silt",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 8,
+    "fields": {
+        "name": "Clay",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 9,
+    "fields": {
+        "name": "Coarse Foram Ooze",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.lithology",
+    "pk": 10,
+    "fields": {
+        "name": "Foram Ooze",
+        "alt_name": ""
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 1,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "10YR 5/4",
+        "thickness": "14",
+        "description": "clay-fine sand; contains abundant foraminifera with sponge spicules and dark(lithic?) fragments poorly sorted throughout the interval; diffuse color boundary at 14cm along a slightly sander layer (0.5cm thickness)."
+    }
+},  
+{
+    "model": "cores.strata",
+    "pk": 2,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "10YR 5/2",
+        "thickness": "23",
+        "description": "ooze (clay-silt) with interbeds of fine-medium sand containing abundant forams and sponge spicules (@17.5, 19, 20, 24, 32, 35 and 37cm - all ~0.5 - 1cm thick).  ooze contains forams and sponge spicules; diffuse bottom boundary; uncoiled pteropod )Creseis chierchiae) at 22.5cm. (26.5 - 50cm - black/orange streaking)"
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 3,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "10YR 5/2",
+        "thickness": "13",
+        "description": "ooze (clay-silt) containing forams, lithic fragments and rare sponge spicules."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 4,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "2.5Y 5/2",
+        "thickness": "122",
+        "description": "foraminifera ooze (clay-fine sand) with high abundance of sponge spicules and black fragments (lithics or manganese?); mostly indistinct layering, but some interbedding of coarser or finer intervals (overall, interval appears to be coarser towards the base).  diagonal dark(black mostly), green, and red banding from 50 - 106cm."
+    }
+}, 
+{
+    "model": "cores.strata",
+    "pk": 5,
+    "fields": {
+        "core": 1,
+        "lithology": 3,
+        "color": "2.5Y 5/2",
+        "thickness": "2",
+        "description": "Fine-medium sand with forams, lithic? fragments (quartz ? black), sponge spicules, and some shell fragments; same 2.5Y 5/2 color as above, but with patches of cream-colored silt throughout."
+    }
+}, 
+{
+    "model": "cores.strata",
+    "pk": 6,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "2.5Y 5/2",
+        "thickness": "3",
+        "description": "as at 50-172cm"
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 7,
+    "fields": {
+        "core": 1,
+        "lithology": 3,
+        "color": "2.5Y 5/2",
+        "thickness": "2",
+        "description": "Fine-medium sand as at 172-174cm, does not cut entire core width."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 8,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "2.5Y 5/2",
+        "thickness": "23",
+        "description": "as at 50-172cm; intense manganese staining at 198cm."
+    }
+},  
+{
+    "model": "cores.strata",
+    "pk": 9,
+    "fields": {
+        "core": 1,
+        "lithology": 3,
+        "color": "2.5Y 5/2",
+        "thickness": "1",
+        "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 10,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "2.5Y 5/2",
+        "thickness": "4",
+        "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
+    }
+}, 
+{
+    "model": "cores.strata",
+    "pk": 11,
+    "fields": {
+        "core": 1,
+        "lithology": 3,
+        "color": "2.5Y 5/2",
+        "thickness": "3",
+        "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 12,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "2.5Y 5/2",
+        "thickness": "5",
+        "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 13,
+    "fields": {
+        "core": 1,
+        "lithology": 3,
+        "color": "2.5Y 5/2",
+        "thickness": "3",
+        "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 14,
+    "fields": {
+        "core": 1,
+        "lithology": 10,
+        "color": "2.5Y 5/2",
+        "thickness": "38",
+        "description": "As at 50-172cm with some green-yellow staining at edge of core between 224 and 234cm. Gradual color change to more green grey at 234cm (one side of core section is green-grey the other is 2.5Y 5/2)."
+    }
+}
+]

@@ -1,5 +1,6 @@
 [
-  {    
+  {
+    "id": 1,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-5GGC",
@@ -13,7 +14,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "PR Trench South Wall; NW Puerto Rico"
   },
-  {    
+  {
+    "id": 2,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-7GGC",
@@ -27,7 +29,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "PR Trench South Wall/Slope"
   },
-  {    
+  {
+    "id": 3,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-8GGC",
@@ -41,7 +44,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "SW Puerto Rico Slope (Muertos Acc. Prism)"
   },
-  {    
+  {
+    "id": 4,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-9GGC",
@@ -55,7 +59,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "SW Puerto Rico Slope (Muertos Acc. Prism)"
   },
-  {    
+  {
+    "id": 5,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-10GGC",
@@ -69,7 +74,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Whiting Basin; SW Basin"
   },
-  {    
+  {
+    "id": 6,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-12GGC",
@@ -83,7 +89,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Whiting Basin"
   },
-  {    
+  {
+    "id": 7,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-13GGC",
@@ -97,7 +104,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Whiting Basin"
   },
-  {    
+  {
+    "id": 8,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-17GGC",
@@ -111,7 +119,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Virgin Islands Basin"
   },
-  {    
+  {
+    "id": 9,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-18GGC",
@@ -125,7 +134,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Virgin Islands Basin"
   },
-  {    
+  {
+    "id": 10,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-20GGC",
@@ -139,7 +149,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Virgin Islands Basin"
   },
-  {    
+  {
+    "id": 11,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-21GGC",
@@ -153,7 +164,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Virgin Islands Basin"
   },
-  {    
+  {
+    "id": 12,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-22GGC",
@@ -167,7 +179,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Virgin Islands Basin"
   },
-  {    
+  {
+    "id": 13,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-23GGC",
@@ -181,7 +194,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Virgin Islands Basin - St. Croix West Slope"
   },
-  {    
+  {
+    "id": 14,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-24GGC",
@@ -195,7 +209,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Virgin Islands Basin - St. Croix West Slope/Ridge"
   },
-  {    
+  {
+    "id": 15,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-28GGC",
@@ -209,7 +224,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "NE Amphitheater, PR Trench South Wall"
   },
-  {    
+  {
+    "id": 16,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-31GGC",
@@ -223,7 +239,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Top of Arecibo Amphitheater, PR Trench South Wall"
   },
-  {    
+  {
+    "id": 17,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-33GGC",
@@ -237,7 +254,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Arecibo Amphitheater, PR Trench South Wall"
   },
-  {    
+  {
+    "id": 18,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-34GGC",
@@ -251,7 +269,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Arecibo Amphitheater, PR Trench South Slope"
   },
-  {    
+  {
+    "id": 19,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-38GGC",
@@ -265,7 +284,8 @@
     "described_by": "J. Chaytor",
     "physiographic_location": "Arecibo Amphitheater, PR Trench South Slope"
   },
-  {    
+  {
+    "id": 20,
     "field_activity": "08008",
     "ship": "R/V Seward Johnson",
     "sample_no": "SJ8-40GGC",

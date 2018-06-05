@@ -8,6 +8,7 @@ class StrataSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'lithology',
+            'color',
             'thickness',
             'description',
             'fossils_set',

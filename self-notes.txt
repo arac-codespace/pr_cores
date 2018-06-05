@@ -52,3 +52,6 @@ modal window that will display info about the survey.
 If I want to keep using the menu window, I probably need an onClick that will
 turn on the menu.  Then I have to figure out how to arrange that
 mini-menu...
+
+When dumping data...
+python manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 > project_dump.json 

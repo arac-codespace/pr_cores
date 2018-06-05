@@ -98,6 +98,7 @@ class Lithology(models.Model):
 class Strata(models.Model):
     # lithology = models.CharField(max_length=25)
     core = models.ForeignKey(Core, blank=True, on_delete=models.CASCADE, verbose_name="Core No.")
+    color = models.CharField(max_length=25, blank=True)
     thickness = models.DecimalField(max_digits=8, decimal_places=3)
     description = models.TextField(blank=True)
     lithology = models.ForeignKey(Lithology, blank=True, null=True, on_delete=models.SET_NULL)
