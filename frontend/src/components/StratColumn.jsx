@@ -116,7 +116,10 @@ class StratColumn extends Component {
 	  let lithologyArray = []
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 	  function getLithColor(lithology){
 	  	console.log(lithology);
 	  	if (lithology === "Clay & Silt"){
@@ -130,6 +133,9 @@ class StratColumn extends Component {
 	  	}
 	  }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		// Populating lithologyArray
 	  strata_set.map((d,i)=>{  	
@@ -138,7 +144,11 @@ class StratColumn extends Component {
 	  		height: y(parseFloat(d.thickness)),
 	  		x: x2("Lithology"),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	  		fill: "black",
+=======
+	  		fill: getLithColor(d.lithology.name),
+>>>>>>> Stashed changes
 =======
 	  		fill: getLithColor(d.lithology.name),
 >>>>>>> Stashed changes
@@ -148,6 +158,11 @@ class StratColumn extends Component {
 	  });
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+	  console.log(lithologyArray)
+
+>>>>>>> Stashed changes
 =======
 	  console.log(lithologyArray)
 
