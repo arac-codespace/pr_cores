@@ -115,18 +115,43 @@ class StratColumn extends Component {
 	  // layers
 	  let lithologyArray = []
 
+<<<<<<< Updated upstream
+=======
+	  function getLithColor(lithology){
+	  	console.log(lithology);
+	  	if (lithology === "Clay & Silt"){
+	  		return "green";
+	  	} else if (lithology === "Clay") {
+	  		return "#006400";
+	  	} else if (lithology === "Coarse Foram Ooze" || lithology === "Foram Ooze"){
+	  		return "brown";
+	  	} else {
+	  		return "yellow";
+	  	}
+	  }
+
+>>>>>>> Stashed changes
 		// Populating lithologyArray
 	  strata_set.map((d,i)=>{  	
 	  	let obj = {
 	  		width: x2.bandwidth(),
 	  		height: y(parseFloat(d.thickness)),
 	  		x: x2("Lithology"),
+<<<<<<< Updated upstream
 	  		fill: "black",
+=======
+	  		fill: getLithColor(d.lithology.name),
+>>>>>>> Stashed changes
 	  		transform: transformArray[i],
 	  	};
 	  	lithologyArray.push(obj);
 	  });
 
+<<<<<<< Updated upstream
+=======
+	  console.log(lithologyArray)
+
+>>>>>>> Stashed changes
 	  // Scales for axis creatiion...
 		let xScale = x2;
 		let yScale = y;

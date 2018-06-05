@@ -442,9 +442,15 @@
     "pk": 1,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "10YR 5/4",
         "thickness": "14",
+=======
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "14",
+>>>>>>> Stashed changes
         "description": "clay-fine sand; contains abundant foraminifera with sponge spicules and dark(lithic?) fragments poorly sorted throughout the interval; diffuse color boundary at 14cm along a slightly sander layer (0.5cm thickness)."
     }
 },  
@@ -453,9 +459,15 @@
     "pk": 2,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "10YR 5/2",
         "thickness": "23",
+=======
+        "lithology": 10,        
+        "lower_bound": "14",
+        "upper_bound": "37",
+>>>>>>> Stashed changes
         "description": "ooze (clay-silt) with interbeds of fine-medium sand containing abundant forams and sponge spicules (@17.5, 19, 20, 24, 32, 35 and 37cm - all ~0.5 - 1cm thick).  ooze contains forams and sponge spicules; diffuse bottom boundary; uncoiled pteropod )Creseis chierchiae) at 22.5cm. (26.5 - 50cm - black/orange streaking)"
     }
 },
@@ -464,9 +476,15 @@
     "pk": 3,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "10YR 5/2",
         "thickness": "13",
+=======
+        "lithology": 10,        
+        "lower_bound": "37",
+        "upper_bound": "50",
+>>>>>>> Stashed changes
         "description": "ooze (clay-silt) containing forams, lithic fragments and rare sponge spicules."
     }
 },
@@ -475,9 +493,15 @@
     "pk": 4,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "122",
+=======
+        "lithology": 10,        
+        "lower_bound": "50",
+        "upper_bound": "172",
+>>>>>>> Stashed changes
         "description": "foraminifera ooze (clay-fine sand) with high abundance of sponge spicules and black fragments (lithics or manganese?); mostly indistinct layering, but some interbedding of coarser or finer intervals (overall, interval appears to be coarser towards the base).  diagonal dark(black mostly), green, and red banding from 50 - 106cm."
     }
 }, 
@@ -486,9 +510,15 @@
     "pk": 5,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "2",
+=======
+        "lithology": 3,        
+        "lower_bound": "172",
+        "upper_bound": "174",
+>>>>>>> Stashed changes
         "description": "Fine-medium sand with forams, lithic? fragments (quartz ? black), sponge spicules, and some shell fragments; same 2.5Y 5/2 color as above, but with patches of cream-colored silt throughout."
     }
 }, 
@@ -497,9 +527,15 @@
     "pk": 6,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "3",
+=======
+        "lithology": 10,        
+        "lower_bound": "174",
+        "upper_bound": "177",
+>>>>>>> Stashed changes
         "description": "as at 50-172cm"
     }
 },
@@ -508,9 +544,15 @@
     "pk": 7,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "2",
+=======
+        "lithology": 3,        
+        "lower_bound": "177",
+        "upper_bound": "179",
+>>>>>>> Stashed changes
         "description": "Fine-medium sand as at 172-174cm, does not cut entire core width."
     }
 },
@@ -519,9 +561,15 @@
     "pk": 8,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "23",
+=======
+        "lithology": 10,        
+        "lower_bound": "179",
+        "upper_bound": "202",
+>>>>>>> Stashed changes
         "description": "as at 50-172cm; intense manganese staining at 198cm."
     }
 },  
@@ -530,9 +578,15 @@
     "pk": 9,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "1",
+=======
+        "lithology": 3,        
+        "lower_bound": "202",
+        "upper_bound": "203",
+>>>>>>> Stashed changes
         "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
     }
 },
@@ -541,9 +595,15 @@
     "pk": 10,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "4",
+=======
+        "lithology": 10,        
+        "lower_bound": "203",
+        "upper_bound": "207",
+>>>>>>> Stashed changes
         "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
     }
 }, 
@@ -552,9 +612,15 @@
     "pk": 11,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "3",
+=======
+        "lithology": 3,        
+        "lower_bound": "207",
+        "upper_bound": "210",
+>>>>>>> Stashed changes
         "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
     }
 },
@@ -563,9 +629,15 @@
     "pk": 12,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "5",
+=======
+        "lithology": 10,        
+        "lower_bound": "210",
+        "upper_bound": "215",
+>>>>>>> Stashed changes
         "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
     }
 },
@@ -574,9 +646,15 @@
     "pk": 13,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 3,
         "color": "2.5Y 5/2",
         "thickness": "3",
+=======
+        "lithology": 3,        
+        "lower_bound": "215",
+        "upper_bound": "218",
+>>>>>>> Stashed changes
         "description": "Fine-medium sand as at 172-174cm; manganese streaks within intervals; otherwise as at 50-172cm."
     }
 },
@@ -585,6 +663,7 @@
     "pk": 14,
     "fields": {
         "core": 1,
+<<<<<<< Updated upstream
         "lithology": 10,
         "color": "2.5Y 5/2",
         "thickness": "38",
@@ -592,3 +671,100 @@
     }
 }
 ]
+=======
+        "lithology": 10,        
+        "lower_bound": "218",
+        "upper_bound": "256",
+        "description": "As at 50-172cm with some green-yellow staining at edge of core between 224 and 234cm. Gradual color change to more green grey at 234cm (one side of core section is green-grey the other is 2.5Y 5/2)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 15,
+    "fields": {
+        "core": 2,
+        "lithology": 8,        
+        "lower_bound": "0",
+        "upper_bound": "7",
+        "description": "Soapy 10YR 4/2 clay; some manganese streaking; sharp bottom boundary"
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 16,
+    "fields": {
+        "core": 2,
+        "lithology": 8,        
+        "lower_bound": "7",
+        "upper_bound": "25",
+        "description": "Intermixed 10YR 5/3 & 10YR 4/2 clay; some manganese staining; orange mottling between 17 and 19 cm, partly soapy, becoming stiffer towards the bottom of the interval; diffuse bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 17,
+    "fields": {
+        "core": 2,
+        "lithology": 8,        
+        "lower_bound": "25",
+        "upper_bound": "196",
+        "description": "no forams or other shell/lithic fragments; clay is stiffer than that between 0-25cm; significant manganese staining at: 17, 48-53, 57.5-60, 65-92, 117-123, 132-138, 148 and 152-161cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 18,
+    "fields": {
+        "core": 2,
+        "lithology": 3,        
+        "lower_bound": "136",
+        "upper_bound": "137",
+        "description": "Fine sand, predominantly lithic fragments (quartz? dark grains, etc), no forams seen; manganese staining."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 19,
+    "fields": {
+        "core": 2,
+        "lithology": 3,        
+        "lower_bound": "157",
+        "upper_bound": "160",
+        "description": "0.25 thick fine sand layers; discontinuous, irregular boundaries; material similar to that @ 136-137cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 20,
+    "fields": {
+        "core": 2,
+        "lithology": 3,        
+        "lower_bound": "196",
+        "upper_bound": "197",
+        "description": "1cm thick fine snd as at 136-137cm (diagonal layer)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 21,
+    "fields": {
+        "core": 2,
+        "lithology": 8,        
+        "lower_bound": "197",
+        "upper_bound": "204",
+        "description": "10YR 5/3 clay as at 25-196"
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 21,
+    "fields": {
+        "core": 2,
+        "lithology": 3,        
+        "lower_bound": "204",
+        "upper_bound": "205.5",
+        "description": "very fine sand with similar composition to 136-137cm."
+    }
+}
+]
+>>>>>>> Stashed changes
