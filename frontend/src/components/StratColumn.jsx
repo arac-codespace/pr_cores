@@ -117,9 +117,9 @@ class StratColumn extends Component {
 
 	  function getLithColor(lithology){
 	  	if (lithology === "Clay & Silt"){
-	  		return "green";
-	  	} else if (lithology === "Clay") {
 	  		return "#006400";
+	  	} else if (lithology === "Clay") {
+	  		return "green";
 	  	} else if (lithology === "Coarse Foram Ooze" || lithology === "Foram Ooze"){
 	  		return "brown";
 	  	} else {
@@ -129,6 +129,7 @@ class StratColumn extends Component {
 
 	  function getTransform(lower_bound) {
 	  	let yCoord = y(lower_bound)
+	  	console.log(lower_bound)
 	  	return 'translate(0,' + yCoord + ')';	  	
 
 	  }

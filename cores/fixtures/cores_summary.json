@@ -678,5 +678,1204 @@
         "upper_bound": "205.5",
         "description": "very fine sand with similar composition to 136-137cm."
     }
+},
+{
+    "model": "cores.strata",
+    "pk": 23,
+    "fields": {
+        "core": 3,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "6.5",
+        "description": "10YR 5/4 foraminifera ooze (silt- very fine sand) with up to medium-size forams."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 24,
+    "fields": {
+        "core": 3,
+        "lithology": 1,        
+        "lower_bound": "6.5",
+        "upper_bound": "20",
+        "description": "10YR 6/3 soupy medium to coarse sand (high silty intersitial water content); abundant forams, uncoiled Creseis chierchiae and Diacria trispinosa pteropods and shell fragments; sponge spicules rare; no grading seen; manganese staining throughout."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 25,
+    "fields": {
+        "core": 3,
+        "lithology": 1,        
+        "lower_bound": "20",
+        "upper_bound": "25",
+        "description": "10YR 7/2? soupy medium to coarse sand )high silty intersitial water content) with forams shell fragments, uncoiled pteropod fragments and manganese mottling."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 26,
+    "fields": {
+        "core": 3,
+        "lithology": 10,        
+        "lower_bound": "25",
+        "upper_bound": "238",
+        "description": "foraminifera ooze (clay- very fine sand) with up to medium-size forams; also contains uncoiled pteropod fragments, shell fragments and rare spicules; 7.5YR 5/4; pporly defined intervals of ooze with higher clay-silt or lower foram content present; mottled throughout. color changes at ~ 89cm (10YR 6/3), 110cm (2.5YR 6/2 or 6/3), 154cm (2.5Y 6/3)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 27,
+    "fields": {
+        "core": 4,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "44",
+        "description": "10YR 6/4 foraminiferal ooze (clays/silt with medium-grains size forams).  Some manganese staining/ctreaking at ~26cm (continues down core).  Sharp bottom contact."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 28,
+    "fields": {
+        "core": 4,
+        "lithology": 1,        
+        "lower_bound": "44",
+        "upper_bound": "67",
+        "description": "Normally-graded sand (fining upwards); 10YR 7/2 with manganese streaks.  44-53cm (v. fine sand (45-46.5cm muddier interval)), 53-57cm medium sand. 57-59cm coarse sand. 59-65cm v.coarse sand, containing intact shells (pteropods, gastropods, shell fragments, forams). 65-67cm medium/coarse sand. Distinct angular/erosional bottom contact."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 29,
+    "fields": {
+        "core": 4,
+        "lithology": 10,        
+        "lower_bound": "67",
+        "upper_bound": "110",
+        "description": "10YR 6/4 foraminiferal ooze (clay/silt with fine to medium grain-sized forams).  Manganese straining/streaking with greenish mottling beginning at ~76cm.  Intact pteropod (Diacria trispinosa?) at 73cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 30,
+    "fields": {
+        "core": 4,
+        "lithology": 1,        
+        "lower_bound": "110",
+        "upper_bound": "114.5",
+        "description": "Normally-graded sand (fining upwards); 10YR 5/1 or 2.5Y 5/1. Irregular top and bottom boundaries. 110-113cm - medium to coarse-grained sand containing forams, shell fragments, and silt-sized black grains (lithics or organic material?) with scattered v. coarse grain-sized pteropod shells (Diacria trispinosa?) and sponge spicules."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 31,
+    "fields": {
+        "core": 4,
+        "lithology": 2,        
+        "lower_bound": "113",
+        "upper_bound": "114.5",
+        "description": "113-114cm - v.coarse to gravel sand with pteropod shells (Diacria trispinosa?), shell fragments and forams (some coarse-grain sized)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 32,
+    "fields": {
+        "core": 4,
+        "lithology": 10,        
+        "lower_bound": "114.5",
+        "upper_bound": "158",
+        "description": "10YR 6/4 foraminiferal ooze with manganese laminae at 119.5, 120.5, 122.5, 127.5 and 128.5cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 33,
+    "fields": {
+        "core": 4,
+        "lithology": 9,        
+        "lower_bound": "133.5",
+        "upper_bound": "135.5",
+        "description": "foram ooze with abundant v. coarse carbonate debris (shell fragments, forams, pteropods) scattered throughout 114.5-135.5cm interval also, but not as concentrated."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 34,
+    "fields": {
+        "core": 4,
+        "lithology": 10,        
+        "lower_bound": "135.5",
+        "upper_bound": "158",
+        "description": "color change to 2.5Y 5/3, no abundant shell fragments as above.  Gradational bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 35,
+    "fields": {
+        "core": 4,
+        "lithology": 3,        
+        "lower_bound": "158",
+        "upper_bound": "171",
+        "description": "Normally-graded (fining-upward) sand (10YR 6/4).  Forams abundant."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 36,
+    "fields": {
+        "core": 4,
+        "lithology": 3,        
+        "lower_bound": "158",
+        "upper_bound": "161.5",
+        "description": "v. fine to fine grained sand."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 37,
+    "fields": {
+        "core": 4,
+        "lithology": 5,        
+        "lower_bound": "161.5",
+        "upper_bound": "162.5",
+        "description": "silt."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 38,
+    "fields": {
+        "core": 4,
+        "lithology": 3,        
+        "lower_bound": "162.5",
+        "upper_bound": "164",
+        "description": "v. fine to fine grained sand."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 39,
+    "fields": {
+        "core": 4,
+        "lithology": 1,        
+        "lower_bound": "164.5",
+        "upper_bound": "171",
+        "description": "fine to medium grained sand (no shell fragments)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 41,
+    "fields": {
+        "core": 5,
+        "lithology": 9,        
+        "lower_bound": "0",
+        "upper_bound": "9.5",
+        "description": "10YR 5/3-6/3 foraminiferal ooze (up to coarse grain size forams); shell fragment, Diacria & Creseis pteropods, and sponge spicules present."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 42,
+    "fields": {
+        "core": 5,
+        "lithology": 2,        
+        "lower_bound": "9.5",
+        "upper_bound": "11",
+        "description": "Greenish, coarse-grained sand composed of carbonate debris (forams, shell fragments, pteropods, spicules); 0.5cm intact Diacria pteropod (see-through) in interal."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 43,
+    "fields": {
+        "core": 5,
+        "lithology": 10,        
+        "lower_bound": "11",
+        "upper_bound": "29",
+        "description": "2.5Y 6/3 foraminiferal ooze (up to medium grain-size forams); shell fragments and Creseis pteropods present."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 44,
+    "fields": {
+        "core": 6,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "10.5",
+        "description": "2.5Y 6/3 foraminiferal ooze (with forams up to medium grain-size); shell and pteropod fragments and sponge spicules present, but not abundant; manganese staining at and above 6cm, slightly greenish color in upper 1cm; irregular bottom color boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 45,
+    "fields": {
+        "core": 6,
+        "lithology": 7,        
+        "lower_bound": "10.5",
+        "upper_bound": "13.5",
+        "description": "Brown clay-silt; scattered forams; manganese/lithic (black) grains and some manganese staining."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 46,
+    "fields": {
+        "core": 7,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "10",
+        "description": "foraminiferal ooze (high clay-silt fraction), 10YR 5/4, some dark staining(manganese?), relatively sharp bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 47,
+    "fields": {
+        "core": 7,
+        "lithology": 8,        
+        "lower_bound": "10",
+        "upper_bound": "12",
+        "description": "10YR 4/3 clay, diffuse bottom boundary, no forams seen."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 48,
+    "fields": {
+        "core": 7,
+        "lithology": 8,        
+        "lower_bound": "12",
+        "upper_bound": "16",
+        "description": "2.5Y 5/2 clay, sharp bottom boundary, no forams seen."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 49,
+    "fields": {
+        "core": 7,
+        "lithology": 1,        
+        "lower_bound": "16",
+        "upper_bound": "27.5",
+        "description": "Normally-graded sand(fining-upward)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 50,
+    "fields": {
+        "core": 7,
+        "lithology": 5,        
+        "lower_bound": "16",
+        "upper_bound": "19",
+        "description": "Silt. 2.5Y 5/2 quartz and other lithic fragments, shell fragments, rare sponge spicules."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 51,
+    "fields": {
+        "core": 7,
+        "lithology": 3,        
+        "lower_bound": "19",
+        "upper_bound": "23",
+        "description": "Fine sand.2.5Y 5/2 quartz and other lithic fragments, shell fragments, rare sponge spicules."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 52,
+    "fields": {
+        "core": 7,
+        "lithology": 1,        
+        "lower_bound": "23",
+        "upper_bound": "27.5",
+        "description": "Medium sand. 2.5Y 5/2 quartz and other lithic fragments, shell fragments, rare sponge spicules."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 53,
+    "fields": {
+        "core": 7,
+        "lithology": 10,        
+        "lower_bound": "27.5",
+        "upper_bound": "48",
+        "description": "foraminiferal ooze (silt with forams up to medium grain size shell fragments (& ooids?)). 2.5Y 6/3. 0.5cm pteropod (Diacria trispinosa) present at ~30 cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 54,
+    "fields": {
+        "core": 7,
+        "lithology": 8,        
+        "lower_bound": "48",
+        "upper_bound": "55",
+        "description": "2.5Y 5/3 clay, no forams or shell fragments seen; sharp bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 55,
+    "fields": {
+        "core": 7,
+        "lithology": 3,        
+        "lower_bound": "55",
+        "upper_bound": "59",
+        "description": "v. fine to fine/medium sand, shell fragments, lithic fragments; possibly some forams present; normally graded. 2.5Y 5/3.  Irregular bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 56,
+    "fields": {
+        "core": 7,
+        "lithology": 10,        
+        "lower_bound": "59",
+        "upper_bound": "111",
+        "description": "foraminiferal ooze (silt with forams up to medium size) conaining abundant forams with rare shell fragments(ooids? also); 2.5Y 6/2."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 57,
+    "fields": {
+        "core": 7,
+        "lithology": 6,        
+        "lower_bound": "111",
+        "upper_bound": "124",
+        "description": "Silt to v. fine sand, abundant lithic fragments, forams abundant; pteropods present (up to 0.5cm in diameter). Sponge spicules.."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 58,
+    "fields": {
+        "core": 8,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "2.5",
+        "description": "10YR 6/3 ooze (clay-silt) with some foams (p to medium sand size)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 59,
+    "fields": {
+        "core": 8,
+        "lithology": 10,        
+        "lower_bound": "2.5",
+        "upper_bound": "4",
+        "description": "foraminiferal ooze (silt-v.fine sand); foram abundance higher than 0-2.5cm interval; contains lithics (dark + quartz like) and shell fragments; 10YR 6/3."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 60,
+    "fields": {
+        "core": 8,
+        "lithology": 10,        
+        "lower_bound": "4",
+        "upper_bound": "12",
+        "description": "foraminiferal ooze (as at 0 - 2.5 cm), 10YR 6/3; diffuse bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 61,
+    "fields": {
+        "core": 8,
+        "lithology": 10,        
+        "lower_bound": "12",
+        "upper_bound": "15",
+        "description": "foraminiferal ooze (as at 4 - 12cm) but color changes to a mix of 10YR 6/3 and 2.5Y 7/2; manganese staining at 14cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 62,
+    "fields": {
+        "core": 8,
+        "lithology": 8,        
+        "lower_bound": "15",
+        "upper_bound": "31",
+        "description": "10YR 6/3 - 2.5Y 7/2 (changes like 12-15cm) clay with some scattered pockets (one visible @ 19.5cm) of foram rich clay."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 63,
+    "fields": {
+        "core": 8,
+        "lithology": 8,        
+        "lower_bound": "31",
+        "upper_bound": "162.5",
+        "description": "2.5Y 7/2 featureless clay (except for manganese staining at 33, 35 and 41cm [pocket of foram-rich ooze associated with staining]."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 64,
+    "fields": {
+        "core": 9,
+        "lithology": 8,        
+        "lower_bound": "0",
+        "upper_bound": "1",
+        "description": "10YR 6/3 clay-rich ooze, some forams present."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 65,
+    "fields": {
+        "core": 9,
+        "lithology": 1,        
+        "lower_bound": "1",
+        "upper_bound": "3",
+        "description": "10YR 6/? medium to corae-grained sand; lithic fragments, slightly irregular top and bottom boundaries."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 66,
+    "fields": {
+        "core": 9,
+        "lithology": 8,        
+        "lower_bound": "3",
+        "upper_bound": "14",
+        "description": "10YR 6/3 clay-rich ooze (as at 0-1cm), rare forams."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 67,
+    "fields": {
+        "core": 9,
+        "lithology": 7,        
+        "lower_bound": "14",
+        "upper_bound": "21",
+        "description": "2.5Y 6/2 laminated clay/silt -vfine sand layers."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 68,
+    "fields": {
+        "core": 9,
+        "lithology": 8,        
+        "lower_bound": "21",
+        "upper_bound": "28",
+        "description": "2.5Y 7/2 clay; no forams/shell fragments/lithic framents.  Diffuse top and bottom boundaries (manganese streaks)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 69,
+    "fields": {
+        "core": 9,
+        "lithology": 8,        
+        "lower_bound": "28",
+        "upper_bound": "102.5",
+        "description": "2.5Y 7/2 featureless clay (sticky)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 70,
+    "fields": {
+        "core": 10,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "70",
+        "description": "10YR 6/3 foraminiferal ooze (silt with scattered, abundant forams up to medium grain size)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 71,
+    "fields": {
+        "core": 10,
+        "lithology": 9,        
+        "lower_bound": "7",
+        "upper_bound": "8",
+        "description": "Concentrated layer of forams(medium to coarse grain size) with dark and light lithic fragments and shell fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 72,
+    "fields": {
+        "core": 10,
+        "lithology": 9,        
+        "lower_bound": "16",
+        "upper_bound": "17",
+        "description": "pockets of foram sand similar to that at 7cm (more may be present below the surface of the core)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 73,
+    "fields": {
+        "core": 10,
+        "lithology": 10,        
+        "lower_bound": "48",
+        "upper_bound": "70",
+        "description": "Manganese banding (most intense banding between 53.5 and 70cm)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 74,
+    "fields": {
+        "core": 10,
+        "lithology": 9,        
+        "lower_bound": "62",
+        "upper_bound": "63",
+        "description": "foraminiferal sand similar to that at 7cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 75,
+    "fields": {
+        "core": 11,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "9",
+        "description": "foraminiferal ooze (silt with up to fine-grain size forams). 10YR 6/3."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 76,
+    "fields": {
+        "core": 11,
+        "lithology": 1,        
+        "lower_bound": "9",
+        "upper_bound": "15",
+        "description": "Normally-graded sand (fining-upward) 10YR 6/3."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 77,
+    "fields": {
+        "core": 11,
+        "lithology": 3,        
+        "lower_bound": "9",
+        "upper_bound": "10.5",
+        "description": "fine-grained sand, with lithic and shell fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 78,
+    "fields": {
+        "core": 11,
+        "lithology": 1,        
+        "lower_bound": "10.5",
+        "upper_bound": "15",
+        "description": "coarse-grained sand with lithic and shell fragments. Sharp bottom contact."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 79,
+    "fields": {
+        "core": 11,
+        "lithology": 5,        
+        "lower_bound": "15",
+        "upper_bound": "18",
+        "description": "10YR 6/3 silt with 0.25-0.5cm thick greenish (2.5Y 6/4 or 5/3 layer at 17cm)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 80,
+    "fields": {
+        "core": 11,
+        "lithology": 10,        
+        "lower_bound": "18",
+        "upper_bound": "63",
+        "description": "foraminiferal ooze (silt with up to medium size forams). Slightly mottled with orange/tan streaks; 0.5cm fine sand layer. 10YR 6/2; irregular bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 81,
+    "fields": {
+        "core": 11,
+        "lithology": 1,        
+        "lower_bound": "63",
+        "upper_bound": "67",
+        "description": "medium grained foram sand with shell fragments, green + black lithic fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 82,
+    "fields": {
+        "core": 11,
+        "lithology": 5,        
+        "lower_bound": "67",
+        "upper_bound": "73",
+        "description": "silt (slightly greener than at 18-63cm)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 83,
+    "fields": {
+        "core": 11,
+        "lithology": 3,        
+        "lower_bound": "73",
+        "upper_bound": "76.5",
+        "description": "fine-medium sand with forams, shell fragments and lithic fragments; irregular top and bottom boundaries."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 84,
+    "fields": {
+        "core": 11,
+        "lithology": 10,        
+        "lower_bound": "76.5",
+        "upper_bound": "98.5",
+        "description": "foraminiferal ooze (clay-silt); 10YR 6/2 with greenish mottling."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 85,
+    "fields": {
+        "core": 11,
+        "lithology": 10,        
+        "lower_bound": "98.5",
+        "upper_bound": "122.5",
+        "description": "Foraminiferal ooze (silt-v.fine sand), slightly larger color than ooze at 76.5-98.5cm; contains sponge spicules & lithic fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 86,
+    "fields": {
+        "core": 11,
+        "lithology": 3,        
+        "lower_bound": "122.5",
+        "upper_bound": "125",
+        "description": "v.fine - fine grained sand, forams, shell fragments and small lithic fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 87,
+    "fields": {
+        "core": 11,
+        "lithology": 10,        
+        "lower_bound": "125",
+        "upper_bound": "142",
+        "description": "Foraminiferal ooze (silt); 10YR 6/2; small shell fragments scattered throughout."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 88,
+    "fields": {
+        "core": 11,
+        "lithology": 3,        
+        "lower_bound": "142",
+        "upper_bound": "150",
+        "description": "Fining upward sand, silt/v.fine sand at 142cm coarsening to fine sand at 150cm.  Irregular top and bottom contacts. Abundant small lithic and shell fragments; sponge spicules and forams."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 89,
+    "fields": {
+        "core": 11,
+        "lithology": 7,        
+        "lower_bound": "150",
+        "upper_bound": "162",
+        "description": "10YR 6/2 clay-silt"
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 90,
+    "fields": {
+        "core": 11,
+        "lithology": 7,        
+        "lower_bound": "162",
+        "upper_bound": "203",
+        "description": "10YR 6/2 clay-silt with some darker mottling; sponge spicules present. 176.5-178cm fine sand pocket (not a visible layer)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 91,
+    "fields": {
+        "core": 12,
+        "lithology": 6,        
+        "lower_bound": "0",
+        "upper_bound": "3.5",
+        "description": "10YR 6/3 silt-v.fine sand; rare forams, abundant black fragments (lithics, manganese?); diffuse/irregular bottom boundary; dark mottling."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 92,
+    "fields": {
+        "core": 12,
+        "lithology": 1,        
+        "lower_bound": "3.5",
+        "upper_bound": "6",
+        "description": "Medium to coarse-grained foraminifera sand; contains shell fragments, black grains (lithics, manganese?); some dark mottling; irregular bottom boundary; some material flow down edge of core to ~10cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 93,
+    "fields": {
+        "core": 12,
+        "lithology": 10,        
+        "lower_bound": "6",
+        "upper_bound": "17",
+        "description": "10YR 6/3 foraminiferal ooze (clay-v.fine sand); contains similar black fragments as at 0-3.5cm & 3.5-6cm; diffuse gradational bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 94,
+    "fields": {
+        "core": 12,
+        "lithology": 8,        
+        "lower_bound": "17",
+        "upper_bound": "33.5",
+        "description": "Mix of 10YR 6/3 and 2.Y 7/2 clay; foram rich zone (not a well defined layer) between 24-25cm (silt with sponge spicules); manganese staining throughout. 32-33.5cm - slightly more greenish colored clay."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 95,
+    "fields": {
+        "core": 12,
+        "lithology": 8,        
+        "lower_bound": "33.5",
+        "upper_bound": "223",
+        "description": "2.5Y 7/2 featureless clay."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 96,
+    "fields": {
+        "core": 13,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "2",
+        "description": "2.5Y 6/3 foraminifera ooze with up to medium-grain sie forams; shell fragments and sponge spicules present."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 97,
+    "fields": {
+        "core": 13,
+        "lithology": 10,        
+        "lower_bound": "2",
+        "upper_bound": "17",
+        "description": "10YR 6/3 foraminifera ooze (with up to medium grain size forams); shell fragments (one measured at 0.5cm long) and uncoiled pteropods (Creseis chierchiae) present."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 98,
+    "fields": {
+        "core": 13,
+        "lithology": 10,        
+        "lower_bound": "17",
+        "upper_bound": "28.5",
+        "description": "as at 2-17cm but a slightly dark color."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 99,
+    "fields": {
+        "core": 14,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "34",
+        "description": "10YR 6/3 foraminifera ooze with forams upto medium grain-size; forams are abundant; shell and carbonate rock fragments; Diacria trispinosa and uncoiled pteropod."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 100,
+    "fields": {
+        "core": 15,
+        "lithology": 8,        
+        "lower_bound": "0",
+        "upper_bound": "5.5",
+        "description": "10YR 4/3 or 5/3 soapy clay, featureless."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 101,
+    "fields": {
+        "core": 15,
+        "lithology": 8,        
+        "lower_bound": "5.5",
+        "upper_bound": "10",
+        "description": "10Y/4 (greenish-brown/olive) stiff clay; fractured, some carbonate debris at top contact (forams, carbonate rock fragments); rip-up clasts of 10-19cm clay at base of interval."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 102,
+    "fields": {
+        "core": 15,
+        "lithology": 8,        
+        "lower_bound": "10",
+        "upper_bound": "19",
+        "description": "5GY/4 or 10GY/4 stiff clay with 10y/4 burrow(?); >2cm carbonate rock pebbles present at 14cm and 11-11.5cm; carbonate rock debris scattered throughout itnerval."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 103,
+    "fields": {
+        "core": 16,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "12.5",
+        "description": "10YR 5/4 'sandy' foraminifera ooze, clay-silt matrix with upto coarse grain size Creseis pteropods, sponge spicules, and forams (all very abundant), shell fragments present; no visible layering or bedding."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 104,
+    "fields": {
+        "core": 17,
+        "lithology": 1,        
+        "lower_bound": "0",
+        "upper_bound": "2.5",
+        "description": "Medium-grained sand, abundant forams, shell fragments, lithic fragments very abundant (dark colored and quartz)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 105,
+    "fields": {
+        "core": 17,
+        "lithology": 5,        
+        "lower_bound": "2.5",
+        "upper_bound": "16",
+        "description": "Silt to fine sand with packets of medium sand (as at 0-2.5cm); 10YR 5/6. 9-11cm sandy layer similar to that at 0-25cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 106,
+    "fields": {
+        "core": 17,
+        "lithology": 6,        
+        "lower_bound": "16",
+        "upper_bound": "31",
+        "description": "Interbedded silt and v. fine sand to medium sand. [16-19cm, 20-24cm, 26-27cm, 29-31cm] - medium sand with forams, angular quartz and lithic fragments, possibly some small shell fragments. Abundant black lithic fragments at 22-24cm and 29-31cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 107,
+    "fields": {
+        "core": 17,
+        "lithology": 5,        
+        "lower_bound": "31",
+        "upper_bound": "51",
+        "description": "Silt to fine sand as at 2.5-16cm, abundant sponge spicules, dark brown bands at 33., 35, 38, 40, 43 and 44 cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 108,
+    "fields": {
+        "core": 17,
+        "lithology": 1,        
+        "lower_bound": "51",
+        "upper_bound": "55.5",
+        "description": "Medium to coarse grained foram sand, some lithic and shell fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 109,
+    "fields": {
+        "core": 17,
+        "lithology": 5,        
+        "lower_bound": "55.5",
+        "upper_bound": "62",
+        "description": "Silt/fine sand as at 2.5-16cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 110,
+    "fields": {
+        "core": 17,
+        "lithology": 1,        
+        "lower_bound": "62",
+        "upper_bound": "63.5",
+        "description": "Fine-medium sand (similar to that at 51-55.5cm) with sponge spicules and abundant lithic and shell fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 111,
+    "fields": {
+        "core": 17,
+        "lithology": 5,        
+        "lower_bound": "63.5",
+        "upper_bound": "75",
+        "description": "Silt/fine sand as at 2.5-16cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 112,
+    "fields": {
+        "core": 17,
+        "lithology": 1,        
+        "lower_bound": "75",
+        "upper_bound": "76",
+        "description": "Medium sand, abundant black lithic fragments (quartz? also present) with some forams present (similar to sands at 62cm and 16m)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 113,
+    "fields": {
+        "core": 17,
+        "lithology": 5,        
+        "lower_bound": "76",
+        "upper_bound": "86",
+        "description": "silt/fine sand as at 2.5-16cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 114,
+    "fields": {
+        "core": 17,
+        "lithology": 1,        
+        "lower_bound": "86",
+        "upper_bound": "90",
+        "description": "Normally-graded sand (fining-upward). Fine - medium/coarse, with predominantly angular to rounded lithic fragments."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 115,
+    "fields": {
+        "core": 17,
+        "lithology": 6,        
+        "lower_bound": "90",
+        "upper_bound": "142",
+        "description": "silt/v. fine sand as at 76-86cm (color change at 107cm to 10YR 5/6). Fine sand interbeds throughout interval composed of lithics (quartz, forams, shell fragments, sponge spicules)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 116,
+    "fields": {
+        "core": 18,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "10.5",
+        "description": "10YR 4/2 or 5/4 foraminifera ooze (clay-silt), scattered forams; sharp bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 117,
+    "fields": {
+        "core": 18,
+        "lithology": 8,        
+        "lower_bound": "10.5",
+        "upper_bound": "28",
+        "description": "5G/7 clay; no forams seen."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 118,
+    "fields": {
+        "core": 19,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "13",
+        "description": "Light brown foraminifera ooze (silt - b.fine sand grain sie)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 119,
+    "fields": {
+        "core": 19,
+        "lithology": 10,        
+        "lower_bound": "13",
+        "upper_bound": "28",
+        "description": "Tan colored foraminifera ooze (silt - v.fine sand); structureless."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 120,
+    "fields": {
+        "core": 19,
+        "lithology": 10,        
+        "lower_bound": "28",
+        "upper_bound": "116",
+        "description": "as at 0-13cm, sharp bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 121,
+    "fields": {
+        "core": 19,
+        "lithology": 7,        
+        "lower_bound": "116",
+        "upper_bound": "139.5",
+        "description": "Light brown clay-silt; structureless; irregular bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 122,
+    "fields": {
+        "core": 19,
+        "lithology": 1,        
+        "lower_bound": "139.5",
+        "upper_bound": "143.5",
+        "description": "Medium-coarse grained sand; forams present; irregular bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 123,
+    "fields": {
+        "core": 19,
+        "lithology": 10,        
+        "lower_bound": "143.5",
+        "upper_bound": "204.5",
+        "description": "Foraminifera ooze (silt-v.fine sand); structureless, some manganese staining; carbonate rock fragment (cobble size) at 195.5cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 124,
+    "fields": {
+        "core": 19,
+        "lithology": 8,        
+        "lower_bound": "204.5",
+        "upper_bound": "211.5",
+        "description": "10YR 7/3 clay with some scattered forams and shell fragments (interval is a mix of 10YR 7/3 and 2.5Y 6/3 colors in places); manganese streaks throughout."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 125,
+    "fields": {
+        "core": 19,
+        "lithology": 10,        
+        "lower_bound": "211.5",
+        "upper_bound": "221.5",
+        "description": "2.5Y 6/3? Foraminifera ooze (with up to medium grain size forams); manganese streaking an grains throughout."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 126,
+    "fields": {
+        "core": 19,
+        "lithology": 8,        
+        "lower_bound": "221.5",
+        "upper_bound": "228.5",
+        "description": "As at 204.5-211.5cm except for less 2.5Y 6/3 color mixing; irregular bottom boundary."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 127,
+    "fields": {
+        "core": 19,
+        "lithology": 8,        
+        "lower_bound": "228.5",
+        "upper_bound": "239.5",
+        "description": "2.5U 6/3 clay; rare shell fragments, no forams seen; manganese streaks throughout interval (between 231-235cm, pocket of manganese streaked 10YR 7/3 clay, as at 204.5-211.5cm)."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 128,
+    "fields": {
+        "core": 19,
+        "lithology": 10,        
+        "lower_bound": "239.5",
+        "upper_bound": "247.5",
+        "description": "Foraminiferal ooze (clay-silt), forams are not abundant; slightly lighter color than the 228.5-239.5cm interval; manganese streaking throughout."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 129,
+    "fields": {
+        "core": 20,
+        "lithology": 10,        
+        "lower_bound": "0",
+        "upper_bound": "14",
+        "description": "10YR 5/4 foraminifera ooze (with up to medium grain-size forams); angular carbonate rock pebbel at 10.5cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 130,
+    "fields": {
+        "core": 20,
+        "lithology": 1,        
+        "lower_bound": "14",
+        "upper_bound": "15",
+        "description": "10YR 5/4 fine-very coarse grained sand with Creseis chierchiae pteropods, abundant forams, shell and lithic fragments and sponge spicules (pebble size pteropod (Diacria trispinosa) at 15cm."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 131,
+    "fields": {
+        "core": 20,
+        "lithology": 1,        
+        "lower_bound": "15",
+        "upper_bound": "19",
+        "description": "Very coarse - pebble grain sized sand pocket surrounded by sticky dense green clay that continues to 34.5cm. Sand is poorly sorted containing abundant forams, lithic fragments (quartz, biotite, etc), carbonate rock fragments, shells and shell fragments.  Diacria and Creseis pteropods, and sponge spicules >1cm carbonate pebble and >1cm Diacria pteropod (completely intact) present."
+    }
+},
+{
+    "model": "cores.strata",
+    "pk": 132,
+    "fields": {
+        "core": 20,
+        "lithology": 8,        
+        "lower_bound": "19",
+        "upper_bound": "34.5",
+        "description": "Green clay is featureless except for scattered shell fragments and forams (which may have come from the sand above)."
+    }
 }
 ]
