@@ -6,7 +6,7 @@ export default ({ scales, margins, svgDimensions }) => {
 
   const xProps = {
     orient: 'Bottom',
-    scale: scales.xScale,
+    scale: scales.x,
     // I'm rendering the axes at a different location so...
     // translate: `translate(0, ${height - margins.bottom})`,    
     translate: 'translate(0,' + (height - margins.bottom - margins.top) + ')',
@@ -15,7 +15,7 @@ export default ({ scales, margins, svgDimensions }) => {
 
   const yProps = {
     orient: 'Left',
-    scale: scales.yScale,
+    scale: scales.y,
     // translate: `translate(${margins.left}, 0)`,
     translate: 'translate(0,0)',
     tickSize: width - margins.left - margins.right,

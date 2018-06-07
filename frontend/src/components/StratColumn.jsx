@@ -3,45 +3,22 @@ import Axes from './Axes'
 import * as d3 from 'd3';
 
 import ResponsiveWrapper from './ResponsiveWrapper';
-
+import SandGravel from './svg_components/SandGravel';
+import Sand from './svg_components/Sand';
+import SandySilt from './svg_components/SandySilt';
+import Silt from './svg_components/Silt';
+import SiltySand from './svg_components/SiltySand';
+import Clay from './svg_components/Clay';
+import ForamOoze from './svg_components/ForamOoze';
+import CoarseForamOoze from './svg_components/CoarseForamOoze';
 
 class StratColumn extends Component {
 
 	constructor(){
 		super();
 		this.drawColumn = this.drawColumn.bind(this);
-		this.buildTransformArray = this.buildTransformArray.bind(this);
 	}
 
-	buildTransformArray(y, strata_set){
-	  // For use inside the function.  This allows for the
-	  // sum of successive thickness by keeping track.
-	  let sumPrevThickness = 0;
-
-	  let transformArray = strata_set.map((d, i)=>{
-
-	  	// Store previous thickness to sum with with current
-	    let prevThickness = 0;
-	    let firstIndex = 0;
-	    let transSum;
-
-	    // To avoid NaN error, make the var 0 when the index is greater than 0
-	    // ie.  No previous index exist before index 0/ first data array
-	    if (i > firstIndex) {
-	      prevThickness = parseFloat(d.previous.thickness);
-	    }
-
-	    //Sum prevThickness... depth check
-	    sumPrevThickness += prevThickness;
-	    transSum = y(sumPrevThickness);
-
-	    // This is the value that will translate-y the bars right to the top of
-	    // the bar located below.  IE: Stack bars.
-	    return 'translate(0,' + transSum + ')';	  	
-	  });	
-
-	  return transformArray;	
-	}
 	drawColumn(core){
 
 	  let strata_set = core.strata_set;
@@ -88,32 +65,15 @@ class StratColumn extends Component {
 	  // Sets upper domain to the max thickness.
 	  y.domain([core.total_length, DOMAINBOUNDARY]);
 
-	  //GENERATE layer-groups
-	  // Defines the previous attribute to store previous thickness value up next
-	  for (let i = 0; i < strata_set.length; i++) {
-	    let prevIndex = 1;
-	    strata_set[i].previous = strata_set[i-prevIndex];
-	  }
-
-	  // An array that returns the transform values of each layer-group
-	  let transformArray = this.buildTransformArray(y, strata_set);
-
-
-
 	  // GENERATE lithology bars
-	  // I'm creating each property bar separately/ with its 
-	  // own scale to allow for future customizations...
-	  let x2 = x.copy();
-
 	  // Control width and alignment of columns
-	  let X2PADDING = 0;
-	  let X2ALIGN = 0;
-	  x2.rangeRound([RANGEBOUNDARY, width])
-	  .domain(['Lithology']).padding(X2PADDING).align(X2ALIGN);
+	  let XPADDING = 0;
+	  let XALIGN = 0;
+	  x.rangeRound([RANGEBOUNDARY, width])
+	  .domain(['Lithology','Color']).padding(XPADDING).align(XALIGN);
 
 	  // Array that will contain drawing instructions for all
 	  // layers
-	  let lithologyArray = []
 
 	  function getLithColor(lithology){
 	  	if (lithology === "Clay & Silt"){
@@ -127,41 +87,79 @@ class StratColumn extends Component {
 	  	}
 	  }
 
-	  function getTransform(lower_bound) {
+	  // Instead of summing thickness succesively, I'll use the lower
+	  // bounds of each strata to determine the y-coordinate of the
+	  // layer in pixels.  This method allows is less reliant on
+	  // the order of the data.
+	  function getGroupLayerTransform(lower_bound) {
 	  	let yCoord = y(lower_bound)
-	  	console.log(lower_bound)
 	  	return 'translate(0,' + yCoord + ')';	  	
 
 	  }
 
-		// Populating lithologyArray
+	  function getPatternFill(lithology_name) {
+	  	console.log(lithology_name);
+	  	switch(lithology_name){
+	  		case "Gravel & Sand":
+	  			return "url(#sed605)";
+	  		case "Sand":
+	  			return "url(#sand-pattern)";
+	  		case "Fine Sand":
+	  			return "url(#sand-pattern)";	  			
+	  		case "Sandy Silt":
+	  		  return "url(#sed619)";
+	  		case "Silt" || "Clay & Silt":
+	  			return "url(#sed616)";
+	  		case "Clay":
+	  			return "url(#sed620)";
+	  		case "Silty Sand":
+	  			return "url(#sed617)";
+	  		case "Foram Ooze":
+	  			return "url(#foram-ooze)";
+	  		case "Coarse Foram Ooze":
+	  			return "url(#coarse-foram-ooze)";	  			
+	  		default:
+	  			return "blue";
+	  	}
+	  }
+
+		// Populating lithologyArray. This array will contain required info to 
+		// draw the bars.
+	  let lithologyArray = []
+
 	  strata_set.map((d,i)=>{  	
 	  	let obj = {
-	  		width: x2.bandwidth(),
+	  		width: x.bandwidth(),
 	  		height: y(parseFloat(d.thickness)),
-	  		x: x2("Lithology"),
+	  		x: x("Lithology"),
 	  		fill: getLithColor(d.lithology.name),
-	  		transform: getTransform(d.lower_bound),
+	  		patternFill: getPatternFill(d.lithology.name),
+	  		transform: getGroupLayerTransform(d.lower_bound),
 	  	};
 	  	lithologyArray.push(obj);
 	  });
 
-	  // Scales for axis creatiion...
-		let xScale = x2;
-		let yScale = y;
-
 	  return (
 
 	  	<svg className="column-svg" height={svgDimensions.height} width={svgDimensions.width}>
+				<SandGravel/>		
+				<Sand/>	
+				<SandySilt/>
+				<Silt/>
+				<SiltySand/>
+				<Clay/>
+				<ForamOoze/>
+				<CoarseForamOoze/>
 	  		<g className="column-container" transform={"translate(" + margins.left + ", " + margins.top + ")"}>
 	  			{lithologyArray.map((d,i) => (
 		  			<g className="layer-group" key={"layer-group-" + i}transform={d.transform}>
 		  					<rect className="bar" fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
+		  					<rect className="bar" fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
 		  			</g>
 	  			))}
 
 	  			<Axes
-	  				scales={{xScale, yScale}}
+	  				scales={{x, y}}
 	  				margins = {margins}
 	  				svgDimensions = {svgDimensions}
 	  			/>
@@ -176,7 +174,7 @@ class StratColumn extends Component {
 		// let width = this.props.width;
 		// let height = this.props.height;
 		return (
-			<div className={'column-component-wrapper'}>				
+			<div className={'column-component-wrapper'}>	
 				{this.drawColumn(core)}
 			</div>
 		);

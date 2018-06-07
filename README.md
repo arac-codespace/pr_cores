@@ -15,6 +15,9 @@
 Setup React + Django etc
 http://v1k45.com/blog/modern-django-part-1-setting-up-django-and-react/
 
+//SVG to Component
+https://svgr.now.sh/
+
 //D3
 https://github.com/freddyrangel/playing-with-react-and-d3
 https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274
