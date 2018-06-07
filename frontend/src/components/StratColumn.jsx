@@ -12,6 +12,24 @@ import Clay from './svg_components/Clay';
 import ForamOoze from './svg_components/ForamOoze';
 import CoarseForamOoze from './svg_components/CoarseForamOoze';
 
+import LithTextures	from './svg_components/LithTextures';
+
+import jss from 'jss';
+import preset from 'jss-preset-default';
+
+// One time setup with default plugins and settings.
+jss.setup(preset());
+
+// MapButton zIndex: 999999
+const styles = {
+  bars: {
+    stroke: "black",
+    strokeWidth: "2px"
+	},
+};
+
+const { classes } = jss.createStyleSheet(styles).attach();
+
 class StratColumn extends Component {
 
 	constructor(){
@@ -98,26 +116,27 @@ class StratColumn extends Component {
 	  }
 
 	  function getPatternFill(lithology_name) {
-	  	console.log(lithology_name);
 	  	switch(lithology_name){
 	  		case "Gravel & Sand":
-	  			return "url(#sed605)";
+	  			return "url(#sand-gravel-pattern)";
 	  		case "Sand":
 	  			return "url(#sand-pattern)";
 	  		case "Fine Sand":
-	  			return "url(#sand-pattern)";	  			
+	  			return "url(#fine-sand-pattern)";	  			
 	  		case "Sandy Silt":
-	  		  return "url(#sed619)";
-	  		case "Silt" || "Clay & Silt":
-	  			return "url(#sed616)";
+	  		  return "url(#sandy-silt-pattern)";
+	  		case "Silt":
+	  			return "url(#silt-pattern)";
+	  		case "Clay & Silt":
+					return "url(#clay-silt-pattern)";	  			
 	  		case "Clay":
-	  			return "url(#sed620)";
+	  			return "url(#clay-pattern)";
 	  		case "Silty Sand":
-	  			return "url(#sed617)";
+	  			return "url(#silty-sand-pattern)";
 	  		case "Foram Ooze":
-	  			return "url(#foram-ooze)";
+	  			return "url(#foram-ooze-pattern)";
 	  		case "Coarse Foram Ooze":
-	  			return "url(#coarse-foram-ooze)";	  			
+	  			return "url(#coarse-foram-ooze-pattern)";	  			
 	  		default:
 	  			return "blue";
 	  	}
@@ -142,19 +161,11 @@ class StratColumn extends Component {
 	  return (
 
 	  	<svg className="column-svg" height={svgDimensions.height} width={svgDimensions.width}>
-				<SandGravel/>		
-				<Sand/>	
-				<SandySilt/>
-				<Silt/>
-				<SiltySand/>
-				<Clay/>
-				<ForamOoze/>
-				<CoarseForamOoze/>
 	  		<g className="column-container" transform={"translate(" + margins.left + ", " + margins.top + ")"}>
 	  			{lithologyArray.map((d,i) => (
 		  			<g className="layer-group" key={"layer-group-" + i}transform={d.transform}>
-		  					<rect className="bar" fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
-		  					<rect className="bar" fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
+		  					<rect className={"bar " + classes.bars} fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
+		  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
 		  			</g>
 	  			))}
 

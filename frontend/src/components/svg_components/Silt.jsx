@@ -1,23 +1,22 @@
 import React from "react";
 // For silt and Clay + Silt
 const Silt = props => (
-  <svg width={0} height={0} {...props}>
     <defs>
       <pattern
-        id="sed616"
-        height={54.125}
-        width={54.125}
+        id={props.id}
+        width={props.width}
+        height={props.height}
         patternUnits="userSpaceOnUse"
         patternTransform="translate(41.752 114.18)"
       >
-        <g>
+        <g transform="scale(2)">
           <g id="g24302" transform="translate(5.625 52.77)">
             <path
               id="path24304"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24306" transform="translate(23.75 52.77)">
@@ -25,8 +24,8 @@ const Silt = props => (
               id="path24308"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24310" transform="translate(50.959 52.77)">
@@ -34,8 +33,8 @@ const Silt = props => (
               id="path24312"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24314" transform="translate(6.834 49.583)">
@@ -43,8 +42,8 @@ const Silt = props => (
               id="path24316"
               d="M0 0h-6.834"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24318" transform="translate(24.709 49.583)">
@@ -52,8 +51,8 @@ const Silt = props => (
               id="path24320"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24322" transform="translate(33.75 49.583)">
@@ -61,8 +60,8 @@ const Silt = props => (
               id="path24324"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24326" transform="translate(16.959 46.583)">
@@ -70,8 +69,8 @@ const Silt = props => (
               id="path24328"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24330" transform="translate(34.959 46.583)">
@@ -79,8 +78,8 @@ const Silt = props => (
               id="path24332"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24334" transform="translate(43.75 46.583)">
@@ -88,8 +87,8 @@ const Silt = props => (
               id="path24336"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24338" transform="translate(6.834 43.708)">
@@ -97,8 +96,8 @@ const Silt = props => (
               id="path24340"
               d="M0 0h-6.834"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24342" transform="translate(24.709 43.708)">
@@ -106,8 +105,8 @@ const Silt = props => (
               id="path24344"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24346" transform="translate(33.625 43.708)">
@@ -115,35 +114,35 @@ const Silt = props => (
               id="path24348"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
-          <g id="g24350" transform="translate(50.709 40.708)">
+          <g id="g24350" transform="translate(5109 4108)">
             <path
               id="path24352"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
-          <g id="g24354" transform="translate(32.709 40.708)">
+          <g id="g24354" transform="translate(32.709 4108)">
             <path
               id="path24356"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
-          <g id="g24358" transform="translate(14.584 40.708)">
+          <g id="g24358" transform="translate(14.584 4108)">
             <path
               id="path24360"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24362" transform="translate(0 37.583)">
@@ -151,8 +150,8 @@ const Silt = props => (
               id="path24364"
               d="M0 0h5.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24366" transform="translate(23.084 37.583)">
@@ -160,8 +159,8 @@ const Silt = props => (
               id="path24368"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24370" transform="translate(31.875 37.583)">
@@ -169,8 +168,8 @@ const Silt = props => (
               id="path24372"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24374" transform="translate(41.625 34.708)">
@@ -178,8 +177,8 @@ const Silt = props => (
               id="path24376"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24378" transform="translate(23.75 34.708)">
@@ -187,8 +186,8 @@ const Silt = props => (
               id="path24380"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24382" transform="translate(5.875 34.708)">
@@ -196,8 +195,8 @@ const Silt = props => (
               id="path24384"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24386" transform="translate(4.959 31.583)">
@@ -205,8 +204,8 @@ const Silt = props => (
               id="path24388"
               d="M0 0h-4.959"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24390" transform="translate(13.75 31.583)">
@@ -214,8 +213,8 @@ const Silt = props => (
               id="path24392"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24394" transform="translate(31.75 31.583)">
@@ -223,8 +222,8 @@ const Silt = props => (
               id="path24396"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24398" transform="translate(39.75 28.583)">
@@ -232,8 +231,8 @@ const Silt = props => (
               id="path24400"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24402" transform="translate(30.834 28.583)">
@@ -241,8 +240,8 @@ const Silt = props => (
               id="path24404"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24406" transform="translate(12.584 28.583)">
@@ -250,8 +249,8 @@ const Silt = props => (
               id="path24408"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24410" transform="translate(0 25.458)">
@@ -259,8 +258,8 @@ const Silt = props => (
               id="path24412"
               d="M0 0h2.959"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24414" transform="translate(20.834 25.458)">
@@ -268,8 +267,8 @@ const Silt = props => (
               id="path24416"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24418" transform="translate(29.875 25.458)">
@@ -277,8 +276,8 @@ const Silt = props => (
               id="path24420"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24422" transform="translate(37.625 22.583)">
@@ -286,8 +285,8 @@ const Silt = props => (
               id="path24424"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24426" transform="translate(19.625 22.583)">
@@ -295,8 +294,8 @@ const Silt = props => (
               id="path24428"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24430" transform="translate(10.834 22.583)">
@@ -304,8 +303,8 @@ const Silt = props => (
               id="path24432"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24434" transform="translate(2.584 19.458)">
@@ -313,8 +312,8 @@ const Silt = props => (
               id="path24436"
               d="M0 0h-2.584"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24438" transform="translate(20.584 19.458)">
@@ -322,8 +321,8 @@ const Silt = props => (
               id="path24440"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24442" transform="translate(29.5 19.458)">
@@ -331,8 +330,8 @@ const Silt = props => (
               id="path24444"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24446" transform="translate(39.75 16.458)">
@@ -340,8 +339,8 @@ const Silt = props => (
               id="path24448"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24450" transform="translate(21.75 16.458)">
@@ -349,8 +348,8 @@ const Silt = props => (
               id="path24452"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24454" transform="translate(12.834 16.458)">
@@ -358,8 +357,8 @@ const Silt = props => (
               id="path24456"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24458" transform="translate(5.084 13.458)">
@@ -367,8 +366,8 @@ const Silt = props => (
               id="path24460"
               d="M0 0h-5.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24462" transform="translate(13.875 13.458)">
@@ -376,8 +375,8 @@ const Silt = props => (
               id="path24464"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24466" transform="translate(31.75 13.458)">
@@ -385,8 +384,8 @@ const Silt = props => (
               id="path24468"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24470" transform="translate(41.625 10.583)">
@@ -394,8 +393,8 @@ const Silt = props => (
               id="path24472"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24474" transform="translate(32.959 10.583)">
@@ -403,8 +402,8 @@ const Silt = props => (
               id="path24476"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24478" transform="translate(14.959 10.583)">
@@ -412,8 +411,8 @@ const Silt = props => (
               id="path24480"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24482" transform="translate(6.459 7.333)">
@@ -421,8 +420,8 @@ const Silt = props => (
               id="path24484"
               d="M0 0h-6.459"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24486" transform="translate(15.5 7.333)">
@@ -430,8 +429,8 @@ const Silt = props => (
               id="path24488"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24490" transform="translate(33.625 7.333)">
@@ -439,17 +438,17 @@ const Silt = props => (
               id="path24492"
               d="M0 0h9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
-          <g id="g24494" transform="translate(50.709 4.458)">
+          <g id="g24494" transform="translate(5109 4.458)">
             <path
               id="path24496"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24498" transform="translate(32.959 4.458)">
@@ -457,8 +456,8 @@ const Silt = props => (
               id="path24500"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24502" transform="translate(14.834 4.458)">
@@ -466,8 +465,8 @@ const Silt = props => (
               id="path24504"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24506" transform="translate(0 1.333)">
@@ -475,8 +474,8 @@ const Silt = props => (
               id="path24508"
               d="M0 0h5.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24510" transform="translate(22.834 1.333)">
@@ -484,17 +483,17 @@ const Silt = props => (
               id="path24512"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
-          <g id="g24514" transform="translate(40.709 1.333)">
+          <g id="g24514" transform="translate(4109 1.333)">
             <path
               id="path24516"
               d="M0 0h-9.084"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24518" transform="translate(51.917 49.583)">
@@ -502,8 +501,8 @@ const Silt = props => (
               id="path24520"
               d="M0 0h2.208"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24522" transform="translate(51.917 43.708)">
@@ -511,8 +510,8 @@ const Silt = props => (
               id="path24524"
               d="M0 0h2.208"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24526" transform="translate(50.167 37.583)">
@@ -520,8 +519,8 @@ const Silt = props => (
               id="path24528"
               d="M0 0h3.958"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24530" transform="translate(54.125 31.583)">
@@ -529,8 +528,8 @@ const Silt = props => (
               id="path24532"
               d="M0 0h-4.083"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24534" transform="translate(48.042 25.458)">
@@ -538,8 +537,8 @@ const Silt = props => (
               id="path24536"
               d="M0 0h6.083"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24538" transform="translate(47.667 19.458)">
@@ -547,8 +546,8 @@ const Silt = props => (
               id="path24540"
               d="M0 0h6.458"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24542" transform="translate(50.167 13.458)">
@@ -556,8 +555,8 @@ const Silt = props => (
               id="path24544"
               d="M0 0h3.958"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24546" transform="translate(51.542 7.333)">
@@ -565,8 +564,8 @@ const Silt = props => (
               id="path24548"
               d="M0 0h2.583"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24550" transform="translate(50.167 1.333)">
@@ -574,8 +573,8 @@ const Silt = props => (
               id="path24552"
               d="M0 0h3.958"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.3}
+              stroke="black"
+              strokeWidth={0.6}
             />
           </g>
           <g id="g24554" transform="translate(11.289 49.583)">
@@ -583,8 +582,8 @@ const Silt = props => (
               id="path24556"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -593,8 +592,8 @@ const Silt = props => (
               id="path24560"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -603,8 +602,8 @@ const Silt = props => (
               id="path24564"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -613,8 +612,8 @@ const Silt = props => (
               id="path24568"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -623,8 +622,8 @@ const Silt = props => (
               id="path24572"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -633,8 +632,8 @@ const Silt = props => (
               id="path24576"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -643,8 +642,8 @@ const Silt = props => (
               id="path24580"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -653,8 +652,8 @@ const Silt = props => (
               id="path24584"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -663,8 +662,8 @@ const Silt = props => (
               id="path24588"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -673,8 +672,8 @@ const Silt = props => (
               id="path24592"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -683,8 +682,8 @@ const Silt = props => (
               id="path24596"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -693,8 +692,8 @@ const Silt = props => (
               id="path24600"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -703,8 +702,8 @@ const Silt = props => (
               id="path24604"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -713,8 +712,8 @@ const Silt = props => (
               id="path24608"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -723,8 +722,8 @@ const Silt = props => (
               id="path24612"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -733,8 +732,8 @@ const Silt = props => (
               id="path24616"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -743,8 +742,8 @@ const Silt = props => (
               id="path24620"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -753,8 +752,8 @@ const Silt = props => (
               id="path24624"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -763,8 +762,8 @@ const Silt = props => (
               id="path24628"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -773,8 +772,8 @@ const Silt = props => (
               id="path24632"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -783,8 +782,8 @@ const Silt = props => (
               id="path24636"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -793,8 +792,8 @@ const Silt = props => (
               id="path24640"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -803,8 +802,8 @@ const Silt = props => (
               id="path24644"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -813,8 +812,8 @@ const Silt = props => (
               id="path24648"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -823,8 +822,8 @@ const Silt = props => (
               id="path24652"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -833,8 +832,8 @@ const Silt = props => (
               id="path24656"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -843,8 +842,8 @@ const Silt = props => (
               id="path24660"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -853,8 +852,8 @@ const Silt = props => (
               id="path24664"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -863,8 +862,8 @@ const Silt = props => (
               id="path24668"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -873,8 +872,8 @@ const Silt = props => (
               id="path24672"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -883,8 +882,8 @@ const Silt = props => (
               id="path24676"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -893,8 +892,8 @@ const Silt = props => (
               id="path24680"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -903,8 +902,8 @@ const Silt = props => (
               id="path24684"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -913,8 +912,8 @@ const Silt = props => (
               id="path24688"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -923,8 +922,8 @@ const Silt = props => (
               id="path24692"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -933,8 +932,8 @@ const Silt = props => (
               id="path24696"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -943,8 +942,8 @@ const Silt = props => (
               id="path24700"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -953,8 +952,8 @@ const Silt = props => (
               id="path24704"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -963,8 +962,8 @@ const Silt = props => (
               id="path24708"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -973,8 +972,8 @@ const Silt = props => (
               id="path24712"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -983,8 +982,8 @@ const Silt = props => (
               id="path24716"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -993,8 +992,8 @@ const Silt = props => (
               id="path24720"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1003,8 +1002,8 @@ const Silt = props => (
               id="path24724"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1013,8 +1012,8 @@ const Silt = props => (
               id="path24728"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1023,8 +1022,8 @@ const Silt = props => (
               id="path24732"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1033,8 +1032,8 @@ const Silt = props => (
               id="path24736"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1043,8 +1042,8 @@ const Silt = props => (
               id="path24740"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1053,8 +1052,8 @@ const Silt = props => (
               id="path24744"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1063,8 +1062,8 @@ const Silt = props => (
               id="path24748"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1073,8 +1072,8 @@ const Silt = props => (
               id="path24752"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1083,8 +1082,8 @@ const Silt = props => (
               id="path24756"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1093,8 +1092,8 @@ const Silt = props => (
               id="path24760"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1103,8 +1102,8 @@ const Silt = props => (
               id="path24764"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1113,8 +1112,8 @@ const Silt = props => (
               id="path24768"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1123,8 +1122,8 @@ const Silt = props => (
               id="path24772"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1133,8 +1132,8 @@ const Silt = props => (
               id="path24776"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1143,8 +1142,8 @@ const Silt = props => (
               id="path24780"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1153,8 +1152,8 @@ const Silt = props => (
               id="path24784"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1163,8 +1162,8 @@ const Silt = props => (
               id="path24788"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1173,8 +1172,8 @@ const Silt = props => (
               id="path24792"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1183,8 +1182,8 @@ const Silt = props => (
               id="path24796"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1193,8 +1192,8 @@ const Silt = props => (
               id="path24800"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1203,8 +1202,8 @@ const Silt = props => (
               id="path24804"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1213,8 +1212,8 @@ const Silt = props => (
               id="path24808"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1223,8 +1222,8 @@ const Silt = props => (
               id="path24812"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1233,8 +1232,8 @@ const Silt = props => (
               id="path24816"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1243,8 +1242,8 @@ const Silt = props => (
               id="path24820"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1253,8 +1252,8 @@ const Silt = props => (
               id="path24824"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1263,8 +1262,8 @@ const Silt = props => (
               id="path24828"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1273,8 +1272,8 @@ const Silt = props => (
               id="path24832"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1283,8 +1282,8 @@ const Silt = props => (
               id="path24836"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1293,8 +1292,8 @@ const Silt = props => (
               id="path24840"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1303,8 +1302,8 @@ const Silt = props => (
               id="path24844"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1313,8 +1312,8 @@ const Silt = props => (
               id="path24848"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1323,8 +1322,8 @@ const Silt = props => (
               id="path24852"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1333,8 +1332,8 @@ const Silt = props => (
               id="path24856"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1343,8 +1342,8 @@ const Silt = props => (
               id="path24860"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1353,8 +1352,8 @@ const Silt = props => (
               id="path24864"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1363,8 +1362,8 @@ const Silt = props => (
               id="path24868"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1373,18 +1372,18 @@ const Silt = props => (
               id="path24872"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
-          <g id="g24874" transform="translate(50.717 28.625)">
+          <g id="g24874" transform="translate(5117 28.625)">
             <path
               id="path24876"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1393,8 +1392,8 @@ const Silt = props => (
               id="path24880"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1403,8 +1402,8 @@ const Silt = props => (
               id="path24884"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1413,8 +1412,8 @@ const Silt = props => (
               id="path24888"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1423,8 +1422,8 @@ const Silt = props => (
               id="path24892"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1433,8 +1432,8 @@ const Silt = props => (
               id="path24896"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1443,8 +1442,8 @@ const Silt = props => (
               id="path24900"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1453,8 +1452,8 @@ const Silt = props => (
               id="path24904"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1463,8 +1462,8 @@ const Silt = props => (
               id="path24908"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1473,8 +1472,8 @@ const Silt = props => (
               id="path24912"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1483,8 +1482,8 @@ const Silt = props => (
               id="path24916"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1493,8 +1492,8 @@ const Silt = props => (
               id="path24920"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1503,8 +1502,8 @@ const Silt = props => (
               id="path24924"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1513,8 +1512,8 @@ const Silt = props => (
               id="path24928"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1523,8 +1522,8 @@ const Silt = props => (
               id="path24932"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1533,8 +1532,8 @@ const Silt = props => (
               id="path24936"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1543,8 +1542,8 @@ const Silt = props => (
               id="path24940"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1553,8 +1552,8 @@ const Silt = props => (
               id="path24944"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1563,8 +1562,8 @@ const Silt = props => (
               id="path24948"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1573,8 +1572,8 @@ const Silt = props => (
               id="path24952"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1583,8 +1582,8 @@ const Silt = props => (
               id="path24956"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1593,8 +1592,8 @@ const Silt = props => (
               id="path24960"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1603,8 +1602,8 @@ const Silt = props => (
               id="path24964"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1613,8 +1612,8 @@ const Silt = props => (
               id="path24968"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1623,8 +1622,8 @@ const Silt = props => (
               id="path24972"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1633,8 +1632,8 @@ const Silt = props => (
               id="path24976"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1643,8 +1642,8 @@ const Silt = props => (
               id="path24980"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1653,8 +1652,8 @@ const Silt = props => (
               id="path24984"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1663,8 +1662,8 @@ const Silt = props => (
               id="path24988"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1673,8 +1672,8 @@ const Silt = props => (
               id="path24992"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1683,8 +1682,8 @@ const Silt = props => (
               id="path24996"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1693,8 +1692,8 @@ const Silt = props => (
               id="path25000"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1703,8 +1702,8 @@ const Silt = props => (
               id="path25004"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1713,8 +1712,8 @@ const Silt = props => (
               id="path25008"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1723,8 +1722,8 @@ const Silt = props => (
               id="path25012"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1733,18 +1732,18 @@ const Silt = props => (
               id="path25016"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
-          <g id="g25018" transform="translate(50.78 16.438)">
+          <g id="g25018" transform="translate(518 16.438)">
             <path
               id="path25020"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1753,8 +1752,8 @@ const Silt = props => (
               id="path25024"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1763,8 +1762,8 @@ const Silt = props => (
               id="path25028"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1773,8 +1772,8 @@ const Silt = props => (
               id="path25032"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1783,8 +1782,8 @@ const Silt = props => (
               id="path25036"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1793,8 +1792,8 @@ const Silt = props => (
               id="path25040"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1803,8 +1802,8 @@ const Silt = props => (
               id="path25044"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1813,8 +1812,8 @@ const Silt = props => (
               id="path25048"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1823,8 +1822,8 @@ const Silt = props => (
               id="path25052"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1833,8 +1832,8 @@ const Silt = props => (
               id="path25056"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1843,8 +1842,8 @@ const Silt = props => (
               id="path25060"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1853,8 +1852,8 @@ const Silt = props => (
               id="path25064"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1863,8 +1862,8 @@ const Silt = props => (
               id="path25068"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1873,8 +1872,8 @@ const Silt = props => (
               id="path25072"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1883,8 +1882,8 @@ const Silt = props => (
               id="path25076"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1893,8 +1892,8 @@ const Silt = props => (
               id="path25080"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1903,8 +1902,8 @@ const Silt = props => (
               id="path25084"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1913,8 +1912,8 @@ const Silt = props => (
               id="path25088"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1923,8 +1922,8 @@ const Silt = props => (
               id="path25092"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1933,8 +1932,8 @@ const Silt = props => (
               id="path25096"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1943,8 +1942,8 @@ const Silt = props => (
               id="path25100"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1953,8 +1952,8 @@ const Silt = props => (
               id="path25104"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1963,8 +1962,8 @@ const Silt = props => (
               id="path25108"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1973,8 +1972,8 @@ const Silt = props => (
               id="path25112"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1983,8 +1982,8 @@ const Silt = props => (
               id="path25116"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -1993,8 +1992,8 @@ const Silt = props => (
               id="path25120"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2003,8 +2002,8 @@ const Silt = props => (
               id="path25124"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2013,8 +2012,8 @@ const Silt = props => (
               id="path25128"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2023,8 +2022,8 @@ const Silt = props => (
               id="path25132"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2033,8 +2032,8 @@ const Silt = props => (
               id="path25136"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2043,8 +2042,8 @@ const Silt = props => (
               id="path25140"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2053,8 +2052,8 @@ const Silt = props => (
               id="path25144"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2063,8 +2062,8 @@ const Silt = props => (
               id="path25148"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2073,8 +2072,8 @@ const Silt = props => (
               id="path25152"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2083,8 +2082,8 @@ const Silt = props => (
               id="path25156"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2093,8 +2092,8 @@ const Silt = props => (
               id="path25160"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2103,8 +2102,8 @@ const Silt = props => (
               id="path25164"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2113,8 +2112,8 @@ const Silt = props => (
               id="path25168"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2123,8 +2122,8 @@ const Silt = props => (
               id="path25172"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2133,8 +2132,8 @@ const Silt = props => (
               id="path25176"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2143,8 +2142,8 @@ const Silt = props => (
               id="path25180"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2153,8 +2152,8 @@ const Silt = props => (
               id="path25184"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2163,8 +2162,8 @@ const Silt = props => (
               id="path25188"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2173,8 +2172,8 @@ const Silt = props => (
               id="path25192"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2183,8 +2182,8 @@ const Silt = props => (
               id="path25196"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
@@ -2193,15 +2192,14 @@ const Silt = props => (
               id="path25200"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
-              strokeWidth={0.7}
+              stroke="black"
+              strokeWidth={0.8}
               strokeLinecap="round"
             />
           </g>
         </g>
       </pattern>
     </defs>
-  </svg>
 );
 
 export default Silt;

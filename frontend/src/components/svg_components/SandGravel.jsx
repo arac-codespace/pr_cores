@@ -3,9 +3,9 @@ import React from "react";
 const SandGravel = props => (
     <defs>
       <pattern
-        id="sed605"
-        height={54.125}
-        width={54.125}
+        id={props.id}
+        width={props.width}
+        height={props.height}
         patternUnits="userSpaceOnUse"
         patternTransform="translate(50.256 113.459)"
       >
@@ -15,7 +15,7 @@ const SandGravel = props => (
               id="path9288"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -25,7 +25,7 @@ const SandGravel = props => (
               id="path9292"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -35,7 +35,7 @@ const SandGravel = props => (
               id="path9296"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -45,7 +45,7 @@ const SandGravel = props => (
               id="path9300"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -55,7 +55,7 @@ const SandGravel = props => (
               id="path9304"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -65,7 +65,7 @@ const SandGravel = props => (
               id="path9308"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -75,7 +75,7 @@ const SandGravel = props => (
               id="path9312"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -85,7 +85,7 @@ const SandGravel = props => (
               id="path9316"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -95,7 +95,7 @@ const SandGravel = props => (
               id="path9320"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -105,7 +105,7 @@ const SandGravel = props => (
               id="path9324"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -115,7 +115,7 @@ const SandGravel = props => (
               id="path9328"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -125,7 +125,7 @@ const SandGravel = props => (
               id="path9332"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -135,7 +135,7 @@ const SandGravel = props => (
               id="path9336"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -145,7 +145,7 @@ const SandGravel = props => (
               id="path9340"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -155,7 +155,7 @@ const SandGravel = props => (
               id="path9344"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -165,7 +165,7 @@ const SandGravel = props => (
               id="path9348"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -175,7 +175,7 @@ const SandGravel = props => (
               id="path9352"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -185,7 +185,7 @@ const SandGravel = props => (
               id="path9356"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -195,7 +195,7 @@ const SandGravel = props => (
               id="path9360"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -205,7 +205,7 @@ const SandGravel = props => (
               id="path9364"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -215,7 +215,7 @@ const SandGravel = props => (
               id="path9368"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -225,7 +225,7 @@ const SandGravel = props => (
               id="path9372"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -235,7 +235,7 @@ const SandGravel = props => (
               id="path9376"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -245,7 +245,7 @@ const SandGravel = props => (
               id="path9380"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -255,7 +255,7 @@ const SandGravel = props => (
               id="path9384"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -265,7 +265,7 @@ const SandGravel = props => (
               id="path9388"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -275,7 +275,7 @@ const SandGravel = props => (
               id="path9392"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -285,7 +285,7 @@ const SandGravel = props => (
               id="path9396"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -295,7 +295,7 @@ const SandGravel = props => (
               id="path9400"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -305,7 +305,7 @@ const SandGravel = props => (
               id="path9404"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -315,7 +315,7 @@ const SandGravel = props => (
               id="path9408"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -325,7 +325,7 @@ const SandGravel = props => (
               id="path9412"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -335,7 +335,7 @@ const SandGravel = props => (
               id="path9416"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -345,7 +345,7 @@ const SandGravel = props => (
               id="path9420"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -355,7 +355,7 @@ const SandGravel = props => (
               id="path9424"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -365,7 +365,7 @@ const SandGravel = props => (
               id="path9428"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -375,7 +375,7 @@ const SandGravel = props => (
               id="path9432"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -385,7 +385,7 @@ const SandGravel = props => (
               id="path9436"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -395,7 +395,7 @@ const SandGravel = props => (
               id="path9440"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -405,7 +405,7 @@ const SandGravel = props => (
               id="path9444"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -415,7 +415,7 @@ const SandGravel = props => (
               id="path9448"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -425,7 +425,7 @@ const SandGravel = props => (
               id="path9452"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -435,7 +435,7 @@ const SandGravel = props => (
               id="path9456"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -445,7 +445,7 @@ const SandGravel = props => (
               id="path9460"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -455,7 +455,7 @@ const SandGravel = props => (
               id="path9464"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -465,7 +465,7 @@ const SandGravel = props => (
               id="path9468"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -475,7 +475,7 @@ const SandGravel = props => (
               id="path9472"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -485,7 +485,7 @@ const SandGravel = props => (
               id="path9476"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -495,7 +495,7 @@ const SandGravel = props => (
               id="path9480"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -505,7 +505,7 @@ const SandGravel = props => (
               id="path9484"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -515,7 +515,7 @@ const SandGravel = props => (
               id="path9488"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -525,7 +525,7 @@ const SandGravel = props => (
               id="path9492"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -535,7 +535,7 @@ const SandGravel = props => (
               id="path9496"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -545,7 +545,7 @@ const SandGravel = props => (
               id="path9500"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -555,7 +555,7 @@ const SandGravel = props => (
               id="path9504"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -565,7 +565,7 @@ const SandGravel = props => (
               id="path9508"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -575,7 +575,7 @@ const SandGravel = props => (
               id="path9512"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -585,7 +585,7 @@ const SandGravel = props => (
               id="path9516"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -595,7 +595,7 @@ const SandGravel = props => (
               id="path9520"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -605,7 +605,7 @@ const SandGravel = props => (
               id="path9524"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -615,7 +615,7 @@ const SandGravel = props => (
               id="path9528"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -625,7 +625,7 @@ const SandGravel = props => (
               id="path9532"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -635,7 +635,7 @@ const SandGravel = props => (
               id="path9536"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -645,7 +645,7 @@ const SandGravel = props => (
               id="path9540"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -655,7 +655,7 @@ const SandGravel = props => (
               id="path9544"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -665,7 +665,7 @@ const SandGravel = props => (
               id="path9548"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -675,7 +675,7 @@ const SandGravel = props => (
               id="path9552"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -685,7 +685,7 @@ const SandGravel = props => (
               id="path9556"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -695,7 +695,7 @@ const SandGravel = props => (
               id="path9560"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -705,7 +705,7 @@ const SandGravel = props => (
               id="path9564"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -715,7 +715,7 @@ const SandGravel = props => (
               id="path9568"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -725,7 +725,7 @@ const SandGravel = props => (
               id="path9572"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -735,7 +735,7 @@ const SandGravel = props => (
               id="path9576"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -745,7 +745,7 @@ const SandGravel = props => (
               id="path9580"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -755,7 +755,7 @@ const SandGravel = props => (
               id="path9584"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -765,7 +765,7 @@ const SandGravel = props => (
               id="path9588"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -775,7 +775,7 @@ const SandGravel = props => (
               id="path9592"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -785,7 +785,7 @@ const SandGravel = props => (
               id="path9596"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -795,7 +795,7 @@ const SandGravel = props => (
               id="path9600"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -805,7 +805,7 @@ const SandGravel = props => (
               id="path9604"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -815,7 +815,7 @@ const SandGravel = props => (
               id="path9608"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -825,7 +825,7 @@ const SandGravel = props => (
               id="path9612"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -835,7 +835,7 @@ const SandGravel = props => (
               id="path9616"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -845,7 +845,7 @@ const SandGravel = props => (
               id="path9620"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -855,7 +855,7 @@ const SandGravel = props => (
               id="path9624"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -865,7 +865,7 @@ const SandGravel = props => (
               id="path9628"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -875,7 +875,7 @@ const SandGravel = props => (
               id="path9632"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -885,7 +885,7 @@ const SandGravel = props => (
               id="path9636"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -895,7 +895,7 @@ const SandGravel = props => (
               id="path9640"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -905,7 +905,7 @@ const SandGravel = props => (
               id="path9644"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -915,7 +915,7 @@ const SandGravel = props => (
               id="path9648"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -925,7 +925,7 @@ const SandGravel = props => (
               id="path9652"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -935,7 +935,7 @@ const SandGravel = props => (
               id="path9656"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -945,7 +945,7 @@ const SandGravel = props => (
               id="path9660"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -955,7 +955,7 @@ const SandGravel = props => (
               id="path9664"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -965,7 +965,7 @@ const SandGravel = props => (
               id="path9668"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -975,7 +975,7 @@ const SandGravel = props => (
               id="path9672"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -985,7 +985,7 @@ const SandGravel = props => (
               id="path9676"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -995,7 +995,7 @@ const SandGravel = props => (
               id="path9680"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -1005,7 +1005,7 @@ const SandGravel = props => (
               id="path9684"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -1015,7 +1015,7 @@ const SandGravel = props => (
               id="path9688"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -1025,7 +1025,7 @@ const SandGravel = props => (
               id="path9692"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -1035,7 +1035,7 @@ const SandGravel = props => (
               id="path9696"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -1045,7 +1045,7 @@ const SandGravel = props => (
               id="path9700"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -1055,7 +1055,7 @@ const SandGravel = props => (
               id="path9704"
               d="M0 0"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.7}
               strokeLinecap="round"
             />
@@ -1065,7 +1065,7 @@ const SandGravel = props => (
               id="path9708"
               d="M0 0l-2.5-2 4-1.75s.75 2 0 2.5S0 0 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1074,7 +1074,7 @@ const SandGravel = props => (
               id="path9712"
               d="M0 0c1-.5 2.75-.75 2.25-2s-2.5-1-2.5-1L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1083,7 +1083,7 @@ const SandGravel = props => (
               id="path9716"
               d="M0 0l5.2-1.6-.8-3L2-3s-1.6.8-2 3z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1092,7 +1092,7 @@ const SandGravel = props => (
               id="path9720"
               d="M0 0v-2.5h-2.25L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1101,7 +1101,7 @@ const SandGravel = props => (
               id="path9724"
               d="M0 0l1.5-4.25L-2-4.5 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1110,7 +1110,7 @@ const SandGravel = props => (
               id="path9728"
               d="M0 0l2-3.75 3.25 1.5L3-.25 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1119,7 +1119,7 @@ const SandGravel = props => (
               id="path9732"
               d="M0 0l-.9-2.16L.54-2.7l1.62 1.08-.72 1.26L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1128,7 +1128,7 @@ const SandGravel = props => (
               id="path9736"
               d="M0 0h1.8v-3.375l-3.6 1.35.45 1.575L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1137,7 +1137,7 @@ const SandGravel = props => (
               id="path9740"
               d="M0 0l1.35-2.325 2.1 2.7L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1146,7 +1146,7 @@ const SandGravel = props => (
               id="path9744"
               d="M0 0l3.15-1.8L1.8-2.925.225-1.575 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1155,7 +1155,7 @@ const SandGravel = props => (
               id="path9748"
               d="M0 0l2.52-1.62-2.7-1.8-1.8 2.34.9 1.44L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1164,7 +1164,7 @@ const SandGravel = props => (
               id="path9752"
               d="M0 0l2.34-1.44L.9-2.52h-2.7L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1173,7 +1173,7 @@ const SandGravel = props => (
               id="path9756"
               d="M0 0l2.16-.36v-2.88L.9-4.68.54-1.8 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1182,7 +1182,7 @@ const SandGravel = props => (
               id="path9760"
               d="M0 0l-2.88-2.16 2.52-1.98L.9-1.8 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1191,7 +1191,7 @@ const SandGravel = props => (
               id="path9764"
               d="M0 0l1.89-2.16-.81-3.51-3.24 1.62L-.54-2.7 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1200,7 +1200,7 @@ const SandGravel = props => (
               id="path9768"
               d="M0 0l1.125 2.475-2.25.9-1.35-2.025L-1.8 0H0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1209,7 +1209,7 @@ const SandGravel = props => (
               id="path9772"
               d="M0 0l2.025.45L1.8-2.475l-2.025-.9-.675 1.8L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1218,7 +1218,7 @@ const SandGravel = props => (
               id="path9776"
               d="M0 0l1.125-2.25L-.45-3.6-.9-1.35 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1227,7 +1227,7 @@ const SandGravel = props => (
               id="path9780"
               d="M0 0l.648-4.536-2.268 2.592L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1236,7 +1236,7 @@ const SandGravel = props => (
               id="path9784"
               d="M0 0l-1.575-2.25 1.125-.9 5.625.675L4.05-.9H1.8L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1245,7 +1245,7 @@ const SandGravel = props => (
               id="path9788"
               d="M0 0l.225-1.8h3.15L2.7.225 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1254,7 +1254,7 @@ const SandGravel = props => (
               id="path9792"
               d="M0 0l1.35-2.25L3.825 0 1.8.9 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1263,7 +1263,7 @@ const SandGravel = props => (
               id="path9796"
               d="M0 0l2.025-1.575L-.9-2.7-3.15-.225 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1272,7 +1272,7 @@ const SandGravel = props => (
               id="path9800"
               d="M0 0l1.08-2.16L4.14-.9 3.78.72 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1281,7 +1281,7 @@ const SandGravel = props => (
               id="path9804"
               d="M0 0l.675-4.05-4.725-.675-.225 2.7 2.475.45L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1290,7 +1290,7 @@ const SandGravel = props => (
               id="path9808"
               d="M0 0v-2.25h-2.025L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1299,7 +1299,7 @@ const SandGravel = props => (
               id="path9812"
               d="M0 0v-2.25h-2.025L0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1308,7 +1308,7 @@ const SandGravel = props => (
               id="path9816"
               d="M0 0l-1.485-2.16 1.89-.27.675.54L.81-.54 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1317,7 +1317,7 @@ const SandGravel = props => (
               id="path9820"
               d="M0 0l1.35-2.25L3.825 0 1.8.9 0 0z"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>

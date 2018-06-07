@@ -3,14 +3,14 @@ import React from "react";
 const CoarseForamOoze = props => (
     <defs>
       <pattern
-        id="coarse-foram-ooze"
-        width={35}
-        height={35}
+        id={props.id}
+        width={props.width}
+        height={props.height}
         patternUnits="userSpaceOnUse"
       >
         <g
           id="e3_group"
-          transform="matrix(2 0 0 2 15 15) scale(0.8)"
+          transform={"matrix(2 0 0 2 15 15) " + props.scale}
           fill="transparent"
           stroke="#000"
         >

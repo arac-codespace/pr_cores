@@ -1,12 +1,12 @@
 import React from "react";
 
 const Sand = props => (
-  <svg id="Layer_1" viewBox="0 0 300 300" {...props}>
+  <defs>
     <pattern
-      width={100}
-      height={100}
+      id={props.id}
+      width={props.width}
+      height={props.height}
       patternUnits="userSpaceOnUse"
-      id="sand-pattern"
       viewBox="1 -201 200 200"
       overflow="visible"
     >
@@ -284,7 +284,7 @@ const Sand = props => (
       <circle className="st1" cx={7} cy={-192} r={2} />
     </g>
     </pattern>
-  </svg>
+  </defs>
 );
 
 export default Sand;

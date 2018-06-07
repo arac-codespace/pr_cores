@@ -1,22 +1,21 @@
 import React from "react";
 
 const Clay = props => (
-  <svg width={0} height={0} {...props}>
     <defs>
       <pattern
-        id="sed620"
-        height={53.584}
-        width={53.584}
+        id={props.id}
+        width={props.width}
+        height={props.height}
         patternUnits="userSpaceOnUse"
         patternTransform="translate(52.96 114.18)"
       >
-        <g>
+        <g transform="scale(4)">
           <g id="g28398" transform="translate(3.776 52.32)">
             <path
               id="path28400"
               d="M0 0h-3.776"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -25,7 +24,7 @@ const Clay = props => (
               id="path28404"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -34,7 +33,7 @@ const Clay = props => (
               id="path28408"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -43,7 +42,7 @@ const Clay = props => (
               id="path28412"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -52,7 +51,7 @@ const Clay = props => (
               id="path28416"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -61,7 +60,7 @@ const Clay = props => (
               id="path28420"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -70,7 +69,7 @@ const Clay = props => (
               id="path28424"
               d="M0 0h-2.645"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -79,7 +78,7 @@ const Clay = props => (
               id="path28428"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -88,7 +87,7 @@ const Clay = props => (
               id="path28432"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -97,7 +96,7 @@ const Clay = props => (
               id="path28436"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -106,7 +105,7 @@ const Clay = props => (
               id="path28440"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -115,7 +114,7 @@ const Clay = props => (
               id="path28444"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -124,7 +123,7 @@ const Clay = props => (
               id="path28448"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -133,7 +132,7 @@ const Clay = props => (
               id="path28452"
               d="M0 0h2.024"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -142,7 +141,7 @@ const Clay = props => (
               id="path28456"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -151,7 +150,7 @@ const Clay = props => (
               id="path28460"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -160,7 +159,7 @@ const Clay = props => (
               id="path28464"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -169,7 +168,7 @@ const Clay = props => (
               id="path28468"
               d="M0 0h6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -178,7 +177,7 @@ const Clay = props => (
               id="path28472"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -187,7 +186,7 @@ const Clay = props => (
               id="path28476"
               d="M0 0h4.395"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -196,7 +195,7 @@ const Clay = props => (
               id="path28480"
               d="M0 0h-6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -205,7 +204,7 @@ const Clay = props => (
               id="path28484"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -214,7 +213,7 @@ const Clay = props => (
               id="path28488"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -223,7 +222,7 @@ const Clay = props => (
               id="path28492"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -232,7 +231,7 @@ const Clay = props => (
               id="path28496"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -241,7 +240,7 @@ const Clay = props => (
               id="path28500"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -250,7 +249,7 @@ const Clay = props => (
               id="path28504"
               d="M0 0h-1.706"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -259,7 +258,7 @@ const Clay = props => (
               id="path28508"
               d="M0 0h6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -268,7 +267,7 @@ const Clay = props => (
               id="path28512"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -277,7 +276,7 @@ const Clay = props => (
               id="path28516"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -286,7 +285,7 @@ const Clay = props => (
               id="path28520"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -295,7 +294,7 @@ const Clay = props => (
               id="path28524"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -304,7 +303,7 @@ const Clay = props => (
               id="path28528"
               d="M0 0h4.714"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -313,7 +312,7 @@ const Clay = props => (
               id="path28532"
               d="M0 0h-5.242"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -322,7 +321,7 @@ const Clay = props => (
               id="path28536"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -331,7 +330,7 @@ const Clay = props => (
               id="path28540"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -340,7 +339,7 @@ const Clay = props => (
               id="path28544"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -349,7 +348,7 @@ const Clay = props => (
               id="path28548"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -358,7 +357,7 @@ const Clay = props => (
               id="path28552"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -367,7 +366,7 @@ const Clay = props => (
               id="path28556"
               d="M0 0h-1.211"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -376,7 +375,7 @@ const Clay = props => (
               id="path28560"
               d="M0 0h-2.184"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -385,7 +384,7 @@ const Clay = props => (
               id="path28564"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -394,7 +393,7 @@ const Clay = props => (
               id="path28568"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -403,7 +402,7 @@ const Clay = props => (
               id="path28572"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -412,7 +411,7 @@ const Clay = props => (
               id="path28576"
               d="M0 0h-6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -421,7 +420,7 @@ const Clay = props => (
               id="path28580"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -430,7 +429,7 @@ const Clay = props => (
               id="path28584"
               d="M0 0h-4.236"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -439,7 +438,7 @@ const Clay = props => (
               id="path28588"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -448,7 +447,7 @@ const Clay = props => (
               id="path28592"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -457,7 +456,7 @@ const Clay = props => (
               id="path28596"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -466,7 +465,7 @@ const Clay = props => (
               id="path28600"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -475,7 +474,7 @@ const Clay = props => (
               id="path28604"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -484,7 +483,7 @@ const Clay = props => (
               id="path28608"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -493,7 +492,7 @@ const Clay = props => (
               id="path28612"
               d="M0 0h-3.458"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -502,7 +501,7 @@ const Clay = props => (
               id="path28616"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -511,7 +510,7 @@ const Clay = props => (
               id="path28620"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -520,7 +519,7 @@ const Clay = props => (
               id="path28624"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -529,7 +528,7 @@ const Clay = props => (
               id="path28628"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -538,7 +537,7 @@ const Clay = props => (
               id="path28632"
               d="M0 0h6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -547,7 +546,7 @@ const Clay = props => (
               id="path28636"
               d="M0 0h2.963"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -556,7 +555,7 @@ const Clay = props => (
               id="path28640"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -565,7 +564,7 @@ const Clay = props => (
               id="path28644"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -574,7 +573,7 @@ const Clay = props => (
               id="path28648"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -583,7 +582,7 @@ const Clay = props => (
               id="path28652"
               d="M0 0h6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -592,7 +591,7 @@ const Clay = props => (
               id="path28656"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -601,7 +600,7 @@ const Clay = props => (
               id="path28660"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -610,7 +609,7 @@ const Clay = props => (
               id="path28664"
               d="M0 0h-2.98"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -619,7 +618,7 @@ const Clay = props => (
               id="path28668"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -628,7 +627,7 @@ const Clay = props => (
               id="path28672"
               d="M0 0h6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -637,7 +636,7 @@ const Clay = props => (
               id="path28676"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -646,7 +645,7 @@ const Clay = props => (
               id="path28680"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -655,7 +654,7 @@ const Clay = props => (
               id="path28684"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -664,7 +663,7 @@ const Clay = props => (
               id="path28688"
               d="M0 0h3.44"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -673,7 +672,7 @@ const Clay = props => (
               id="path28692"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -682,7 +681,7 @@ const Clay = props => (
               id="path28696"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -691,7 +690,7 @@ const Clay = props => (
               id="path28700"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -700,7 +699,7 @@ const Clay = props => (
               id="path28704"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -709,7 +708,7 @@ const Clay = props => (
               id="path28708"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -718,7 +717,7 @@ const Clay = props => (
               id="path28712"
               d="M0 0h6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -727,7 +726,7 @@ const Clay = props => (
               id="path28716"
               d="M0 0h2.184"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -736,7 +735,7 @@ const Clay = props => (
               id="path28720"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -745,7 +744,7 @@ const Clay = props => (
               id="path28724"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -754,7 +753,7 @@ const Clay = props => (
               id="path28728"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -763,7 +762,7 @@ const Clay = props => (
               id="path28732"
               d="M0 0h6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -772,7 +771,7 @@ const Clay = props => (
               id="path28736"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -781,7 +780,7 @@ const Clay = props => (
               id="path28740"
               d="M0 0h4.236"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -790,7 +789,7 @@ const Clay = props => (
               id="path28744"
               d="M0 0h-6.038"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -799,7 +798,7 @@ const Clay = props => (
               id="path28748"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -808,7 +807,7 @@ const Clay = props => (
               id="path28752"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -817,7 +816,7 @@ const Clay = props => (
               id="path28756"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -826,7 +825,7 @@ const Clay = props => (
               id="path28760"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -835,7 +834,7 @@ const Clay = props => (
               id="path28764"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -844,7 +843,7 @@ const Clay = props => (
               id="path28768"
               d="M0 0h-.415"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -853,7 +852,7 @@ const Clay = props => (
               id="path28772"
               d="M0 0h3.14"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -862,7 +861,7 @@ const Clay = props => (
               id="path28776"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -871,7 +870,7 @@ const Clay = props => (
               id="path28780"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -880,7 +879,7 @@ const Clay = props => (
               id="path28784"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -889,7 +888,7 @@ const Clay = props => (
               id="path28788"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -898,7 +897,7 @@ const Clay = props => (
               id="path28792"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -907,7 +906,7 @@ const Clay = props => (
               id="path28796"
               d="M0 0h3.281"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -916,7 +915,7 @@ const Clay = props => (
               id="path28800"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -925,7 +924,7 @@ const Clay = props => (
               id="path28804"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -934,7 +933,7 @@ const Clay = props => (
               id="path28808"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -943,7 +942,7 @@ const Clay = props => (
               id="path28812"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -952,7 +951,7 @@ const Clay = props => (
               id="path28816"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -961,7 +960,7 @@ const Clay = props => (
               id="path28820"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -970,7 +969,7 @@ const Clay = props => (
               id="path28824"
               d="M0 0h-4.732"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -979,7 +978,7 @@ const Clay = props => (
               id="path28828"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -988,7 +987,7 @@ const Clay = props => (
               id="path28832"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -997,7 +996,7 @@ const Clay = props => (
               id="path28836"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1006,7 +1005,7 @@ const Clay = props => (
               id="path28840"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1015,7 +1014,7 @@ const Clay = props => (
               id="path28844"
               d="M0 0h6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1024,7 +1023,7 @@ const Clay = props => (
               id="path28848"
               d="M0 0h1.688"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1033,7 +1032,7 @@ const Clay = props => (
               id="path28852"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1042,7 +1041,7 @@ const Clay = props => (
               id="path28856"
               d="M0 0h-6.368"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1051,7 +1050,7 @@ const Clay = props => (
               id="path28860"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1060,7 +1059,7 @@ const Clay = props => (
               id="path28864"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1069,7 +1068,7 @@ const Clay = props => (
               id="path28868"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
@@ -1078,14 +1077,13 @@ const Clay = props => (
               id="path28872"
               d="M0 0h-6.369"
               fill="none"
-              stroke="#231f20"
+              stroke="black"
               strokeWidth={0.3}
             />
           </g>
         </g>
       </pattern>
     </defs>
-  </svg>
 );
 
 export default Clay;
