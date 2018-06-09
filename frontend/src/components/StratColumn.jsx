@@ -26,6 +26,11 @@ const styles = {
     stroke: "black",
     strokeWidth: "2px"
 	},
+	lines: {
+		stroke: "black",
+		strokeWidth: "2px",
+		fill: "none"
+	}
 };
 
 const { classes } = jss.createStyleSheet(styles).attach();
@@ -37,7 +42,7 @@ class StratColumn extends Component {
 		this.drawColumn = this.drawColumn.bind(this);
 	}
 
-	drawColumn(core){
+	drawColumn(core, mscl){
 
 	  let strata_set = core.strata_set;
 		
@@ -85,10 +90,10 @@ class StratColumn extends Component {
 
 	  // GENERATE lithology bars
 	  // Control width and alignment of columns
-	  let XPADDING = 0;
+	  let XPADDING = 0.5;
 	  let XALIGN = 0;
 	  x.rangeRound([RANGEBOUNDARY, width])
-	  .domain(['Lithology','Color']).padding(XPADDING).align(XALIGN);
+	  .domain(['Lithology','Wet Bulk Density', 'Magnetic Susceptivility']).padding(XPADDING).align(XALIGN);
 
 	  // Array that will contain drawing instructions for all
 	  // layers
@@ -158,6 +163,18 @@ class StratColumn extends Component {
 	  	lithologyArray.push(obj);
 	  });
 
+	  let densityArray = []
+
+	  let x2 = d3.scaleLinear().domain([1, 2]).range([0,x.bandwidth()]);
+
+	  
+	  var valueline = d3.line()
+	    .x(function(d) { return x2(d.Den1); })
+	    .y(function(d) { return y(d.Depth_corrected); });
+
+
+	  // console.log(valueline(mscl));
+
 	  return (
 
 	  	<svg className="column-svg" height={svgDimensions.height} width={svgDimensions.width}>
@@ -168,13 +185,33 @@ class StratColumn extends Component {
 		  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
 		  			</g>
 	  			))}
-
+	  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
+	  				<path className={"line " + classes.lines } d={valueline(mscl)} ></path>
+	  			</g>
 	  			<Axes
-	  				scales={{x, y}}
+	  				orient = {"Left"}
+	  				scale={y}
+	  				translateX = {0}
+	  				translateY= {0}
 	  				margins = {margins}
 	  				svgDimensions = {svgDimensions}
-	  			/>
-
+	  			/> 
+	  			<Axes
+	  				orient = {"Top"}
+	  				scale={x}
+	  				translateX = {0}
+	  				translateY= {0}
+	  				margins = {margins}
+	  				svgDimensions = {svgDimensions}
+	  			/> 
+	  			<Axes
+	  				orient = {"Bottom"}
+	  				scale={x2}
+	  				translateX = {x("Wet Bulk Density")}
+	  				translateY= {height}
+	  				margins = {margins}
+	  				svgDimensions = {svgDimensions}
+	  			/> 	  				  			 			
 	  		</g>
 	  	</svg>
 	  );  
@@ -182,11 +219,12 @@ class StratColumn extends Component {
 
 	render() {
 		let core = this.props.core;
+		let mscl = this.props.mscl;
 		// let width = this.props.width;
 		// let height = this.props.height;
 		return (
 			<div className={'column-component-wrapper'}>	
-				{this.drawColumn(core)}
+				{this.drawColumn(core,mscl)}
 			</div>
 		);
 	}

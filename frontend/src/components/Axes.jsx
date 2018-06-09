@@ -1,30 +1,34 @@
 import React from 'react'
 import Axis from './Axis'
 
-export default ({ scales, margins, svgDimensions }) => {
+export default ({ orient, scale, translateX, translateY, margins, svgDimensions }) => {
   const { height, width } = svgDimensions
 
-  const xProps = {
-    orient: 'Bottom',
-    scale: scales.x,
-    // I'm rendering the axes at a different location so...
-    // translate: `translate(0, ${height - margins.bottom})`,    
-    translate: 'translate(0,' + (height - margins.bottom - margins.top) + ')',
-    tickSize: height - margins.top - margins.bottom,
-  }
 
-  const yProps = {
-    orient: 'Left',
-    scale: scales.y,
-    // translate: `translate(${margins.left}, 0)`,
-    translate: 'translate(0,0)',
-    tickSize: width - margins.left - margins.right,
+  /*
+    For bottom: translate(0, height - margins.top - margins-bottom)
+    for left: translate(0,0)
+    for top: translate(0,0)
+  */ 
+
+  let tickSize;
+  if (orient === "Top" || orient === "Bottom"){
+    tickSize = height - margins.left - margins.right
+
+  } else {
+    tickSize = width - margins.left - margins.right
+  }
+  
+  const Props = {
+    orient: orient,
+    scale: scale,
+    translate: 'translate(' + translateX + ', ' + translateY + ')',
+    tickSize: tickSize,
   }
 
   return (
     <g>
-      <Axis {...xProps} />
-      <Axis {...yProps} />
+      <Axis {...Props} />
     </g>
   )
 }
