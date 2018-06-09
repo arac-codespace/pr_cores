@@ -173,6 +173,15 @@ class StratColumn extends Component {
 	    .y(function(d) { return y(d.Depth_corrected); });
 
 
+	  function drawDensity(valueline, mscl){
+	  	return (
+  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
+  				<path className={"line " + classes.lines } d={valueline(mscl)} ></path>
+  			</g>
+	  	)
+	  }
+	  // this.drawDensity(valueline)
+
 	  // console.log(valueline(mscl));
 
 	  return (
@@ -185,9 +194,7 @@ class StratColumn extends Component {
 		  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
 		  			</g>
 	  			))}
-	  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
-	  				<path className={"line " + classes.lines } d={valueline(mscl)} ></path>
-	  			</g>
+	  			{drawDensity(valueline, mscl)}
 	  			<Axes
 	  				orient = {"Left"}
 	  				scale={y}
