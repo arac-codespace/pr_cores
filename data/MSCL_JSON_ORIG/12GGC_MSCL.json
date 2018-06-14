@@ -1,0 +1,146 @@
+[
+ {
+   "SB_Depth": "",
+   "Core_Sect": "",
+   "Sect_depth": "",
+   "CT": "",
+   "Den1": "",
+   "MS1": "",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.005*",
+   "Core_Sect": "1*",
+   "Sect_depth": "0.5*",
+   "CT": "10.498*",
+   "Den1": "",
+   "MS1": "",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.015*",
+   "Core_Sect": "1*",
+   "Sect_depth": "1.5*",
+   "CT": "10.52*",
+   "Den1": "0.2604*",
+   "MS1": "1.4565*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.025",
+   "Core_Sect": "1",
+   "Sect_depth": "2.5",
+   "CT": "10.535",
+   "Den1": "1.478",
+   "MS1": "3.7484",
+   "Depth_corrected": "0"
+ },
+ {
+   "SB_Depth": "0.035",
+   "Core_Sect": "1",
+   "Sect_depth": "3.5",
+   "CT": "10.457",
+   "Den1": "1.4344",
+   "MS1": "4.2646",
+   "Depth_corrected": "1"
+ },
+ {
+   "SB_Depth": "0.045",
+   "Core_Sect": "1",
+   "Sect_depth": "4.5",
+   "CT": "10.44",
+   "Den1": "1.3407",
+   "MS1": "4.8795",
+   "Depth_corrected": "2"
+ },
+ {
+   "SB_Depth": "0.055",
+   "Core_Sect": "1",
+   "Sect_depth": "5.5",
+   "CT": "10.428",
+   "Den1": "1.3134",
+   "MS1": "5.2493",
+   "Depth_corrected": "3"
+ },
+ {
+   "SB_Depth": "0.065",
+   "Core_Sect": "1",
+   "Sect_depth": "6.5",
+   "CT": "10.403",
+   "Den1": "1.4809",
+   "MS1": "4.8225",
+   "Depth_corrected": "4"
+ },
+ {
+   "SB_Depth": "0.075",
+   "Core_Sect": "1",
+   "Sect_depth": "7.5",
+   "CT": "10.415",
+   "Den1": "1.564",
+   "MS1": "4.7214",
+   "Depth_corrected": "5"
+ },
+ {
+   "SB_Depth": "0.085",
+   "Core_Sect": "1",
+   "Sect_depth": "8.5",
+   "CT": "10.415",
+   "Den1": "1.5347",
+   "MS1": "4.8982",
+   "Depth_corrected": "6"
+ },
+ {
+   "SB_Depth": "0.095",
+   "Core_Sect": "1",
+   "Sect_depth": "9.5",
+   "CT": "10.414",
+   "Den1": "1.572",
+   "MS1": "4.7411",
+   "Depth_corrected": "7"
+ },
+ {
+   "SB_Depth": "0.105",
+   "Core_Sect": "1",
+   "Sect_depth": "10.5",
+   "CT": "10.401",
+   "Den1": "1.5322",
+   "MS1": "4.7941",
+   "Depth_corrected": "8"
+ },
+ {
+   "SB_Depth": "0.115",
+   "Core_Sect": "1",
+   "Sect_depth": "11.5",
+   "CT": "10.416",
+   "Den1": "1.5422",
+   "MS1": "4.6143",
+   "Depth_corrected": "9"
+ },
+ {
+   "SB_Depth": "0.125",
+   "Core_Sect": "1",
+   "Sect_depth": "12.5",
+   "CT": "10.419",
+   "Den1": "1.525",
+   "MS1": "4.4012",
+   "Depth_corrected": "10"
+ },
+ {
+   "SB_Depth": "0.135",
+   "Core_Sect": "1",
+   "Sect_depth": "13.5",
+   "CT": "10.428",
+   "Den1": "1.5616",
+   "MS1": "3.9057",
+   "Depth_corrected": "11"
+ },
+ {
+   "SB_Depth": "0.145",
+   "Core_Sect": "1",
+   "Sect_depth": "14.5",
+   "CT": "10.522",
+   "Den1": "1.5166",
+   "MS1": "3.3672",
+   "Depth_corrected": "12"
+ }
+]

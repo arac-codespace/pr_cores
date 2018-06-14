@@ -1,0 +1,102 @@
+[
+    {
+        "model": "cores.mscl",
+        "pk": 1785,
+        "fields": {
+            "core": 16,
+            "den1": "1.4026",
+            "ms1": "30.3173",
+            "depth": "1"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1786,
+        "fields": {
+            "core": 16,
+            "den1": "1.423",
+            "ms1": "34.9754",
+            "depth": "2"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1787,
+        "fields": {
+            "core": 16,
+            "den1": "1.4732",
+            "ms1": "37.7216",
+            "depth": "3"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1788,
+        "fields": {
+            "core": 16,
+            "den1": "1.4976",
+            "ms1": "39.9208",
+            "depth": "4"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1789,
+        "fields": {
+            "core": 16,
+            "den1": "1.568",
+            "ms1": "39.9318",
+            "depth": "5"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1790,
+        "fields": {
+            "core": 16,
+            "den1": "1.5892",
+            "ms1": "39.7689",
+            "depth": "6"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1791,
+        "fields": {
+            "core": 16,
+            "den1": "1.5901",
+            "ms1": "38.7994",
+            "depth": "7"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1792,
+        "fields": {
+            "core": 16,
+            "den1": "1.5931",
+            "ms1": "36.6156",
+            "depth": "8"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1793,
+        "fields": {
+            "core": 16,
+            "den1": "1.5955",
+            "ms1": "32.7057",
+            "depth": "9"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1794,
+        "fields": {
+            "core": 16,
+            "den1": "1.6242",
+            "ms1": "27.1499",
+            "depth": "10"
+        }
+    }
+]

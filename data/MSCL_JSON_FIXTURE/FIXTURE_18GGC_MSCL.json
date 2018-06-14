@@ -1,0 +1,1002 @@
+[
+    {
+        "model": "cores.mscl",
+        "pk": 1149,
+        "fields": {
+            "core": 9,
+            "den1": "1.4262",
+            "ms1": "4.1504",
+            "depth": "0"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1150,
+        "fields": {
+            "core": 9,
+            "den1": "1.7771",
+            "ms1": "4.0677",
+            "depth": "1"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1151,
+        "fields": {
+            "core": 9,
+            "den1": "1.7362",
+            "ms1": "4.6728",
+            "depth": "2"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1152,
+        "fields": {
+            "core": 9,
+            "den1": "1.7242",
+            "ms1": "5.1271",
+            "depth": "3"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1153,
+        "fields": {
+            "core": 9,
+            "den1": "1.7349",
+            "ms1": "5.4952",
+            "depth": "4"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1154,
+        "fields": {
+            "core": 9,
+            "den1": "1.7195",
+            "ms1": "5.8683",
+            "depth": "5"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1155,
+        "fields": {
+            "core": 9,
+            "den1": "1.7252",
+            "ms1": "6.1312",
+            "depth": "6"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1156,
+        "fields": {
+            "core": 9,
+            "den1": "1.8013",
+            "ms1": "6.0669",
+            "depth": "7"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1157,
+        "fields": {
+            "core": 9,
+            "den1": "1.7742",
+            "ms1": "6.3183",
+            "depth": "8"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1158,
+        "fields": {
+            "core": 9,
+            "den1": "1.7703",
+            "ms1": "6.3734",
+            "depth": "9"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1159,
+        "fields": {
+            "core": 9,
+            "den1": "1.8197",
+            "ms1": "6.162",
+            "depth": "10"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1160,
+        "fields": {
+            "core": 9,
+            "den1": "1.8184",
+            "ms1": "6.0617",
+            "depth": "11"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1161,
+        "fields": {
+            "core": 9,
+            "den1": "1.8315",
+            "ms1": "5.8311",
+            "depth": "12"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1162,
+        "fields": {
+            "core": 9,
+            "den1": "1.8363",
+            "ms1": "5.6256",
+            "depth": "13"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1163,
+        "fields": {
+            "core": 9,
+            "den1": "1.8319",
+            "ms1": "5.5234",
+            "depth": "14"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1164,
+        "fields": {
+            "core": 9,
+            "den1": "1.8359",
+            "ms1": "5.4383",
+            "depth": "15"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1165,
+        "fields": {
+            "core": 9,
+            "den1": "1.7677",
+            "ms1": "5.5296",
+            "depth": "16"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1166,
+        "fields": {
+            "core": 9,
+            "den1": "1.7218",
+            "ms1": "5.5583",
+            "depth": "17"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1167,
+        "fields": {
+            "core": 9,
+            "den1": "1.7316",
+            "ms1": "5.4061",
+            "depth": "18"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1168,
+        "fields": {
+            "core": 9,
+            "den1": "1.711",
+            "ms1": "5.4301",
+            "depth": "19"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1169,
+        "fields": {
+            "core": 9,
+            "den1": "1.6424",
+            "ms1": "5.5735",
+            "depth": "20"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1170,
+        "fields": {
+            "core": 9,
+            "den1": "1.6457",
+            "ms1": "5.6049",
+            "depth": "21"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1171,
+        "fields": {
+            "core": 9,
+            "den1": "1.6444",
+            "ms1": "5.6125",
+            "depth": "22"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1172,
+        "fields": {
+            "core": 9,
+            "den1": "1.658",
+            "ms1": "5.6927",
+            "depth": "23"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1173,
+        "fields": {
+            "core": 9,
+            "den1": "1.6605",
+            "ms1": "5.8557",
+            "depth": "24"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1174,
+        "fields": {
+            "core": 9,
+            "den1": "1.6322",
+            "ms1": "6.1717",
+            "depth": "25"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1175,
+        "fields": {
+            "core": 9,
+            "den1": "1.6297",
+            "ms1": "6.3548",
+            "depth": "26"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1176,
+        "fields": {
+            "core": 9,
+            "den1": "1.6447",
+            "ms1": "6.4226",
+            "depth": "27"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1177,
+        "fields": {
+            "core": 9,
+            "den1": "1.6738",
+            "ms1": "6.3945",
+            "depth": "28"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1178,
+        "fields": {
+            "core": 9,
+            "den1": "1.6788",
+            "ms1": "6.5005",
+            "depth": "29"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1179,
+        "fields": {
+            "core": 9,
+            "den1": "1.6583",
+            "ms1": "6.6228",
+            "depth": "30"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1180,
+        "fields": {
+            "core": 9,
+            "den1": "1.6706",
+            "ms1": "6.6178",
+            "depth": "31"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1181,
+        "fields": {
+            "core": 9,
+            "den1": "1.6666",
+            "ms1": "6.6739",
+            "depth": "32"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1182,
+        "fields": {
+            "core": 9,
+            "den1": "1.6723",
+            "ms1": "6.6891",
+            "depth": "33"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1183,
+        "fields": {
+            "core": 9,
+            "den1": "1.6524",
+            "ms1": "6.8104",
+            "depth": "34"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1184,
+        "fields": {
+            "core": 9,
+            "den1": "1.6858",
+            "ms1": "6.7204",
+            "depth": "35"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1185,
+        "fields": {
+            "core": 9,
+            "den1": "1.6709",
+            "ms1": "6.7748",
+            "depth": "36"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1186,
+        "fields": {
+            "core": 9,
+            "den1": "1.6832",
+            "ms1": "6.7613",
+            "depth": "37"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1187,
+        "fields": {
+            "core": 9,
+            "den1": "1.6888",
+            "ms1": "6.7803",
+            "depth": "38"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1188,
+        "fields": {
+            "core": 9,
+            "den1": "1.7001",
+            "ms1": "6.7779",
+            "depth": "39"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1189,
+        "fields": {
+            "core": 9,
+            "den1": "1.6882",
+            "ms1": "6.8653",
+            "depth": "40"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1190,
+        "fields": {
+            "core": 9,
+            "den1": "1.6968",
+            "ms1": "6.9148",
+            "depth": "41"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1191,
+        "fields": {
+            "core": 9,
+            "den1": "1.6904",
+            "ms1": "6.9388",
+            "depth": "42"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1192,
+        "fields": {
+            "core": 9,
+            "den1": "1.6845",
+            "ms1": "7.0483",
+            "depth": "43"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1193,
+        "fields": {
+            "core": 9,
+            "den1": "1.7086",
+            "ms1": "6.9487",
+            "depth": "44"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1194,
+        "fields": {
+            "core": 9,
+            "den1": "1.6932",
+            "ms1": "7.0098",
+            "depth": "45"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1195,
+        "fields": {
+            "core": 9,
+            "den1": "1.6931",
+            "ms1": "7.0086",
+            "depth": "46"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1196,
+        "fields": {
+            "core": 9,
+            "den1": "1.7017",
+            "ms1": "7.0101",
+            "depth": "47"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1197,
+        "fields": {
+            "core": 9,
+            "den1": "1.6974",
+            "ms1": "7.071",
+            "depth": "48"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1198,
+        "fields": {
+            "core": 9,
+            "den1": "1.7111",
+            "ms1": "7.0163",
+            "depth": "49"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1199,
+        "fields": {
+            "core": 9,
+            "den1": "1.6914",
+            "ms1": "7.0981",
+            "depth": "50"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1200,
+        "fields": {
+            "core": 9,
+            "den1": "1.7147",
+            "ms1": "7.0444",
+            "depth": "51"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1201,
+        "fields": {
+            "core": 9,
+            "den1": "1.7004",
+            "ms1": "7.0955",
+            "depth": "52"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1202,
+        "fields": {
+            "core": 9,
+            "den1": "1.6972",
+            "ms1": "7.1109",
+            "depth": "53"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1203,
+        "fields": {
+            "core": 9,
+            "den1": "1.7021",
+            "ms1": "7.1356",
+            "depth": "54"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1204,
+        "fields": {
+            "core": 9,
+            "den1": "1.7105",
+            "ms1": "7.1002",
+            "depth": "55"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1205,
+        "fields": {
+            "core": 9,
+            "den1": "1.696",
+            "ms1": "7.2041",
+            "depth": "56"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1206,
+        "fields": {
+            "core": 9,
+            "den1": "1.6927",
+            "ms1": "7.2184",
+            "depth": "57"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1207,
+        "fields": {
+            "core": 9,
+            "den1": "1.7218",
+            "ms1": "7.1001",
+            "depth": "58"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1208,
+        "fields": {
+            "core": 9,
+            "den1": "1.7236",
+            "ms1": "7.1679",
+            "depth": "59"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1209,
+        "fields": {
+            "core": 9,
+            "den1": "1.7085",
+            "ms1": "7.2273",
+            "depth": "60"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1210,
+        "fields": {
+            "core": 9,
+            "den1": "1.7033",
+            "ms1": "7.2885",
+            "depth": "61"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1211,
+        "fields": {
+            "core": 9,
+            "den1": "1.7021",
+            "ms1": "7.2933",
+            "depth": "62"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1212,
+        "fields": {
+            "core": 9,
+            "den1": "1.7199",
+            "ms1": "7.2544",
+            "depth": "63"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1213,
+        "fields": {
+            "core": 9,
+            "den1": "1.699",
+            "ms1": "7.3848",
+            "depth": "64"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1214,
+        "fields": {
+            "core": 9,
+            "den1": "1.7175",
+            "ms1": "7.3033",
+            "depth": "65"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1215,
+        "fields": {
+            "core": 9,
+            "den1": "1.7202",
+            "ms1": "7.2899",
+            "depth": "66"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1216,
+        "fields": {
+            "core": 9,
+            "den1": "1.6897",
+            "ms1": "7.4626",
+            "depth": "67"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1217,
+        "fields": {
+            "core": 9,
+            "den1": "1.6878",
+            "ms1": "7.4687",
+            "depth": "68"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1218,
+        "fields": {
+            "core": 9,
+            "den1": "1.7",
+            "ms1": "7.4542",
+            "depth": "69"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1219,
+        "fields": {
+            "core": 9,
+            "den1": "1.6905",
+            "ms1": "7.5374",
+            "depth": "70"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1220,
+        "fields": {
+            "core": 9,
+            "den1": "1.7066",
+            "ms1": "7.4641",
+            "depth": "71"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1221,
+        "fields": {
+            "core": 9,
+            "den1": "1.7115",
+            "ms1": "7.4812",
+            "depth": "72"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1222,
+        "fields": {
+            "core": 9,
+            "den1": "1.7269",
+            "ms1": "7.4147",
+            "depth": "73"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1223,
+        "fields": {
+            "core": 9,
+            "den1": "1.7189",
+            "ms1": "7.4491",
+            "depth": "74"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1224,
+        "fields": {
+            "core": 9,
+            "den1": "1.7046",
+            "ms1": "7.544",
+            "depth": "75"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1225,
+        "fields": {
+            "core": 9,
+            "den1": "1.723",
+            "ms1": "7.419",
+            "depth": "76"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1226,
+        "fields": {
+            "core": 9,
+            "den1": "1.7053",
+            "ms1": "7.5349",
+            "depth": "77"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1227,
+        "fields": {
+            "core": 9,
+            "den1": "1.7134",
+            "ms1": "7.542",
+            "depth": "78"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1228,
+        "fields": {
+            "core": 9,
+            "den1": "1.7269",
+            "ms1": "7.5212",
+            "depth": "79"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1229,
+        "fields": {
+            "core": 9,
+            "den1": "1.714",
+            "ms1": "7.5525",
+            "depth": "80"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1230,
+        "fields": {
+            "core": 9,
+            "den1": "1.7193",
+            "ms1": "7.5717",
+            "depth": "81"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1231,
+        "fields": {
+            "core": 9,
+            "den1": "1.7157",
+            "ms1": "7.6323",
+            "depth": "82"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1232,
+        "fields": {
+            "core": 9,
+            "den1": "1.7073",
+            "ms1": "7.6311",
+            "depth": "83"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1233,
+        "fields": {
+            "core": 9,
+            "den1": "1.6899",
+            "ms1": "7.7918",
+            "depth": "84"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1234,
+        "fields": {
+            "core": 9,
+            "den1": "1.7238",
+            "ms1": "7.6788",
+            "depth": "85"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1235,
+        "fields": {
+            "core": 9,
+            "den1": "1.7232",
+            "ms1": "7.7618",
+            "depth": "86"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1236,
+        "fields": {
+            "core": 9,
+            "den1": "1.7324",
+            "ms1": "7.7207",
+            "depth": "87"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1237,
+        "fields": {
+            "core": 9,
+            "den1": "1.7553",
+            "ms1": "7.6572",
+            "depth": "88"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1238,
+        "fields": {
+            "core": 9,
+            "den1": "1.7505",
+            "ms1": "7.6221",
+            "depth": "89"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1239,
+        "fields": {
+            "core": 9,
+            "den1": "1.7561",
+            "ms1": "7.5168",
+            "depth": "90"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1240,
+        "fields": {
+            "core": 9,
+            "den1": "1.7465",
+            "ms1": "7.4197",
+            "depth": "91"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1241,
+        "fields": {
+            "core": 9,
+            "den1": "1.7586",
+            "ms1": "7.3077",
+            "depth": "92"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1242,
+        "fields": {
+            "core": 9,
+            "den1": "1.7165",
+            "ms1": "6.9855",
+            "depth": "93"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1243,
+        "fields": {
+            "core": 9,
+            "den1": "1.7057",
+            "ms1": "6.7761",
+            "depth": "94"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1244,
+        "fields": {
+            "core": 9,
+            "den1": "1.7445",
+            "ms1": "6.3793",
+            "depth": "95"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1245,
+        "fields": {
+            "core": 9,
+            "den1": "1.7251",
+            "ms1": "6.0768",
+            "depth": "96"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1246,
+        "fields": {
+            "core": 9,
+            "den1": "1.6966",
+            "ms1": "5.7899",
+            "depth": "97"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1247,
+        "fields": {
+            "core": 9,
+            "den1": "1.4966",
+            "ms1": "5.8407",
+            "depth": "98"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 1248,
+        "fields": {
+            "core": 9,
+            "den1": "1.4436",
+            "ms1": "5.1831",
+            "depth": "99"
+        }
+    }
+]

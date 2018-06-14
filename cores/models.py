@@ -118,6 +118,18 @@ class Strata(models.Model):
         return self.lithology.name
 
 
+class MSCL(models.Model):
+    core = models.ForeignKey(Core, blank=True, on_delete=models.CASCADE, verbose_name="Core No.")
+    den1 = models.DecimalField(max_digits=8, decimal_places=4, blank=True, verbose_name="Wet Bulk Density (g/cm3")
+    ms1 = models.DecimalField(max_digits=8, decimal_places=4, blank=True, verbose_name="Magnetic Susceptibility (SI)")
+    depth = models.DecimalField(max_digits=5, decimal_places=2, blank=True, verbose_name="Corrected Depth")
+
+    class Meta:
+        verbose_name = "MSCL"
+        verbose_name_plural = "MSCL"
+
+
+
 class Fossils(models.Model):
     name = models.CharField(max_length=25)
     alt_name = models.CharField(max_length=25, blank=True)

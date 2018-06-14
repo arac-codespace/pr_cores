@@ -1,0 +1,132 @@
+[
+    {
+        "model": "cores.mscl",
+        "pk": 859,
+        "fields": {
+            "core": 6,
+            "den1": "1.478",
+            "ms1": "3.7484",
+            "depth": "0"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 860,
+        "fields": {
+            "core": 6,
+            "den1": "1.4344",
+            "ms1": "4.2646",
+            "depth": "1"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 861,
+        "fields": {
+            "core": 6,
+            "den1": "1.3407",
+            "ms1": "4.8795",
+            "depth": "2"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 862,
+        "fields": {
+            "core": 6,
+            "den1": "1.3134",
+            "ms1": "5.2493",
+            "depth": "3"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 863,
+        "fields": {
+            "core": 6,
+            "den1": "1.4809",
+            "ms1": "4.8225",
+            "depth": "4"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 864,
+        "fields": {
+            "core": 6,
+            "den1": "1.564",
+            "ms1": "4.7214",
+            "depth": "5"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 865,
+        "fields": {
+            "core": 6,
+            "den1": "1.5347",
+            "ms1": "4.8982",
+            "depth": "6"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 866,
+        "fields": {
+            "core": 6,
+            "den1": "1.572",
+            "ms1": "4.7411",
+            "depth": "7"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 867,
+        "fields": {
+            "core": 6,
+            "den1": "1.5322",
+            "ms1": "4.7941",
+            "depth": "8"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 868,
+        "fields": {
+            "core": 6,
+            "den1": "1.5422",
+            "ms1": "4.6143",
+            "depth": "9"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 869,
+        "fields": {
+            "core": 6,
+            "den1": "1.525",
+            "ms1": "4.4012",
+            "depth": "10"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 870,
+        "fields": {
+            "core": 6,
+            "den1": "1.5616",
+            "ms1": "3.9057",
+            "depth": "11"
+        }
+    },
+    {
+        "model": "cores.mscl",
+        "pk": 871,
+        "fields": {
+            "core": 6,
+            "den1": "1.5166",
+            "ms1": "3.3672",
+            "depth": "12"
+        }
+    }
+]

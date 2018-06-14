@@ -38,7 +38,8 @@ class CoreSerializer(serializers.ModelSerializer):
             'date_described',
             'date_coll',
             'collected_by',
-            'strata_set'
+            'strata_set',
+            'mscl_set'
         )
         depth = 1
 

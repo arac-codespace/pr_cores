@@ -1,0 +1,1856 @@
+[
+ {
+   "SB_Depth": "",
+   "Core_Sect": "",
+   "Sect_Depth": "",
+   "CT": "",
+   "Den1": "",
+   "MS1": "",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.005*",
+   "Core_Sect": "2*",
+   "Sect_Depth": "0.5*",
+   "CT": "10.833*",
+   "Den1": "",
+   "MS1": "",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.015*",
+   "Core_Sect": "2*",
+   "Sect_Depth": "1.5*",
+   "CT": "10.539*",
+   "Den1": "1.057*",
+   "MS1": "0.9809*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.025*",
+   "Core_Sect": "2*",
+   "Sect_Depth": "2.5*",
+   "CT": "10.566*",
+   "Den1": "1.0218*",
+   "MS1": "3.6891*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.035*",
+   "Core_Sect": "2*",
+   "Sect_Depth": "3.5*",
+   "CT": "10.569*",
+   "Den1": "1.1039*",
+   "MS1": "4.5686*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "0.045",
+   "Core_Sect": "2",
+   "Sect_Depth": "4.5",
+   "CT": "10.603",
+   "Den1": "1.7563",
+   "MS1": "3.6743",
+   "Depth_corrected": "0"
+ },
+ {
+   "SB_Depth": "0.055",
+   "Core_Sect": "2",
+   "Sect_Depth": "5.5",
+   "CT": "10.606",
+   "Den1": "1.8316",
+   "MS1": "4.1071",
+   "Depth_corrected": "1"
+ },
+ {
+   "SB_Depth": "0.065",
+   "Core_Sect": "2",
+   "Sect_Depth": "6.5",
+   "CT": "10.613",
+   "Den1": "1.7882",
+   "MS1": "4.7284",
+   "Depth_corrected": "2"
+ },
+ {
+   "SB_Depth": "0.075",
+   "Core_Sect": "2",
+   "Sect_Depth": "7.5",
+   "CT": "10.598",
+   "Den1": "1.8081",
+   "MS1": "5.0452",
+   "Depth_corrected": "3"
+ },
+ {
+   "SB_Depth": "0.085",
+   "Core_Sect": "2",
+   "Sect_Depth": "8.5",
+   "CT": "10.596",
+   "Den1": "1.8248",
+   "MS1": "5.4185",
+   "Depth_corrected": "4"
+ },
+ {
+   "SB_Depth": "0.095",
+   "Core_Sect": "2",
+   "Sect_Depth": "9.5",
+   "CT": "10.515",
+   "Den1": "1.8242",
+   "MS1": "5.9998",
+   "Depth_corrected": "5"
+ },
+ {
+   "SB_Depth": "0.105",
+   "Core_Sect": "2",
+   "Sect_Depth": "10.5",
+   "CT": "10.407",
+   "Den1": "1.8729",
+   "MS1": "6.621",
+   "Depth_corrected": "6"
+ },
+ {
+   "SB_Depth": "0.115",
+   "Core_Sect": "2",
+   "Sect_Depth": "11.5",
+   "CT": "10.392",
+   "Den1": "1.8557",
+   "MS1": "7.4672",
+   "Depth_corrected": "7"
+ },
+ {
+   "SB_Depth": "0.125",
+   "Core_Sect": "2",
+   "Sect_Depth": "12.5",
+   "CT": "10.361",
+   "Den1": "1.9046",
+   "MS1": "8.1874",
+   "Depth_corrected": "8"
+ },
+ {
+   "SB_Depth": "0.135",
+   "Core_Sect": "2",
+   "Sect_Depth": "13.5",
+   "CT": "10.354",
+   "Den1": "1.9565",
+   "MS1": "8.8844",
+   "Depth_corrected": "9"
+ },
+ {
+   "SB_Depth": "0.145",
+   "Core_Sect": "2",
+   "Sect_Depth": "14.5",
+   "CT": "10.33",
+   "Den1": "2.0851",
+   "MS1": "9.0768",
+   "Depth_corrected": "10"
+ },
+ {
+   "SB_Depth": "0.155",
+   "Core_Sect": "2",
+   "Sect_Depth": "15.5",
+   "CT": "10.329",
+   "Den1": "2.0917",
+   "MS1": "9.4412",
+   "Depth_corrected": "11"
+ },
+ {
+   "SB_Depth": "0.165",
+   "Core_Sect": "2",
+   "Sect_Depth": "16.5",
+   "CT": "10.314",
+   "Den1": "2.0983",
+   "MS1": "9.4174",
+   "Depth_corrected": "12"
+ },
+ {
+   "SB_Depth": "0.175",
+   "Core_Sect": "2",
+   "Sect_Depth": "17.5",
+   "CT": "10.312",
+   "Den1": "2.0375",
+   "MS1": "9.2341",
+   "Depth_corrected": "13"
+ },
+ {
+   "SB_Depth": "0.185",
+   "Core_Sect": "2",
+   "Sect_Depth": "18.5",
+   "CT": "10.313",
+   "Den1": "1.9524",
+   "MS1": "8.7929",
+   "Depth_corrected": "14"
+ },
+ {
+   "SB_Depth": "0.195",
+   "Core_Sect": "2",
+   "Sect_Depth": "19.5",
+   "CT": "10.313",
+   "Den1": "1.8868",
+   "MS1": "8.2648",
+   "Depth_corrected": "15"
+ },
+ {
+   "SB_Depth": "0.205",
+   "Core_Sect": "2",
+   "Sect_Depth": "20.5",
+   "CT": "10.313",
+   "Den1": "1.8969",
+   "MS1": "6.8867",
+   "Depth_corrected": "16"
+ },
+ {
+   "SB_Depth": "0.215",
+   "Core_Sect": "2",
+   "Sect_Depth": "21.5",
+   "CT": "10.312",
+   "Den1": "1.9227",
+   "MS1": "7.081",
+   "Depth_corrected": "17"
+ },
+ {
+   "SB_Depth": "0.225",
+   "Core_Sect": "2",
+   "Sect_Depth": "22.5",
+   "CT": "10.314",
+   "Den1": "1.8892",
+   "MS1": "7.0579",
+   "Depth_corrected": "18"
+ },
+ {
+   "SB_Depth": "0.235",
+   "Core_Sect": "2",
+   "Sect_Depth": "23.5",
+   "CT": "10.316",
+   "Den1": "1.8882",
+   "MS1": "7.094",
+   "Depth_corrected": "19"
+ },
+ {
+   "SB_Depth": "0.245",
+   "Core_Sect": "2",
+   "Sect_Depth": "24.5",
+   "CT": "10.316",
+   "Den1": "1.9194",
+   "MS1": "7.0855",
+   "Depth_corrected": "20"
+ },
+ {
+   "SB_Depth": "0.255",
+   "Core_Sect": "2",
+   "Sect_Depth": "25.5",
+   "CT": "10.316",
+   "Den1": "1.892",
+   "MS1": "7.3326",
+   "Depth_corrected": "21"
+ },
+ {
+   "SB_Depth": "0.265",
+   "Core_Sect": "2",
+   "Sect_Depth": "26.5",
+   "CT": "10.317",
+   "Den1": "1.8962",
+   "MS1": "7.4583",
+   "Depth_corrected": "22"
+ },
+ {
+   "SB_Depth": "0.275",
+   "Core_Sect": "2",
+   "Sect_Depth": "27.5",
+   "CT": "10.317",
+   "Den1": "1.8975",
+   "MS1": "7.4894",
+   "Depth_corrected": "23"
+ },
+ {
+   "SB_Depth": "0.285",
+   "Core_Sect": "2",
+   "Sect_Depth": "28.5",
+   "CT": "10.318",
+   "Den1": "1.9005",
+   "MS1": "7.4755",
+   "Depth_corrected": "24"
+ },
+ {
+   "SB_Depth": "0.295",
+   "Core_Sect": "2",
+   "Sect_Depth": "29.5",
+   "CT": "10.318",
+   "Den1": "1.9107",
+   "MS1": "7.3641",
+   "Depth_corrected": "25"
+ },
+ {
+   "SB_Depth": "0.305",
+   "Core_Sect": "2",
+   "Sect_Depth": "30.5",
+   "CT": "10.318",
+   "Den1": "1.9011",
+   "MS1": "7.3652",
+   "Depth_corrected": "26"
+ },
+ {
+   "SB_Depth": "0.315",
+   "Core_Sect": "2",
+   "Sect_Depth": "31.5",
+   "CT": "10.318",
+   "Den1": "1.9062",
+   "MS1": "7.3097",
+   "Depth_corrected": "27"
+ },
+ {
+   "SB_Depth": "0.325",
+   "Core_Sect": "2",
+   "Sect_Depth": "32.5",
+   "CT": "10.319",
+   "Den1": "1.8971",
+   "MS1": "7.2707",
+   "Depth_corrected": "28"
+ },
+ {
+   "SB_Depth": "0.335",
+   "Core_Sect": "2",
+   "Sect_Depth": "33.5",
+   "CT": "10.32",
+   "Den1": "1.9173",
+   "MS1": "7.1208",
+   "Depth_corrected": "29"
+ },
+ {
+   "SB_Depth": "0.345",
+   "Core_Sect": "2",
+   "Sect_Depth": "34.5",
+   "CT": "10.319",
+   "Den1": "1.9047",
+   "MS1": "7.1341",
+   "Depth_corrected": "30"
+ },
+ {
+   "SB_Depth": "0.355",
+   "Core_Sect": "2",
+   "Sect_Depth": "35.5",
+   "CT": "10.32",
+   "Den1": "1.89",
+   "MS1": "7.1518",
+   "Depth_corrected": "31"
+ },
+ {
+   "SB_Depth": "0.365",
+   "Core_Sect": "2",
+   "Sect_Depth": "36.5",
+   "CT": "10.32",
+   "Den1": "1.8837",
+   "MS1": "7.1395",
+   "Depth_corrected": "32"
+ },
+ {
+   "SB_Depth": "0.375",
+   "Core_Sect": "2",
+   "Sect_Depth": "37.5",
+   "CT": "10.32",
+   "Den1": "1.8593",
+   "MS1": "7.233",
+   "Depth_corrected": "33"
+ },
+ {
+   "SB_Depth": "0.385",
+   "Core_Sect": "2",
+   "Sect_Depth": "38.5",
+   "CT": "10.322",
+   "Den1": "1.9004",
+   "MS1": "7.0728",
+   "Depth_corrected": "34"
+ },
+ {
+   "SB_Depth": "0.395",
+   "Core_Sect": "2",
+   "Sect_Depth": "39.5",
+   "CT": "10.322",
+   "Den1": "1.9253",
+   "MS1": "6.9811",
+   "Depth_corrected": "35"
+ },
+ {
+   "SB_Depth": "0.405",
+   "Core_Sect": "2",
+   "Sect_Depth": "40.5",
+   "CT": "10.322",
+   "Den1": "1.889",
+   "MS1": "7.1516",
+   "Depth_corrected": "36"
+ },
+ {
+   "SB_Depth": "0.415",
+   "Core_Sect": "2",
+   "Sect_Depth": "41.5",
+   "CT": "10.325",
+   "Den1": "1.9055",
+   "MS1": "7.1552",
+   "Depth_corrected": "37"
+ },
+ {
+   "SB_Depth": "0.425",
+   "Core_Sect": "2",
+   "Sect_Depth": "42.5",
+   "CT": "10.324",
+   "Den1": "1.907",
+   "MS1": "7.2232",
+   "Depth_corrected": "38"
+ },
+ {
+   "SB_Depth": "0.435",
+   "Core_Sect": "2",
+   "Sect_Depth": "43.5",
+   "CT": "10.326",
+   "Den1": "1.9022",
+   "MS1": "7.3809",
+   "Depth_corrected": "39"
+ },
+ {
+   "SB_Depth": "0.445",
+   "Core_Sect": "2",
+   "Sect_Depth": "44.5",
+   "CT": "10.326",
+   "Den1": "1.9022",
+   "MS1": "7.56",
+   "Depth_corrected": "40"
+ },
+ {
+   "SB_Depth": "0.455",
+   "Core_Sect": "2",
+   "Sect_Depth": "45.5",
+   "CT": "10.326",
+   "Den1": "1.9143",
+   "MS1": "7.7257",
+   "Depth_corrected": "41"
+ },
+ {
+   "SB_Depth": "0.465",
+   "Core_Sect": "2",
+   "Sect_Depth": "46.5",
+   "CT": "10.328",
+   "Den1": "1.9242",
+   "MS1": "7.8941",
+   "Depth_corrected": "42"
+ },
+ {
+   "SB_Depth": "0.475",
+   "Core_Sect": "2",
+   "Sect_Depth": "47.5",
+   "CT": "10.328",
+   "Den1": "1.9424",
+   "MS1": "8.0657",
+   "Depth_corrected": "43"
+ },
+ {
+   "SB_Depth": "0.485",
+   "Core_Sect": "2",
+   "Sect_Depth": "48.5",
+   "CT": "10.328",
+   "Den1": "1.9229",
+   "MS1": "8.3953",
+   "Depth_corrected": "44"
+ },
+ {
+   "SB_Depth": "0.495",
+   "Core_Sect": "2",
+   "Sect_Depth": "49.5",
+   "CT": "10.329",
+   "Den1": "1.9125",
+   "MS1": "8.6526",
+   "Depth_corrected": "45"
+ },
+ {
+   "SB_Depth": "0.505",
+   "Core_Sect": "2",
+   "Sect_Depth": "50.5",
+   "CT": "10.329",
+   "Den1": "1.9612",
+   "MS1": "8.6111",
+   "Depth_corrected": "46"
+ },
+ {
+   "SB_Depth": "0.515",
+   "Core_Sect": "2",
+   "Sect_Depth": "51.5",
+   "CT": "10.329",
+   "Den1": "1.9481",
+   "MS1": "8.7391",
+   "Depth_corrected": "47"
+ },
+ {
+   "SB_Depth": "0.525",
+   "Core_Sect": "2",
+   "Sect_Depth": "52.5",
+   "CT": "10.328",
+   "Den1": "1.9707",
+   "MS1": "8.6412",
+   "Depth_corrected": "48"
+ },
+ {
+   "SB_Depth": "0.535",
+   "Core_Sect": "2",
+   "Sect_Depth": "53.5",
+   "CT": "10.328",
+   "Den1": "1.9542",
+   "MS1": "8.7142",
+   "Depth_corrected": "49"
+ },
+ {
+   "SB_Depth": "0.545",
+   "Core_Sect": "2",
+   "Sect_Depth": "54.5",
+   "CT": "10.328",
+   "Den1": "1.9326",
+   "MS1": "8.8114",
+   "Depth_corrected": "50"
+ },
+ {
+   "SB_Depth": "0.555",
+   "Core_Sect": "2",
+   "Sect_Depth": "55.5",
+   "CT": "10.326",
+   "Den1": "1.8984",
+   "MS1": "8.9753",
+   "Depth_corrected": "51"
+ },
+ {
+   "SB_Depth": "0.565",
+   "Core_Sect": "2",
+   "Sect_Depth": "56.5",
+   "CT": "10.327",
+   "Den1": "1.8862",
+   "MS1": "9.1754",
+   "Depth_corrected": "52"
+ },
+ {
+   "SB_Depth": "0.575",
+   "Core_Sect": "2",
+   "Sect_Depth": "57.5",
+   "CT": "10.328",
+   "Den1": "1.874",
+   "MS1": "9.4866",
+   "Depth_corrected": "53"
+ },
+ {
+   "SB_Depth": "0.585",
+   "Core_Sect": "2",
+   "Sect_Depth": "58.5",
+   "CT": "10.328",
+   "Den1": "1.8791",
+   "MS1": "9.8963",
+   "Depth_corrected": "54"
+ },
+ {
+   "SB_Depth": "0.595",
+   "Core_Sect": "2",
+   "Sect_Depth": "59.5",
+   "CT": "10.328",
+   "Den1": "1.8803",
+   "MS1": "10.4331",
+   "Depth_corrected": "55"
+ },
+ {
+   "SB_Depth": "0.605",
+   "Core_Sect": "2",
+   "Sect_Depth": "60.5",
+   "CT": "10.328",
+   "Den1": "1.856",
+   "MS1": "11.2671",
+   "Depth_corrected": "56"
+ },
+ {
+   "SB_Depth": "0.615",
+   "Core_Sect": "2",
+   "Sect_Depth": "61.5",
+   "CT": "10.328",
+   "Den1": "1.8759",
+   "MS1": "11.9826",
+   "Depth_corrected": "57"
+ },
+ {
+   "SB_Depth": "0.625",
+   "Core_Sect": "2",
+   "Sect_Depth": "62.5",
+   "CT": "10.327",
+   "Den1": "1.8899",
+   "MS1": "12.7982",
+   "Depth_corrected": "58"
+ },
+ {
+   "SB_Depth": "0.635",
+   "Core_Sect": "2",
+   "Sect_Depth": "63.5",
+   "CT": "10.327",
+   "Den1": "1.8824",
+   "MS1": "13.7908",
+   "Depth_corrected": "59"
+ },
+ {
+   "SB_Depth": "0.645",
+   "Core_Sect": "2",
+   "Sect_Depth": "64.5",
+   "CT": "10.326",
+   "Den1": "1.9015",
+   "MS1": "14.695",
+   "Depth_corrected": "60"
+ },
+ {
+   "SB_Depth": "0.655",
+   "Core_Sect": "2",
+   "Sect_Depth": "65.5",
+   "CT": "10.324",
+   "Den1": "1.9256",
+   "MS1": "15.5461",
+   "Depth_corrected": "61"
+ },
+ {
+   "SB_Depth": "0.665",
+   "Core_Sect": "2",
+   "Sect_Depth": "66.5",
+   "CT": "10.323",
+   "Den1": "1.9002",
+   "MS1": "16.5123",
+   "Depth_corrected": "62"
+ },
+ {
+   "SB_Depth": "0.675",
+   "Core_Sect": "2",
+   "Sect_Depth": "67.5",
+   "CT": "10.324",
+   "Den1": "1.7705",
+   "MS1": "18.2943",
+   "Depth_corrected": "63"
+ },
+ {
+   "SB_Depth": "0.685",
+   "Core_Sect": "2",
+   "Sect_Depth": "68.5",
+   "CT": "10.325",
+   "Den1": "1.5876",
+   "MS1": "21.1263",
+   "Depth_corrected": "64"
+ },
+ {
+   "SB_Depth": "0.695",
+   "Core_Sect": "2",
+   "Sect_Depth": "69.5",
+   "CT": "10.325",
+   "Den1": "1.6378",
+   "MS1": "21.7276",
+   "Depth_corrected": "65"
+ },
+ {
+   "SB_Depth": "0.705",
+   "Core_Sect": "2",
+   "Sect_Depth": "70.5",
+   "CT": "10.327",
+   "Den1": "1.7735",
+   "MS1": "21.7827",
+   "Depth_corrected": "66"
+ },
+ {
+   "SB_Depth": "0.715",
+   "Core_Sect": "2",
+   "Sect_Depth": "71.5",
+   "CT": "10.327",
+   "Den1": "1.8334",
+   "MS1": "22.8547",
+   "Depth_corrected": "67"
+ },
+ {
+   "SB_Depth": "0.725",
+   "Core_Sect": "2",
+   "Sect_Depth": "72.5",
+   "CT": "10.325",
+   "Den1": "1.8671",
+   "MS1": "24.1347",
+   "Depth_corrected": "68"
+ },
+ {
+   "SB_Depth": "0.735",
+   "Core_Sect": "2",
+   "Sect_Depth": "73.5",
+   "CT": "10.326",
+   "Den1": "1.8576",
+   "MS1": "25.4622",
+   "Depth_corrected": "69"
+ },
+ {
+   "SB_Depth": "0.745",
+   "Core_Sect": "2",
+   "Sect_Depth": "74.5",
+   "CT": "10.327",
+   "Den1": "1.8887",
+   "MS1": "25.7218",
+   "Depth_corrected": "70"
+ },
+ {
+   "SB_Depth": "0.755",
+   "Core_Sect": "2",
+   "Sect_Depth": "75.5",
+   "CT": "10.327",
+   "Den1": "1.8824",
+   "MS1": "25.5545",
+   "Depth_corrected": "71"
+ },
+ {
+   "SB_Depth": "0.765",
+   "Core_Sect": "2",
+   "Sect_Depth": "76.5",
+   "CT": "10.325",
+   "Den1": "1.9023",
+   "MS1": "24.0458",
+   "Depth_corrected": "72"
+ },
+ {
+   "SB_Depth": "0.775",
+   "Core_Sect": "2",
+   "Sect_Depth": "77.5",
+   "CT": "10.325",
+   "Den1": "1.7994",
+   "MS1": "22.8834",
+   "Depth_corrected": "73"
+ },
+ {
+   "SB_Depth": "0.785",
+   "Core_Sect": "2",
+   "Sect_Depth": "78.5",
+   "CT": "10.324",
+   "Den1": "1.7594",
+   "MS1": "20.1541",
+   "Depth_corrected": "74"
+ },
+ {
+   "SB_Depth": "0.795",
+   "Core_Sect": "2",
+   "Sect_Depth": "79.5",
+   "CT": "10.323",
+   "Den1": "1.7497",
+   "MS1": "17.1918",
+   "Depth_corrected": "75"
+ },
+ {
+   "SB_Depth": "0.805",
+   "Core_Sect": "2",
+   "Sect_Depth": "80.5",
+   "CT": "10.323",
+   "Den1": "1.8069",
+   "MS1": "14.2314",
+   "Depth_corrected": "76"
+ },
+ {
+   "SB_Depth": "0.815",
+   "Core_Sect": "2",
+   "Sect_Depth": "81.5",
+   "CT": "10.325",
+   "Den1": "1.8198",
+   "MS1": "12.3621",
+   "Depth_corrected": "77"
+ },
+ {
+   "SB_Depth": "0.825",
+   "Core_Sect": "2",
+   "Sect_Depth": "82.5",
+   "CT": "10.325",
+   "Den1": "1.8405",
+   "MS1": "10.8525",
+   "Depth_corrected": "78"
+ },
+ {
+   "SB_Depth": "0.835",
+   "Core_Sect": "2",
+   "Sect_Depth": "83.5",
+   "CT": "10.324",
+   "Den1": "1.8555",
+   "MS1": "9.8492",
+   "Depth_corrected": "79"
+ },
+ {
+   "SB_Depth": "0.845",
+   "Core_Sect": "2",
+   "Sect_Depth": "84.5",
+   "CT": "10.324",
+   "Den1": "1.799",
+   "MS1": "9.4385",
+   "Depth_corrected": "80"
+ },
+ {
+   "SB_Depth": "0.855",
+   "Core_Sect": "2",
+   "Sect_Depth": "85.5",
+   "CT": "10.324",
+   "Den1": "1.8635",
+   "MS1": "8.7089",
+   "Depth_corrected": "81"
+ },
+ {
+   "SB_Depth": "0.865",
+   "Core_Sect": "2",
+   "Sect_Depth": "86.5",
+   "CT": "10.324",
+   "Den1": "1.8586",
+   "MS1": "8.4753",
+   "Depth_corrected": "82"
+ },
+ {
+   "SB_Depth": "0.875",
+   "Core_Sect": "2",
+   "Sect_Depth": "87.5",
+   "CT": "10.326",
+   "Den1": "1.8361",
+   "MS1": "8.4632",
+   "Depth_corrected": "83"
+ },
+ {
+   "SB_Depth": "0.885",
+   "Core_Sect": "2",
+   "Sect_Depth": "88.5",
+   "CT": "10.325",
+   "Den1": "1.874",
+   "MS1": "8.3307",
+   "Depth_corrected": "84"
+ },
+ {
+   "SB_Depth": "0.895",
+   "Core_Sect": "2",
+   "Sect_Depth": "89.5",
+   "CT": "10.324",
+   "Den1": "1.8586",
+   "MS1": "8.512",
+   "Depth_corrected": "85"
+ },
+ {
+   "SB_Depth": "0.905",
+   "Core_Sect": "2",
+   "Sect_Depth": "90.5",
+   "CT": "10.324",
+   "Den1": "1.8604",
+   "MS1": "8.6868",
+   "Depth_corrected": "86"
+ },
+ {
+   "SB_Depth": "0.915",
+   "Core_Sect": "2",
+   "Sect_Depth": "91.5",
+   "CT": "10.341",
+   "Den1": "1.8742",
+   "MS1": "8.8004",
+   "Depth_corrected": "87"
+ },
+ {
+   "SB_Depth": "0.925",
+   "Core_Sect": "2",
+   "Sect_Depth": "92.5",
+   "CT": "10.343",
+   "Den1": "1.8676",
+   "MS1": "9.1173",
+   "Depth_corrected": "88"
+ },
+ {
+   "SB_Depth": "0.935",
+   "Core_Sect": "2",
+   "Sect_Depth": "93.5",
+   "CT": "10.354",
+   "Den1": "1.8464",
+   "MS1": "9.4507",
+   "Depth_corrected": "89"
+ },
+ {
+   "SB_Depth": "0.945",
+   "Core_Sect": "2",
+   "Sect_Depth": "94.5",
+   "CT": "10.39",
+   "Den1": "1.8722",
+   "MS1": "9.5875",
+   "Depth_corrected": "90"
+ },
+ {
+   "SB_Depth": "0.955",
+   "Core_Sect": "2",
+   "Sect_Depth": "95.5",
+   "CT": "10.528",
+   "Den1": "1.8489",
+   "MS1": "9.6341",
+   "Depth_corrected": "91"
+ },
+ {
+   "SB_Depth": "0.965",
+   "Core_Sect": "2",
+   "Sect_Depth": "96.5",
+   "CT": "10.546",
+   "Den1": "1.8488",
+   "MS1": "9.7621",
+   "Depth_corrected": "92"
+ },
+ {
+   "SB_Depth": "0.975",
+   "Core_Sect": "2",
+   "Sect_Depth": "97.5",
+   "CT": "10.545",
+   "Den1": "1.8967",
+   "MS1": "9.7217",
+   "Depth_corrected": "93"
+ },
+ {
+   "SB_Depth": "0.985",
+   "Core_Sect": "2",
+   "Sect_Depth": "98.5",
+   "CT": "10.561",
+   "Den1": "1.8605",
+   "MS1": "9.972",
+   "Depth_corrected": "94"
+ },
+ {
+   "SB_Depth": "0.995",
+   "Core_Sect": "2",
+   "Sect_Depth": "99.5",
+   "CT": "10.572",
+   "Den1": "1.876",
+   "MS1": "9.9284",
+   "Depth_corrected": "95"
+ },
+ {
+   "SB_Depth": "1.005",
+   "Core_Sect": "2",
+   "Sect_Depth": "100.5",
+   "CT": "10.596",
+   "Den1": "1.8737",
+   "MS1": "9.8779",
+   "Depth_corrected": "96"
+ },
+ {
+   "SB_Depth": "1.015",
+   "Core_Sect": "2",
+   "Sect_Depth": "101.5",
+   "CT": "10.6",
+   "Den1": "1.8376",
+   "MS1": "9.9923",
+   "Depth_corrected": "97"
+ },
+ {
+   "SB_Depth": "1.025",
+   "Core_Sect": "2",
+   "Sect_Depth": "102.5",
+   "CT": "10.567",
+   "Den1": "1.814",
+   "MS1": "10.211",
+   "Depth_corrected": "98"
+ },
+ {
+   "SB_Depth": "1.035*",
+   "Core_Sect": "1*",
+   "Sect_Depth": "0.5*",
+   "CT": "10.641*",
+   "Den1": "",
+   "MS1": "",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "1.045*",
+   "Core_Sect": "1*",
+   "Sect_Depth": "1.5*",
+   "CT": "10.62*",
+   "Den1": "0.3522*",
+   "MS1": "1.4017*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "1.055*",
+   "Core_Sect": "1*",
+   "Sect_Depth": "2.5*",
+   "CT": "10.593*",
+   "Den1": "0.0498*",
+   "MS1": "443.4025*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "1.065",
+   "Core_Sect": "1",
+   "Sect_Depth": "3.5",
+   "CT": "10.541",
+   "Den1": "1.7891",
+   "MS1": "14.3796",
+   "Depth_corrected": "99"
+ },
+ {
+   "SB_Depth": "1.075",
+   "Core_Sect": "1",
+   "Sect_Depth": "4.5",
+   "CT": "10.526",
+   "Den1": "1.8382",
+   "MS1": "16.1241",
+   "Depth_corrected": "100"
+ },
+ {
+   "SB_Depth": "1.085",
+   "Core_Sect": "1",
+   "Sect_Depth": "5.5",
+   "CT": "10.543",
+   "Den1": "1.8705",
+   "MS1": "17.7669",
+   "Depth_corrected": "101"
+ },
+ {
+   "SB_Depth": "1.095",
+   "Core_Sect": "1",
+   "Sect_Depth": "6.5",
+   "CT": "10.536",
+   "Den1": "1.8983",
+   "MS1": "19.3377",
+   "Depth_corrected": "102"
+ },
+ {
+   "SB_Depth": "1.105",
+   "Core_Sect": "1",
+   "Sect_Depth": "7.5",
+   "CT": "10.513",
+   "Den1": "1.9321",
+   "MS1": "20.3237",
+   "Depth_corrected": "103"
+ },
+ {
+   "SB_Depth": "1.115",
+   "Core_Sect": "1",
+   "Sect_Depth": "8.5",
+   "CT": "10.504",
+   "Den1": "1.9429",
+   "MS1": "20.928",
+   "Depth_corrected": "104"
+ },
+ {
+   "SB_Depth": "1.125",
+   "Core_Sect": "1",
+   "Sect_Depth": "9.5",
+   "CT": "10.494",
+   "Den1": "1.9194",
+   "MS1": "21.2072",
+   "Depth_corrected": "105"
+ },
+ {
+   "SB_Depth": "1.135",
+   "Core_Sect": "1",
+   "Sect_Depth": "10.5",
+   "CT": "10.426",
+   "Den1": "1.9261",
+   "MS1": "20.9379",
+   "Depth_corrected": "106"
+ },
+ {
+   "SB_Depth": "1.145",
+   "Core_Sect": "1",
+   "Sect_Depth": "11.5",
+   "CT": "10.329",
+   "Den1": "1.9376",
+   "MS1": "20.63",
+   "Depth_corrected": "107"
+ },
+ {
+   "SB_Depth": "1.155",
+   "Core_Sect": "1",
+   "Sect_Depth": "12.5",
+   "CT": "10.298",
+   "Den1": "1.915",
+   "MS1": "20.4775",
+   "Depth_corrected": "108"
+ },
+ {
+   "SB_Depth": "1.165",
+   "Core_Sect": "1",
+   "Sect_Depth": "13.5",
+   "CT": "10.292",
+   "Den1": "1.9155",
+   "MS1": "20.2189",
+   "Depth_corrected": "109"
+ },
+ {
+   "SB_Depth": "1.175",
+   "Core_Sect": "1",
+   "Sect_Depth": "14.5",
+   "CT": "10.288",
+   "Den1": "1.9086",
+   "MS1": "20.3868",
+   "Depth_corrected": "110"
+ },
+ {
+   "SB_Depth": "1.185",
+   "Core_Sect": "1",
+   "Sect_Depth": "15.5",
+   "CT": "10.263",
+   "Den1": "1.9081",
+   "MS1": "20.8229",
+   "Depth_corrected": "111"
+ },
+ {
+   "SB_Depth": "1.195",
+   "Core_Sect": "1",
+   "Sect_Depth": "16.5",
+   "CT": "10.263",
+   "Den1": "1.9055",
+   "MS1": "21.2511",
+   "Depth_corrected": "112"
+ },
+ {
+   "SB_Depth": "1.205",
+   "Core_Sect": "1",
+   "Sect_Depth": "17.5",
+   "CT": "10.263",
+   "Den1": "1.9358",
+   "MS1": "21.0626",
+   "Depth_corrected": "113"
+ },
+ {
+   "SB_Depth": "1.215",
+   "Core_Sect": "1",
+   "Sect_Depth": "18.5",
+   "CT": "10.263",
+   "Den1": "1.8992",
+   "MS1": "21.3952",
+   "Depth_corrected": "114"
+ },
+ {
+   "SB_Depth": "1.225",
+   "Core_Sect": "1",
+   "Sect_Depth": "19.5",
+   "CT": "10.265",
+   "Den1": "1.9052",
+   "MS1": "20.9889",
+   "Depth_corrected": "115"
+ },
+ {
+   "SB_Depth": "1.235",
+   "Core_Sect": "1",
+   "Sect_Depth": "20.5",
+   "CT": "10.266",
+   "Den1": "1.905",
+   "MS1": "20.476",
+   "Depth_corrected": "116"
+ },
+ {
+   "SB_Depth": "1.245",
+   "Core_Sect": "1",
+   "Sect_Depth": "21.5",
+   "CT": "10.262",
+   "Den1": "1.9076",
+   "MS1": "19.961",
+   "Depth_corrected": "117"
+ },
+ {
+   "SB_Depth": "1.255",
+   "Core_Sect": "1",
+   "Sect_Depth": "22.5",
+   "CT": "10.26",
+   "Den1": "1.9004",
+   "MS1": "19.6101",
+   "Depth_corrected": "118"
+ },
+ {
+   "SB_Depth": "1.265",
+   "Core_Sect": "1",
+   "Sect_Depth": "23.5",
+   "CT": "10.262",
+   "Den1": "1.858",
+   "MS1": "19.8222",
+   "Depth_corrected": "119"
+ },
+ {
+   "SB_Depth": "1.275",
+   "Core_Sect": "1",
+   "Sect_Depth": "24.5",
+   "CT": "10.259",
+   "Den1": "1.8285",
+   "MS1": "20.1588",
+   "Depth_corrected": "120"
+ },
+ {
+   "SB_Depth": "1.285",
+   "Core_Sect": "1",
+   "Sect_Depth": "25.5",
+   "CT": "10.259",
+   "Den1": "1.7859",
+   "MS1": "20.7175",
+   "Depth_corrected": "121"
+ },
+ {
+   "SB_Depth": "1.295",
+   "Core_Sect": "1",
+   "Sect_Depth": "26.5",
+   "CT": "10.259",
+   "Den1": "1.8604",
+   "MS1": "20.0369",
+   "Depth_corrected": "122"
+ },
+ {
+   "SB_Depth": "1.305",
+   "Core_Sect": "1",
+   "Sect_Depth": "27.5",
+   "CT": "10.259",
+   "Den1": "1.8444",
+   "MS1": "20.3993",
+   "Depth_corrected": "123"
+ },
+ {
+   "SB_Depth": "1.315",
+   "Core_Sect": "1",
+   "Sect_Depth": "28.5",
+   "CT": "10.258",
+   "Den1": "1.8396",
+   "MS1": "20.646",
+   "Depth_corrected": "124"
+ },
+ {
+   "SB_Depth": "1.325",
+   "Core_Sect": "1",
+   "Sect_Depth": "29.5",
+   "CT": "10.259",
+   "Den1": "1.8511",
+   "MS1": "20.7372",
+   "Depth_corrected": "125"
+ },
+ {
+   "SB_Depth": "1.335",
+   "Core_Sect": "1",
+   "Sect_Depth": "30.5",
+   "CT": "10.258",
+   "Den1": "1.8556",
+   "MS1": "20.9171",
+   "Depth_corrected": "126"
+ },
+ {
+   "SB_Depth": "1.345",
+   "Core_Sect": "1",
+   "Sect_Depth": "31.5",
+   "CT": "10.258",
+   "Den1": "1.8323",
+   "MS1": "21.4865",
+   "Depth_corrected": "127"
+ },
+ {
+   "SB_Depth": "1.355",
+   "Core_Sect": "1",
+   "Sect_Depth": "32.5",
+   "CT": "10.26",
+   "Den1": "1.8356",
+   "MS1": "21.8141",
+   "Depth_corrected": "128"
+ },
+ {
+   "SB_Depth": "1.365",
+   "Core_Sect": "1",
+   "Sect_Depth": "33.5",
+   "CT": "10.259",
+   "Den1": "1.8382",
+   "MS1": "22.3176",
+   "Depth_corrected": "129"
+ },
+ {
+   "SB_Depth": "1.375",
+   "Core_Sect": "1",
+   "Sect_Depth": "34.5",
+   "CT": "10.258",
+   "Den1": "1.8482",
+   "MS1": "22.8417",
+   "Depth_corrected": "130"
+ },
+ {
+   "SB_Depth": "1.385",
+   "Core_Sect": "1",
+   "Sect_Depth": "35.5",
+   "CT": "10.257",
+   "Den1": "1.8143",
+   "MS1": "24.0791",
+   "Depth_corrected": "131"
+ },
+ {
+   "SB_Depth": "1.395",
+   "Core_Sect": "1",
+   "Sect_Depth": "36.5",
+   "CT": "10.255",
+   "Den1": "1.85",
+   "MS1": "24.4915",
+   "Depth_corrected": "132"
+ },
+ {
+   "SB_Depth": "1.405",
+   "Core_Sect": "1",
+   "Sect_Depth": "37.5",
+   "CT": "10.255",
+   "Den1": "1.8463",
+   "MS1": "26.0084",
+   "Depth_corrected": "133"
+ },
+ {
+   "SB_Depth": "1.415",
+   "Core_Sect": "1",
+   "Sect_Depth": "38.5",
+   "CT": "10.256",
+   "Den1": "1.8327",
+   "MS1": "27.9764",
+   "Depth_corrected": "134"
+ },
+ {
+   "SB_Depth": "1.425",
+   "Core_Sect": "1",
+   "Sect_Depth": "39.5",
+   "CT": "10.257",
+   "Den1": "1.8374",
+   "MS1": "29.636",
+   "Depth_corrected": "135"
+ },
+ {
+   "SB_Depth": "1.435",
+   "Core_Sect": "1",
+   "Sect_Depth": "40.5",
+   "CT": "10.259",
+   "Den1": "1.8866",
+   "MS1": "30.9067",
+   "Depth_corrected": "136"
+ },
+ {
+   "SB_Depth": "1.445",
+   "Core_Sect": "1",
+   "Sect_Depth": "41.5",
+   "CT": "10.26",
+   "Den1": "1.8602",
+   "MS1": "33.7246",
+   "Depth_corrected": "137"
+ },
+ {
+   "SB_Depth": "1.455",
+   "Core_Sect": "1",
+   "Sect_Depth": "42.5",
+   "CT": "10.268",
+   "Den1": "1.8687",
+   "MS1": "36.2397",
+   "Depth_corrected": "138"
+ },
+ {
+   "SB_Depth": "1.465",
+   "Core_Sect": "1",
+   "Sect_Depth": "43.5",
+   "CT": "10.268",
+   "Den1": "1.8989",
+   "MS1": "38.5446",
+   "Depth_corrected": "139"
+ },
+ {
+   "SB_Depth": "1.475",
+   "Core_Sect": "1",
+   "Sect_Depth": "44.5",
+   "CT": "10.271",
+   "Den1": "1.9246",
+   "MS1": "40.372",
+   "Depth_corrected": "140"
+ },
+ {
+   "SB_Depth": "1.485",
+   "Core_Sect": "1",
+   "Sect_Depth": "45.5",
+   "CT": "10.272",
+   "Den1": "1.9569",
+   "MS1": "41.1781",
+   "Depth_corrected": "141"
+ },
+ {
+   "SB_Depth": "1.495",
+   "Core_Sect": "1",
+   "Sect_Depth": "46.5",
+   "CT": "10.276",
+   "Den1": "1.9793",
+   "MS1": "40.9466",
+   "Depth_corrected": "142"
+ },
+ {
+   "SB_Depth": "1.505",
+   "Core_Sect": "1",
+   "Sect_Depth": "47.5",
+   "CT": "10.278",
+   "Den1": "1.9252",
+   "MS1": "41.0347",
+   "Depth_corrected": "143"
+ },
+ {
+   "SB_Depth": "1.515",
+   "Core_Sect": "1",
+   "Sect_Depth": "48.5",
+   "CT": "10.276",
+   "Den1": "1.9346",
+   "MS1": "37.6786",
+   "Depth_corrected": "144"
+ },
+ {
+   "SB_Depth": "1.525",
+   "Core_Sect": "1",
+   "Sect_Depth": "49.5",
+   "CT": "10.275",
+   "Den1": "1.9367",
+   "MS1": "36.1843",
+   "Depth_corrected": "145"
+ },
+ {
+   "SB_Depth": "1.535",
+   "Core_Sect": "1",
+   "Sect_Depth": "50.5",
+   "CT": "10.275",
+   "Den1": "1.902",
+   "MS1": "35.6089",
+   "Depth_corrected": "146"
+ },
+ {
+   "SB_Depth": "1.545",
+   "Core_Sect": "1",
+   "Sect_Depth": "51.5",
+   "CT": "10.277",
+   "Den1": "1.8909",
+   "MS1": "34.9954",
+   "Depth_corrected": "147"
+ },
+ {
+   "SB_Depth": "1.555",
+   "Core_Sect": "1",
+   "Sect_Depth": "52.5",
+   "CT": "10.275",
+   "Den1": "1.8737",
+   "MS1": "35.0045",
+   "Depth_corrected": "148"
+ },
+ {
+   "SB_Depth": "1.565",
+   "Core_Sect": "1",
+   "Sect_Depth": "53.5",
+   "CT": "10.277",
+   "Den1": "1.889",
+   "MS1": "34.6283",
+   "Depth_corrected": "149"
+ },
+ {
+   "SB_Depth": "1.575",
+   "Core_Sect": "1",
+   "Sect_Depth": "54.5",
+   "CT": "10.278",
+   "Den1": "1.8713",
+   "MS1": "34.984",
+   "Depth_corrected": "150"
+ },
+ {
+   "SB_Depth": "1.585",
+   "Core_Sect": "1",
+   "Sect_Depth": "55.5",
+   "CT": "10.277",
+   "Den1": "1.8621",
+   "MS1": "35.1286",
+   "Depth_corrected": "151"
+ },
+ {
+   "SB_Depth": "1.595",
+   "Core_Sect": "1",
+   "Sect_Depth": "56.5",
+   "CT": "10.28",
+   "Den1": "1.879",
+   "MS1": "34.5265",
+   "Depth_corrected": "152"
+ },
+ {
+   "SB_Depth": "1.605",
+   "Core_Sect": "1",
+   "Sect_Depth": "57.5",
+   "CT": "10.28",
+   "Den1": "1.8954",
+   "MS1": "33.609",
+   "Depth_corrected": "153"
+ },
+ {
+   "SB_Depth": "1.615",
+   "Core_Sect": "1",
+   "Sect_Depth": "58.5",
+   "CT": "10.28",
+   "Den1": "1.8797",
+   "MS1": "32.1283",
+   "Depth_corrected": "154"
+ },
+ {
+   "SB_Depth": "1.625",
+   "Core_Sect": "1",
+   "Sect_Depth": "59.5",
+   "CT": "10.281",
+   "Den1": "1.8763",
+   "MS1": "31.4408",
+   "Depth_corrected": "155"
+ },
+ {
+   "SB_Depth": "1.635",
+   "Core_Sect": "1",
+   "Sect_Depth": "60.5",
+   "CT": "10.28",
+   "Den1": "1.848",
+   "MS1": "30.1394",
+   "Depth_corrected": "156"
+ },
+ {
+   "SB_Depth": "1.645",
+   "Core_Sect": "1",
+   "Sect_Depth": "61.5",
+   "CT": "10.279",
+   "Den1": "1.9064",
+   "MS1": "27.2321",
+   "Depth_corrected": "157"
+ },
+ {
+   "SB_Depth": "1.655",
+   "Core_Sect": "1",
+   "Sect_Depth": "62.5",
+   "CT": "10.279",
+   "Den1": "1.8786",
+   "MS1": "25.6509",
+   "Depth_corrected": "158"
+ },
+ {
+   "SB_Depth": "1.665",
+   "Core_Sect": "1",
+   "Sect_Depth": "63.5",
+   "CT": "10.279",
+   "Den1": "1.8365",
+   "MS1": "24.359",
+   "Depth_corrected": "159"
+ },
+ {
+   "SB_Depth": "1.675",
+   "Core_Sect": "1",
+   "Sect_Depth": "64.5",
+   "CT": "10.279",
+   "Den1": "1.8518",
+   "MS1": "22.4796",
+   "Depth_corrected": "160"
+ },
+ {
+   "SB_Depth": "1.685",
+   "Core_Sect": "1",
+   "Sect_Depth": "65.5",
+   "CT": "10.278",
+   "Den1": "1.8607",
+   "MS1": "20.9687",
+   "Depth_corrected": "161"
+ },
+ {
+   "SB_Depth": "1.695",
+   "Core_Sect": "1",
+   "Sect_Depth": "66.5",
+   "CT": "10.277",
+   "Den1": "1.8547",
+   "MS1": "19.9996",
+   "Depth_corrected": "162"
+ },
+ {
+   "SB_Depth": "1.705",
+   "Core_Sect": "1",
+   "Sect_Depth": "67.5",
+   "CT": "10.276",
+   "Den1": "1.8297",
+   "MS1": "19.5982",
+   "Depth_corrected": "163"
+ },
+ {
+   "SB_Depth": "1.715",
+   "Core_Sect": "1",
+   "Sect_Depth": "68.5",
+   "CT": "10.276",
+   "Den1": "1.8567",
+   "MS1": "18.9784",
+   "Depth_corrected": "164"
+ },
+ {
+   "SB_Depth": "1.725",
+   "Core_Sect": "1",
+   "Sect_Depth": "69.5",
+   "CT": "10.276",
+   "Den1": "1.8376",
+   "MS1": "19.1001",
+   "Depth_corrected": "165"
+ },
+ {
+   "SB_Depth": "1.735",
+   "Core_Sect": "1",
+   "Sect_Depth": "70.5",
+   "CT": "10.276",
+   "Den1": "1.8573",
+   "MS1": "18.9349",
+   "Depth_corrected": "166"
+ },
+ {
+   "SB_Depth": "1.745",
+   "Core_Sect": "1",
+   "Sect_Depth": "71.5",
+   "CT": "10.276",
+   "Den1": "1.8729",
+   "MS1": "18.9622",
+   "Depth_corrected": "167"
+ },
+ {
+   "SB_Depth": "1.755",
+   "Core_Sect": "1",
+   "Sect_Depth": "72.5",
+   "CT": "10.276",
+   "Den1": "1.845",
+   "MS1": "19.4733",
+   "Depth_corrected": "168"
+ },
+ {
+   "SB_Depth": "1.765",
+   "Core_Sect": "1",
+   "Sect_Depth": "73.5",
+   "CT": "10.275",
+   "Den1": "1.8768",
+   "MS1": "19.4064",
+   "Depth_corrected": "169"
+ },
+ {
+   "SB_Depth": "1.775",
+   "Core_Sect": "1",
+   "Sect_Depth": "74.5",
+   "CT": "10.276",
+   "Den1": "1.8309",
+   "MS1": "20.2645",
+   "Depth_corrected": "170"
+ },
+ {
+   "SB_Depth": "1.785",
+   "Core_Sect": "1",
+   "Sect_Depth": "75.5",
+   "CT": "10.276",
+   "Den1": "1.8468",
+   "MS1": "20.3892",
+   "Depth_corrected": "171"
+ },
+ {
+   "SB_Depth": "1.795",
+   "Core_Sect": "1",
+   "Sect_Depth": "76.5",
+   "CT": "10.276",
+   "Den1": "1.8425",
+   "MS1": "20.7742",
+   "Depth_corrected": "172"
+ },
+ {
+   "SB_Depth": "1.805",
+   "Core_Sect": "1",
+   "Sect_Depth": "77.5",
+   "CT": "10.276",
+   "Den1": "1.8444",
+   "MS1": "21.0157",
+   "Depth_corrected": "173"
+ },
+ {
+   "SB_Depth": "1.815",
+   "Core_Sect": "1",
+   "Sect_Depth": "78.5",
+   "CT": "10.276",
+   "Den1": "1.8604",
+   "MS1": "21.0202",
+   "Depth_corrected": "174"
+ },
+ {
+   "SB_Depth": "1.825",
+   "Core_Sect": "1",
+   "Sect_Depth": "79.5",
+   "CT": "10.276",
+   "Den1": "1.8654",
+   "MS1": "20.9272",
+   "Depth_corrected": "175"
+ },
+ {
+   "SB_Depth": "1.835",
+   "Core_Sect": "1",
+   "Sect_Depth": "80.5",
+   "CT": "10.276",
+   "Den1": "1.837",
+   "MS1": "20.9494",
+   "Depth_corrected": "176"
+ },
+ {
+   "SB_Depth": "1.845",
+   "Core_Sect": "1",
+   "Sect_Depth": "81.5",
+   "CT": "10.277",
+   "Den1": "1.8168",
+   "MS1": "20.6065",
+   "Depth_corrected": "178"
+ },
+ {
+   "SB_Depth": "1.855",
+   "Core_Sect": "1",
+   "Sect_Depth": "82.5",
+   "CT": "10.277",
+   "Den1": "1.8369",
+   "MS1": "19.7423",
+   "Depth_corrected": "179"
+ },
+ {
+   "SB_Depth": "1.865",
+   "Core_Sect": "1",
+   "Sect_Depth": "83.5",
+   "CT": "10.278",
+   "Den1": "1.8184",
+   "MS1": "19.3291",
+   "Depth_corrected": "180"
+ },
+ {
+   "SB_Depth": "1.875",
+   "Core_Sect": "1",
+   "Sect_Depth": "84.5",
+   "CT": "10.279",
+   "Den1": "1.811",
+   "MS1": "18.8692",
+   "Depth_corrected": "181"
+ },
+ {
+   "SB_Depth": "1.885",
+   "Core_Sect": "1",
+   "Sect_Depth": "85.5",
+   "CT": "10.279",
+   "Den1": "1.828",
+   "MS1": "18.279",
+   "Depth_corrected": "182"
+ },
+ {
+   "SB_Depth": "1.895",
+   "Core_Sect": "1",
+   "Sect_Depth": "86.5",
+   "CT": "10.279",
+   "Den1": "1.8171",
+   "MS1": "18.0848",
+   "Depth_corrected": "183"
+ },
+ {
+   "SB_Depth": "1.905",
+   "Core_Sect": "1",
+   "Sect_Depth": "87.5",
+   "CT": "10.279",
+   "Den1": "1.8268",
+   "MS1": "17.7999",
+   "Depth_corrected": "184"
+ },
+ {
+   "SB_Depth": "1.915",
+   "Core_Sect": "1",
+   "Sect_Depth": "88.5",
+   "CT": "10.28",
+   "Den1": "1.879",
+   "MS1": "17.1163",
+   "Depth_corrected": "185"
+ },
+ {
+   "SB_Depth": "1.925",
+   "Core_Sect": "1",
+   "Sect_Depth": "89.5",
+   "CT": "10.28",
+   "Den1": "1.8784",
+   "MS1": "16.9016",
+   "Depth_corrected": "186"
+ },
+ {
+   "SB_Depth": "1.935",
+   "Core_Sect": "1",
+   "Sect_Depth": "90.5",
+   "CT": "10.279",
+   "Den1": "1.8729",
+   "MS1": "16.6974",
+   "Depth_corrected": "187"
+ },
+ {
+   "SB_Depth": "1.945",
+   "Core_Sect": "1",
+   "Sect_Depth": "91.5",
+   "CT": "10.279",
+   "Den1": "1.9224",
+   "MS1": "15.9087",
+   "Depth_corrected": "188"
+ },
+ {
+   "SB_Depth": "1.955",
+   "Core_Sect": "1",
+   "Sect_Depth": "92.5",
+   "CT": "10.28",
+   "Den1": "1.8523",
+   "MS1": "16.1711",
+   "Depth_corrected": "189"
+ },
+ {
+   "SB_Depth": "1.965",
+   "Core_Sect": "1",
+   "Sect_Depth": "93.5",
+   "CT": "10.279",
+   "Den1": "1.8543",
+   "MS1": "15.8227",
+   "Depth_corrected": "190"
+ },
+ {
+   "SB_Depth": "1.975",
+   "Core_Sect": "1",
+   "Sect_Depth": "94.5",
+   "CT": "10.281",
+   "Den1": "1.8234",
+   "MS1": "15.7798",
+   "Depth_corrected": "191"
+ },
+ {
+   "SB_Depth": "1.985",
+   "Core_Sect": "1",
+   "Sect_Depth": "95.5",
+   "CT": "10.44",
+   "Den1": "1.7725",
+   "MS1": "15.2849",
+   "Depth_corrected": "192"
+ },
+ {
+   "SB_Depth": "1.995",
+   "Core_Sect": "1",
+   "Sect_Depth": "96.5",
+   "CT": "10.525",
+   "Den1": "1.4912",
+   "MS1": "17.2389",
+   "Depth_corrected": "193"
+ },
+ {
+   "SB_Depth": "2.005",
+   "Core_Sect": "1",
+   "Sect_Depth": "97.5",
+   "CT": "10.555",
+   "Den1": "1.4909",
+   "MS1": "16.6322",
+   "Depth_corrected": "194"
+ },
+ {
+   "SB_Depth": "2.015*",
+   "Core_Sect": "1*",
+   "Sect_Depth": "98.5*",
+   "CT": "10.569*",
+   "Den1": "1.2563*",
+   "MS1": "18.954*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "2.025*",
+   "Core_Sect": "1*",
+   "Sect_Depth": "99.5*",
+   "CT": "10.575*",
+   "Den1": "1.0849*",
+   "MS1": "20.8554*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "2.035*",
+   "Core_Sect": "1*",
+   "Sect_Depth": "100.5*",
+   "CT": "10.566*",
+   "Den1": "0.9976*",
+   "MS1": "21.0696*",
+   "Depth_corrected": ""
+ },
+ {
+   "SB_Depth": "2.045*",
+   "Core_Sect": "1*",
+   "Sect_Depth": "101.5*",
+   "CT": "10.56*",
+   "Den1": "1.0556*",
+   "MS1": "17.6399*",
+   "Depth_corrected": ""
+ }
+]
