@@ -42,8 +42,10 @@ class StratColumn extends Component {
 		this.drawColumn = this.drawColumn.bind(this);
 	}
 
-	drawColumn(core, mscl){
+	drawColumn(core){
 
+		let mscl = core.mscl_set;
+		console.log(mscl);
 	  let strata_set = core.strata_set;
 		
 		let margins = {
@@ -90,7 +92,7 @@ class StratColumn extends Component {
 
 	  // GENERATE lithology bars
 	  // Control width and alignment of columns
-	  let XPADDING = 0.5;
+	  let XPADDING = 0.25;
 	  let XALIGN = 0;
 	  x.rangeRound([RANGEBOUNDARY, width])
 	  .domain(['Lithology','Wet Bulk Density', 'Magnetic Susceptivility']).padding(XPADDING).align(XALIGN);
@@ -163,26 +165,58 @@ class StratColumn extends Component {
 	  	lithologyArray.push(obj);
 	  });
 
-	  let densityArray = []
 
+		// Drawing Density Line
 	  let x2 = d3.scaleLinear().domain([1, 2]).range([0,x.bandwidth()]);
 
 	  
-	  var valueline = d3.line()
-	    .x(function(d) { return x2(d.Den1); })
-	    .y(function(d) { return y(d.Depth_corrected); });
+	  var denityLine = d3.line()
+	    .x(function(d) { return x2(d.den1); })
+	    .y(function(d) { return y(d.depth); });
 
-
-	  function drawDensity(valueline, mscl){
+	  function drawDensity(denityLine, mscl){
 	  	return (
-  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
-  				<path className={"line " + classes.lines } d={valueline(mscl)} ></path>
-  			</g>
+	  		<g className="density">
+	  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
+	  				<path className={"line " + classes.lines } d={denityLine(mscl)} ></path>
+	  			</g>
+	  			<Axes
+	  				orient = {"Bottom"}
+	  				scale={x2}
+	  				translateX = {x("Wet Bulk Density")}
+	  				translateY= {height}
+	  				margins = {margins}
+	  				svgDimensions = {svgDimensions}
+	  			/> 	  			
+	  		</g>
 	  	)
 	  }
-	  // this.drawDensity(valueline)
 
-	  // console.log(valueline(mscl));
+	  // Drawing magnetic susceptability line
+	  let x3 = d3.scaleLinear().domain([0, 100]).range([0,x.bandwidth()]);
+
+	  
+	  var magneticLine = d3.line()
+	    .x(function(d) { return x3(d.ms1); })
+	    .y(function(d) { return y(d.depth); });
+
+	  function drawMagnetism(magneticLine, mscl){
+	  	return (
+	  		<g className="magnetism">
+	  			<g className="magnetism-group" transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
+	  				<path className={"line " + classes.lines } d={magneticLine(mscl)} ></path>
+	  			</g>
+	  			<Axes
+	  				orient = {"Bottom"}
+	  				scale={x3}
+	  				translateX = {x("Magnetic Susceptivility")}
+	  				translateY= {height}
+	  				margins = {margins}
+	  				svgDimensions = {svgDimensions}
+	  			/> 	  			  			
+	  		</g>
+	  	)
+	  }
 
 	  return (
 
@@ -194,7 +228,9 @@ class StratColumn extends Component {
 		  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
 		  			</g>
 	  			))}
-	  			{drawDensity(valueline, mscl)}
+	  			{drawDensity(denityLine, mscl)}
+	  			{drawMagnetism(magneticLine, mscl)}
+
 	  			<Axes
 	  				orient = {"Left"}
 	  				scale={y}
@@ -204,21 +240,22 @@ class StratColumn extends Component {
 	  				svgDimensions = {svgDimensions}
 	  			/> 
 	  			<Axes
+	  				orient = {"Right"}
+	  				scale={y}
+	  				translateX = {width}
+	  				translateY= {0}
+	  				margins = {margins}
+	  				svgDimensions = {svgDimensions}
+	  			/> 	  			
+	  			<Axes
 	  				orient = {"Top"}
 	  				scale={x}
 	  				translateX = {0}
 	  				translateY= {0}
 	  				margins = {margins}
 	  				svgDimensions = {svgDimensions}
-	  			/> 
-	  			<Axes
-	  				orient = {"Bottom"}
-	  				scale={x2}
-	  				translateX = {x("Wet Bulk Density")}
-	  				translateY= {height}
-	  				margins = {margins}
-	  				svgDimensions = {svgDimensions}
-	  			/> 	  				  			 			
+	  				tickSize={-5}
+	  			/>   				  			 			
 	  		</g>
 	  	</svg>
 	  );  
@@ -226,12 +263,12 @@ class StratColumn extends Component {
 
 	render() {
 		let core = this.props.core;
-		let mscl = this.props.mscl;
+		// let mscl = this.props.mscl;
 		// let width = this.props.width;
 		// let height = this.props.height;
 		return (
 			<div className={'column-component-wrapper'}>	
-				{this.drawColumn(core,mscl)}
+				{this.drawColumn(core)}
 			</div>
 		);
 	}

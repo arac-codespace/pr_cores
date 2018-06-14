@@ -29,6 +29,7 @@ class Cores extends Component {
   render() {
 
     let cores = this.props.cores;
+    console.log(cores)
     return (
       <div className="col-12">
         <StratColumn core={cores[0]} mscl={this.state.mscl}/>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Axis from './Axis'
 
-export default ({ orient, scale, translateX, translateY, margins, svgDimensions }) => {
+export default ({ orient, scale, translateX, translateY, margins, svgDimensions, tickSize }) => {
   const { height, width } = svgDimensions
 
 
@@ -11,12 +11,13 @@ export default ({ orient, scale, translateX, translateY, margins, svgDimensions 
     for top: translate(0,0)
   */ 
 
-  let tickSize;
-  if (orient === "Top" || orient === "Bottom"){
-    tickSize = height - margins.left - margins.right
+  if (!tickSize){
+    if (orient === "Top" || orient === "Bottom"){
+      tickSize = height - margins.left - margins.right
 
-  } else {
-    tickSize = width - margins.left - margins.right
+    } else {
+      tickSize = width - margins.left - margins.right
+    }
   }
   
   const Props = {
@@ -24,6 +25,8 @@ export default ({ orient, scale, translateX, translateY, margins, svgDimensions 
     scale: scale,
     translate: 'translate(' + translateX + ', ' + translateY + ')',
     tickSize: tickSize,
+    width: svgDimensions.width,
+    height: svgDimensions.height
   }
 
   return (
