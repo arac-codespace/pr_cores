@@ -30,6 +30,10 @@ const styles = {
 		stroke: "black",
 		strokeWidth: "2px",
 		fill: "none"
+	},
+	header: {
+		textAnchor:"middle",
+		fontSize: "0.85rem"
 	}
 };
 
@@ -40,12 +44,16 @@ class StratColumn extends Component {
 	constructor(){
 		super();
 		this.drawColumn = this.drawColumn.bind(this);
+		this.handleHover = this.handleHover.bind(this);
+	}
+	
+	handleHover(){
+		console.log("hmm")
 	}
 
 	drawColumn(core){
 
 		let mscl = core.mscl_set;
-		console.log(mscl);
 	  let strata_set = core.strata_set;
 		
 		let margins = {
@@ -168,55 +176,30 @@ class StratColumn extends Component {
 
 		// Drawing Density Line
 	  let x2 = d3.scaleLinear().domain([1, 2]).range([0,x.bandwidth()]);
-
-	  
+	 
 	  var denityLine = d3.line()
 	    .x(function(d) { return x2(d.den1); })
 	    .y(function(d) { return y(d.depth); });
 
-	  function drawDensity(denityLine, mscl){
-	  	return (
-	  		<g className="density">
-	  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
-	  				<path className={"line " + classes.lines } d={denityLine(mscl)} ></path>
-	  			</g>
-	  			<Axes
-	  				orient = {"Bottom"}
-	  				scale={x2}
-	  				translateX = {x("Wet Bulk Density")}
-	  				translateY= {height}
-	  				margins = {margins}
-	  				svgDimensions = {svgDimensions}
-	  			/> 	  			
-	  		</g>
-	  	)
-	  }
 
 	  // Drawing magnetic susceptability line
 	  let x3 = d3.scaleLinear().domain([0, 100]).range([0,x.bandwidth()]);
-
 	  
 	  var magneticLine = d3.line()
 	    .x(function(d) { return x3(d.ms1); })
 	    .y(function(d) { return y(d.depth); });
 
-	  function drawMagnetism(magneticLine, mscl){
-	  	return (
-	  		<g className="magnetism">
-	  			<g className="magnetism-group" transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
-	  				<path className={"line " + classes.lines } d={magneticLine(mscl)} ></path>
-	  			</g>
-	  			<Axes
-	  				orient = {"Bottom"}
-	  				scale={x3}
-	  				translateX = {x("Magnetic Susceptivility")}
-	  				translateY= {height}
-	  				margins = {margins}
-	  				svgDimensions = {svgDimensions}
-	  			/> 	  			  			
-	  		</g>
-	  	)
-	  }
+	   let options = {
+	   	x: x,
+	   	x2: x2,
+	   	x3: x3,
+	   	y: y,
+	   	svgDimensions: svgDimensions,
+	   	margins: margins,
+	   	height: height,
+	   	width: width
+	   }
+	  let halfBandwidth = (x.bandwidth()/2)
 
 	  return (
 
@@ -228,8 +211,17 @@ class StratColumn extends Component {
 		  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
 		  			</g>
 	  			))}
-	  			{drawDensity(denityLine, mscl)}
-	  			{drawMagnetism(magneticLine, mscl)}
+	  			<g transform={"translate(" + x("Lithology") + " ,0)"}>
+	  				<text className={classes.header} dy={-28} x={halfBandwidth}>Lithology</text>
+	  			</g>
+	  			<g transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
+	  				<text className={classes.header} dy={-28} x={halfBandwidth}>Wet Bulk Density</text>
+	  			</g>
+	  			<g transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
+	  				<text className={classes.header} dy={-28} x={halfBandwidth}>Magnetic Susceptivility</text>
+	  			</g>	  				  			
+	  			{this.drawDensity(denityLine, mscl,options)}
+	  			{this.drawMagnetism(magneticLine, mscl,options)}
 
 	  			<Axes
 	  				orient = {"Left"}
@@ -246,21 +238,65 @@ class StratColumn extends Component {
 	  				translateY= {0}
 	  				margins = {margins}
 	  				svgDimensions = {svgDimensions}
-	  			/> 	  			
-	  			<Axes
-	  				orient = {"Top"}
-	  				scale={x}
-	  				translateX = {0}
-	  				translateY= {0}
-	  				margins = {margins}
-	  				svgDimensions = {svgDimensions}
-	  				tickSize={-5}
-	  			/>   				  			 			
+	  			/> 	  			   				  			 			
 	  		</g>
 	  	</svg>
 	  );  
 	}
 
+  drawDensity(denityLine, mscl, options){
+  	const {x, x2, height, margins, svgDimensions, y} = options
+  	return (
+  		<g className="density">
+  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
+  				<path className={"line " + classes.lines } d={denityLine(mscl)}></path>
+  			</g>
+  			<Axes
+  				orient = {"Bottom"}
+  				scale={x2}
+  				translateX = {x("Wet Bulk Density")}
+  				translateY= {height}
+  				margins = {margins}
+  				svgDimensions = {svgDimensions}
+  			/> 
+  			<Axes
+  				orient = {"Top"}
+  				scale={x2}
+  				translateX = {x("Wet Bulk Density")}
+  				translateY= {0}
+  				margins = {margins}
+  				svgDimensions = {svgDimensions}
+  			/>   				  			
+  		</g>
+  	)
+  }
+  
+  drawMagnetism(magneticLine, mscl, options){
+  	const {x, x3, height, margins, svgDimensions, y} = options
+  	return (
+  		<g className="magnetism">
+  			<g className="magnetism-group" transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
+  				<path className={"line " + classes.lines } d={magneticLine(mscl)}></path>
+  			</g>
+  			<Axes
+  				orient = {"Bottom"}
+  				scale={x3}
+  				translateX = {x("Magnetic Susceptivility")}
+  				translateY= {height}
+  				margins = {margins}
+  				svgDimensions = {svgDimensions}
+  			/> 	
+  			<Axes
+  				orient = {"Top"}
+  				scale={x3}
+  				translateX = {x("Magnetic Susceptivility")}
+  				translateY= {0}
+  				margins = {margins}
+  				svgDimensions = {svgDimensions}
+  			/>    			  			  			
+  		</g>
+  	)
+  }  
 	render() {
 		let core = this.props.core;
 		// let mscl = this.props.mscl;
