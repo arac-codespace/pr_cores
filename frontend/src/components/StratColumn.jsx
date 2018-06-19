@@ -24,17 +24,57 @@ jss.setup(preset());
 const styles = {
   bars: {
     stroke: "black",
-    strokeWidth: "2px"
+    strokeWidth: "1px"
 	},
 	lines: {
 		stroke: "black",
 		strokeWidth: "2px",
 		fill: "none"
 	},
+	denLine: {
+		extend: 'lines',
+		stroke: 'red'
+	},
+	magLine: {
+		extend: "lines",
+		stroke: "green"
+	},
 	header: {
 		textAnchor:"middle",
-		fontSize: "0.85rem"
-	}
+		fontSize: "0.65rem"
+	},
+	tooltip:{
+	  position: "absolute",
+	  fontSize: "0.65rem",
+	  maxWidth:"400px",
+	  color: "#FFFFFF",
+	  background: "#000000",
+	  // height: "30px",
+	  // lineHeight: "30px",
+	  textAlign: "center",
+	  visibility: "visible",
+	  borderRadius: "6px",
+	  pointerEvents: "none",
+	  '&:after': {
+		  content: '""',
+		  position: 'absolute',
+		  top: '100%',
+		  left: '50%',
+		  marginLeft: '-8px',
+		  width: '0', 
+		  height: '0',
+		  borderTop: '8px solid #000000',
+		  borderRight: '8px solid transparent',
+		  borderLeft: '8px solid transparent',	  	
+	  }	
+	},
+	tooltipHidden: {
+		extend: 'tooltip',
+		visibility: 'hidden'		
+	},
+	// columnWrapper: {
+	// 	overflow: 'hidden',
+	// }
 };
 
 const { classes } = jss.createStyleSheet(styles).attach();
@@ -43,13 +83,34 @@ class StratColumn extends Component {
 
 	constructor(){
 		super();
+		this.state = {
+			hover: false,
+			tooltipContent: {},
+			x: 0,
+			y: 0
+		}
 		this.drawColumn = this.drawColumn.bind(this);
-		this.handleHover = this.handleHover.bind(this);
+		this.handleOnMouseMove = this.handleOnMouseMove.bind(this);
+		this.handleOnMouseOut = this.handleOnMouseOut.bind(this);
+
 	}
 	
-	handleHover(){
-		console.log("hmm")
+	handleOnMouseMove(e,data){
+		// console.log(e.screenX)
+		this.setState({
+			hover: true,
+			tooltipContent: data,			
+			x: e.pageX,
+			y: e.pageY
+		})
+	}	
+
+	handleOnMouseOut(){
+		this.setState({
+			hover: false
+		})
 	}
+
 
 	drawColumn(core){
 
@@ -63,11 +124,12 @@ class StratColumn extends Component {
 	    left: 50
 	  };
 
-	  // let DIMENSIONX = 600;
+	  // 600px
+	  let DIMENSIONX = Math.max(this.props.parentWidth, 768);
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions
-	  let width = Math.max(this.props.parentWidth, 0) - (margins.left + margins.right);
+	  let width = DIMENSIONX - (margins.left + margins.right);
 	  let height = DIMENSIONY - margins.top - margins.bottom;	  
 
 	  // Canvas dimensions of svg element
@@ -91,7 +153,7 @@ class StratColumn extends Component {
 	  let x = d3.scaleBand();
 
 	  // Sets y-axis range
-	  y.range(yRange);
+	  y.rangeRound(yRange);
 
 	  let DOMAINBOUNDARY = 0;
 
@@ -100,10 +162,12 @@ class StratColumn extends Component {
 
 	  // GENERATE lithology bars
 	  // Control width and alignment of columns
-	  let XPADDING = 0.25;
+	  // let XPADDING = 0.25;
+	  let PADDINGOUT = 0;
+	  let PADDINGIN = 0;
 	  let XALIGN = 0;
 	  x.rangeRound([RANGEBOUNDARY, width])
-	  .domain(['Lithology','Wet Bulk Density', 'Magnetic Susceptivility']).padding(XPADDING).align(XALIGN);
+	  .domain(['Lithology','Wet Bulk Density', 'Magnetic Susceptivility']).paddingOuter(PADDINGOUT).paddingInner(PADDINGIN).align(XALIGN);
 
 	  // Array that will contain drawing instructions for all
 	  // layers
@@ -169,59 +233,97 @@ class StratColumn extends Component {
 	  		fill: getLithColor(d.lithology.name),
 	  		patternFill: getPatternFill(d.lithology.name),
 	  		transform: getGroupLayerTransform(d.lower_bound),
+	  		data: d
 	  	};
 	  	lithologyArray.push(obj);
 	  });
 
 
 		// Drawing Density Line
-	  let x2 = d3.scaleLinear().domain([1, 2]).range([0,x.bandwidth()]);
+	  let x2 = d3.scaleLinear().domain([1, 2]).rangeRound([0,x.bandwidth()]);
 	 
-	  var denityLine = d3.line()
+	  var densityLine = d3.line()
 	    .x(function(d) { return x2(d.den1); })
 	    .y(function(d) { return y(d.depth); });
 
 
 	  // Drawing magnetic susceptability line
-	  let x3 = d3.scaleLinear().domain([0, 100]).range([0,x.bandwidth()]);
+	  let x3 = d3.scaleLinear().domain([0, 100]).rangeRound([0,x.bandwidth()]);
 	  
 	  var magneticLine = d3.line()
 	    .x(function(d) { return x3(d.ms1); })
 	    .y(function(d) { return y(d.depth); });
 
-	   let options = {
-	   	x: x,
-	   	x2: x2,
-	   	x3: x3,
-	   	y: y,
-	   	svgDimensions: svgDimensions,
-	   	margins: margins,
-	   	height: height,
-	   	width: width
-	   }
+     let options = {
+      xDomain: null,
+      scale: null,
+      svgDimensions: svgDimensions,
+      margins: margins,
+      height: height,
+      width: width,
+      lineStyle: null
+     }
+
+     options.xDomain = x("Wet Bulk Density")
+     options.scale = x2
+     options.lineStyle = classes.denLine
+
+     let drawDensity = this.drawLineChart(densityLine, mscl, options)
+
+     options.xDomain = x("Magnetic Susceptivility")
+     options.scale = x3
+     options.lineStyle = classes.magLine
+
+     let drawMagnetism = this.drawLineChart(magneticLine, mscl, options)
+
+
+
 	  let halfBandwidth = (x.bandwidth()/2)
 
 	  return (
 
 	  	<svg className="column-svg" height={svgDimensions.height} width={svgDimensions.width}>
 	  		<g className="column-container" transform={"translate(" + margins.left + ", " + margins.top + ")"}>
-	  			{lithologyArray.map((d,i) => (
-		  			<g className="layer-group" key={"layer-group-" + i}transform={d.transform}>
-		  					<rect className={"bar " + classes.bars} fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
-		  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
+		  		<g className="layers contaienr">
+		  			{lithologyArray.map((d,i) => (
+			  			<g className="layer-group" key={"layer-group-" + i}transform={d.transform}>
+			  					<rect className={"bar " + classes.bars} fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
+			  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
+			  					<rect 
+			  						className={"bar " + classes.bars} 
+			  						fill={"transparent"} 
+			  						width={d.width} 
+			  						height={d.height} 
+			  						x={d.x}
+			  						onMouseMove = {(e)=>(this.handleOnMouseMove(e,d.data))}
+			  						onMouseOut = {()=>(this.handleOnMouseOut())}
+			  					></rect>
+
+			  			</g>
+		  			))}
+		  		</g>
+		  		<g className="headers-container">
+		  			<g transform={"translate(" + x("Lithology") + " ,0)"}>
+		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Lithology</text>	  					  				
 		  			</g>
-	  			))}
-	  			<g transform={"translate(" + x("Lithology") + " ,0)"}>
-	  				<text className={classes.header} dy={-28} x={halfBandwidth}>Lithology</text>
-	  			</g>
-	  			<g transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
-	  				<text className={classes.header} dy={-28} x={halfBandwidth}>Wet Bulk Density</text>
-	  			</g>
-	  			<g transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
-	  				<text className={classes.header} dy={-28} x={halfBandwidth}>Magnetic Susceptivility</text>
-	  			</g>	  				  			
-	  			{this.drawDensity(denityLine, mscl,options)}
-	  			{this.drawMagnetism(magneticLine, mscl,options)}
+		  			<g transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
+		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Wet Bulk Density (g/cm3)</text>
+		  				<text className={classes.header} dy={-16} x={halfBandwidth*0.25}>1.0</text>
+		  				<text className={classes.header} dy={-16} x={halfBandwidth*1.75}>2.0</text>
+
+
+		  				<line x1={5} x2={x.bandwidth()-5} stroke="red" y1={-10} y2={-10}></line>
+		  			</g>
+		  			<g transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
+		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Magnetic Susceptivility (SI)</text>
+		  				<text className={classes.header} dy={-16} x={halfBandwidth*0.25}>0.0</text>
+		  				<text className={classes.header} dy={-16} x={halfBandwidth*1.75}>100.0</text>		
+		  				
+		  				<line x1={5} x2={x.bandwidth()-5} stroke="green" y1={-10} y2={-10}></line>		  				  				
+		  			</g>	  				  			
+		  		</g>
+	  			{drawDensity}
+	  			{drawMagnetism}
 
 	  			<Axes
 	  				orient = {"Left"}
@@ -230,39 +332,34 @@ class StratColumn extends Component {
 	  				translateY= {0}
 	  				margins = {margins}
 	  				svgDimensions = {svgDimensions}
-	  			/> 
-	  			<Axes
-	  				orient = {"Right"}
-	  				scale={y}
-	  				translateX = {width}
-	  				translateY= {0}
-	  				margins = {margins}
-	  				svgDimensions = {svgDimensions}
-	  			/> 	  			   				  			 			
+	  				ticks = {10}
+	  				dash = {true}
+	  			/> 			   				  			 			
 	  		</g>
 	  	</svg>
 	  );  
 	}
 
-  drawDensity(denityLine, mscl, options){
-  	const {x, x2, height, margins, svgDimensions, y} = options
+
+  drawLineChart(valueLine, mscl, options){
+  	const {xDomain, scale, height, margins, svgDimensions, lineStyle} = options
   	return (
-  		<g className="density">
-  			<g className="density-group" transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
-  				<path className={"line " + classes.lines } d={denityLine(mscl)}></path>
+  		<g className="line-chart">
+  			<g className="line-chart-group" transform={"translate(" + xDomain + " ,0)"}>
+  				<path className={lineStyle} d={valueLine(mscl)}></path>
   			</g>
   			<Axes
   				orient = {"Bottom"}
-  				scale={x2}
-  				translateX = {x("Wet Bulk Density")}
+  				scale={scale}
+  				translateX = {xDomain}
   				translateY= {height}
   				margins = {margins}
   				svgDimensions = {svgDimensions}
   			/> 
   			<Axes
   				orient = {"Top"}
-  				scale={x2}
-  				translateX = {x("Wet Bulk Density")}
+  				scale={scale}
+  				translateX = {xDomain}
   				translateY= {0}
   				margins = {margins}
   				svgDimensions = {svgDimensions}
@@ -270,40 +367,34 @@ class StratColumn extends Component {
   		</g>
   	)
   }
-  
-  drawMagnetism(magneticLine, mscl, options){
-  	const {x, x3, height, margins, svgDimensions, y} = options
-  	return (
-  		<g className="magnetism">
-  			<g className="magnetism-group" transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
-  				<path className={"line " + classes.lines } d={magneticLine(mscl)}></path>
-  			</g>
-  			<Axes
-  				orient = {"Bottom"}
-  				scale={x3}
-  				translateX = {x("Magnetic Susceptivility")}
-  				translateY= {height}
-  				margins = {margins}
-  				svgDimensions = {svgDimensions}
-  			/> 	
-  			<Axes
-  				orient = {"Top"}
-  				scale={x3}
-  				translateX = {x("Magnetic Susceptivility")}
-  				translateY= {0}
-  				margins = {margins}
-  				svgDimensions = {svgDimensions}
-  			/>    			  			  			
-  		</g>
-  	)
-  }  
+
 	render() {
 		let core = this.props.core;
+
+		let tooltipPosition = {
+			position: "absolute",
+			left: this.state.x + 15,
+			top: this.state.y - 100,
+			width: "100%",
+		}
+
+		let content;
+		if (this.state.hover) 
+	  {
+			content = (
+				<span id="tooltip-content" style={tooltipPosition} className={classes.tooltip}><p>{this.state.tooltipContent.description}</p></span>
+			)
+		} else {
+			content = (
+				<span id="tooltip-content" style={tooltipPosition} className={classes.tooltipHidden}>Huh</span>
+			)			
+		}
 		// let mscl = this.props.mscl;
 		// let width = this.props.width;
 		// let height = this.props.height;
 		return (
-			<div className={'column-component-wrapper'}>	
+			<div className={classes.columnWrapper}>	
+				<div id="tooltip">{content}</div>
 				{this.drawColumn(core)}
 			</div>
 		);

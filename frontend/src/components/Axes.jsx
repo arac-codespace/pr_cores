@@ -1,7 +1,7 @@
 import React from 'react'
 import Axis from './Axis'
 
-export default ({ orient, scale, translateX, translateY, margins, svgDimensions, tickSize }) => {
+export default ({ orient, scale, translateX, translateY, margins, svgDimensions, tickSize, ticks, dash }) => {
   const { height, width } = svgDimensions
 
 
@@ -19,6 +19,8 @@ export default ({ orient, scale, translateX, translateY, margins, svgDimensions,
       tickSize = width - margins.left - margins.right
     }
   }
+
+
   
   const Props = {
     orient: orient,
@@ -26,11 +28,13 @@ export default ({ orient, scale, translateX, translateY, margins, svgDimensions,
     translate: 'translate(' + translateX + ', ' + translateY + ')',
     tickSize: tickSize,
     width: svgDimensions.width,
-    height: svgDimensions.height
+    height: svgDimensions.height,
+    ticks: ticks ? ticks : 5,
+    dash: dash ? dash: false
   }
 
   return (
-    <g>
+    <g className="axis-container">
       <Axis {...Props} />
     </g>
   )

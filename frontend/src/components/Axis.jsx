@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as d3Axis from 'd3-axis'
 import { select as d3Select } from 'd3-selection'
+import {selectAll} from 'd3-selection'
 
 export default class Axis extends Component {
   componentDidMount() {
@@ -17,9 +18,23 @@ export default class Axis extends Component {
       .scale(this.props.scale)
       .tickSize(-this.props.tickSize)
       .tickPadding([12])
-      .ticks([4])
+      .ticks([this.props.ticks])
+      .tickFormat("")
+      // .tickFormat("")
 
-    d3Select(this.axisElement).call(axis)
+    let tickInsert = d3Select(this.axisElement)
+    tickInsert.call(axis);
+
+    if (this.props.dash){
+      tickInsert.selectAll("line").each(function(d,i){
+        let numOfLines = tickInsert.selectAll("line").size();
+        console.log(this);
+        if (i+1<numOfLines) {
+          d3Select(this).style("stroke-dasharray", "5 5")
+        }
+      })
+    }
+    
   }
 
   render() {
