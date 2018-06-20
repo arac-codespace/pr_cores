@@ -15,12 +15,36 @@ const styles = {
 const { classes } = jss.createStyleSheet(styles).attach();
 
 class Collapse extends Component {
-	render() {
+
+  constructor(props){
+    super(props)
+    this.state={
+      containerWidth: null,
+    }
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  // componentDidMount(){
+  //   this.setState({
+  //     containerWidth: document.getElementById(this.props.collapseId).getBoundingClientRect().width,
+  //   })
+  // }
+
+  handleClick(){
+    this.setState({
+      containerWidth: document.getElementById(this.props.collapseId).getBoundingClientRect().width
+    })
+  }
+
+  render() {
+    console.log(this.props.title)
+    console.log(this.state.containerWidth)
 		let title = this.props.title;
 		let collapseId = this.props.collapseId
 		return (
 			<div>	
-        <a data-toggle="collapse" href={"#"+collapseId} id={"collapse"+collapseId}>
+        <a data-toggle="collapse" href={"#"+collapseId} id={"collapse"+collapseId} onClick={this.handleClick}>
           <strong>                            
             {"|| "+title}
           </strong>
@@ -28,7 +52,11 @@ class Collapse extends Component {
         </a>
         <div className={"collapse " + classes.details} id={collapseId}>
           <div className="card card-body">   
-          	{this.props.children}                     
+          	{this.state.containerWidth > 0 && this.state.containerWidth !== null ?
+              this.props.children
+              :
+              <p>Huh...</p>
+            }                     
           </div>
         </div>
 			</div>

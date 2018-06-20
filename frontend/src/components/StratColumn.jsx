@@ -125,7 +125,7 @@ class StratColumn extends Component {
 	  };
 
 	  // 600px
-	  let DIMENSIONX = Math.max(this.props.parentWidth, 768);
+	  let DIMENSIONX = Math.max(this.props.parentWidth, 460);
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions

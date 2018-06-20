@@ -13,7 +13,8 @@ const styles = {
     width: "100%",
     height: "100%",
     padding: "15px 15px 15px 15px",
-    overflow: 'auto',
+    overflowX: 'hidden',
+    overflowY: "scroll",
     marginTop:"32px",
     // paddingTop: "30px"
   }

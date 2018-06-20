@@ -25,11 +25,12 @@ const styles = {
     top: "0",
     left: "0",
     zIndex: "9999",
+    position: 'absolute',
     display: "none"
   },
   menuContainerActive: {
     extend: "menuContainer",
-    display: "absolute",
+    display: "block",
   },
   colPadding: {
     padding: 0,

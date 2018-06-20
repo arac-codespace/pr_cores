@@ -23,8 +23,9 @@ export default ChartComponent => (
     }
 
     fitParentContainer() {
+      // debugger;
       const { containerWidth } = this.state
-      const currentContainerWidth = this.chartContainer
+      const currentContainerWidth = this.containerWidth
         .getBoundingClientRect().width
 
       const shouldResize = containerWidth !== currentContainerWidth
@@ -50,7 +51,12 @@ export default ChartComponent => (
 
       return (
         <div
-          ref={(el) => { this.chartContainer = el }}
+          ref={node => {
+            // this callback executes before componentDidMount
+            if (node !== null) {
+              this.containerWidth = node;
+            }
+          }}
           className="Responsive-wrapper"
         >
           {shouldRenderChart && this.renderChart()}

@@ -20,18 +20,23 @@ const styles = {
     width: "100%",
     height: "100%",
     padding: "15px 15px 15px 15px",
-    overflow: 'auto',
+    overflowY: 'scroll',
+    overflowX: 'hidden',
     marginTop:"32px",
     // paddingTop: "30px"
+  },
+  columnContainer: {
+    overflowX: 'auto',
   }
 };
 
 const { classes } = jss.createStyleSheet(styles).attach();
 
 class SampleMenu extends Component {
+
 	render() {
 		let survey = this.props.survey;
-
+    let visibility = this.props.visibility;
 		return (
       <MenuContainer>
       	<h4>{"Survey No: " + survey.survey_no}</h4>
@@ -41,8 +46,7 @@ class SampleMenu extends Component {
         {survey.core_set.map((core,index) => (
 
           <div key={"core-" + core.id} className="core-details">
-            <Collapse title={"Sample No: " + core.sample_no} collapseId={"CoreDetails"+core.id}>
-            <StratColumn core={core}/>
+            <Collapse title={"Sample No: " + core.sample_no} collapseId={"Core"+core.id}>
               <p>{"Latitude: " + core.lat}</p>
               <p>{"Longitude: " + core.lng}</p>
               <p>{"Date Collected: " + core.date_coll}</p>
@@ -53,7 +57,12 @@ class SampleMenu extends Component {
               <p>{"Core Condition: " + core.core_condition}</p>
               <p>{"Described By: " + core.described_by}</p>
               <p>{"Location: " + core.physiographic_location}</p>
-              <p>{"Date Described: " + core.date_described}</p>                                                                                              
+              <p>{"Date Described: " + core.date_described}</p>  
+              <Collapse title={"Visualization"} collapseId={"ColumnCollapse"+core.id} getWidth={this.getWidth}>  
+                <div className = {classes.columnContainer}>
+                  <StratColumn core={core}/>
+                </div>
+              </Collapse>
             </Collapse>
           </div>
         ))}

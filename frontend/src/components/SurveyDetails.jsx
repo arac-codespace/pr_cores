@@ -24,11 +24,12 @@ const styles = {
     top: "0",
     left: "0",
     zIndex: "9999",
-    display: "none"
+    position: "absolute",
+    visibility: "hidden",
   },
   menuContainerActive: {
     extend: "menuContainer",
-    display: "absolute",
+    visibility: "visible",
   },
   colPadding: {
     padding: 0,
@@ -122,8 +123,8 @@ class SurveyDetails extends Component {
         <div className="row">
           <div className={"col-12 col-lg-12 " + classes.colPadding}>
             <MapButton text={"Info"} handleClick={handleClickSamples}/>
-            <div className={"col-lg-4 " + menuVisibility}>
-              <SampleMenu survey={survey}/>
+            <div className={"col-12 " + menuVisibility}>
+              <SampleMenu survey={survey} visibility={isSampleMenuOpen}/>
             </div>           
             <GoogleMap center={center} zoom={zoom} dataset = {survey} renderMarkers={renderMarkers} handleClick={handleClickSamples}>
             </GoogleMap>      

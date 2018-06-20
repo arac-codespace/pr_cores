@@ -28,7 +28,6 @@ export default class Axis extends Component {
     if (this.props.dash){
       tickInsert.selectAll("line").each(function(d,i){
         let numOfLines = tickInsert.selectAll("line").size();
-        console.log(this);
         if (i+1<numOfLines) {
           d3Select(this).style("stroke-dasharray", "5 5")
         }
