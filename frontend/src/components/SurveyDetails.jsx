@@ -20,7 +20,6 @@ const styles = {
     // brings menu below button edge
     // paddingTop:"40px",
     height: "100%",
-    position: "absolute",
     top: "0",
     left: "0",
     zIndex: "9999",
@@ -33,7 +32,7 @@ const styles = {
   },
   colPadding: {
     padding: 0,
-    overflow:"hidden"
+    // overflow:"hidden"
   }
 };
 
@@ -80,20 +79,26 @@ class SurveyDetails extends Component {
           openElements[i].classList.remove('show');
       }      
     }
-
+    console.log(target)
     // Target used when I want to show info after clicking marker/boundary...
-    // target is survey id
-    if (target) {
-      let id = "SurveyDetails" + target;
-      let surveyCollapse = document.getElementById(id);
-      if (!surveyCollapse.classList.contains('show')) {
-        surveyCollapse.classList.add('show');
+    // target is object with id, name, isSurvey
+    if (target && !target.isSurvey) {
+
+      let id = target.name + target.id;
+      let anchorID = "collapse"+id;
+
+      let sampleToCollapse = document.getElementById(id);
+
+      if (!sampleToCollapse.classList.contains('show')) {
+        document.getElementById(anchorID).click();
+        document.getElementById(anchorID).scrollIntoView();
       }
       // If user clicks survey boundary, menu will only
       // open and not toggle
       this.setState({
         isSampleMenuOpen: true
       })
+
     } else {      
       // The fact that there's no target means that
       // user's not clicking a boundary.  So toggle

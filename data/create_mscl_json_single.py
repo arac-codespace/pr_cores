@@ -41,14 +41,18 @@ for file in directory:
         print(str(item["Depth_corrected"]).isspace())
 
         if item["Depth_corrected"] and not str(item["Depth_corrected"]).isspace():
+            # Check for erroneous readings...
+            density = str(item['Den1']) if "*" not in str(item['Den1']) else None
+            magnetism = str(item['MS1']) if "*" not in str(item['MS1']) else None
+
             primary_key += 1
             mscl_obj.append({
                 "model": "cores.mscl",
                 "pk": primary_key,
                 "fields": {
                     "core": core_foreign_key,
-                    "den1": re.sub("[*]", "", str(item['Den1'])),
-                    "ms1": re.sub("[*]", "", str(item['MS1'])),
+                    "den1": density,
+                    "ms1": magnetism,
                     "depth": str(item['Depth_corrected'])
                 }
             })

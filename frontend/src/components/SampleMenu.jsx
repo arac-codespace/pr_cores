@@ -46,7 +46,7 @@ class SampleMenu extends Component {
         {survey.core_set.map((core,index) => (
 
           <div key={"core-" + core.id} className="core-details">
-            <Collapse title={"Sample No: " + core.sample_no} collapseId={"Core"+core.id}>
+            <Collapse title={"Sample No: " + core.sample_no} collapseId={core.sample_no+core.id}>
               <p>{"Latitude: " + core.lat}</p>
               <p>{"Longitude: " + core.lng}</p>
               <p>{"Date Collected: " + core.date_coll}</p>
@@ -70,7 +70,7 @@ class SampleMenu extends Component {
         {survey.bag_set.map((bag,index) => (
 
           <div key={"bag-" + bag.id} className="bag-details">
-            <Collapse title={"Sample No: " + bag.sample_no} collapseId={"BagDetails"+bag.id}>
+            <Collapse title={"Sample No: " + bag.sample_no} collapseId={bag.sample_no+bag.id}>
               <p>{"Latitude: " + bag.lat}</p>
               <p>{"Longitude: " + bag.lng}</p>
               <p>{"Date Collected: " + bag.date_coll}</p>

@@ -31,8 +31,8 @@ class GoogleMap extends Component {
     let handleClick = this.props.handleClick;
     console.log(dataset);
 
-    // dataset.length > 1 = surveys
-    if (dataset.length >1) {
+    // dataset.length = array length
+    if (dataset.length) {
       dataset.map( (data) => {
         if (data.total_samples >=1) {        
           // if boundaries exist...
@@ -53,7 +53,7 @@ class GoogleMap extends Component {
         }
       });
     } else {
-      // I'm on survey/:id
+      // dataset is a single object, so we're in survey/:id
      if (dataset.total_samples >=1) {        
         // if boundaries exist...
         this.renderBoundaries(google, dataset, handleClick)
@@ -61,12 +61,14 @@ class GoogleMap extends Component {
         if (renderMarkers) {          
           if (dataset.core_set.length >= 1) {          
             dataset.core_set.map((core) => {
-              this.renderMarkers(google, core)
+              // google, data, listenMarker
+              this.renderMarkers(google, core, true)
             })
           }
           if (dataset.bag_set.length >=1) {
             dataset.bag_set.map((bag) => {
-              this.renderMarkers(google, bag)
+              // google, data, listenMarker
+              this.renderMarkers(google, bag, true)
             })
           }
         }
@@ -91,14 +93,16 @@ class GoogleMap extends Component {
     
   };
 
-  renderMarkers(google, data) {
+  renderMarkers(google, data, listenMarker = false) {
     let myLatLng = new google.maps.LatLng(data.lat, data.lng);
+    let handleClick = this.props.handleClick;
     let symbol = {
       path: google.maps.SymbolPath.CIRCLE,
       scale: 10,
-      fillColor: "blue",
+      // data.total_length is a core attribute
+      fillColor: data.total_length ? "blue" : "green",
       fillOpacity: 1,
-      strokeColor: "red",
+      strokeColor: data.total_length ? "red" : "yellow",
       strokeWeight: 5,
       labelOrigin: new google.maps.Point(0, -2),
     };
@@ -106,7 +110,7 @@ class GoogleMap extends Component {
     let marker = new google.maps.Marker({
       position: myLatLng,
       map: google.map,
-      title: data.sample_no,
+      title: data.total_length ? "Core: " + data.sample_no : "Bagged: " + data.sample_no,
       zIndex: 999999,
       icon: symbol,
       label: {
@@ -116,9 +120,20 @@ class GoogleMap extends Component {
       clickable: true,
       cursor: "help"
     });
+
+    let handleClickPackage = {
+      // check target data type
+      isSurvey: false,
+      id: data.id,
+      name: data.sample_no
+    }
+
     marker.addListener('click', function() {
       // marker.map.setZoom(8);
       marker.map.setCenter(marker.getPosition());
+      if (listenMarker){
+        handleClick(handleClickPackage);
+      }
       console.log(marker.title);
     }); 
     gmarkers.push(marker);   
@@ -154,10 +169,17 @@ class GoogleMap extends Component {
       strokeOpacity:0.5,
     });
 
+    let handleClickPackage = {
+      // check target data type
+      isSurvey: true,
+      id: data.id,
+      name: data.survey_no
+    }
+
     polygon.addListener('click', function(e) {
       // Feed survey id to handle click so handleClick can
       // trigger the collapse of collapseSurveyDetails:id
-      handleClick(data.id);
+      handleClick(handleClickPackage);
     });
 
     let bounds = new google.maps.LatLngBounds();

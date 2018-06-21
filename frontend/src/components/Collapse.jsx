@@ -38,8 +38,6 @@ class Collapse extends Component {
   }
 
   render() {
-    console.log(this.props.title)
-    console.log(this.state.containerWidth)
 		let title = this.props.title;
 		let collapseId = this.props.collapseId
 		return (

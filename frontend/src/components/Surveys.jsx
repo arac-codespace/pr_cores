@@ -21,20 +21,20 @@ const styles = {
     // brings menu below button edge
     // paddingTop:"40px",
     height: "100%",
-    position: "absolute",
     top: "0",
     left: "0",
     zIndex: "9999",
     position: 'absolute',
-    display: "none"
+    display: "block",
+    visibility: "hidden"
   },
   menuContainerActive: {
     extend: "menuContainer",
-    display: "block",
+    visibility: "visible",
   },
   colPadding: {
     padding: 0,
-    overflow:"hidden"
+    // overflow:"hidden"
   }
 };
 
@@ -80,7 +80,7 @@ class Surveys extends Component {
     //   document.removeEventListener('click', this.handleClickSurveysOutside, false);      
     // }
 
-    // if collapsed items are opened...
+    // if any collapsed items are opened, close them...
     let openElements = document.getElementsByClassName("collapse show")
     if (openElements.length > 0) {
       for(var i=0;i<openElements.length;i++){
@@ -89,12 +89,15 @@ class Surveys extends Component {
     }
 
     // Target used when I want to show info after clicking marker/boundary...
-    // target is survey id
+    // target is object with id, name, isSurvey
     if (target) {
-      let id = "SurveyDetails" + target;
-      let surveyCollapse = document.getElementById(id);
-      if (!surveyCollapse.classList.contains('show')) {
-        surveyCollapse.classList.add('show');
+      console.log(target)
+      let id = "SurveyDetails" + target.id;
+      let anchorID = "collapse"+id;
+      let surveyToCollapse = document.getElementById(id);
+      // debugger;
+      if (!surveyToCollapse.classList.contains('show')) {
+        document.getElementById(anchorID).click();
       }
       // If user clicks survey boundary, menu will only
       // open and not toggle

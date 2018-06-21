@@ -44,7 +44,7 @@ const styles = {
 		fontSize: "0.65rem"
 	},
 	tooltip:{
-	  position: "absolute",
+	  // position: "absolute",
 	  fontSize: "0.65rem",
 	  maxWidth:"400px",
 	  color: "#FFFFFF",
@@ -58,8 +58,8 @@ const styles = {
 	  '&:after': {
 		  content: '""',
 		  position: 'absolute',
-		  top: '100%',
-		  left: '50%',
+		  // top: '100%',
+		  // left: '50%',
 		  marginLeft: '-8px',
 		  width: '0', 
 		  height: '0',
@@ -100,8 +100,8 @@ class StratColumn extends Component {
 		this.setState({
 			hover: true,
 			tooltipContent: data,			
-			x: e.pageX,
-			y: e.pageY
+			x: e.clientX,
+			y: e.clientY
 		})
 	}	
 
@@ -125,7 +125,7 @@ class StratColumn extends Component {
 	  };
 
 	  // 600px
-	  let DIMENSIONX = Math.max(this.props.parentWidth, 460);
+	  let DIMENSIONX = Math.max(this.props.parentWidth, 600);
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions
@@ -240,9 +240,9 @@ class StratColumn extends Component {
 
 
 		// Drawing Density Line
-	  let x2 = d3.scaleLinear().domain([1, 2]).rangeRound([0,x.bandwidth()]);
-	 
+	  let x2 = d3.scaleLinear().domain([1, 2.65]).rangeRound([0,x.bandwidth()]);
 	  var densityLine = d3.line()
+	  	.defined(function(d){return d.den1 !== null;})
 	    .x(function(d) { return x2(d.den1); })
 	    .y(function(d) { return y(d.depth); });
 
@@ -251,6 +251,7 @@ class StratColumn extends Component {
 	  let x3 = d3.scaleLinear().domain([0, 100]).rangeRound([0,x.bandwidth()]);
 	  
 	  var magneticLine = d3.line()
+	  	.defined(function(d){return d.ms1 !== null;})	  
 	    .x(function(d) { return x3(d.ms1); })
 	    .y(function(d) { return y(d.depth); });
 
@@ -308,17 +309,12 @@ class StratColumn extends Component {
 		  			</g>
 		  			<g transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
 		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Wet Bulk Density (g/cm3)</text>
-		  				<text className={classes.header} dy={-16} x={halfBandwidth*0.25}>1.0</text>
-		  				<text className={classes.header} dy={-16} x={halfBandwidth*1.75}>2.0</text>
-
-
+		  				  			
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="red" y1={-10} y2={-10}></line>
 		  			</g>
 		  			<g transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
 		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Magnetic Susceptivility (SI)</text>
-		  				<text className={classes.header} dy={-16} x={halfBandwidth*0.25}>0.0</text>
-		  				<text className={classes.header} dy={-16} x={halfBandwidth*1.75}>100.0</text>		
-		  				
+		  				  						  				
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="green" y1={-10} y2={-10}></line>		  				  				
 		  			</g>	  				  			
 		  		</g>
@@ -355,6 +351,7 @@ class StratColumn extends Component {
   				translateY= {height}
   				margins = {margins}
   				svgDimensions = {svgDimensions}
+  				ticks = {5}
   			/> 
   			<Axes
   				orient = {"Top"}
@@ -363,6 +360,7 @@ class StratColumn extends Component {
   				translateY= {0}
   				margins = {margins}
   				svgDimensions = {svgDimensions}
+  				ticks = {5}
   			/>   				  			
   		</g>
   	)
@@ -372,10 +370,13 @@ class StratColumn extends Component {
 		let core = this.props.core;
 
 		let tooltipPosition = {
-			position: "absolute",
-			left: this.state.x + 15,
-			top: this.state.y - 100,
+			position: "fixed",
+			transform: "translate(" + this.state.x + "px, " + this.state.y +"px)",
+			// left: this.state.x - 100,
+			// top: this.state.y - 100,
 			width: "100%",
+		  left: "0",
+		  top: "0",			
 		}
 
 		let content;

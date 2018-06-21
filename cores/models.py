@@ -59,6 +59,7 @@ class Sample(models.Model):
     survey = models.ForeignKey(Survey, null=True, on_delete=models.SET_NULL, verbose_name="Survey No.")
     date_coll = models.DateField(verbose_name="Date Collected", blank=True, null=True)
     collected_by = models.CharField(max_length=25, verbose_name="Collected By", blank=True)
+    depth = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
 
     class Meta:
         abstract = True
@@ -67,7 +68,6 @@ class Sample(models.Model):
 class Core(Sample):
     core_type = models.CharField(max_length=25, verbose_name="Core Type", blank=True)
     total_length = models.DecimalField(max_digits=8, decimal_places=3, verbose_name="Total Length", blank=True, null=True)
-    depth = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
     core_condition = models.CharField(max_length=25, verbose_name="Core Condition", blank=True)
     described_by = models.CharField(max_length=25, verbose_name="Described By", blank=True)
     physiographic_location = models.CharField(max_length=25, verbose_name="Location", blank=True)
@@ -120,9 +120,9 @@ class Strata(models.Model):
 
 class MSCL(models.Model):
     core = models.ForeignKey(Core, blank=True, on_delete=models.CASCADE, verbose_name="Core No.")
-    den1 = models.DecimalField(max_digits=8, decimal_places=4, blank=True, verbose_name="Wet Bulk Density (g/cm3")
-    ms1 = models.DecimalField(max_digits=8, decimal_places=4, blank=True, verbose_name="Magnetic Susceptibility (SI)")
-    depth = models.DecimalField(max_digits=5, decimal_places=2, blank=True, verbose_name="Corrected Depth")
+    den1 = models.DecimalField(max_digits=8, decimal_places=4, blank= True, null=True, verbose_name="Wet Bulk Density (g/cm3")
+    ms1 = models.DecimalField(max_digits=8, decimal_places=4, blank= True, null=True, verbose_name="Magnetic Susceptibility (SI)")
+    depth = models.DecimalField(max_digits=5, decimal_places=2, blank= True, null=True, verbose_name="Corrected Depth")
 
     class Meta:
         verbose_name = "MSCL"
@@ -162,7 +162,7 @@ class Boundaries(models.Model):
         default=DISTINCT,
         verbose_name="Boundary Type"
     )
-    position = models.DecimalField(max_digits=8, decimal_places=3, blank=True)
+    position = models.DecimalField(max_digits=8, decimal_places=3, blank=True, null=True)
     strata = models.ForeignKey(Strata, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):

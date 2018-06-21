@@ -17,9 +17,9 @@ export default class Axis extends Component {
     const axis = d3Axis[axisType]()
       .scale(this.props.scale)
       .tickSize(-this.props.tickSize)
-      .tickPadding([12])
+      .tickPadding([16])
       .ticks([this.props.ticks])
-      .tickFormat("")
+      // .tickFormat("")
       // .tickFormat("")
 
     let tickInsert = d3Select(this.axisElement)
