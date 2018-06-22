@@ -15,7 +15,7 @@ const styles = {
     padding: "15px 15px 15px 15px",
     overflowX: 'hidden',
     overflowY: "scroll",
-    marginTop:"32px",
+    // marginTop:"32px",
     // paddingTop: "30px"
   }
 };
@@ -25,7 +25,7 @@ const { classes } = jss.createStyleSheet(styles).attach();
 class MenuContainer extends Component {
 	render() {
 		return (
-			<div className={classes.menu} ref={node=>{this.node=node;}}>
+			<div id={this.props.id} className={"MenuContainerComponent " + classes.menu} ref={node=>{this.node=node;}}>
 				{this.props.children}
 			</div>
 		);

@@ -16,7 +16,7 @@ jss.setup(preset());
 const styles = {
   menuContainer: {
     width: "100%",
-    padding: "10px 15px",
+    padding: "44px 10px 16px 14px",
     // brings menu below button edge
     // paddingTop:"40px",
     height: "100%",
@@ -29,10 +29,6 @@ const styles = {
   menuContainerActive: {
     extend: "menuContainer",
     visibility: "visible",
-  },
-  colPadding: {
-    padding: 0,
-    // overflow:"hidden"
   }
 };
 
@@ -72,37 +68,88 @@ class SurveyDetails extends Component {
   // https://larsgraubner.com/handle-outside-clicks-react/
   handleClickSamples(target=null){
 
-    // if collapsed items are opened...
-    let openElements = document.getElementsByClassName("collapse show")
-    if (openElements.length > 0) {
-      for(var i=0;i<openElements.length;i++){
-          openElements[i].classList.remove('show');
-      }      
-    }
-    console.log(target)
+    // NOTE: From prior experience, avoid removing class names directly
+    // if the class is tied to behaviour.  Here I use click to close
+    // collapsable elements so the 'onClick' behaviour of the collapse
+    // components triggers.  Removing the 'show' class directly will
+    // fuck everything up becase the components will not keep track
+    // of the state properly...
+
     // Target used when I want to show info after clicking marker/boundary...
     // target is object with id, name, isSurvey
-    if (target && !target.isSurvey) {
-
-      let id = target.name + target.id;
-      let anchorID = "collapse"+id;
-
-      let sampleToCollapse = document.getElementById(id);
-
-      if (!sampleToCollapse.classList.contains('show')) {
-        document.getElementById(anchorID).click();
-        document.getElementById(anchorID).scrollIntoView();
-      }
-      // If user clicks survey boundary, menu will only
-      // open and not toggle
+    if (target && !target.isSurvey) {      
+      // make menu visible
+      // debugger;
       this.setState({
         isSampleMenuOpen: true
       })
+      
+
+      let id = target.name + target.id;
+      let anchorID = "collapse"+id;
+      let coreID = "CoreSamples";
+      let baggedID = "BaggedSamples"
+  
+      console.log(target)
+
+      let sectionToCollapse;
+      if (target.isCore){
+        sectionToCollapse = {
+          anchor: document.getElementById("collapse" + coreID),
+          collapse: document.getElementById(coreID)
+        };
+      } else {
+        sectionToCollapse = {
+          anchor: document.getElementById("collapse" + baggedID),
+          collapse: document.getElementById(baggedID)
+        };        
+      }
+
+      console.log(sectionToCollapse);
+
+      // If the stuff is already open, don't close the stuff...
+      // if (document.getElementById(anchorID).classList.contains('collapsed') && sectionToCollapse.classList.contains('collapsed')){          
+      //   let collapseAnchors = document.getElementsByClassName("collapseHeader");
+      //   if (collapseAnchors.length > 0) {
+      //     for(var i=0;i<collapseAnchors.length;i++){
+      //       // If the anchor is NOT collapsed
+      //       if (!collapseAnchors[i].classList.contains("collapsed")) {
+      //         collapseAnchors[i].click();
+      //       }
+      //     }      
+      //   }
+      // }
+
+      if (document.getElementById(anchorID).classList.contains('collapsed')) {
+        if (sectionToCollapse.anchor.classList.contains('collapsed')){
+          sectionToCollapse.anchor.click();
+        };
+        // console.log(document.getElementById(anchorID));
+
+        // document.getElementById(anchorID).addEventListener("focus", function(){
+        //   console.log("Hey! I focused and should scroll...")
+        // })
+
+        document.getElementById(anchorID).click();
+        // document.getElementById(anchorID).scrollIntoView()
+      }
 
     } else {      
+      // Target is null...
+
       // The fact that there's no target means that
       // user's not clicking a boundary.  So toggle
       // by clicking btn is enabled...
+
+      let collapseAnchors = document.getElementsByClassName("collapseHeader");
+      if (collapseAnchors.length > 0) {
+        for(var i=0;i<collapseAnchors.length;i++){
+          // If the anchor is NOT collapsed
+          if (!collapseAnchors[i].classList.contains("collapsed")) {
+            collapseAnchors[i].click();
+          }
+        }      
+      }      
       this.setState(prevState => ({
         isSampleMenuOpen: !prevState.isSampleMenuOpen
       }));
@@ -126,13 +173,15 @@ class SurveyDetails extends Component {
     return (
       <div className="survey col-12">
         <div className="row">
-          <div className={"col-12 col-lg-12 " + classes.colPadding}>
-            <MapButton text={"Info"} handleClick={handleClickSamples}/>
-            <div className={"col-12 " + menuVisibility}>
-              <SampleMenu survey={survey} visibility={isSampleMenuOpen}/>
-            </div>           
-            <GoogleMap center={center} zoom={zoom} dataset = {survey} renderMarkers={renderMarkers} handleClick={handleClickSamples}>
-            </GoogleMap>      
+          <div className={"col-12 col-lg-12"}>
+            <div className="row">
+              <MapButton text={"Info"} handleClick={handleClickSamples}/>
+              <div className={"col-lg-6 col-12 " + menuVisibility}>
+                <SampleMenu survey={survey} visibility={isSampleMenuOpen}/>
+              </div>           
+              <GoogleMap center={center} zoom={zoom} dataset = {survey} renderMarkers={renderMarkers} handleClick={handleClickSamples}>
+              </GoogleMap>
+            </div>
           </div>
         </div>
       </div>

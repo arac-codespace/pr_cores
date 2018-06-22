@@ -10,8 +10,7 @@ const styles = {
   mapButtonContainer: {
     position: "absolute", 
     zIndex: "999999",
-    marginTop: "10px",
-    marginLeft: "14px"
+    padding: "10px 10px 16px 14px",
   },
   mapButton: {
     borderRadius: "0",

@@ -20,7 +20,7 @@ const styles = {
     height: "100%",
     padding: "15px 15px 15px 15px",
     overflow: 'auto',
-    marginTop:"32px",
+    // marginTop:"32px",
     // paddingTop: "30px"
   }
 };

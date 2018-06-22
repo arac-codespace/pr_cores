@@ -124,6 +124,7 @@ class GoogleMap extends Component {
     let handleClickPackage = {
       // check target data type
       isSurvey: false,
+      isCore: data.total_length ? true : false,
       id: data.id,
       name: data.sample_no
     }
@@ -134,7 +135,6 @@ class GoogleMap extends Component {
       if (listenMarker){
         handleClick(handleClickPackage);
       }
-      console.log(marker.title);
     }); 
     gmarkers.push(marker);   
   }
