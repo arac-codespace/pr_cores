@@ -36,77 +36,47 @@ class Collapse extends Component {
   constructor(props){
     super(props)
     this.state={
-      containerWidth: null,
-      isCollapsed: true
+      isOpen: false
     }
-
     this.handleClick = this.handleClick.bind(this)
-    this.scrollTo = this.scrollTo.bind(this);
   }
 
-  componentDidUpdate(prevProps, prevState){
-    if (this.state.isCollapsed !== prevState.isCollapsed) {
-      // debugger;
-      console.log("Hey, I'm update")
-    }
-  }
 
   handleClick(target){
 
-    // let isCollapsed = document.getElementById("collapse" + this.props.collapseId).classList.contains("collapsed");
     this.setState(prevState=>({
-      containerWidth: document.getElementById(this.props.collapseId).getBoundingClientRect().width,
-      isCollapsed: !prevState.isCollapsed
+      isOpen: !prevState.isOpen
     }))
-  }
-
-  scrollTo(){
-    document.getElementById("collapse"+this.props.collapseId).scrollIntoView();
   }
 
   render() {
 		let title = this.props.title;
 		let collapseId = this.props.collapseId
     let titleStyle = this.props.titleStyle;
-    let awaitWidth = this.props.awaitWidth;
 
-    let isCollapsed = this.state.isCollapsed;
-    let collapseIcon = isCollapsed ? " +" : " -";
-
-    // awaitWidth means that the details will only be loaded when the collapse
-    // space is available.  This allows ResponsiveWrapper to calculate available
-    // space properly and pass it to StratColumn. Otherwise, ResponsiveWrapper would
-    // pass 0 to StratColumn and StratColumn would default to the minWidth specified.
-
-    // Note that since the component starts collapsed, getting the available space during
-    // componentDidMount is not very straightforward.
+    let isOpen = this.state.isOpen;
+    let collapseIcon = isOpen ? " -" : " +";
 
     let collapseDetails;
-    if (awaitWidth) {
-      collapseDetails = this.state.containerWidth > 0 && this.state.containerWidth !== null ? 
-      this.props.children
-      :
-      <p>Not loaded</p>      
-    } else {
+
+    if (isOpen){
       collapseDetails = this.props.children
     }
 
-    console.log(isCollapsed);
+    // console.log(isOpen);
 
     return (
       <div className="CollapseComponent"> 
         <a 
           ref={node=> this.node = node}
-          className={"collapseHeader collapsed " + (titleStyle ? titleStyle : classes.anchor)} 
-          data-toggle="collapse" 
-          href={"#"+collapseId} 
+          className={"collapseHeader " + (titleStyle ? titleStyle : classes.anchor)} 
           id={"collapse"+collapseId} 
           onClick={this.handleClick}
         >          
           <span>{title + collapseIcon}</span>
         </a>
         <div
-          className={"collapse"}
+          className={"collapseableDiv"}
           id={collapseId}
         >   
           {collapseDetails}                   

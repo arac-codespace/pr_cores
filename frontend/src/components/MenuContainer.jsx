@@ -17,6 +17,22 @@ const styles = {
     overflowY: "scroll",
     // marginTop:"32px",
     // paddingTop: "30px"
+  },
+    menuContainer: {
+    width: "100%",
+    padding: "44px 10px 16px 14px",
+    // brings menu below button edge
+    // paddingTop:"40px",
+    height: "100%",
+    top: "0",
+    left: "0",
+    zIndex: "9999",
+    position: "absolute",
+    visibility: "hidden",
+  },
+  menuContainerActive: {
+    extend: "menuContainer",
+    visibility: "visible",
   }
 };
 
@@ -25,9 +41,11 @@ const { classes } = jss.createStyleSheet(styles).attach();
 class MenuContainer extends Component {
 	render() {
 		return (
-			<div id={this.props.id} className={"MenuContainerComponent " + classes.menu} ref={node=>{this.node=node;}}>
-				{this.props.children}
-			</div>
+            <div id={this.props.id} className={"col-lg-6 col-12 MenuContainerComponent " + classes.menuContainerActive}>                 
+                <div className={classes.menu} ref={node=>{this.node=node;}}>
+				    {this.props.children}
+                </div>
+            </div>
 		);
 	}
 }

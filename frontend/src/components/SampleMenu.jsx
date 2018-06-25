@@ -7,6 +7,12 @@ import StratColumn from './StratColumn';
 import SampleDescription from './SampleDescription';
 import Header from './Header';
 
+
+import CoreSection from './CoreSection';
+import BaggedSection from './BaggedSection';
+
+
+
 import { NavLink } from 'react-router-dom'
 
 import jss from 'jss';
@@ -53,7 +59,12 @@ class SampleMenu extends Component {
 
 	render() {
 		let survey = this.props.survey;
-    let visibility = this.props.visibility;
+    let markerInfo = this.props.markerInfo;
+
+    let handleBaggedSectionClick = this.props.handleBaggedSectionClick
+    let handleCoreSectionClick = this.props.handleCoreSectionClick
+
+
 		return (
       <MenuContainer id={"MenuContainer"}>
       	<Header text={"Survey Description"}/>
@@ -62,59 +73,8 @@ class SampleMenu extends Component {
           <SampleDescription label={"Ship/Platform:"} info={survey.ship}/>
           <SampleDescription label={"Total Samples Collected:"} info={survey.total_samples}/>    		
         </div>
-        <Collapse 
-          title={"Core Samples"} 
-          collapseId={"CoreSamples"}
-          titleStyle={classes.collapseHeader}
-          >          
-          {survey.core_set.map((core,index) => (
-            <div key={"core-" + core.id} className="core-details">
-              <Collapse title={core.sample_no} collapseId={core.sample_no+core.id}>
-                <div className={classes.descriptionWrapper}>
-                  <SampleDescription label={"Sample No:"} info={core.sample_no}/>
-                  <SampleDescription label={"Latitude:"} info={core.lat}/>
-                  <SampleDescription label={"Longitude:"} info={core.lng}/>
-                  <SampleDescription label={"Date Collected:"} info={core.date_coll}/>
-                  <SampleDescription label={"Collected By:"} info={core.collected_by}/>
-                  <SampleDescription label={"Core Type:"} info={core.core_type}/>
-                  <SampleDescription label={"Length:"} info={core.total_length}/>
-                  <SampleDescription label={"Depth:"} info={core.depth}/>
-                  <SampleDescription label={"Core Condition:"} info={core.core_condition}/>
-                  <SampleDescription label={"Described By:"} info={core.described_by}/>
-                  <SampleDescription label={"Location:"} info={core.physiographic_location}/>
-                  <SampleDescription label={"Date Described:"} info={core.date_described}/>
-                  <div className={classes.section}>
-                    <Collapse title={"Visualization"} collapseId={"ColumnCollapse"+core.id} getWidth={this.getWidth} awaitWidth={true}>  
-                      <div className = {classes.columnContainer}>
-                        <StratColumn core={core}/>
-                      </div>
-                    </Collapse>
-                  </div>
-                </div>
-              </Collapse>
-            </div>
-          ))}
-        </Collapse>
-        <Collapse 
-          title={"Bagged Samples"} 
-          collapseId={"BaggedSamples"}
-          titleStyle={classes.collapseHeader}
-        >            
-          {survey.bag_set.map((bag,index) => (
-            <div key={"bag-" + bag.id} className="bag-details">
-              <Collapse title={bag.sample_no} collapseId={bag.sample_no+bag.id}>
-                <div className={classes.descriptionWrapper}>
-                  <SampleDescription label={"Sample No:"} info={bag.sample_no}/>
-                  <SampleDescription label={"Latitude:"} info={bag.lat}/>
-                  <SampleDescription label={"Longitude:"} info={bag.lng}/>
-                  <SampleDescription label={"Date Collected:"} info={bag.date_coll}/>
-                  <SampleDescription label={"Collected By:"} info={bag.collected_by}/>
-                  <SampleDescription label={"Description:"} info={bag.description}/>    
-                </div>                                                             
-              </Collapse>
-            </div>
-          ))}
-        </Collapse>        
+        <CoreSection markerInfo={this.props.markerInfo} cores={survey.core_set} handleCoreSectionClick={handleCoreSectionClick}/>
+        <BaggedSection markerInfo={this.props.markerInfo} bags={survey.bag_set} handleBaggedSectionClick={handleBaggedSectionClick}/>     
       </MenuContainer>	
 		);
 	}

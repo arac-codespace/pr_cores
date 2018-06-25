@@ -54,132 +54,104 @@ const {center, zoom} = fitBounds(bounds, size);
 
 const { classes } = jss.createStyleSheet(styles).attach();
 
+const markerInfo = {
+  openCores: false,
+  openBagged: false,
+  sampleNo: false
+}
 class SurveyDetails extends Component {
 
   constructor() {
     super();
     this.state = {
-      isSampleMenuOpen: false,
+      isInfoOpen: false,
       renderMarkers: true,
+      markerInfo: markerInfo,
     };
-    this.handleClickSamples = this.handleClickSamples.bind(this);
+    this.toggleOpenMenu = this.toggleOpenMenu.bind(this);
+    this.handleMarkerInfo = this.handleMarkerInfo.bind(this);
+    this.handleBaggedSectionClick = this.handleBaggedSectionClick.bind(this);
+    this.handleCoreSectionClick = this.handleCoreSectionClick.bind(this);
   };	
 
   // https://larsgraubner.com/handle-outside-clicks-react/
-  handleClickSamples(target=null){
+  toggleOpenMenu(){
+    // I don't want component to keep state of markerInfo
+    // when closing the menu by clicking the btn, so...
+    this.setState((prevState) => ({
+      isInfoOpen: !prevState.isInfoOpen,
+      markerInfo: markerInfo
+    }))
+  }
 
-    // NOTE: From prior experience, avoid removing class names directly
-    // if the class is tied to behaviour.  Here I use click to close
-    // collapsable elements so the 'onClick' behaviour of the collapse
-    // components triggers.  Removing the 'show' class directly will
-    // fuck everything up becase the components will not keep track
-    // of the state properly...
+  handleMarkerInfo(markerInfo=null){
+    if (markerInfo !== null){      
+      let openCores = markerInfo.isCore;
+      let openBagged = !markerInfo.isCore;
+      let sampleNo = markerInfo.name;
 
-    // Target used when I want to show info after clicking marker/boundary...
-    // target is object with id, name, isSurvey
-    if (target && !target.isSurvey) {      
-      // make menu visible
-      // debugger;
       this.setState({
-        isSampleMenuOpen: true
+        isInfoOpen: true,
+        markerInfo: {
+          openCores: openCores,
+          openBagged: openBagged,
+          sampleNo: sampleNo,
+        }
       })
-      
-
-      let id = target.name + target.id;
-      let anchorID = "collapse"+id;
-      let coreID = "CoreSamples";
-      let baggedID = "BaggedSamples"
-  
-      console.log(target)
-
-      let sectionToCollapse;
-      if (target.isCore){
-        sectionToCollapse = {
-          anchor: document.getElementById("collapse" + coreID),
-          collapse: document.getElementById(coreID)
-        };
-      } else {
-        sectionToCollapse = {
-          anchor: document.getElementById("collapse" + baggedID),
-          collapse: document.getElementById(baggedID)
-        };        
-      }
-
-      console.log(sectionToCollapse);
-
-      // If the stuff is already open, don't close the stuff...
-      // if (document.getElementById(anchorID).classList.contains('collapsed') && sectionToCollapse.classList.contains('collapsed')){          
-      //   let collapseAnchors = document.getElementsByClassName("collapseHeader");
-      //   if (collapseAnchors.length > 0) {
-      //     for(var i=0;i<collapseAnchors.length;i++){
-      //       // If the anchor is NOT collapsed
-      //       if (!collapseAnchors[i].classList.contains("collapsed")) {
-      //         collapseAnchors[i].click();
-      //       }
-      //     }      
-      //   }
-      // }
-
-      if (document.getElementById(anchorID).classList.contains('collapsed')) {
-        if (sectionToCollapse.anchor.classList.contains('collapsed')){
-          sectionToCollapse.anchor.click();
-        };
-        // console.log(document.getElementById(anchorID));
-
-        // document.getElementById(anchorID).addEventListener("focus", function(){
-        //   console.log("Hey! I focused and should scroll...")
-        // })
-
-        document.getElementById(anchorID).click();
-        // document.getElementById(anchorID).scrollIntoView()
-      }
-
-    } else {      
-      // Target is null...
-
-      // The fact that there's no target means that
-      // user's not clicking a boundary.  So toggle
-      // by clicking btn is enabled...
-
-      let collapseAnchors = document.getElementsByClassName("collapseHeader");
-      if (collapseAnchors.length > 0) {
-        for(var i=0;i<collapseAnchors.length;i++){
-          // If the anchor is NOT collapsed
-          if (!collapseAnchors[i].classList.contains("collapsed")) {
-            collapseAnchors[i].click();
-          }
-        }      
-      }      
-      this.setState(prevState => ({
-        isSampleMenuOpen: !prevState.isSampleMenuOpen
-      }));
     }
-  }  
+  }
 
+  handleBaggedSectionClick(){
+    // Basically, using this click will erase the marker sample_no record
+    console.log("baggedsectionclick")
+    this.setState(prevState => ({
+      markerInfo: {
+        openBagged: !prevState.markerInfo.openBagged,
+        sampleNo: null,
+      }
+    }))
+  }
+
+  handleCoreSectionClick(){
+    console.log("coresectionclick")    
+    this.setState(prevState => ({
+      markerInfo: {
+        openCores: !prevState.markerInfo.openCores,
+        sampleNo: null,
+      }
+    }))
+  }
 
 	render() {
+    // functions
+    console.log("huh")
+    let handleMarkerInfo = this.handleMarkerInfo;
+    let toggleOpenMenu = this.toggleOpenMenu;
+
     let survey = this.props.survey;
-    let isSampleMenuOpen = this.state.isSampleMenuOpen;
-    let handleClickSamples = this.handleClickSamples;
+    let isInfoOpen = this.state.isInfoOpen;
     let renderMarkers = this.state.renderMarkers;
 
-    // debugger; 
-    let menuVisibility;
-    if (isSampleMenuOpen){
-      menuVisibility = classes.menuContainerActive
-    } else {
-      menuVisibility = classes.menuContainer
+    let content;
+    if (isInfoOpen){
+      content = 
+      <SampleMenu 
+        survey={survey} 
+        visibility={isInfoOpen} 
+        markerInfo={this.state.markerInfo} 
+        handleCoreSectionClick={this.handleCoreSectionClick} 
+        handleBaggedSectionClick={this.handleBaggedSectionClick}
+      />
     }
+
     return (
       <div className="survey col-12">
         <div className="row">
           <div className={"col-12 col-lg-12"}>
             <div className="row">
-              <MapButton text={"Info"} handleClick={handleClickSamples}/>
-              <div className={"col-lg-6 col-12 " + menuVisibility}>
-                <SampleMenu survey={survey} visibility={isSampleMenuOpen}/>
-              </div>           
-              <GoogleMap center={center} zoom={zoom} dataset = {survey} renderMarkers={renderMarkers} handleClick={handleClickSamples}>
+              <MapButton text={"Info"} handleClick={toggleOpenMenu}/>
+              {content}                                                
+              <GoogleMap center={center} zoom={zoom} dataset = {survey} renderMarkers={renderMarkers} handleClick={handleMarkerInfo}>
               </GoogleMap>
             </div>
           </div>
