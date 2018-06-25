@@ -60,9 +60,9 @@ class CoreDescription extends Component {
 		let markerInfo = this.props.markerInfo;
 		let core = this.props.core;
 
-			this.setState({
-				showInfo: markerInfo.sampleNo == core.sample_no ? true : false,
-			})
+		this.setState({
+			showInfo: markerInfo.sampleNo == core.sample_no ? true : false,
+		})						
 	}
 
 	componentDidUpdate(prevProps){
@@ -73,7 +73,7 @@ class CoreDescription extends Component {
 
 			this.setState({
 				showInfo: markerInfo.sampleNo == core.sample_no ? true : false
-			})
+			})						
 		}
 	}
 
@@ -86,6 +86,7 @@ class CoreDescription extends Component {
 	render() {
 
 		let core = this.props.core;
+		let markerInfo = this.props.markerInfo;
 		let showInfo = this.state.showInfo;
     let collapseIcon = showInfo ? " -" : " +";
 
@@ -119,8 +120,17 @@ class CoreDescription extends Component {
 		return (
 			<div>
 	      <a 
+	      ref = {node => {
+	      	if (core.sample_no === markerInfo.sampleNo){
+	      		// debugger;
+	      		// console.log(this);
+	      		if (node){
+	      			node.scrollIntoView();
+	      		}
+	      	}
+	      }}	      
 	        className={"collapseHeader " + classes.collapseHeader} 
-	        id={core.sample_no + "anchor"} 
+	        id={"anchor"+core.sample_no} 
 	        onClick={this.handleClick}
 	      >          
 	        <span>{core.sample_no + collapseIcon}</span>

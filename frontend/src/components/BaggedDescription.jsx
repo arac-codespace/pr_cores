@@ -59,7 +59,7 @@ class BaggedDescription extends Component {
 	componentDidMount(){
 		let markerInfo = this.props.markerInfo;
 		let bag = this.props.bag;
-
+		
 		this.setState({
 			showInfo: markerInfo.sampleNo == bag.sample_no ? true : false,
 		})
@@ -87,6 +87,7 @@ class BaggedDescription extends Component {
 
 		let bag = this.props.bag;
 		let showInfo = this.state.showInfo;
+		let markerInfo = this.props.markerInfo;
 
     let collapseIcon = showInfo ? " -" : " +";
 
@@ -106,8 +107,17 @@ class BaggedDescription extends Component {
 		return (
 			<div>
 	      <a 
+	      ref = {node => {
+	      	if (bag.sample_no === markerInfo.sampleNo){
+	      		// debugger;
+	      		// console.log(this);
+	      		if (node){
+	      			node.scrollIntoView();
+	      		}
+	      	}
+	      }}
 	        className={"collapseHeader " + classes.collapseHeader} 
-	        id={bag.sample_no + "anchor"} 
+	        id={"anchor"+bag.sample_no} 
 	        onClick={this.handleClick}
 	      >          
 	        <span>{bag.sample_no + collapseIcon}</span>
