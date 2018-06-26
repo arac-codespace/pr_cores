@@ -131,7 +131,7 @@ class GoogleMap extends Component {
 
     marker.addListener('click', function() {
       // marker.map.setZoom(8);
-      marker.map.setCenter(marker.getPosition());
+      // marker.map.setCenter(marker.getPosition());
       if (listenMarker){
         handleClick(handleClickPackage);
       }

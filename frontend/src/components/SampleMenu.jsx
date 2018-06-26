@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 
-import Collapse from './Collapse';
 import MenuContainer from './MenuContainer';
-import SampleTable from './SampleTable';
-import StratColumn from './StratColumn';
 import SampleDescription from './SampleDescription';
 import Header from './Header';
 
 
-import CoreSection from './CoreSection';
-import BaggedSection from './BaggedSection';
+import MenuSection from './MenuSection';
+import SurveyDescription from './SurveyDescription';
+import BaggedDescription from './BaggedDescription';
+import CoreDescription from './CoreDescription';
+import CollapseDescriptionWrapper from './CollapseDescriptionWrapper';
 
-
-
-import { NavLink } from 'react-router-dom'
 
 import jss from 'jss';
 import preset from 'jss-preset-default';
@@ -65,16 +62,39 @@ class SampleMenu extends Component {
     let handleCoreSectionClick = this.props.handleCoreSectionClick
 
 
+
+    let coreDescriptions; 
+    if (survey.core_set.length > 0){      
+      let CoresWithCollapse = CollapseDescriptionWrapper(CoreDescription);
+      coreDescriptions = survey.core_set.map((item,index) => (
+        <CoresWithCollapse key={item.sample_no + item.id} sample={item} markerInfo={markerInfo}/>
+      ))    
+    }
+    
+
+    
+    let baggedDescriptions;
+    if (survey.bag_set.length > 0){      
+      let BaggedWithCollapse = CollapseDescriptionWrapper(BaggedDescription);
+      baggedDescriptions = survey.bag_set.map((item,index) => (
+        <BaggedWithCollapse key={item.sample_no + item.id} sample={item} markerInfo={markerInfo}/>
+      ))    
+    }
+     
+
 		return (
       <MenuContainer id={"MenuContainer"}>
       	<Header text={"Survey Description"}/>
         <div className = "card card-body">   
-          <SampleDescription label={"Survey No:"} info={survey.survey_no}/>         
-          <SampleDescription label={"Ship/Platform:"} info={survey.ship}/>
-          <SampleDescription label={"Total Samples Collected:"} info={survey.total_samples}/>    		
+          <SurveyDescription survey={survey}/>    		
         </div>
-        <CoreSection markerInfo={this.props.markerInfo} cores={survey.core_set} handleCoreSectionClick={handleCoreSectionClick}/>
-        <BaggedSection markerInfo={this.props.markerInfo} bags={survey.bag_set} handleBaggedSectionClick={handleBaggedSectionClick}/>     
+        <MenuSection title={"Core Samples"} id={"coreSamples"} showInfo={markerInfo.openCores} handleClick={handleCoreSectionClick}>          
+          {coreDescriptions}
+        </MenuSection>
+
+        <MenuSection title={"Bagged Samples"} id={"baggedSamples"} showInfo={markerInfo.openBagged} handleClick={handleBaggedSectionClick}>          
+          {baggedDescriptions}
+        </MenuSection>        
       </MenuContainer>	
 		);
 	}

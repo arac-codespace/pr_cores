@@ -25,7 +25,7 @@ const { classes } = jss.createStyleSheet(styles).attach();
 class SampleDescription extends Component {
 	render() {
 		return (
-      <div className={"SampleDescriptionComponent"}>                
+      <div className={"SampleDescription"}>                
         <span className={classes.infoLabel}>
         	{this.props.label}
         </span> 

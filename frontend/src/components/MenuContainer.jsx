@@ -29,6 +29,7 @@ const styles = {
     zIndex: "9999",
     position: "absolute",
     visibility: "hidden",
+    maxWidth: "675px",
   },
   menuContainerActive: {
     extend: "menuContainer",
@@ -41,7 +42,7 @@ const { classes } = jss.createStyleSheet(styles).attach();
 class MenuContainer extends Component {
 	render() {
 		return (
-            <div id={this.props.id} className={"col-lg-6 col-12 MenuContainerComponent " + classes.menuContainerActive}>                 
+            <div id={this.props.id} className={"col-12 col-md-12 col-lg-6 MenuContainerComponent " + classes.menuContainerActive}>                 
                 <div className={classes.menu} ref={node=>{this.node=node;}}>
 				    {this.props.children}
                 </div>

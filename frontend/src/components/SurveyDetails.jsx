@@ -85,25 +85,38 @@ class SurveyDetails extends Component {
   }
 
   handleMarkerInfo(markerInfo=null){
-    if (markerInfo !== null){      
-      let openCores = markerInfo.isCore;
-      let openBagged = !markerInfo.isCore;
-      let sampleNo = markerInfo.name;
+    if (markerInfo !== null){   
 
-      this.setState({
-        isInfoOpen: true,
-        markerInfo: {
-          openCores: openCores,
-          openBagged: openBagged,
-          sampleNo: sampleNo,
-        }
-      })
+      if (markerInfo.isSurvey){
+
+        this.setState({
+          isInfoOpen: true,
+          markerInfo: {
+            openCores: false,
+            openBagged: false,
+            sampleNo: false,
+          }
+        })
+
+      } else {        
+        let openCores = markerInfo.isCore;
+        let openBagged = !markerInfo.isCore;
+        let sampleNo = markerInfo.name;
+
+        this.setState({
+          isInfoOpen: true,
+          markerInfo: {
+            openCores: openCores,
+            openBagged: openBagged,
+            sampleNo: sampleNo,
+          }
+        })
+      }  
     }
   }
 
   handleBaggedSectionClick(){
     // Basically, using this click will erase the marker sample_no record
-    console.log("baggedsectionclick")
     this.setState(prevState => ({
       markerInfo: {
         openBagged: !prevState.markerInfo.openBagged,
@@ -113,7 +126,6 @@ class SurveyDetails extends Component {
   }
 
   handleCoreSectionClick(){
-    console.log("coresectionclick")    
     this.setState(prevState => ({
       markerInfo: {
         openCores: !prevState.markerInfo.openCores,

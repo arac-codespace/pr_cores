@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Axes from './Axes'
+import Axes from './strat_column_utils/Axes'
 import * as d3 from 'd3';
 
-import ResponsiveWrapper from './ResponsiveWrapper';
+import ResponsiveWrapper from './stratcolumn/ResponsiveWrapper';
 import SandGravel from './svg_components/SandGravel';
 import Sand from './svg_components/Sand';
 import SandySilt from './svg_components/SandySilt';
@@ -125,7 +125,7 @@ class StratColumn extends Component {
 	  };
 
 	  // 600px
-	  let DIMENSIONX = Math.max(this.props.parentWidth, 600);
+	  let DIMENSIONX = Math.max(this.props.parentWidth, 500);
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions

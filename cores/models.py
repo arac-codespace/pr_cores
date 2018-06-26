@@ -27,30 +27,19 @@ class Survey(models.Model):
 
     # To get survey boundary...
     def get_boundary(self):
-        if self.core_set.all():
-            survey_cores = self.core_set.all()
-            cores_lat = []
-            cores_lng = []
-            for core in survey_cores:
-                cores_lat.append(core.lat)
-                cores_lng.append(core.lng)
-            # Get max values...
-            max_lat = max(cores_lat)
-            min_lat = min(cores_lat)
-            max_lng = max(cores_lng)
-            min_lng = min(cores_lng)
 
-            # Get NW and SE points...
-            nw_point = {'lat': max_lat, 'lng': min_lng}
-            ne_point = {'lat': max_lat, 'lng': max_lng}
-            se_point = {'lat': min_lat, 'lng': max_lng}
-            sw_point = {'lat': min_lat, 'lng': min_lng}
+        cores = self.core_set.all()
+        bags = self.bag_set.all()
 
-            boundaries = {'nw': nw_point, 'ne': ne_point, 'se': se_point, 'sw': sw_point}
+        if cores and bags:
+            boundaries = get_dataset_boundaries(cores, bags)
             return boundaries
+        elif cores:
+            return get_dataset_boundaries(cores)
+        elif bags:
+            return get_dataset_boundaries(bags)
         else:
             return
-
 
 class Sample(models.Model):
     sample_no = models.CharField(max_length=25, verbose_name="Sample No.")
@@ -174,3 +163,31 @@ class Bag(Sample):
 
     def __str__(self):
         return self.sample_no
+
+
+def get_dataset_boundaries(dataset1, dataset2=False):
+    samples_lat = []
+    samples_lng = []
+    for data in dataset1:
+        samples_lat.append(data.lat)
+        samples_lng.append(data.lng)
+
+    if dataset2:
+        for data in dataset2:
+            samples_lat.append(data.lat)
+            samples_lng.append(data.lng)
+
+    # Get max values...
+    max_lat = max(samples_lat)
+    min_lat = min(samples_lat)
+    max_lng = max(samples_lng)
+    min_lng = min(samples_lng)
+
+    # Get NW and SE points...
+    nw_point = {'lat': max_lat, 'lng': min_lng}
+    ne_point = {'lat': max_lat, 'lng': max_lng}
+    se_point = {'lat': min_lat, 'lng': max_lng}
+    sw_point = {'lat': min_lat, 'lng': min_lng}
+
+    boundaries = {'nw': nw_point, 'ne': ne_point, 'se': se_point, 'sw': sw_point}
+    return boundaries
