@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Axes from './strat_column_utils/Axes'
 import * as d3 from 'd3';
 
-import ResponsiveWrapper from './stratcolumn/ResponsiveWrapper';
+import ResponsiveWrapper from './strat_column_utils/ResponsiveWrapper';
 import SandGravel from './svg_components/SandGravel';
 import Sand from './svg_components/Sand';
 import SandySilt from './svg_components/SandySilt';

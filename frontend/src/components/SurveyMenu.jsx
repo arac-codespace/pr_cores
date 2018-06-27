@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
-import Collapse from './Collapse';
 import MenuContainer from './MenuContainer';
-import SampleTable from './SampleTable';
+import SampleDescription from './SampleDescription';
+import Header from './Header';
 
-import { NavLink } from 'react-router-dom'
+
+import MenuSection from './MenuSection';
+import SurveyDescription from './SurveyDescription';
+import BaggedDescription from './BaggedDescription';
+import CoreDescription from './CoreDescription';
+import CollapseDescriptionWrapper from './CollapseDescriptionWrapper';
+
 
 import jss from 'jss';
 import preset from 'jss-preset-default';
@@ -14,60 +20,82 @@ jss.setup(preset());
 
 // MapButton zIndex: 999999
 const styles = {
-  menu: {
-    backgroundColor: "rgba(255,255,255,0.85)",
-    width: "100%",
-    height: "100%",
-    padding: "15px 15px 15px 15px",
-    overflow: 'auto',
-    // marginTop:"32px",
-    // paddingTop: "30px"
+  descriptionWrapper: {
+    marginBottom: "1rem",
+    padding: "0.5rem 1.5rem",
+    backgroundColor: "#ffffffb5", 
+    border: "1px solid #cfcfcf",   
+  },
+  columnContainer: {
+    extend: "descriptionWrapper",
+    overflowX: 'auto',
+  },
+  section: {
+    margin: "1rem 0px"
+  },
+  collapseHeader: {
+    backgroundColor: "#2e374e",
+    fontSize: "1rem",
+    display: "block",
+    fontWeight: "bold",
+    color: "white",
+    textTransform: "uppercase",
+    textAlign: "center",    
+    margin: "0.2rem 0rem 0rem 0px",    
+    "&:hover": {
+      backgroundColor: "#4a6cc3",
+      color: "white",
+      textDecoration: "none"      
+    }
   }
 };
 
 const { classes } = jss.createStyleSheet(styles).attach();
 
 class SurveyMenu extends Component {
+
 	render() {
-		let surveys = this.props.surveys;    
+		let survey = this.props.survey;
+    let markerInfo = this.props.markerInfo;
+
+    let handleBaggedSectionClick = this.props.handleBaggedSectionClick
+    let handleCoreSectionClick = this.props.handleCoreSectionClick
+
+
+
+    let coreDescriptions; 
+    if (survey.core_set.length > 0){      
+      let CoresWithCollapse = CollapseDescriptionWrapper(CoreDescription);
+      coreDescriptions = survey.core_set.map((item,index) => (
+        <CoresWithCollapse key={item.sample_no + item.id} sample={item} markerInfo={markerInfo} isSurvey={false}/>
+      ))    
+    }
+    
+
+    
+    let baggedDescriptions;
+    if (survey.bag_set.length > 0){      
+      let BaggedWithCollapse = CollapseDescriptionWrapper(BaggedDescription);
+      baggedDescriptions = survey.bag_set.map((item,index) => (
+        <BaggedWithCollapse key={item.sample_no + item.id} sample={item} markerInfo={markerInfo} isSurvey={false}/>
+      ))    
+    }
+     
 
 		return (
-      <MenuContainer>
-        {surveys.map((survey,index) => (
-          <div key={"survey-" + survey.id} className="survey-details">
-            <Collapse title={"Survey No: " + survey.survey_no} collapseId={"SurveyDetails"+survey.id}>
-              <p>{"Ship/Platform: " + survey.ship}</p>
-              <p>{"Total Samples Collected: " + survey.total_samples}</p>
-              {survey.total_samples >= 1 ? 
-                (
-                  <div className="coreInfo">
-                    <p>Survey Boundaries:</p> 
-                    <ul>
-                      <li>
-                        {"[NW:" + survey.get_boundary.nw.lat + ", " + survey.get_boundary.nw.lng + "]"}
-                      </li>
-                      <li>
-                        {"[SE: " + survey.get_boundary.se.lat + ", " + survey.get_boundary.se.lng + "]"}
-                      </li>
-                    </ul>
-                    <Collapse title={"Core Samples: " + survey.core_quant} collapseId={"SurveyCores"+survey.id}>
-                      <SampleTable samples={survey.core_set}/>
-                    </Collapse>                                                                                                   
-                    <Collapse title={"Bagged Samples: " + survey.bag_quant} collapseId={"SurveyBagbed"+survey.id}>
-                      <SampleTable samples={survey.bag_set}/>
-                    </Collapse>
-                  </div>
-                ):(<p>No Sample Info Available</p>)
-              } 
-              {/*Point to url where map should show all samples
-              as markers @ surveys/survey.id*/}
-              <NavLink exact to={"surveys/" + survey.id}>
-                <span> See on map </span>
-              </NavLink> 
-            </Collapse>
-          </div>
-        ))}
-      </MenuContainer>				
+      <MenuContainer id={"MenuContainer"}>
+      	<Header text={"Survey Description"}/>
+        <div className = "card card-body">   
+          <SurveyDescription survey={survey}/>    		
+        </div>
+        <MenuSection title={"Core Samples"} id={"coreSamples"} showInfo={markerInfo.openCores} handleClick={handleCoreSectionClick}>          
+          {coreDescriptions}
+        </MenuSection>
+
+        <MenuSection title={"Bagged Samples"} id={"baggedSamples"} showInfo={markerInfo.openBagged} handleClick={handleBaggedSectionClick}>          
+          {baggedDescriptions}
+        </MenuSection>        
+      </MenuContainer>	
 		);
 	}
 }

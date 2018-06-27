@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SurveyDetails from '../components/SurveyDetails';
+import Survey from '../components/Survey';
 
 
 class SurveyContainer extends Component {
@@ -31,7 +31,7 @@ class SurveyContainer extends Component {
     let survey = this.state.survey;
     if (this.state.isLoaded) {      
   		return (
-  			<SurveyDetails survey={survey}/>
+  			<Survey survey={survey}/>
   		);
     } else {
       return (

@@ -17,7 +17,8 @@ class SurveyDescription extends Component {
               <SampleDescription label={"Bagged Samples Collected:"} info={survey.bag_quant}/>  
             </div>
           ):(<p>No Sample Info Available</p>)
-        }                  
+        }  
+        {this.props.children}                
       </div>
 		);
 	}

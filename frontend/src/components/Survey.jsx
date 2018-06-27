@@ -4,7 +4,7 @@ import { fitBounds } from 'google-map-react/utils';
 
 
 import MapButton from './MapButton';
-import SampleMenu from './SampleMenu';
+import SurveyMenu from './SurveyMenu';
 
 import jss from 'jss';
 import preset from 'jss-preset-default';
@@ -59,7 +59,7 @@ const markerInfo = {
   openBagged: false,
   sampleNo: false
 }
-class SurveyDetails extends Component {
+class Survey extends Component {
 
   constructor() {
     super();
@@ -147,7 +147,7 @@ class SurveyDetails extends Component {
     let content;
     if (isInfoOpen){
       content = 
-      <SampleMenu 
+      <SurveyMenu 
         survey={survey} 
         visibility={isInfoOpen} 
         markerInfo={this.state.markerInfo} 
@@ -173,4 +173,4 @@ class SurveyDetails extends Component {
 	}
 }
 
-export default SurveyDetails;
+export default Survey;

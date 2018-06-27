@@ -44,22 +44,37 @@ export default DescriptionComponent => (
 
     componentDidMount(){
       let markerInfo = this.props.markerInfo;
-      let sample = this.props.sample;
-      
-      this.setState({
-        showInfo: markerInfo.sampleNo == sample.sample_no ? true : false,
-      })
+      if (this.props.isSurvey){
+        let survey = this.props.survey;
+        this.setState({
+          showInfo: markerInfo.surveyNo == survey.survey_no ? true : false,
+        })        
+      } else {
+        let sample = this.props.sample;
+        this.setState({
+          showInfo: markerInfo.sampleNo == sample.sample_no ? true : false,
+        })
+      }
     }
 
     componentDidUpdate(prevProps){
       if (this.props.markerInfo !== prevProps.markerInfo){
         
-        let markerInfo = this.props.markerInfo;
-        let sample = this.props.sample;
+        if (this.props.isSurvey){
+          let markerInfo = this.props.markerInfo;
+          let survey = this.props.survey;
 
-        this.setState({
-          showInfo: markerInfo.sampleNo == sample.sample_no ? true : false
-        })
+          this.setState({
+            showInfo: markerInfo.surveyNo == survey.survey_no ? true : false
+          })
+        } else {          
+          let markerInfo = this.props.markerInfo;
+          let sample = this.props.sample;
+
+          this.setState({
+            showInfo: markerInfo.sampleNo == sample.sample_no ? true : false
+          })
+        }
       }
     }
 
@@ -71,10 +86,29 @@ export default DescriptionComponent => (
 
     render() {
 
-    let sample = this.props.sample;
+    // let sample = this.props.sample;
     let showInfo = this.state.showInfo;
     let markerInfo = this.props.markerInfo;
     let collapseIcon = showInfo ? " -" : " +";
+    let style = this.props.style;
+
+
+    let data;
+    let scrollCondition;
+    let id;
+    let title;
+
+    if (this.props.isSurvey){
+      data = this.props.survey;
+      scrollCondition = data.survey_no === markerInfo.surveyNo;
+      id = "anchor"+data.survey_no;
+      title = data.survey_no + collapseIcon;
+    } else {
+      data = this.props.sample;
+      scrollCondition = data.sample_no === markerInfo.sampleNo;
+      id = "anchor"+data.sample_no;
+      title = data.sample_no + collapseIcon;;
+    }
 
     let content;
     if (showInfo){
@@ -87,17 +121,17 @@ export default DescriptionComponent => (
         <div className="DescriptionWrapper">
           <span 
           ref = {node => {
-            if (sample.sample_no === markerInfo.sampleNo){
+            if (scrollCondition){
               if (node){
                 node.scrollIntoView();
               }
             }
           }}
-            className={"collapseHeader " + classes.collapseHeader} 
-            id={"anchor"+sample.sample_no} 
+            className={"collapseHeader " + (style ? style : classes.collapseHeader)} 
+            id={id} 
             onClick={this.handleClick}
           >          
-            <span>{sample.sample_no + collapseIcon}</span>
+            <span>{title}</span>
           </span>
           {content}
         </div>
