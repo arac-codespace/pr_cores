@@ -138,7 +138,7 @@ class Surveys extends Component {
         <div className="row">
           <div className={"col-12 col-lg-12"}>
             <div className="row">
-              <MapButton text={"Info"} handleClick={toggleOpenMenu}/>
+              <MapButton text={"Surveys"} handleClick={toggleOpenMenu}/>
               {content}                                                
               <GoogleMap center={center} zoom={zoom} dataset = {surveys} renderMarkers={renderMarkers} handleClick={handleMarkerInfo}>
               </GoogleMap>

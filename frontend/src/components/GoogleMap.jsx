@@ -29,7 +29,7 @@ class GoogleMap extends Component {
     let dataset = this.props.dataset;
     let renderMarkers = this.props.renderMarkers;
     let handleClick = this.props.handleClick;
-    console.log(dataset);
+    // console.log(dataset);
 
     // dataset.length = array length
     if (dataset.length) {

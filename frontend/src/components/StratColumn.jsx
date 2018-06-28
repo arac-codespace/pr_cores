@@ -54,19 +54,7 @@ const styles = {
 	  textAlign: "center",
 	  visibility: "visible",
 	  borderRadius: "6px",
-	  pointerEvents: "none",
-	  '&:after': {
-		  content: '""',
-		  position: 'absolute',
-		  // top: '100%',
-		  // left: '50%',
-		  marginLeft: '-8px',
-		  width: '0', 
-		  height: '0',
-		  borderTop: '8px solid #000000',
-		  borderRight: '8px solid transparent',
-		  borderLeft: '8px solid transparent',	  	
-	  }	
+	  pointerEvents: "none",	
 	},
 	tooltipHidden: {
 		extend: 'tooltip',
@@ -368,15 +356,12 @@ class StratColumn extends Component {
 
 	render() {
 		let core = this.props.core;
-
 		let tooltipPosition = {
 			position: "fixed",
 			transform: "translate(" + this.state.x + "px, " + this.state.y +"px)",
-			// left: this.state.x - 100,
-			// top: this.state.y - 100,
-			width: "100%",
-		  left: "0",
-		  top: "0",			
+		    width: "50%",
+		    left: "15px",
+		    top: "0",			
 		}
 
 		let content;

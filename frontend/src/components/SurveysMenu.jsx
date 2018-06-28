@@ -36,6 +36,7 @@ const styles = {
     textTransform: "uppercase",
     textAlign: "center",    
     margin: "0.2rem 0rem 0rem 0px",
+    padding: "0.5rem",           
     cursor: "pointer",    
     "&:hover": {
       backgroundColor: "#4a6cc3",
@@ -45,7 +46,7 @@ const styles = {
   },
   anchor: {
     textTransform: 'uppercase',
-    fontSize: '0.85rem',
+    fontSize: '0.65rem',
     fontWeight: 'bold',    
   } 
 };
@@ -70,9 +71,11 @@ class SurveysMenu extends Component {
           isSurvey={true} 
           style={classes.collapseHeader}
         >
+        <div className="link-container">          
           <NavLink exact to={"surveys/" + survey.id}>
-            <span className={classes.anchor}> See on map </span>
+            <span className={classes.anchor}> Detailed view </span>
           </NavLink> 
+        </div>
         </SurveyWithCollapse>
       </div>
     ))    

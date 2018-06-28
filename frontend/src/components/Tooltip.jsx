@@ -20,18 +20,6 @@ const styles = {
 	  visibility: "visible",
 	  borderRadius: "6px",
 	  pointerEvents: "none",
-	  '&:after': {
-		  content: '""',
-		  position: 'absolute',
-		  // top: '100%',
-		  // left: '50%',
-		  marginLeft: '-8px',
-		  width: '0', 
-		  height: '0',
-		  borderTop: '8px solid #000000',
-		  borderRight: '8px solid transparent',
-		  borderLeft: '8px solid transparent',	  	
-	  }	
 	},
 	tooltipHidden: {
 		extend: 'tooltip',

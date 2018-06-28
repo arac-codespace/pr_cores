@@ -29,7 +29,7 @@ const styles = {
     zIndex: "9999",
     position: "absolute",
     visibility: "hidden",
-    maxWidth: "675px",
+    maxWidth: "600px",
   },
   menuContainerActive: {
     extend: "menuContainer",

@@ -5,7 +5,7 @@ class SurveyDescription extends Component {
 	render() {
     let survey = this.props.survey
 		return (
-			<div className="SurveyDescription">
+			<div className="SurveyDescription card card-body">
         <SampleDescription label={"Survey No:"} info={survey.survey_no}/>         
         <SampleDescription label={"Ship/Platform:"} info={survey.ship}/>
         <SampleDescription label={"Northwest Boundary:"} info={survey.get_boundary.nw.lat + ", " + survey.get_boundary.nw.lng}/>

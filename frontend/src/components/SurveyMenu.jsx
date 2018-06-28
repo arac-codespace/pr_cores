@@ -85,9 +85,7 @@ class SurveyMenu extends Component {
 		return (
       <MenuContainer id={"MenuContainer"}>
       	<Header text={"Survey Description"}/>
-        <div className = "card card-body">   
-          <SurveyDescription survey={survey}/>    		
-        </div>
+        <SurveyDescription survey={survey}/>    		
         <MenuSection title={"Core Samples"} id={"coreSamples"} showInfo={markerInfo.openCores} handleClick={handleCoreSectionClick}>          
           {coreDescriptions}
         </MenuSection>

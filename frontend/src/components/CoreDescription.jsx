@@ -42,10 +42,10 @@ class CoreDescription extends Component {
         <SampleDescription label={"Longitude:"} info={sample.lng}/>
         <SampleDescription label={"Date Collected:"} info={sample.date_coll}/>
         <SampleDescription label={"Collected By:"} info={sample.collected_by}/>
-        <SampleDescription label={"Core Type:"} info={sample.sample_type}/>
-        <SampleDescription label={"Length:"} info={sample.total_length}/>
-        <SampleDescription label={"Depth:"} info={sample.depth}/>
-        <SampleDescription label={"Core Condition:"} info={sample.core_condition}/>
+        <SampleDescription label={"Core Type:"} info={sample.core_type ? sample.core_type : "Undefined"}/>
+        <SampleDescription label={"Length (cm):"} info={sample.total_length}/>
+        <SampleDescription label={"Depth (cm):"} info={sample.depth}/>
+        <SampleDescription label={"Core Condition:"} info={sample.core_condition ? sample.core_condition : "Undefined"}/>
         <SampleDescription label={"Described By:"} info={sample.described_by}/>
         <SampleDescription label={"Location:"} info={sample.physiographic_location}/>
         <SampleDescription label={"Date Described:"} info={sample.date_described}/>

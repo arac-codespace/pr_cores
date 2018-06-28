@@ -18,6 +18,7 @@ const styles = {
     backgroundColor: "#21854c",  
     display: "block",  
     textAlign: "center",
+    cursor: "pointer",
     "&:hover": {
       color: "#ffffff",
       backgroundColor: "#0eb255",
@@ -67,14 +68,14 @@ class Collapse extends Component {
 
     return (
       <div className="CollapseComponent"> 
-        <a 
+        <span 
           ref={node=> this.node = node}
           className={"collapseHeader " + (titleStyle ? titleStyle : classes.anchor)} 
           id={"collapse"+collapseId} 
           onClick={this.handleClick}
         >          
           <span>{title + collapseIcon}</span>
-        </a>
+        </span>
         <div
           className={"collapseableDiv"}
           id={collapseId}
