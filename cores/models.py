@@ -118,6 +118,18 @@ class MSCL(models.Model):
         verbose_name_plural = "MSCL"
 
 
+class GrainSize(models.Model):
+    core = models.ForeignKey(Core, blank=True, on_delete=models.CASCADE, verbose_name="Core No.")
+    field_no = models.CharField(max_length=25)
+    depth = models.DecimalField(max_digits=5, decimal_places=2, blank= True, null=True, verbose_name="True Depth")
+    gravel_pct = models.DecimalField(max_digits=4, decimal_places=2, blank= True, null=True, verbose_name="Gravel Percent")
+    clay_pct = models.DecimalField(max_digits=4, decimal_places=2, blank= True, null=True, verbose_name="Clay Percent")
+    silt_pct = models.DecimalField(max_digits=4, decimal_places=2, blank= True, null=True, verbose_name="Silt Percent")
+    sand_pct = models.DecimalField(max_digits=4, decimal_places=2, blank= True, null=True, verbose_name="Sand Percent")
+    mean_grain_size = models.DecimalField(max_digits=4, decimal_places=2, blank= True, null=True, verbose_name="Mean Grain Size")
+
+
+
 
 class Fossils(models.Model):
     name = models.CharField(max_length=25)

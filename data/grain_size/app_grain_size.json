@@ -1,0 +1,2774 @@
+[
+    {
+        "model": "cores.grainsize",
+        "pk": 1,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-1",
+            "depth": "5",
+            "gravel_pct": "0",
+            "clay_pct": "49.24",
+            "silt_pct": "19.49",
+            "sand_pct": "31.27",
+            "mean_grain_size": "6.61"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 2,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-2",
+            "depth": "15",
+            "gravel_pct": "0",
+            "clay_pct": "44.57",
+            "silt_pct": "26.25",
+            "sand_pct": "29.17",
+            "mean_grain_size": "6.64"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 3,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-3",
+            "depth": "30",
+            "gravel_pct": "0",
+            "clay_pct": "42.74",
+            "silt_pct": "31.96",
+            "sand_pct": "25.3",
+            "mean_grain_size": "6.68"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 4,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-4",
+            "depth": "39",
+            "gravel_pct": "0",
+            "clay_pct": "49.43",
+            "silt_pct": "38.1",
+            "sand_pct": "12.47",
+            "mean_grain_size": "7.18"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 5,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-5",
+            "depth": "50",
+            "gravel_pct": "0",
+            "clay_pct": "48.61",
+            "silt_pct": "29.71",
+            "sand_pct": "21.69",
+            "mean_grain_size": "7.03"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 6,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-6",
+            "depth": "70",
+            "gravel_pct": "0",
+            "clay_pct": "44.73",
+            "silt_pct": "32.26",
+            "sand_pct": "23.01",
+            "mean_grain_size": "6.85"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 7,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-7",
+            "depth": "90",
+            "gravel_pct": "0",
+            "clay_pct": "45",
+            "silt_pct": "30.27",
+            "sand_pct": "24.74",
+            "mean_grain_size": "6.79"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 8,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-8",
+            "depth": "110",
+            "gravel_pct": "0",
+            "clay_pct": "52.03",
+            "silt_pct": "24.76",
+            "sand_pct": "23.22",
+            "mean_grain_size": "7.17"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 9,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-9",
+            "depth": "130",
+            "gravel_pct": "0",
+            "clay_pct": "47.41",
+            "silt_pct": "28.88",
+            "sand_pct": "23.71",
+            "mean_grain_size": "6.97"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 10,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-10",
+            "depth": "150",
+            "gravel_pct": "0",
+            "clay_pct": "49.36",
+            "silt_pct": "22.36",
+            "sand_pct": "28.29",
+            "mean_grain_size": "7"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 11,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-11",
+            "depth": "168",
+            "gravel_pct": "0",
+            "clay_pct": "48.3",
+            "silt_pct": "22.94",
+            "sand_pct": "28.75",
+            "mean_grain_size": "6.82"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 12,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-12",
+            "depth": "174",
+            "gravel_pct": "0",
+            "clay_pct": "40.16",
+            "silt_pct": "26.07",
+            "sand_pct": "33.77",
+            "mean_grain_size": "6.35"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 13,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-13",
+            "depth": "190",
+            "gravel_pct": "0",
+            "clay_pct": "40.97",
+            "silt_pct": "33.22",
+            "sand_pct": "25.82",
+            "mean_grain_size": "6.65"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 14,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-14",
+            "depth": "207",
+            "gravel_pct": "0",
+            "clay_pct": "49.13",
+            "silt_pct": "26.27",
+            "sand_pct": "24.6",
+            "mean_grain_size": "7.07"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 15,
+        "fields": {
+            "core": 1,
+            "field_no": "SJ8-5GGC-15",
+            "depth": "225",
+            "gravel_pct": "0",
+            "clay_pct": "48.92",
+            "silt_pct": "25.5",
+            "sand_pct": "25.57",
+            "mean_grain_size": "6.98"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 16,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-1",
+            "depth": "5",
+            "gravel_pct": "0",
+            "clay_pct": "80.46",
+            "silt_pct": "18.88",
+            "sand_pct": "0.65",
+            "mean_grain_size": "8.95"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 17,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-2",
+            "depth": "20",
+            "gravel_pct": "0",
+            "clay_pct": "76.74",
+            "silt_pct": "23.12",
+            "sand_pct": "0.13",
+            "mean_grain_size": "8.87"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 18,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-3",
+            "depth": "40",
+            "gravel_pct": "0",
+            "clay_pct": "77.99",
+            "silt_pct": "21.97",
+            "sand_pct": "0.04",
+            "mean_grain_size": "8.91"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 19,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-4",
+            "depth": "60",
+            "gravel_pct": "0",
+            "clay_pct": "80.72",
+            "silt_pct": "19.25",
+            "sand_pct": "0.03",
+            "mean_grain_size": "9"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 20,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-5",
+            "depth": "80",
+            "gravel_pct": "0",
+            "clay_pct": "75.34",
+            "silt_pct": "24.57",
+            "sand_pct": "0.09",
+            "mean_grain_size": "8.82"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 21,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-6",
+            "depth": "105",
+            "gravel_pct": "0",
+            "clay_pct": "73.52",
+            "silt_pct": "25.87",
+            "sand_pct": "0.61",
+            "mean_grain_size": "8.72"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 22,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-7",
+            "depth": "125",
+            "gravel_pct": "0",
+            "clay_pct": "71.22",
+            "silt_pct": "28.59",
+            "sand_pct": "0.18",
+            "mean_grain_size": "8.7"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 23,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-8",
+            "depth": "136",
+            "gravel_pct": "0",
+            "clay_pct": "72.1",
+            "silt_pct": "25.36",
+            "sand_pct": "2.54",
+            "mean_grain_size": "8.66"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 24,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-9",
+            "depth": "150",
+            "gravel_pct": "0",
+            "clay_pct": "72.55",
+            "silt_pct": "26.15",
+            "sand_pct": "1.28",
+            "mean_grain_size": "8.69"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 25,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-10",
+            "depth": "156",
+            "gravel_pct": "0",
+            "clay_pct": "75.02",
+            "silt_pct": "24.29",
+            "sand_pct": "0.69",
+            "mean_grain_size": "8.8"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 26,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-11",
+            "depth": "180",
+            "gravel_pct": "0",
+            "clay_pct": "77.72",
+            "silt_pct": "21.74",
+            "sand_pct": "0.53",
+            "mean_grain_size": "8.84"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 27,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-12",
+            "depth": "197",
+            "gravel_pct": "0",
+            "clay_pct": "60.89",
+            "silt_pct": "27",
+            "sand_pct": "12.11",
+            "mean_grain_size": "7.95"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 28,
+        "fields": {
+            "core": 2,
+            "field_no": "SJ8-7GGC-13",
+            "depth": "158",
+            "gravel_pct": "0",
+            "clay_pct": "60.12",
+            "silt_pct": "26.46",
+            "sand_pct": "13.43",
+            "mean_grain_size": "7.85"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 29,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-1",
+            "depth": "3",
+            "gravel_pct": "0.11",
+            "clay_pct": "47.64",
+            "silt_pct": "25.44",
+            "sand_pct": "26.81",
+            "mean_grain_size": "6.56"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 30,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-2",
+            "depth": "10",
+            "gravel_pct": "0.97",
+            "clay_pct": "49.55",
+            "silt_pct": "16.71",
+            "sand_pct": "32.77",
+            "mean_grain_size": "6.4"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 31,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-3",
+            "depth": "15",
+            "gravel_pct": "0.15",
+            "clay_pct": "54.68",
+            "silt_pct": "17.96",
+            "sand_pct": "27.19",
+            "mean_grain_size": "6.89"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 32,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-4",
+            "depth": "22",
+            "gravel_pct": "0.37",
+            "clay_pct": "44.91",
+            "silt_pct": "28.03",
+            "sand_pct": "26.69",
+            "mean_grain_size": "6.5"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 33,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-5",
+            "depth": "25",
+            "gravel_pct": "0.25",
+            "clay_pct": "43.61",
+            "silt_pct": "28.96",
+            "sand_pct": "27.18",
+            "mean_grain_size": "6.52"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 34,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-6",
+            "depth": "40",
+            "gravel_pct": "0.49",
+            "clay_pct": "50.21",
+            "silt_pct": "36.16",
+            "sand_pct": "13.16",
+            "mean_grain_size": "7.35"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 35,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-7",
+            "depth": "60",
+            "gravel_pct": "0.02",
+            "clay_pct": "46.92",
+            "silt_pct": "37.53",
+            "sand_pct": "15.53",
+            "mean_grain_size": "7.15"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 36,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-8",
+            "depth": "80",
+            "gravel_pct": "0.1",
+            "clay_pct": "54.94",
+            "silt_pct": "30.61",
+            "sand_pct": "14.36",
+            "mean_grain_size": "7.47"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 37,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-9",
+            "depth": "105",
+            "gravel_pct": "0.07",
+            "clay_pct": "29.8",
+            "silt_pct": "55.76",
+            "sand_pct": "14.37",
+            "mean_grain_size": "6.52"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 38,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-10",
+            "depth": "125",
+            "gravel_pct": "0.12",
+            "clay_pct": "47.96",
+            "silt_pct": "33.09",
+            "sand_pct": "18.82",
+            "mean_grain_size": "7.08"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 39,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-11",
+            "depth": "145",
+            "gravel_pct": "0.1",
+            "clay_pct": "55.79",
+            "silt_pct": "25.06",
+            "sand_pct": "19.06",
+            "mean_grain_size": "7.33"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 40,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-12",
+            "depth": "165",
+            "gravel_pct": "0",
+            "clay_pct": "39.26",
+            "silt_pct": "39.7",
+            "sand_pct": "21.04",
+            "mean_grain_size": "6.51"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 41,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-13",
+            "depth": "185",
+            "gravel_pct": "0.02",
+            "clay_pct": "43.02",
+            "silt_pct": "35.5",
+            "sand_pct": "21.46",
+            "mean_grain_size": "6.58"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 42,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-14",
+            "depth": "205",
+            "gravel_pct": "0.01",
+            "clay_pct": "43.92",
+            "silt_pct": "34.36",
+            "sand_pct": "21.71",
+            "mean_grain_size": "6.66"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 43,
+        "fields": {
+            "core": 3,
+            "field_no": "SJ8-8GGC-15",
+            "depth": "225",
+            "gravel_pct": "0.02",
+            "clay_pct": "38.4",
+            "silt_pct": "40.86",
+            "sand_pct": "20.72",
+            "mean_grain_size": "6.45"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 44,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-1",
+            "depth": "5",
+            "gravel_pct": "0",
+            "clay_pct": "38.04",
+            "silt_pct": "20.37",
+            "sand_pct": "41.59",
+            "mean_grain_size": "5.55"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 45,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-2",
+            "depth": "15",
+            "gravel_pct": "0",
+            "clay_pct": "48.25",
+            "silt_pct": "31.95",
+            "sand_pct": "19.82",
+            "mean_grain_size": "6.91"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 46,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-3",
+            "depth": "27",
+            "gravel_pct": "0",
+            "clay_pct": "69.14",
+            "silt_pct": "28.57",
+            "sand_pct": "2.29",
+            "mean_grain_size": "8.48"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 47,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-4",
+            "depth": "35",
+            "gravel_pct": "0",
+            "clay_pct": "65.48",
+            "silt_pct": "33.87",
+            "sand_pct": "0.64",
+            "mean_grain_size": "8.42"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 48,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-5",
+            "depth": "40",
+            "gravel_pct": "0",
+            "clay_pct": "49.87",
+            "silt_pct": "49.08",
+            "sand_pct": "1.04",
+            "mean_grain_size": "7.69"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 49,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-6",
+            "depth": "45",
+            "gravel_pct": "0",
+            "clay_pct": "26.56",
+            "silt_pct": "56.19",
+            "sand_pct": "17.25",
+            "mean_grain_size": "6.02"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 50,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-7",
+            "depth": "50",
+            "gravel_pct": "0",
+            "clay_pct": "21.37",
+            "silt_pct": "38.34",
+            "sand_pct": "40.29",
+            "mean_grain_size": "5.46"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 51,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-8",
+            "depth": "55",
+            "gravel_pct": "0.04",
+            "clay_pct": "6.11",
+            "silt_pct": "29.81",
+            "sand_pct": "64.05",
+            "mean_grain_size": "3.96"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 52,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-9",
+            "depth": "60",
+            "gravel_pct": "4.72",
+            "clay_pct": "14.88",
+            "silt_pct": "12.68",
+            "sand_pct": "67.72",
+            "mean_grain_size": "3.15"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 53,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-10",
+            "depth": "64",
+            "gravel_pct": "4.17",
+            "clay_pct": "11.64",
+            "silt_pct": "15.06",
+            "sand_pct": "69.12",
+            "mean_grain_size": "3.05"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 54,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-11",
+            "depth": "67",
+            "gravel_pct": "0.38",
+            "clay_pct": "38.06",
+            "silt_pct": "34.64",
+            "sand_pct": "26.91",
+            "mean_grain_size": "6.21"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 55,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-12",
+            "depth": "75",
+            "gravel_pct": "0.66",
+            "clay_pct": "42.88",
+            "silt_pct": "33.63",
+            "sand_pct": "22.82",
+            "mean_grain_size": "6.57"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 56,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-13",
+            "depth": "85",
+            "gravel_pct": "0.07",
+            "clay_pct": "49.12",
+            "silt_pct": "32.32",
+            "sand_pct": "18.49",
+            "mean_grain_size": "7.19"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 57,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-14",
+            "depth": "100",
+            "gravel_pct": "0.31",
+            "clay_pct": "51.28",
+            "silt_pct": "40.65",
+            "sand_pct": "7.76",
+            "mean_grain_size": "7.55"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 58,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-15",
+            "depth": "111",
+            "gravel_pct": "0.68",
+            "clay_pct": "19.41",
+            "silt_pct": "23.63",
+            "sand_pct": "56.26",
+            "mean_grain_size": "4.63"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 59,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-16",
+            "depth": "115",
+            "gravel_pct": "0.02",
+            "clay_pct": "48.79",
+            "silt_pct": "29.42",
+            "sand_pct": "21.75",
+            "mean_grain_size": "6.85"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 60,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-17",
+            "depth": "130",
+            "gravel_pct": "0.05",
+            "clay_pct": "47.26",
+            "silt_pct": "39.49",
+            "sand_pct": "13.2",
+            "mean_grain_size": "7.1"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 61,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-18",
+            "depth": "145",
+            "gravel_pct": "0.01",
+            "clay_pct": "46.78",
+            "silt_pct": "38.7",
+            "sand_pct": "14.52",
+            "mean_grain_size": "7.09"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 62,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-19",
+            "depth": "155",
+            "gravel_pct": "0.02",
+            "clay_pct": "62.74",
+            "silt_pct": "32.45",
+            "sand_pct": "4.78",
+            "mean_grain_size": "8.12"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 63,
+        "fields": {
+            "core": 4,
+            "field_no": "SJ8-9GGC-20",
+            "depth": "162",
+            "gravel_pct": "0",
+            "clay_pct": "30.88",
+            "silt_pct": "47.3",
+            "sand_pct": "21.82",
+            "mean_grain_size": "6.33"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 64,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-1",
+            "depth": "5",
+            "gravel_pct": "0.05",
+            "clay_pct": "44.27",
+            "silt_pct": "40.24",
+            "sand_pct": "15.44",
+            "mean_grain_size": "6.85"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 65,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-2",
+            "depth": "15",
+            "gravel_pct": "0.01",
+            "clay_pct": "31.18",
+            "silt_pct": "55.81",
+            "sand_pct": "13",
+            "mean_grain_size": "6.52"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 66,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-3",
+            "depth": "21",
+            "gravel_pct": "0",
+            "clay_pct": "30.1",
+            "silt_pct": "29.31",
+            "sand_pct": "40.61",
+            "mean_grain_size": "5.91"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 67,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-4",
+            "depth": "25",
+            "gravel_pct": "0.08",
+            "clay_pct": "3.87",
+            "silt_pct": "22.26",
+            "sand_pct": "73.8",
+            "mean_grain_size": "3.76"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 68,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-5",
+            "depth": "28",
+            "gravel_pct": "0.09",
+            "clay_pct": "32.5",
+            "silt_pct": "51.04",
+            "sand_pct": "16.37",
+            "mean_grain_size": "6.45"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 69,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-6",
+            "depth": "45",
+            "gravel_pct": "0",
+            "clay_pct": "37.42",
+            "silt_pct": "46.53",
+            "sand_pct": "16.03",
+            "mean_grain_size": "6.68"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 70,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-7",
+            "depth": "50",
+            "gravel_pct": "0",
+            "clay_pct": "32.59",
+            "silt_pct": "55.58",
+            "sand_pct": "11.82",
+            "mean_grain_size": "6.73"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 71,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-8",
+            "depth": "55",
+            "gravel_pct": "0",
+            "clay_pct": "20.62",
+            "silt_pct": "40.18",
+            "sand_pct": "39.21",
+            "mean_grain_size": "5.34"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 72,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-9",
+            "depth": "59",
+            "gravel_pct": "0.01",
+            "clay_pct": "32.88",
+            "silt_pct": "50.47",
+            "sand_pct": "16.62",
+            "mean_grain_size": "6.42"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 73,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-10",
+            "depth": "70",
+            "gravel_pct": "0.01",
+            "clay_pct": "46.23",
+            "silt_pct": "35.68",
+            "sand_pct": "18.1",
+            "mean_grain_size": "6.99"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 74,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-11",
+            "depth": "80",
+            "gravel_pct": "0.12",
+            "clay_pct": "43.48",
+            "silt_pct": "42.43",
+            "sand_pct": "13.96",
+            "mean_grain_size": "7.01"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 75,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-12",
+            "depth": "90",
+            "gravel_pct": "0.01",
+            "clay_pct": "34.15",
+            "silt_pct": "51.95",
+            "sand_pct": "13.89",
+            "mean_grain_size": "6.69"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 76,
+        "fields": {
+            "core": 7,
+            "field_no": "SJ8-13GGC-13",
+            "depth": "108",
+            "gravel_pct": "0.01",
+            "clay_pct": "27.45",
+            "silt_pct": "46.42",
+            "sand_pct": "26.12",
+            "mean_grain_size": "5.97"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 77,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-1",
+            "depth": "3",
+            "gravel_pct": "0.03",
+            "clay_pct": "67.37",
+            "silt_pct": "15.5",
+            "sand_pct": "17.1",
+            "mean_grain_size": "7.66"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 78,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-2",
+            "depth": "13",
+            "gravel_pct": "0",
+            "clay_pct": "51.82",
+            "silt_pct": "41.88",
+            "sand_pct": "6.3",
+            "mean_grain_size": "7.73"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 79,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-3",
+            "depth": "20",
+            "gravel_pct": "0",
+            "clay_pct": "74.03",
+            "silt_pct": "23.22",
+            "sand_pct": "2.74",
+            "mean_grain_size": "8.65"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 80,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-4",
+            "depth": "27",
+            "gravel_pct": "0",
+            "clay_pct": "73.14",
+            "silt_pct": "26.47",
+            "sand_pct": "0.39",
+            "mean_grain_size": "8.69"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 81,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-5",
+            "depth": "40",
+            "gravel_pct": "0",
+            "clay_pct": "53.76",
+            "silt_pct": "41.48",
+            "sand_pct": "4.75",
+            "mean_grain_size": "7.78"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 82,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-6",
+            "depth": "60",
+            "gravel_pct": "0",
+            "clay_pct": "56.61",
+            "silt_pct": "43.35",
+            "sand_pct": "0.03",
+            "mean_grain_size": "8.1"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 83,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-7",
+            "depth": "80",
+            "gravel_pct": "0",
+            "clay_pct": "50.25",
+            "silt_pct": "49.73",
+            "sand_pct": "0.02",
+            "mean_grain_size": "7.86"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 84,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-8",
+            "depth": "100",
+            "gravel_pct": "0",
+            "clay_pct": "61.29",
+            "silt_pct": "38.68",
+            "sand_pct": "0.04",
+            "mean_grain_size": "8.25"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 85,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-9",
+            "depth": "120",
+            "gravel_pct": "0",
+            "clay_pct": "67.25",
+            "silt_pct": "32.62",
+            "sand_pct": "0.13",
+            "mean_grain_size": "8.49"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 86,
+        "fields": {
+            "core": 8,
+            "field_no": "SJ8-17GGC-10",
+            "depth": "140",
+            "gravel_pct": "0",
+            "clay_pct": "68.37",
+            "silt_pct": "31.48",
+            "sand_pct": "0.15",
+            "mean_grain_size": "8.62"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 87,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-1",
+            "depth": "1",
+            "gravel_pct": "0.03",
+            "clay_pct": "36.19",
+            "silt_pct": "31.03",
+            "sand_pct": "32.75",
+            "mean_grain_size": "5.97"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 88,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-2",
+            "depth": "3.5",
+            "gravel_pct": "0",
+            "clay_pct": "42.79",
+            "silt_pct": "38",
+            "sand_pct": "19.2",
+            "mean_grain_size": "6.7"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 89,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-3",
+            "depth": "10",
+            "gravel_pct": "0",
+            "clay_pct": "49.47",
+            "silt_pct": "40.89",
+            "sand_pct": "9.63",
+            "mean_grain_size": "7.4"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 90,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-4",
+            "depth": "16.5",
+            "gravel_pct": "0",
+            "clay_pct": "8.02",
+            "silt_pct": "58.47",
+            "sand_pct": "33.5",
+            "mean_grain_size": "4.81"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 91,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-5",
+            "depth": "22",
+            "gravel_pct": "0",
+            "clay_pct": "68.05",
+            "silt_pct": "29.17",
+            "sand_pct": "2.78",
+            "mean_grain_size": "8.37"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 92,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-6",
+            "depth": "40",
+            "gravel_pct": "0",
+            "clay_pct": "60.94",
+            "silt_pct": "38.7",
+            "sand_pct": "0.36",
+            "mean_grain_size": "8.24"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 93,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-7",
+            "depth": "60",
+            "gravel_pct": "0",
+            "clay_pct": "51.78",
+            "silt_pct": "48.13",
+            "sand_pct": "0.07",
+            "mean_grain_size": "7.89"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 94,
+        "fields": {
+            "core": 9,
+            "field_no": "SJ8-18GGC-8",
+            "depth": "80",
+            "gravel_pct": "0",
+            "clay_pct": "56.09",
+            "silt_pct": "43.71",
+            "sand_pct": "0.19",
+            "mean_grain_size": "8.08"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 95,
+        "fields": {
+            "core": 10,
+            "field_no": "SJ8-20GGC-1",
+            "depth": "2",
+            "gravel_pct": "0.13",
+            "clay_pct": "34.22",
+            "silt_pct": "20.27",
+            "sand_pct": "45.37",
+            "mean_grain_size": "5.52"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 96,
+        "fields": {
+            "core": 10,
+            "field_no": "SJ8-20GGC-2",
+            "depth": "6",
+            "gravel_pct": "0.01",
+            "clay_pct": "33.95",
+            "silt_pct": "24.58",
+            "sand_pct": "41.43",
+            "mean_grain_size": "5.6"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 97,
+        "fields": {
+            "core": 10,
+            "field_no": "SJ8-20GGC-3",
+            "depth": "15",
+            "gravel_pct": "0",
+            "clay_pct": "45.85",
+            "silt_pct": "37.01",
+            "sand_pct": "17.14",
+            "mean_grain_size": "6.95"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 98,
+        "fields": {
+            "core": 10,
+            "field_no": "SJ8-20GGC-4",
+            "depth": "30",
+            "gravel_pct": "0",
+            "clay_pct": "49.98",
+            "silt_pct": "40.65",
+            "sand_pct": "9.38",
+            "mean_grain_size": "7.5"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 99,
+        "fields": {
+            "core": 10,
+            "field_no": "SJ8-20GGC-5",
+            "depth": "45",
+            "gravel_pct": "0.08",
+            "clay_pct": "44.55",
+            "silt_pct": "34.42",
+            "sand_pct": "20.94",
+            "mean_grain_size": "6.86"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 100,
+        "fields": {
+            "core": 10,
+            "field_no": "SJ8-20GGC-6",
+            "depth": "61",
+            "gravel_pct": "1.47",
+            "clay_pct": "22.07",
+            "silt_pct": "47.82",
+            "sand_pct": "28.64",
+            "mean_grain_size": "5.52"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 101,
+        "fields": {
+            "core": 10,
+            "field_no": "SJ8-20GGC-7",
+            "depth": "64",
+            "gravel_pct": "0",
+            "clay_pct": "39.06",
+            "silt_pct": "36.86",
+            "sand_pct": "24.07",
+            "mean_grain_size": "6.57"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 102,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-1",
+            "depth": "2",
+            "gravel_pct": "0.17",
+            "clay_pct": "38.4",
+            "silt_pct": "30.83",
+            "sand_pct": "30.58",
+            "mean_grain_size": "6.23"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 103,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-2",
+            "depth": "12",
+            "gravel_pct": "0",
+            "clay_pct": "0.7",
+            "silt_pct": "1.43",
+            "sand_pct": "97.86",
+            "mean_grain_size": "1.81"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 104,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-3",
+            "depth": "16",
+            "gravel_pct": "0",
+            "clay_pct": "25.75",
+            "silt_pct": "41.13",
+            "sand_pct": "33.12",
+            "mean_grain_size": "5.6"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 105,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-4",
+            "depth": "20",
+            "gravel_pct": "0.01",
+            "clay_pct": "37.1",
+            "silt_pct": "38.56",
+            "sand_pct": "24.32",
+            "mean_grain_size": "6.41"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 106,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-5",
+            "depth": "30",
+            "gravel_pct": "0",
+            "clay_pct": "43.69",
+            "silt_pct": "29.93",
+            "sand_pct": "26.37",
+            "mean_grain_size": "6.73"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 107,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-6",
+            "depth": "33",
+            "gravel_pct": "0",
+            "clay_pct": "37.08",
+            "silt_pct": "27.85",
+            "sand_pct": "35.06",
+            "mean_grain_size": "6.14"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 108,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-7",
+            "depth": "40",
+            "gravel_pct": "0",
+            "clay_pct": "20.83",
+            "silt_pct": "43.88",
+            "sand_pct": "35.3",
+            "mean_grain_size": "5.32"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 109,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-8",
+            "depth": "50",
+            "gravel_pct": "0.01",
+            "clay_pct": "30.25",
+            "silt_pct": "26.84",
+            "sand_pct": "42.9",
+            "mean_grain_size": "5.56"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 110,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-9",
+            "depth": "60.5",
+            "gravel_pct": "0",
+            "clay_pct": "40.83",
+            "silt_pct": "26.53",
+            "sand_pct": "32.64",
+            "mean_grain_size": "6.31"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 111,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-10",
+            "depth": "64",
+            "gravel_pct": "0.11",
+            "clay_pct": "12.54",
+            "silt_pct": "12.56",
+            "sand_pct": "74.78",
+            "mean_grain_size": "3.48"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 112,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-11",
+            "depth": "67",
+            "gravel_pct": "0.03",
+            "clay_pct": "38.1",
+            "silt_pct": "33.74",
+            "sand_pct": "28.13",
+            "mean_grain_size": "6.38"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 113,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-12",
+            "depth": "71.5",
+            "gravel_pct": "0",
+            "clay_pct": "39.16",
+            "silt_pct": "37.36",
+            "sand_pct": "23.5",
+            "mean_grain_size": "6.59"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 114,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-13",
+            "depth": "74",
+            "gravel_pct": "0.03",
+            "clay_pct": "26.45",
+            "silt_pct": "10.88",
+            "sand_pct": "62.64",
+            "mean_grain_size": "4.65"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 115,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-14",
+            "depth": "77",
+            "gravel_pct": "0.03",
+            "clay_pct": "41.89",
+            "silt_pct": "29.37",
+            "sand_pct": "28.71",
+            "mean_grain_size": "6.46"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 116,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-15",
+            "depth": "90",
+            "gravel_pct": "0",
+            "clay_pct": "48.35",
+            "silt_pct": "30.38",
+            "sand_pct": "21.26",
+            "mean_grain_size": "7.03"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 117,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-16",
+            "depth": "110",
+            "gravel_pct": "0.04",
+            "clay_pct": "30.76",
+            "silt_pct": "38.28",
+            "sand_pct": "30.91",
+            "mean_grain_size": "5.97"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 118,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-17",
+            "depth": "120",
+            "gravel_pct": "0",
+            "clay_pct": "37.7",
+            "silt_pct": "41.15",
+            "sand_pct": "21.15",
+            "mean_grain_size": "6.6"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 119,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-18",
+            "depth": "123",
+            "gravel_pct": "0.13",
+            "clay_pct": "35.71",
+            "silt_pct": "20.15",
+            "sand_pct": "44.01",
+            "mean_grain_size": "5.8"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 120,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-19",
+            "depth": "125.5",
+            "gravel_pct": "0.03",
+            "clay_pct": "18.07",
+            "silt_pct": "50.83",
+            "sand_pct": "31.06",
+            "mean_grain_size": "5.54"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 121,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-20",
+            "depth": "139",
+            "gravel_pct": "0",
+            "clay_pct": "40.74",
+            "silt_pct": "34.82",
+            "sand_pct": "24.44",
+            "mean_grain_size": "6.69"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 122,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-21",
+            "depth": "146",
+            "gravel_pct": "0.1",
+            "clay_pct": "32.05",
+            "silt_pct": "20.51",
+            "sand_pct": "47.33",
+            "mean_grain_size": "5.49"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 123,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-22",
+            "depth": "150",
+            "gravel_pct": "0.02",
+            "clay_pct": "48.21",
+            "silt_pct": "28.89",
+            "sand_pct": "22.88",
+            "mean_grain_size": "7.05"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 124,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-23",
+            "depth": "160",
+            "gravel_pct": "0",
+            "clay_pct": "45.23",
+            "silt_pct": "20.57",
+            "sand_pct": "34.2",
+            "mean_grain_size": "6.55"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 125,
+        "fields": {
+            "core": 11,
+            "field_no": "SJ8-21GGC-24",
+            "depth": "180",
+            "gravel_pct": "0.07",
+            "clay_pct": "35.13",
+            "silt_pct": "40.46",
+            "sand_pct": "24.34",
+            "mean_grain_size": "6.53"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 126,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-1",
+            "depth": "1",
+            "gravel_pct": "0",
+            "clay_pct": "48.53",
+            "silt_pct": "41.71",
+            "sand_pct": "9.75",
+            "mean_grain_size": "7.34"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 127,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-2",
+            "depth": "4",
+            "gravel_pct": "0",
+            "clay_pct": "40.16",
+            "silt_pct": "23.44",
+            "sand_pct": "36.4",
+            "mean_grain_size": "6.01"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 128,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-3",
+            "depth": "12",
+            "gravel_pct": "0",
+            "clay_pct": "51.34",
+            "silt_pct": "38.12",
+            "sand_pct": "10.53",
+            "mean_grain_size": "7.42"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 129,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-4",
+            "depth": "23",
+            "gravel_pct": "0",
+            "clay_pct": "61.3",
+            "silt_pct": "34.27",
+            "sand_pct": "4.45",
+            "mean_grain_size": "8.09"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 130,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-5",
+            "depth": "29",
+            "gravel_pct": "0",
+            "clay_pct": "62.36",
+            "silt_pct": "37.31",
+            "sand_pct": "0.34",
+            "mean_grain_size": "8.3"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 131,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-6",
+            "depth": "34",
+            "gravel_pct": "0",
+            "clay_pct": "57.9",
+            "silt_pct": "41.62",
+            "sand_pct": "0.48",
+            "mean_grain_size": "8.1"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 132,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-7",
+            "depth": "60",
+            "gravel_pct": "0",
+            "clay_pct": "65.28",
+            "silt_pct": "34.7",
+            "sand_pct": "0.03",
+            "mean_grain_size": "8.4"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 133,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-8",
+            "depth": "80",
+            "gravel_pct": "0",
+            "clay_pct": "68.8",
+            "silt_pct": "31.18",
+            "sand_pct": "0.04",
+            "mean_grain_size": "8.52"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 134,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-9",
+            "depth": "100",
+            "gravel_pct": "0",
+            "clay_pct": "60.33",
+            "silt_pct": "39.65",
+            "sand_pct": "0.02",
+            "mean_grain_size": "8.18"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 135,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-10",
+            "depth": "120",
+            "gravel_pct": "0",
+            "clay_pct": "66.91",
+            "silt_pct": "33.08",
+            "sand_pct": "0.02",
+            "mean_grain_size": "8.47"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 136,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-11",
+            "depth": "140",
+            "gravel_pct": "0",
+            "clay_pct": "65.59",
+            "silt_pct": "34.36",
+            "sand_pct": "0.03",
+            "mean_grain_size": "8.39"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 137,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-12",
+            "depth": "160",
+            "gravel_pct": "0",
+            "clay_pct": "64.67",
+            "silt_pct": "35.27",
+            "sand_pct": "0.04",
+            "mean_grain_size": "8.36"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 138,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-13",
+            "depth": "180",
+            "gravel_pct": "0",
+            "clay_pct": "65.97",
+            "silt_pct": "33.89",
+            "sand_pct": "0.14",
+            "mean_grain_size": "8.42"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 139,
+        "fields": {
+            "core": 12,
+            "field_no": "SJ8-22GGC-14",
+            "depth": "200",
+            "gravel_pct": "0",
+            "clay_pct": "62.53",
+            "silt_pct": "37.3",
+            "sand_pct": "0.18",
+            "mean_grain_size": "8.3"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 140,
+        "fields": {
+            "core": 13,
+            "field_no": "SJ8-23GGC-1",
+            "depth": "0.5",
+            "gravel_pct": "0.41",
+            "clay_pct": "42.9",
+            "silt_pct": "28.16",
+            "sand_pct": "28.53",
+            "mean_grain_size": "6.37"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 141,
+        "fields": {
+            "core": 13,
+            "field_no": "SJ8-23GGC-2",
+            "depth": "8",
+            "gravel_pct": "0.05",
+            "clay_pct": "52.5",
+            "silt_pct": "15.57",
+            "sand_pct": "31.88",
+            "mean_grain_size": "6.58"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 142,
+        "fields": {
+            "core": 13,
+            "field_no": "SJ8-23GGC-3",
+            "depth": "17",
+            "gravel_pct": "0.11",
+            "clay_pct": "38.11",
+            "silt_pct": "27.42",
+            "sand_pct": "34.37",
+            "mean_grain_size": "5.98"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 143,
+        "fields": {
+            "core": 14,
+            "field_no": "SJ8-24GGC-1",
+            "depth": "1",
+            "gravel_pct": "0.05",
+            "clay_pct": "35.05",
+            "silt_pct": "37.97",
+            "sand_pct": "26.94",
+            "mean_grain_size": "6.06"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 144,
+        "fields": {
+            "core": 14,
+            "field_no": "SJ8-24GGC-2",
+            "depth": "10",
+            "gravel_pct": "0.08",
+            "clay_pct": "49.05",
+            "silt_pct": "18.07",
+            "sand_pct": "32.78",
+            "mean_grain_size": "6.39"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 145,
+        "fields": {
+            "core": 14,
+            "field_no": "SJ8-24GGC-3",
+            "depth": "20",
+            "gravel_pct": "0.16",
+            "clay_pct": "39.33",
+            "silt_pct": "23.56",
+            "sand_pct": "36.94",
+            "mean_grain_size": "5.85"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 146,
+        "fields": {
+            "core": 14,
+            "field_no": "SJ8-24GGC-4",
+            "depth": "26.5",
+            "gravel_pct": "0.27",
+            "clay_pct": "33.67",
+            "silt_pct": "40.7",
+            "sand_pct": "25.36",
+            "mean_grain_size": "6.25"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 147,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-1",
+            "depth": "0",
+            "gravel_pct": "3.85",
+            "clay_pct": "64.93",
+            "silt_pct": "26.11",
+            "sand_pct": "5.11",
+            "mean_grain_size": "7.91"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 148,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-2",
+            "depth": "2",
+            "gravel_pct": "1.86",
+            "clay_pct": "62.79",
+            "silt_pct": "31.31",
+            "sand_pct": "4.03",
+            "mean_grain_size": "8.06"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 149,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-3",
+            "depth": "4",
+            "gravel_pct": "0.93",
+            "clay_pct": "54.17",
+            "silt_pct": "37.94",
+            "sand_pct": "6.95",
+            "mean_grain_size": "7.71"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 150,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-4",
+            "depth": "6",
+            "gravel_pct": "0",
+            "clay_pct": "54.55",
+            "silt_pct": "40.97",
+            "sand_pct": "4.49",
+            "mean_grain_size": "7.97"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 151,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-5",
+            "depth": "8",
+            "gravel_pct": "1.6",
+            "clay_pct": "56.28",
+            "silt_pct": "37.42",
+            "sand_pct": "4.7",
+            "mean_grain_size": "7.89"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 152,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-6",
+            "depth": "9",
+            "gravel_pct": "0.04",
+            "clay_pct": "55.41",
+            "silt_pct": "38.4",
+            "sand_pct": "6.15",
+            "mean_grain_size": "7.93"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 153,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-7",
+            "depth": "9",
+            "gravel_pct": "0",
+            "clay_pct": "57.88",
+            "silt_pct": "38.96",
+            "sand_pct": "3.17",
+            "mean_grain_size": "8.13"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 154,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-8",
+            "depth": "13.5",
+            "gravel_pct": "0",
+            "clay_pct": "60.41",
+            "silt_pct": "37.88",
+            "sand_pct": "1.71",
+            "mean_grain_size": "8.2"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 155,
+        "fields": {
+            "core": 15,
+            "field_no": "SJ8-28GGC-9",
+            "depth": "13.5",
+            "gravel_pct": "0",
+            "clay_pct": "63.31",
+            "silt_pct": "35.28",
+            "sand_pct": "1.41",
+            "mean_grain_size": "8.26"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 156,
+        "fields": {
+            "core": 16,
+            "field_no": "SJ8-31GGC-1",
+            "depth": "0",
+            "gravel_pct": "0.18",
+            "clay_pct": "42.55",
+            "silt_pct": "32.11",
+            "sand_pct": "25.15",
+            "mean_grain_size": "6.48"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 157,
+        "fields": {
+            "core": 16,
+            "field_no": "SJ8-31GGC-2",
+            "depth": "2",
+            "gravel_pct": "0.02",
+            "clay_pct": "33.33",
+            "silt_pct": "39",
+            "sand_pct": "27.66",
+            "mean_grain_size": "6.05"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 158,
+        "fields": {
+            "core": 16,
+            "field_no": "SJ8-31GGC-3",
+            "depth": "4",
+            "gravel_pct": "0",
+            "clay_pct": "32.8",
+            "silt_pct": "43.54",
+            "sand_pct": "23.66",
+            "mean_grain_size": "6.22"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 159,
+        "fields": {
+            "core": 16,
+            "field_no": "SJ8-31GGC-4",
+            "depth": "6",
+            "gravel_pct": "0.14",
+            "clay_pct": "41.03",
+            "silt_pct": "36.1",
+            "sand_pct": "22.72",
+            "mean_grain_size": "6.5"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 160,
+        "fields": {
+            "core": 16,
+            "field_no": "SJ8-31GGC-5",
+            "depth": "8",
+            "gravel_pct": "0.07",
+            "clay_pct": "33.4",
+            "silt_pct": "45.27",
+            "sand_pct": "21.26",
+            "mean_grain_size": "6.31"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 161,
+        "fields": {
+            "core": 16,
+            "field_no": "SJ8-31GGC-6",
+            "depth": "10.5",
+            "gravel_pct": "0.4",
+            "clay_pct": "35.77",
+            "silt_pct": "43.08",
+            "sand_pct": "20.75",
+            "mean_grain_size": "6.34"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 162,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-1",
+            "depth": "2",
+            "gravel_pct": "0",
+            "clay_pct": "43.87",
+            "silt_pct": "22.55",
+            "sand_pct": "33.58",
+            "mean_grain_size": "6.45"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 163,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-2",
+            "depth": "10",
+            "gravel_pct": "0",
+            "clay_pct": "53.99",
+            "silt_pct": "23.12",
+            "sand_pct": "22.88",
+            "mean_grain_size": "7.28"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 164,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-3",
+            "depth": "15",
+            "gravel_pct": "0",
+            "clay_pct": "27.22",
+            "silt_pct": "15.51",
+            "sand_pct": "57.27",
+            "mean_grain_size": "5.04"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 165,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-4",
+            "depth": "20",
+            "gravel_pct": "0",
+            "clay_pct": "20.87",
+            "silt_pct": "14.3",
+            "sand_pct": "64.83",
+            "mean_grain_size": "4.6"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 166,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-5",
+            "depth": "25",
+            "gravel_pct": "0",
+            "clay_pct": "33.47",
+            "silt_pct": "22.91",
+            "sand_pct": "43.61",
+            "mean_grain_size": "5.8"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 167,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-6",
+            "depth": "30",
+            "gravel_pct": "0",
+            "clay_pct": "46.31",
+            "silt_pct": "22.34",
+            "sand_pct": "31.36",
+            "mean_grain_size": "6.7"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 168,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-7",
+            "depth": "35",
+            "gravel_pct": "0",
+            "clay_pct": "51.92",
+            "silt_pct": "20.47",
+            "sand_pct": "27.59",
+            "mean_grain_size": "7.04"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 169,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-8",
+            "depth": "40",
+            "gravel_pct": "0",
+            "clay_pct": "39.54",
+            "silt_pct": "28.05",
+            "sand_pct": "32.41",
+            "mean_grain_size": "6.46"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 170,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-9",
+            "depth": "49",
+            "gravel_pct": "0",
+            "clay_pct": "49.3",
+            "silt_pct": "22.11",
+            "sand_pct": "28.59",
+            "mean_grain_size": "6.82"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 171,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-10",
+            "depth": "52",
+            "gravel_pct": "0",
+            "clay_pct": "16.9",
+            "silt_pct": "9.83",
+            "sand_pct": "73.26",
+            "mean_grain_size": "3.85"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 172,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-11",
+            "depth": "55",
+            "gravel_pct": "0",
+            "clay_pct": "37.5",
+            "silt_pct": "17.03",
+            "sand_pct": "45.46",
+            "mean_grain_size": "5.88"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 173,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-12",
+            "depth": "59",
+            "gravel_pct": "0",
+            "clay_pct": "33.3",
+            "silt_pct": "20.04",
+            "sand_pct": "46.67",
+            "mean_grain_size": "5.74"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 174,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-13",
+            "depth": "62",
+            "gravel_pct": "0",
+            "clay_pct": "20.51",
+            "silt_pct": "11.37",
+            "sand_pct": "68.11",
+            "mean_grain_size": "4.49"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 175,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-14",
+            "depth": "65",
+            "gravel_pct": "0",
+            "clay_pct": "47.31",
+            "silt_pct": "29.23",
+            "sand_pct": "23.46",
+            "mean_grain_size": "6.99"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 176,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-15",
+            "depth": "70",
+            "gravel_pct": "0",
+            "clay_pct": "40.96",
+            "silt_pct": "25.05",
+            "sand_pct": "33.99",
+            "mean_grain_size": "6.41"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 177,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-16",
+            "depth": "75",
+            "gravel_pct": "0",
+            "clay_pct": "27.93",
+            "silt_pct": "15.29",
+            "sand_pct": "56.77",
+            "mean_grain_size": "5.11"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 178,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-17",
+            "depth": "85",
+            "gravel_pct": "0",
+            "clay_pct": "48.76",
+            "silt_pct": "23.54",
+            "sand_pct": "27.7",
+            "mean_grain_size": "6.85"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 179,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-18",
+            "depth": "86",
+            "gravel_pct": "0",
+            "clay_pct": "20.28",
+            "silt_pct": "8.04",
+            "sand_pct": "71.68",
+            "mean_grain_size": "4.29"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 180,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-19",
+            "depth": "88",
+            "gravel_pct": "0",
+            "clay_pct": "6.33",
+            "silt_pct": "6.26",
+            "sand_pct": "87.42",
+            "mean_grain_size": "2.91"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 181,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-20",
+            "depth": "90",
+            "gravel_pct": "0",
+            "clay_pct": "38.53",
+            "silt_pct": "19.09",
+            "sand_pct": "42.38",
+            "mean_grain_size": "5.98"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 182,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-21",
+            "depth": "105",
+            "gravel_pct": "0",
+            "clay_pct": "37.65",
+            "silt_pct": "11.29",
+            "sand_pct": "51.06",
+            "mean_grain_size": "5.74"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 183,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-22",
+            "depth": "115",
+            "gravel_pct": "0",
+            "clay_pct": "41.92",
+            "silt_pct": "17",
+            "sand_pct": "41.07",
+            "mean_grain_size": "6.17"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 184,
+        "fields": {
+            "core": 17,
+            "field_no": "SJ8-33GGC-23",
+            "depth": "125",
+            "gravel_pct": "0",
+            "clay_pct": "49.38",
+            "silt_pct": "21.86",
+            "sand_pct": "28.77",
+            "mean_grain_size": "6.8"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 185,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-1",
+            "depth": "5",
+            "gravel_pct": "0.02",
+            "clay_pct": "41.56",
+            "silt_pct": "34.2",
+            "sand_pct": "24.23",
+            "mean_grain_size": "6.42"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 186,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-2",
+            "depth": "15",
+            "gravel_pct": "0.02",
+            "clay_pct": "51.73",
+            "silt_pct": "26.97",
+            "sand_pct": "21.28",
+            "mean_grain_size": "6.99"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 187,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-3",
+            "depth": "30",
+            "gravel_pct": "0",
+            "clay_pct": "50.58",
+            "silt_pct": "24.42",
+            "sand_pct": "25.01",
+            "mean_grain_size": "7.01"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 188,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-4",
+            "depth": "50",
+            "gravel_pct": "0",
+            "clay_pct": "41.02",
+            "silt_pct": "25.03",
+            "sand_pct": "33.94",
+            "mean_grain_size": "6.39"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 189,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-5",
+            "depth": "70",
+            "gravel_pct": "0",
+            "clay_pct": "41.72",
+            "silt_pct": "27.27",
+            "sand_pct": "31.02",
+            "mean_grain_size": "6.54"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 190,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-6",
+            "depth": "90",
+            "gravel_pct": "0",
+            "clay_pct": "40.11",
+            "silt_pct": "21.63",
+            "sand_pct": "38.25",
+            "mean_grain_size": "6.27"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 191,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-7",
+            "depth": "110",
+            "gravel_pct": "0",
+            "clay_pct": "41.58",
+            "silt_pct": "20.84",
+            "sand_pct": "37.56",
+            "mean_grain_size": "6.21"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 192,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-8",
+            "depth": "130",
+            "gravel_pct": "0",
+            "clay_pct": "55.81",
+            "silt_pct": "28.01",
+            "sand_pct": "16.18",
+            "mean_grain_size": "7.55"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 193,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-9",
+            "depth": "135",
+            "gravel_pct": "0",
+            "clay_pct": "57.63",
+            "silt_pct": "24.82",
+            "sand_pct": "17.55",
+            "mean_grain_size": "7.55"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 194,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-10",
+            "depth": "141",
+            "gravel_pct": "0",
+            "clay_pct": "21.61",
+            "silt_pct": "16.57",
+            "sand_pct": "61.81",
+            "mean_grain_size": "4.46"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 195,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-11",
+            "depth": "144",
+            "gravel_pct": "0",
+            "clay_pct": "48.88",
+            "silt_pct": "31.19",
+            "sand_pct": "19.94",
+            "mean_grain_size": "7"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 196,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-12",
+            "depth": "160",
+            "gravel_pct": "0",
+            "clay_pct": "43.77",
+            "silt_pct": "40.13",
+            "sand_pct": "16.09",
+            "mean_grain_size": "7.05"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 197,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-13",
+            "depth": "180",
+            "gravel_pct": "0",
+            "clay_pct": "43.6",
+            "silt_pct": "17.98",
+            "sand_pct": "38.43",
+            "mean_grain_size": "6.41"
+        }
+    },
+    {
+        "model": "cores.grainsize",
+        "pk": 198,
+        "fields": {
+            "core": 19,
+            "field_no": "SJ8-38GGC-14",
+            "depth": "200",
+            "gravel_pct": "0",
+            "clay_pct": "58.72",
+            "silt_pct": "23.83",
+            "sand_pct": "17.45",
+            "mean_grain_size": "7.59"
+        }
+    }
+]

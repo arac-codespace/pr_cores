@@ -1,7 +1,7 @@
 from django.contrib import admin
 from nested_admin import NestedModelAdmin, NestedStackedInline, NestedTabularInline
 
-from .models import Core, Strata, Survey, Fossils, Bag, Lithology, Boundaries, MSCL
+from .models import Core, Strata, Survey, Fossils, Bag, Lithology, Boundaries, MSCL, GrainSize
 
 
 class FossilInline(NestedTabularInline):
@@ -32,3 +32,4 @@ admin.site.register(Strata)
 admin.site.register(MSCL)
 admin.site.register(Lithology)
 admin.site.register(Boundaries)
+admin.site.register(GrainSize)
