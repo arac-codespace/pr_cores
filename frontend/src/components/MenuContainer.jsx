@@ -20,7 +20,7 @@ const styles = {
   },
     menuContainer: {
     width: "100%",
-    padding: "44px 10px 16px 14px",
+    padding: "44px 0px 16px 14px",
     // brings menu below button edge
     // paddingTop:"40px",
     height: "100%",
@@ -29,7 +29,7 @@ const styles = {
     zIndex: "9999",
     position: "absolute",
     visibility: "hidden",
-    maxWidth: "600px",
+    maxWidth: "700px",
   },
   menuContainerActive: {
     extend: "menuContainer",

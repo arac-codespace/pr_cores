@@ -54,7 +54,12 @@ const styles = {
 	  textAlign: "center",
 	  visibility: "visible",
 	  borderRadius: "6px",
-	  pointerEvents: "none",	
+	  pointerEvents: "none",
+	  textAlign: "left",
+      padding: "0.5rem",	
+	},
+	tooltipText:{
+		margin: "0",
 	},
 	tooltipHidden: {
 		extend: 'tooltip',
@@ -368,11 +373,15 @@ class StratColumn extends Component {
 		if (this.state.hover) 
 	  {
 			content = (
-				<span id="tooltip-content" style={tooltipPosition} className={classes.tooltip}><p>{this.state.tooltipContent.description}</p></span>
+				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltip}>
+					<p className={classes.tooltipText}>Lithology: {this.state.tooltipContent.lithology.name}</p>
+					<p className={classes.tooltipText}>Thickness (CM): {this.state.tooltipContent.thickness}</p>
+					<p className={classes.tooltipText}>Description: {this.state.tooltipContent.description}</p>
+				</div>
 			)
 		} else {
 			content = (
-				<span id="tooltip-content" style={tooltipPosition} className={classes.tooltipHidden}>Huh</span>
+				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltipHidden}>Huh</div>
 			)			
 		}
 		// let mscl = this.props.mscl;
