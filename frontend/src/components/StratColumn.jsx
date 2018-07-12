@@ -126,7 +126,7 @@ class StratColumn extends Component {
 	  };
 
 	  // 600px
-	  let DIMENSIONX = Math.max(this.props.parentWidth, 700);
+	  let DIMENSIONX = Math.max(this.props.parentWidth, 750);
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions
@@ -334,23 +334,29 @@ class StratColumn extends Component {
 		  		</g>
 		  		<g className="headers-container">
 		  			<g transform={"translate(" + x("Lithology") + " ,0)"}>
-		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Lithology</text>	  					  				
+		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Lithology</text>	  					  				
 		  			</g>
 		  			<g transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
-		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Wet Bulk Density (g/cm3)</text>
+		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Wet Bulk Density (g/cm3)</text>
 		  				  			
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="red" y1={-10} y2={-10}></line>
 		  			</g>
 		  			<g transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
-		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Magnetic Susceptivility (SI)</text>
+		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Magnetic Susceptivility (SI)</text>
 		  				  						  				
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="green" y1={-10} y2={-10}></line>		  				  				
 		  			</g>	
 		  			<g transform={"translate(" + x("Mean Grain Size") + " ,0)"}>
-		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Mean Grain Size (phi)</text>
+		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Mean Grain Size (phi)</text>
 		  				  			
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="blue" y1={-10} y2={-10}></line>
-		  			</g>		  			  				  			
+		  			</g>	
+		  			<g transform={"translate(" + x("Grain Size Distribution") + " ,0)"}>
+		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Grain Size Distribution</text>
+		  				<text className={classes.header} dy={-18} x={halfBandwidth}>(x:100)</text>
+		  				  						  				
+		  				<line x1={5} x2={x.bandwidth()-5} stroke="yellow" y1={-10} y2={-10}></line>		  				  				
+		  			</g>		  				  			  				  			
 		  		</g>
 		  		{drawGrainDistribution}
 	  			{drawDensity}
@@ -383,16 +389,13 @@ class StratColumn extends Component {
   	for (let i=0; i < data.length; i++) {
   		/* first data point has no previous depth point*/
   		if (i == data.length -1) {
-  		// 	data[i].lower_bound = 0
-  		// 	data[i].thickness = data[i].depth
-  		// } else if (i == data.length - 1) {
   		// 	data[i].thickness = data.total_length - data[i].depth // test!
   			// data[i].thickness = data.total_length - data[i].depth
-  			data[i].thickness = 1  		
+  			data[i].thickness = data[i].b_depth - data[i].depth  		
   		} else {
   			// data[i].lower_bound = data[i-1].depth
   			// data[i].thickness = data[i+1].depth - data[i].depth
-  			data[i].thickness = 1
+  			data[i].thickness = data[i].b_depth - data[i].depth
   		// debugger; 			
   		}
   	}
@@ -452,25 +455,7 @@ class StratColumn extends Component {
   				<g className="grain-dist-chart" key={"grain-dist-" + i} transform={"translate(" + xDomain + " ," + y(parseFloat(d.depth)) + ")"}>
 	  				{drawGrainBars(d)}
   				</g>
-	  		))}
-  			<Axes
-  				orient = {"Bottom"}
-  				scale={scale}
-  				translateX = {xDomain}
-  				translateY= {height}
-  				margins = {margins}
-  				svgDimensions = {svgDimensions}
-  				ticks = {ticks ? ticks : 5}
-  			/> 
-  			<Axes
-  				orient = {"Top"}
-  				scale={scale}
-  				translateX = {xDomain}
-  				translateY= {0}
-  				margins = {margins}
-  				svgDimensions = {svgDimensions}
-  				ticks = {ticks? ticks: 5}
-  			/>   				  			
+	  		))} 				  			
   		</g>
   	)
   }

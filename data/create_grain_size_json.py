@@ -68,6 +68,7 @@ for item in grain_size:
             "core": get_core_id_from_name(item['FIELD_NO']),
             "field_no": item['FIELD_NO'],
             "depth": str(item['T_DEPTH']),
+            "b_depth": str(item['B_DEPTH']),
             "gravel_pct": str(item['GRAVEL_PCT']),
             "clay_pct": str(item['CLAY_PCT']),
             "silt_pct": str(item['SILT_PCT']),
