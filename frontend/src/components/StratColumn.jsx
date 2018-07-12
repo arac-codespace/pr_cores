@@ -39,6 +39,10 @@ const styles = {
 		extend: "lines",
 		stroke: "green"
 	},
+	meanGrainLine: {
+		extend: "lines",
+		stroke: "blue"
+	},
 	header: {
 		textAnchor:"middle",
 		fontSize: "0.65rem"
@@ -109,6 +113,10 @@ class StratColumn extends Component {
 
 		let mscl = core.mscl_set;
 	  let strata_set = core.strata_set;
+		let grain_size = core.grainsize_set;
+
+		// Appending total_thickness to grain_size for use in bar height calculations...
+		grain_size.total_length = core.total_length
 		
 		let margins = {
 	    top: 50,
@@ -118,7 +126,7 @@ class StratColumn extends Component {
 	  };
 
 	  // 600px
-	  let DIMENSIONX = Math.max(this.props.parentWidth, 500);
+	  let DIMENSIONX = Math.max(this.props.parentWidth, 700);
 	  let DIMENSIONY = 1200;
 
 	  // Graphic max dimensions
@@ -160,7 +168,11 @@ class StratColumn extends Component {
 	  let PADDINGIN = 0;
 	  let XALIGN = 0;
 	  x.rangeRound([RANGEBOUNDARY, width])
-	  .domain(['Lithology','Wet Bulk Density', 'Magnetic Susceptivility']).paddingOuter(PADDINGOUT).paddingInner(PADDINGIN).align(XALIGN);
+	  .domain(
+	  	['Lithology','Mean Grain Size', 'Grain Size Distribution', 'Wet Bulk Density', 'Magnetic Susceptivility']
+	  	).paddingOuter(PADDINGOUT)
+	  .paddingInner(PADDINGIN)
+	  .align(XALIGN);
 
 	  // Array that will contain drawing instructions for all
 	  // layers
@@ -234,42 +246,66 @@ class StratColumn extends Component {
 
 		// Drawing Density Line
 	  let x2 = d3.scaleLinear().domain([1, 2.65]).rangeRound([0,x.bandwidth()]);
-	  var densityLine = d3.line()
-	  	.defined(function(d){return d.den1 !== null;})
-	    .x(function(d) { return x2(d.den1); })
-	    .y(function(d) { return y(d.depth); });
+	  let densityLine = d3.line()
+	  	.defined(function(d){return d.den1 !== null})
+	    .x(function(d) {return x2(d.den1)})
+	    .y(function(d) {return y(d.depth)});
 
 
 	  // Drawing magnetic susceptability line
 	  let x3 = d3.scaleLinear().domain([0, 100]).rangeRound([0,x.bandwidth()]);
 	  
-	  var magneticLine = d3.line()
-	  	.defined(function(d){return d.ms1 !== null;})	  
-	    .x(function(d) { return x3(d.ms1); })
-	    .y(function(d) { return y(d.depth); });
+	  let magneticLine = d3.line()
+	  	.defined(function(d) {return d.ms1 !== null})	  
+	    .x(function(d) {return x3(d.ms1)})
+	    .y(function(d) {return y(d.depth)});
 
-     let options = {
+
+	  // Draw mean grain size line
+	  let x4 = d3.scaleLinear().domain([10.0,0]).rangeRound([0,x.bandwidth()])
+
+	  let meanGrainLine = d3.line()
+	    .defined(function(d) {return d.mean_grain_size !== null})
+	    .x(function(d) {return x4(d.mean_grain_size)})
+	    .y(function(d) {return y(d.depth)});
+
+    let options = {
       xDomain: null,
       scale: null,
       svgDimensions: svgDimensions,
       margins: margins,
       height: height,
       width: width,
-      lineStyle: null
-     }
+      lineStyle: null,
+      ticks: 5,
+      y: y
+    }
 
-     options.xDomain = x("Wet Bulk Density")
-     options.scale = x2
-     options.lineStyle = classes.denLine
+    options.xDomain = x("Wet Bulk Density")
+    options.scale = x2
+    options.lineStyle = classes.denLine
+ 
+    let drawDensity = this.drawLineChart(densityLine, mscl, options)
+ 
+    options.xDomain = x("Magnetic Susceptivility")
+    options.scale = x3
+    options.lineStyle = classes.magLine
+ 
+    let drawMagnetism = this.drawLineChart(magneticLine, mscl, options)
 
-     let drawDensity = this.drawLineChart(densityLine, mscl, options)
+    options.xDomain = x("Mean Grain Size")
+    options.scale = x4
+    options.lineStyle = classes.meanGrainLine
+    // options.ticks = 10
+    let drawMeanGrain = this.drawLineChart(meanGrainLine, grain_size, options)
 
-     options.xDomain = x("Magnetic Susceptivility")
-     options.scale = x3
-     options.lineStyle = classes.magLine
+    // Prepare grain size distribution data
+	  let x5 = d3.scaleLinear().domain([0,100]).rangeRound([0,x.bandwidth()])
 
-     let drawMagnetism = this.drawLineChart(magneticLine, mscl, options)
+	  options.xDomain = x("Grain Size Distribution")
+	  options.scale = x5
 
+	  let drawGrainDistribution = this.drawGrainDistibution(grain_size, options)
 
 
 	  let halfBandwidth = (x.bandwidth()/2)
@@ -309,10 +345,17 @@ class StratColumn extends Component {
 		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Magnetic Susceptivility (SI)</text>
 		  				  						  				
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="green" y1={-10} y2={-10}></line>		  				  				
-		  			</g>	  				  			
+		  			</g>	
+		  			<g transform={"translate(" + x("Mean Grain Size") + " ,0)"}>
+		  				<text className={classes.header} dy={-28} x={halfBandwidth}>Mean Grain Size (phi)</text>
+		  				  			
+		  				<line x1={5} x2={x.bandwidth()-5} stroke="blue" y1={-10} y2={-10}></line>
+		  			</g>		  			  				  			
 		  		</g>
+		  		{drawGrainDistribution}
 	  			{drawDensity}
 	  			{drawMagnetism}
+	  			{drawMeanGrain}
 
 	  			<Axes
 	  				orient = {"Left"}
@@ -321,7 +364,7 @@ class StratColumn extends Component {
 	  				translateY= {0}
 	  				margins = {margins}
 	  				svgDimensions = {svgDimensions}
-	  				ticks = {10}
+	  				ticks = {20}
 	  				dash = {true}
 	  			/> 			   				  			 			
 	  		</g>
@@ -330,13 +373,86 @@ class StratColumn extends Component {
 	}
 
 
-  drawLineChart(valueLine, mscl, options){
-  	const {xDomain, scale, height, margins, svgDimensions, lineStyle} = options
+  drawGrainDistibution(data, options){
+  	const {xDomain, scale, height, margins, svgDimensions, ticks, y} = options
+
+  	/* I need to calculate the 'thickness' of each interval in order to give the rects the proper height. 
+			Note that depth is equivalent to upper_boundary
+  	*/
+
+  	for (let i=0; i < data.length; i++) {
+  		/* first data point has no previous depth point*/
+  		if (i == data.length -1) {
+  		// 	data[i].lower_bound = 0
+  		// 	data[i].thickness = data[i].depth
+  		// } else if (i == data.length - 1) {
+  		// 	data[i].thickness = data.total_length - data[i].depth // test!
+  			// data[i].thickness = data.total_length - data[i].depth
+  			data[i].thickness = 1  		
+  		} else {
+  			// data[i].lower_bound = data[i-1].depth
+  			// data[i].thickness = data[i+1].depth - data[i].depth
+  			data[i].thickness = 1
+  		// debugger; 			
+  		}
+  	}
+  	// debugger;
+
+  	/* Need to calculate x position */
+
+  	function drawGrainBars(datapoint) {
+
+			let gravelX = 0
+			let sandX = 0
+			let siltX = 0
+			let clayX = 0
+
+			/* 
+				Here I'm assigning the x coordinate's starting point based on the order (G,S,Slt,C)
+			*/ 
+  		if (datapoint.gravel_pct > 0) {
+
+  			gravelX = 0 // starting point
+  			sandX = scale(datapoint.gravel_pct)
+  			siltX = sandX + scale(datapoint.sand_pct)
+  			clayX = siltX + scale(datapoint.silt_pct)
+
+  		} else if (datapoint.gravel_pct == 0 && datapoint.sand_pct > 0) {
+
+  			gravelX = 0
+  			sandX = 0 // starting point
+  			siltX = scale(datapoint.sand_pct)
+  			clayX = siltX + scale(datapoint.silt_pct)
+
+  		} else if (datapoint.gravel_pct == 0 && datapoint.sand_pct == 0 && datapoint.silt_pct > 0) {
+
+  			gravelX = 0
+  			sandX = 0
+  			siltX = 0 // starting point
+  			clayX = scale(datapoint.silt_pct)
+  		}
+
+			return (
+  				<g className="grain-draw-bars">
+
+						<rect className={"bar " + classes.bars} fill={"red"} x={gravelX} width={scale(datapoint.gravel_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
+
+						<rect className={"bar " + classes.bars} fill={"yellow"} x={sandX} width={scale(datapoint.sand_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
+
+						<rect className={"bar " + classes.bars} fill={"blue"} x={siltX} width={scale(datapoint.silt_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
+
+						<rect className={"bar " + classes.bars} fill={"green"} x={clayX} width={scale(datapoint.clay_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
+				</g>
+			)
+   	}
+
   	return (
-  		<g className="line-chart">
-  			<g className="line-chart-group" transform={"translate(" + xDomain + " ,0)"}>
-  				<path className={lineStyle} d={valueLine(mscl)}></path>
-  			</g>
+  		<g className="grain-dist">
+	  		{data.map( (d,i) => (
+  				<g className="grain-dist-chart" key={"grain-dist-" + i} transform={"translate(" + xDomain + " ," + y(parseFloat(d.depth)) + ")"}>
+	  				{drawGrainBars(d)}
+  				</g>
+	  		))}
   			<Axes
   				orient = {"Bottom"}
   				scale={scale}
@@ -344,7 +460,7 @@ class StratColumn extends Component {
   				translateY= {height}
   				margins = {margins}
   				svgDimensions = {svgDimensions}
-  				ticks = {5}
+  				ticks = {ticks ? ticks : 5}
   			/> 
   			<Axes
   				orient = {"Top"}
@@ -353,7 +469,39 @@ class StratColumn extends Component {
   				translateY= {0}
   				margins = {margins}
   				svgDimensions = {svgDimensions}
-  				ticks = {5}
+  				ticks = {ticks? ticks: 5}
+  			/>   				  			
+  		</g>
+  	)
+  }
+
+  drawLineChart(valueLine, pointData, options){
+  	const {xDomain, scale, height, margins, svgDimensions, lineStyle, ticks} = options
+  	// sort pointData by depth!
+		let sortedData = pointData.sort((a, b) => parseFloat(a.depth) - parseFloat(b.depth));
+
+  	return (
+  		<g className="line-chart">
+  			<g className="line-chart-group" transform={"translate(" + xDomain + " ,0)"}>
+  				<path className={lineStyle} d={valueLine(sortedData)}></path>
+  			</g>
+  			<Axes
+  				orient = {"Bottom"}
+  				scale={scale}
+  				translateX = {xDomain}
+  				translateY= {height}
+  				margins = {margins}
+  				svgDimensions = {svgDimensions}
+  				ticks = {ticks ? ticks : 5}
+  			/> 
+  			<Axes
+  				orient = {"Top"}
+  				scale={scale}
+  				translateX = {xDomain}
+  				translateY= {0}
+  				margins = {margins}
+  				svgDimensions = {svgDimensions}
+  				ticks = {ticks? ticks: 5}
   			/>   				  			
   		</g>
   	)
