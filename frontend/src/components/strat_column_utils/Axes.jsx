@@ -1,7 +1,7 @@
 import React from 'react'
 import Axis from './Axis'
 
-export default ({ orient, scale, translateX, translateY, margins, svgDimensions, tickSize, ticks, dash }) => {
+export default ({ orient, scale, translateX, translateY, margins, svgDimensions, tickSize, ticks, dash,showText }) => {
   const { height, width } = svgDimensions
 
 
@@ -30,7 +30,8 @@ export default ({ orient, scale, translateX, translateY, margins, svgDimensions,
     width: svgDimensions.width,
     height: svgDimensions.height,
     ticks: ticks ? ticks : 5,
-    dash: dash ? dash: false
+    dash: dash ? dash: false,
+    showText: showText
   }
 
   return (

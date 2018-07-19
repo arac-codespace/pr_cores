@@ -67,7 +67,8 @@ const styles = {
 	},
 	tooltipHidden: {
 		extend: 'tooltip',
-		visibility: 'hidden'		
+		visibility: 'hidden',
+		position: 'fixed'	
 	},
 	// columnWrapper: {
 	// 	overflow: 'hidden',
@@ -89,14 +90,44 @@ class StratColumn extends Component {
 		this.drawColumn = this.drawColumn.bind(this);
 		this.handleOnMouseMove = this.handleOnMouseMove.bind(this);
 		this.handleOnMouseOut = this.handleOnMouseOut.bind(this);
+		this.drawGrainBars = this.drawGrainBars.bind(this);
+		this.drawGrainDistribution = this.drawGrainDistribution.bind(this);
+		this.drawColumn = this.drawColumn.bind(this);
+		this.drawLineChart = this.drawLineChart.bind(this);
 
 	}
 	
 	handleOnMouseMove(e,data){
 		// console.log(e.screenX)
+		let tooltipPosition = {
+			position: "fixed",
+			transform: "translate(" + this.state.x + "px, " + this.state.y +"px)",
+		    width: "50%",
+		    left: "15px",
+		    top: "0",			
+		}		
+		let content;
+		// Check if data is from lithology bars or grain size bars
+		if (data.lithology){			
+			content = (
+				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltip}>
+					<p className={classes.tooltipText}>Interval Description</p>				
+					<p className={classes.tooltipText}>Lithology: {data.lithology.name}</p>
+					<p className={classes.tooltipText}>Thickness (CM): {data.thickness}</p>
+					<p className={classes.tooltipText}>Description: {data.description}</p>
+				</div>
+			)		
+		} else {
+			content = (
+				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltip}>
+					<p className={classes.tooltipText}>Grain Size Distribution</p>
+					<p className={classes.tooltipText}>{data.name}: {data.percent}%</p>
+				</div>			
+			)
+		}
 		this.setState({
 			hover: true,
-			tooltipContent: data,			
+			tooltipContent: content,			
 			x: e.clientX,
 			y: e.clientY
 		})
@@ -278,24 +309,31 @@ class StratColumn extends Component {
       width: width,
       lineStyle: null,
       ticks: 5,
-      y: y
+      y: y,
+      showText: true,
+      backgroundColor: "transparent",
     }
 
     options.xDomain = x("Wet Bulk Density")
     options.scale = x2
     options.lineStyle = classes.denLine
+    // options.backgroundColor = "rgba(255, 0, 0, 0.05)" // red
+
+
  
     let drawDensity = this.drawLineChart(densityLine, mscl, options)
  
     options.xDomain = x("Magnetic Susceptivility")
     options.scale = x3
     options.lineStyle = classes.magLine
+    // options.backgroundColor = "rgba(0, 255, 0, 0.05)" // green    
  
     let drawMagnetism = this.drawLineChart(magneticLine, mscl, options)
 
     options.xDomain = x("Mean Grain Size")
     options.scale = x4
     options.lineStyle = classes.meanGrainLine
+    // options.backgroundColor = "rgba(0, 0, 255, 0.05)" // blue
     // options.ticks = 10
     let drawMeanGrain = this.drawLineChart(meanGrainLine, grain_size, options)
 
@@ -304,8 +342,10 @@ class StratColumn extends Component {
 
 	  options.xDomain = x("Grain Size Distribution")
 	  options.scale = x5
+    // options.backgroundColor = "rgba(255, 255, 0, 0.15)" // yellow
 
-	  let drawGrainDistribution = this.drawGrainDistibution(grain_size, options)
+
+	  let drawGrainDistribution = this.drawGrainDistribution(grain_size, options)
 
 
 	  let halfBandwidth = (x.bandwidth()/2)
@@ -338,7 +378,7 @@ class StratColumn extends Component {
 		  			</g>
 		  			<g transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
 		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Wet Bulk Density (g/cm3)</text>
-		  				  			
+		  				  		
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="red" y1={-10} y2={-10}></line>
 		  			</g>
 		  			<g transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
@@ -353,7 +393,7 @@ class StratColumn extends Component {
 		  			</g>	
 		  			<g transform={"translate(" + x("Grain Size Distribution") + " ,0)"}>
 		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Grain Size Distribution</text>
-		  				<text className={classes.header} dy={-18} x={halfBandwidth}>(x:100)</text>
+		  				<text className={classes.header} dy={-18} x={halfBandwidth}>(x/100%)</text>
 		  				  						  				
 		  				<line x1={5} x2={x.bandwidth()-5} stroke="yellow" y1={-10} y2={-10}></line>		  				  				
 		  			</g>		  				  			  				  			
@@ -372,15 +412,94 @@ class StratColumn extends Component {
 	  				svgDimensions = {svgDimensions}
 	  				ticks = {20}
 	  				dash = {true}
+	  				showText = {true}
 	  			/> 			   				  			 			
 	  		</g>
 	  	</svg>
 	  );  
 	}
 
+	drawGrainBars(datapoint, options) {
+  	const {xDomain, scale, height, margins, svgDimensions, ticks, y, backgroundColor} = options
 
-  drawGrainDistibution(data, options){
-  	const {xDomain, scale, height, margins, svgDimensions, ticks, y} = options
+		let gravelX = 0
+		let sandX = 0
+		let siltX = 0
+		let clayX = 0
+
+		/* 
+			Here I'm assigning the x coordinate's starting point based on the order (G,S,Slt,C)
+		*/ 
+		if (datapoint.gravel_pct > 0) {
+
+			gravelX = 0 // starting point
+			sandX = scale(datapoint.gravel_pct)
+			siltX = sandX + scale(datapoint.sand_pct)
+			clayX = siltX + scale(datapoint.silt_pct)
+
+		} else if (datapoint.gravel_pct == 0 && datapoint.sand_pct > 0) {
+
+			gravelX = 0
+			sandX = 0 // starting point
+			siltX = scale(datapoint.sand_pct)
+			clayX = siltX + scale(datapoint.silt_pct)
+
+		} else if (datapoint.gravel_pct == 0 && datapoint.sand_pct == 0 && datapoint.silt_pct > 0) {
+
+			gravelX = 0
+			sandX = 0
+			siltX = 0 // starting point
+			clayX = scale(datapoint.silt_pct)
+		}
+
+		return (
+				<g className="grain-draw-bars">
+
+					<rect className={"bar " + classes.bars} 
+						fill={"red"} 
+						x={gravelX} 
+						width={scale(datapoint.gravel_pct)} 
+						height={y(parseFloat(datapoint.thickness))} 
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Gravel Percent",percent: datapoint.gravel_pct}))}
+						onMouseOut = {()=>(this.handleOnMouseOut())}
+					>
+					</rect>
+
+					<rect className={"bar " + classes.bars} 
+						fill={"yellow"} 
+						x={sandX} 
+						width={scale(datapoint.sand_pct)} 
+						height={y(parseFloat(datapoint.thickness))} 
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Sand Percent",percent: datapoint.sand_pct}))}
+						onMouseOut = {()=>(this.handleOnMouseOut())}
+					>
+					</rect>
+
+					<rect className={"bar " + classes.bars} 
+						fill={"blue"} 
+						x={siltX} 
+						width={scale(datapoint.silt_pct)} 
+						height={y(parseFloat(datapoint.thickness))} 
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Silt Percent",percent: datapoint.silt_pct}))}
+						onMouseOut = {()=>(this.handleOnMouseOut())}
+					>
+					</rect>
+
+					<rect className={"bar " + classes.bars} 
+						fill={"green"} 
+						x={clayX} 
+						width={scale(datapoint.clay_pct)} 
+						height={y(parseFloat(datapoint.thickness))} 
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Clay Percent",percent: datapoint.clay_pct}))}
+						onMouseOut = {()=>(this.handleOnMouseOut())}
+					>
+					</rect>
+			</g>
+		)
+ 	}
+
+  drawGrainDistribution(data, options){
+  	const {xDomain, scale, height, margins, svgDimensions, ticks, y, backgroundColor} = options
 
   	/* I need to calculate the 'thickness' of each interval in order to give the rects the proper height. 
 			Note that depth is equivalent to upper_boundary
@@ -403,57 +522,20 @@ class StratColumn extends Component {
 
   	/* Need to calculate x position */
 
-  	function drawGrainBars(datapoint) {
-
-			let gravelX = 0
-			let sandX = 0
-			let siltX = 0
-			let clayX = 0
-
-			/* 
-				Here I'm assigning the x coordinate's starting point based on the order (G,S,Slt,C)
-			*/ 
-  		if (datapoint.gravel_pct > 0) {
-
-  			gravelX = 0 // starting point
-  			sandX = scale(datapoint.gravel_pct)
-  			siltX = sandX + scale(datapoint.sand_pct)
-  			clayX = siltX + scale(datapoint.silt_pct)
-
-  		} else if (datapoint.gravel_pct == 0 && datapoint.sand_pct > 0) {
-
-  			gravelX = 0
-  			sandX = 0 // starting point
-  			siltX = scale(datapoint.sand_pct)
-  			clayX = siltX + scale(datapoint.silt_pct)
-
-  		} else if (datapoint.gravel_pct == 0 && datapoint.sand_pct == 0 && datapoint.silt_pct > 0) {
-
-  			gravelX = 0
-  			sandX = 0
-  			siltX = 0 // starting point
-  			clayX = scale(datapoint.silt_pct)
-  		}
-
-			return (
-  				<g className="grain-draw-bars">
-
-						<rect className={"bar " + classes.bars} fill={"red"} x={gravelX} width={scale(datapoint.gravel_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
-
-						<rect className={"bar " + classes.bars} fill={"yellow"} x={sandX} width={scale(datapoint.sand_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
-
-						<rect className={"bar " + classes.bars} fill={"blue"} x={siltX} width={scale(datapoint.silt_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
-
-						<rect className={"bar " + classes.bars} fill={"green"} x={clayX} width={scale(datapoint.clay_pct)} height={y(parseFloat(datapoint.thickness))} ></rect>
-				</g>
-			)
-   	}
-
   	return (
   		<g className="grain-dist">
+				<g className="grain-dist-bg" transform={"translate(" + xDomain + " ,0)"}>  				
+					<rect className="graph-background" fill={backgroundColor} height={height} width={scale.range()[1]}></rect>
+					<g className="tick" opacity="1" transform="translate(0,0)">
+						<line stroke="#000" y2="1100"></line>
+					</g>	
+					<g className="tick" opacity="1" transform={"translate(" + scale.range()[1] + ",0)"}>						
+						<line stroke="#000" y2="1100"></line>				  				
+					</g>											
+				</g>  		
 	  		{data.map( (d,i) => (
   				<g className="grain-dist-chart" key={"grain-dist-" + i} transform={"translate(" + xDomain + " ," + y(parseFloat(d.depth)) + ")"}>
-	  				{drawGrainBars(d)}
+	  				{this.drawGrainBars(d, options)}
   				</g>
 	  		))} 				  			
   		</g>
@@ -461,13 +543,15 @@ class StratColumn extends Component {
   }
 
   drawLineChart(valueLine, pointData, options){
-  	const {xDomain, scale, height, margins, svgDimensions, lineStyle, ticks} = options
+  	const {xDomain, scale, height, margins, svgDimensions, lineStyle, ticks, showText, backgroundColor} = options
   	// sort pointData by depth!
 		let sortedData = pointData.sort((a, b) => parseFloat(a.depth) - parseFloat(b.depth));
+		// debugger;
 
   	return (
   		<g className="line-chart">
   			<g className="line-chart-group" transform={"translate(" + xDomain + " ,0)"}>
+  				<rect height={height} width={scale.range()[1]} fill={backgroundColor}></rect>
   				<path className={lineStyle} d={valueLine(sortedData)}></path>
   			</g>
   			<Axes
@@ -478,6 +562,7 @@ class StratColumn extends Component {
   				margins = {margins}
   				svgDimensions = {svgDimensions}
   				ticks = {ticks ? ticks : 5}
+  				showText = {showText}
   			/> 
   			<Axes
   				orient = {"Top"}
@@ -487,6 +572,7 @@ class StratColumn extends Component {
   				margins = {margins}
   				svgDimensions = {svgDimensions}
   				ticks = {ticks? ticks: 5}
+  				showText = {showText}
   			/>   				  			
   		</g>
   	)
@@ -494,27 +580,14 @@ class StratColumn extends Component {
 
 	render() {
 		let core = this.props.core;
-		let tooltipPosition = {
-			position: "fixed",
-			transform: "translate(" + this.state.x + "px, " + this.state.y +"px)",
-		    width: "50%",
-		    left: "15px",
-		    top: "0",			
-		}
 
 		let content;
 		if (this.state.hover) 
 	  {
-			content = (
-				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltip}>
-					<p className={classes.tooltipText}>Lithology: {this.state.tooltipContent.lithology.name}</p>
-					<p className={classes.tooltipText}>Thickness (CM): {this.state.tooltipContent.thickness}</p>
-					<p className={classes.tooltipText}>Description: {this.state.tooltipContent.description}</p>
-				</div>
-			)
+			content = this.state.tooltipContent 		
 		} else {
 			content = (
-				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltipHidden}>Huh</div>
+				<div id="tooltip-content" className={classes.tooltipHidden}>Huh</div>
 			)			
 		}
 		// let mscl = this.props.mscl;

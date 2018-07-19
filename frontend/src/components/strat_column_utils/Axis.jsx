@@ -22,6 +22,10 @@ export default class Axis extends Component {
       // .tickFormat("")
       // .tickFormat("")
 
+    if (!this.props.showText){
+      axis.tickFormat("")
+    }
+    
     let tickInsert = d3Select(this.axisElement)
     tickInsert.call(axis);
 
@@ -33,6 +37,7 @@ export default class Axis extends Component {
         }
       })
     }
+
     
   }
 
