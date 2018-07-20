@@ -14,6 +14,7 @@ import CoarseForamOoze from './svg_components/CoarseForamOoze';
 
 import LithTextures	from './svg_components/LithTextures';
 
+import SampleDescription from './SampleDescription'
 import jss from 'jss';
 import preset from 'jss-preset-default';
 
@@ -24,7 +25,10 @@ jss.setup(preset());
 const styles = {
   bars: {
     stroke: "black",
-    strokeWidth: "1px"
+    strokeWidth: "1px",
+    "&:hover": {
+    	fill: "rgba(255, 255, 255, 0.5)"
+    }
 	},
 	lines: {
 		stroke: "black",
@@ -49,10 +53,11 @@ const styles = {
 	},
 	tooltip:{
 	  // position: "absolute",
-	  fontSize: "0.65rem",
+	  border: "1px solid black",
+	  lineHeight: "1.25rem",
 	  maxWidth:"400px",
-	  color: "#FFFFFF",
-	  background: "#000000",
+	  color: "black",
+	  background: "white",
 	  // height: "30px",
 	  // lineHeight: "30px",
 	  textAlign: "center",
@@ -64,6 +69,12 @@ const styles = {
 	},
 	tooltipText:{
 		margin: "0",
+	},
+	tooltipTextHeader:{
+		extend: "tooltipText",
+		textTransform: "uppercase",
+		fontSize: "0.75rem",
+		fontWeight: "bold"
 	},
 	tooltipHidden: {
 		extend: 'tooltip',
@@ -101,27 +112,58 @@ class StratColumn extends Component {
 		// console.log(e.screenX)
 		let tooltipPosition = {
 			position: "fixed",
-			transform: "translate(" + this.state.x + "px, " + this.state.y +"px)",
+			transform: "translate(" + e.clientX + "px, " + e.clientY +"px)",
 		    width: "50%",
 		    left: "15px",
 		    top: "0",			
-		}		
+		}
+
+		let boldSelection = {
+			fontWeight: "bold",
+			textTransform: "uppercase",
+			color: "cyan"
+		}
+
 		let content;
 		// Check if data is from lithology bars or grain size bars
 		if (data.lithology){			
 			content = (
 				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltip}>
-					<p className={classes.tooltipText}>Interval Description</p>				
-					<p className={classes.tooltipText}>Lithology: {data.lithology.name}</p>
-					<p className={classes.tooltipText}>Thickness (CM): {data.thickness}</p>
-					<p className={classes.tooltipText}>Description: {data.description}</p>
-				</div>
+					<p className={classes.tooltipTextHeader}>Interval Description</p>				
+					<SampleDescription label={"Lithology:"} info={data.lithology.name}/>
+					<SampleDescription label={ "Thickness (CM):"} info={data.thickness}/>
+					<SampleDescription label={ "Description:"} info={data.description}/>
+				</div>						
 			)		
 		} else {
 			content = (
 				<div id="tooltip-content" style={tooltipPosition} className={classes.tooltip}>
-					<p className={classes.tooltipText}>Grain Size Distribution</p>
-					<p className={classes.tooltipText}>{data.name}: {data.percent}%</p>
+					<p className={classes.tooltipTextHeader}>Grain Size Distribution (%)</p>
+
+					<div style={data.toBold == "Gravel" ? boldSelection : {} }>
+						<SampleDescription
+						 label={"Gravel Percent:"} 
+						 info= {data.grainData.gravel_pct}
+						/>
+					</div>
+					<div style={data.toBold == "Sand" ? boldSelection : {} }>
+						<SampleDescription					 
+						 label={"Sand Percent:"} 
+						 info= {data.grainData.sand_pct}
+						/>
+					</div>
+					<div style={data.toBold == "Silt" ? boldSelection : {} }>
+						<SampleDescription					 
+						 label={"Silt Percent:"} 
+						 info= {data.grainData.silt_pct}
+						/>
+					</div>
+					<div style={data.toBold == "Clay" ? boldSelection : {} }>
+						<SampleDescription					 
+						 label={"Clay Percent:"} 
+						 info= {data.grainData.clay_pct}
+						/>
+					</div>
 				</div>			
 			)
 		}
@@ -460,7 +502,7 @@ class StratColumn extends Component {
 						x={gravelX} 
 						width={scale(datapoint.gravel_pct)} 
 						height={y(parseFloat(datapoint.thickness))} 
-						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Gravel Percent",percent: datapoint.gravel_pct}))}
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{toBold: "Gravel", grainData: datapoint}))}
 						onMouseOut = {()=>(this.handleOnMouseOut())}
 					>
 					</rect>
@@ -470,7 +512,7 @@ class StratColumn extends Component {
 						x={sandX} 
 						width={scale(datapoint.sand_pct)} 
 						height={y(parseFloat(datapoint.thickness))} 
-						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Sand Percent",percent: datapoint.sand_pct}))}
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{toBold: "Sand", grainData: datapoint}))}
 						onMouseOut = {()=>(this.handleOnMouseOut())}
 					>
 					</rect>
@@ -480,7 +522,7 @@ class StratColumn extends Component {
 						x={siltX} 
 						width={scale(datapoint.silt_pct)} 
 						height={y(parseFloat(datapoint.thickness))} 
-						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Silt Percent",percent: datapoint.silt_pct}))}
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{toBold: "Silt", grainData: datapoint}))}
 						onMouseOut = {()=>(this.handleOnMouseOut())}
 					>
 					</rect>
@@ -490,7 +532,7 @@ class StratColumn extends Component {
 						x={clayX} 
 						width={scale(datapoint.clay_pct)} 
 						height={y(parseFloat(datapoint.thickness))} 
-						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{name: "Clay Percent",percent: datapoint.clay_pct}))}
+						onMouseMove = {(e)=>(this.handleOnMouseMove(e,{toBold: "Clay", grainData: datapoint}))}
 						onMouseOut = {()=>(this.handleOnMouseOut())}
 					>
 					</rect>
@@ -580,15 +622,14 @@ class StratColumn extends Component {
 
 	render() {
 		let core = this.props.core;
-
+		// console.log(e.screenX)
+		
 		let content;
 		if (this.state.hover) 
 	  {
 			content = this.state.tooltipContent 		
 		} else {
-			content = (
-				<div id="tooltip-content" className={classes.tooltipHidden}>Huh</div>
-			)			
+			content = (<div className={classes.tooltipHidden}></div>)
 		}
 		// let mscl = this.props.mscl;
 		// let width = this.props.width;
