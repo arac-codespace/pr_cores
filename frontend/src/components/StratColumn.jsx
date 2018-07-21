@@ -12,7 +12,6 @@ import Clay from './svg_components/Clay';
 import ForamOoze from './svg_components/ForamOoze';
 import CoarseForamOoze from './svg_components/CoarseForamOoze';
 
-import LithTextures	from './svg_components/LithTextures';
 
 import SampleDescription from './SampleDescription'
 import jss from 'jss';
@@ -89,7 +88,6 @@ const styles = {
 const { classes } = jss.createStyleSheet(styles).attach();
 
 class StratColumn extends Component {
-
 	constructor(){
 		super();
 		this.state = {
@@ -105,11 +103,11 @@ class StratColumn extends Component {
 		this.drawGrainDistribution = this.drawGrainDistribution.bind(this);
 		this.drawColumn = this.drawColumn.bind(this);
 		this.drawLineChart = this.drawLineChart.bind(this);
+		this.drawLithology = this.drawLithology.bind(this);
 
 	}
 	
 	handleOnMouseMove(e,data){
-		// console.log(e.screenX)
 		let tooltipPosition = {
 			position: "fixed",
 			transform: "translate(" + e.clientX + "px, " + e.clientY +"px)",
@@ -121,7 +119,7 @@ class StratColumn extends Component {
 		let boldSelection = {
 			fontWeight: "bold",
 			textTransform: "uppercase",
-			color: "cyan"
+			color: "red"
 		}
 
 		let content;
@@ -188,9 +186,6 @@ class StratColumn extends Component {
 	  let strata_set = core.strata_set;
 		let grain_size = core.grainsize_set;
 
-		// Appending total_thickness to grain_size for use in bar height calculations...
-		grain_size.total_length = core.total_length
-		
 		let margins = {
 	    top: 50,
 	    right: 50,
@@ -212,13 +207,7 @@ class StratColumn extends Component {
 			height: height + margins.top + margins.bottom
 		};
 
-
-	  //SCALES SETUP
-	  // let totalThickness = d3.sum(strata_set, function(d) {
-	  //   return parseFloat(d.thickness);
-	  // });
-
-	  // depth check...
+	  // Depth check...
 	  let RANGEBOUNDARY = 0;
     let yRange = [height, RANGEBOUNDARY];
 
@@ -247,8 +236,121 @@ class StratColumn extends Component {
 	  .paddingInner(PADDINGIN)
 	  .align(XALIGN);
 
-	  // Array that will contain drawing instructions for all
-	  // layers
+	  let halfBandwidth = (x.bandwidth()/2)
+
+	  let lithOptions = {
+	  	x: x,
+	  	y: y,
+	  	halfBandwidth: halfBandwidth
+	  }
+	  // Draw Lithology
+		let drawLithology = this.drawLithology(strata_set, lithOptions);
+
+    let options = {
+      xDomain: null,
+      scale: null,
+      svgDimensions: svgDimensions,
+      margins: margins,
+      height: height,
+      width: width,
+      lineStyle: null,
+      ticks: 5,
+      y: y,
+      showText: true,
+      backgroundColor: "transparent",
+      halfBandwidth: halfBandwidth,
+      headerText: null,
+      lineColor: null
+    }
+
+		// Drawing Density Line
+	  let x2 = d3.scaleLinear().domain([1, 2.65]).rangeRound([0,x.bandwidth()]);
+	  let densityLine = d3.line()
+	  	.defined(function(d){return d.den1 !== null})
+	    .x(function(d) {return x2(d.den1)})
+	    .y(function(d) {return y(d.depth)});
+
+    options.xDomain = x("Wet Bulk Density")
+    options.scale = x2
+    options.lineStyle = classes.denLine
+    options.headerText = "Wet Bulk Density (cm3)"
+    options.lineColor = "red"
+ 
+    let drawDensity = this.drawLineChart(densityLine, mscl, options)
+
+ 
+ 	  // Drawing magnetic susceptability line
+	  let x3 = d3.scaleLinear().domain([0, 100]).rangeRound([0,x.bandwidth()]);
+	  
+	  let magneticLine = d3.line()
+	  	.defined(function(d) {return d.ms1 !== null})	  
+	    .x(function(d) {return x3(d.ms1)})
+	    .y(function(d) {return y(d.depth)});
+
+    options.xDomain = x("Magnetic Susceptivility")
+    options.scale = x3
+    options.lineStyle = classes.magLine
+    options.headerText = "Magnetic Susceptivility (SI)"
+    options.lineColor = "green"
+
+ 
+    let drawMagnetism = this.drawLineChart(magneticLine, mscl, options)
+
+	  // Draw mean grain size line
+	  let x4 = d3.scaleLinear().domain([10.0,0]).rangeRound([0,x.bandwidth()])
+
+	  let meanGrainLine = d3.line()
+	    .defined(function(d) {return d.mean_grain_size !== null})
+	    .x(function(d) {return x4(d.mean_grain_size)})
+	    .y(function(d) {return y(d.depth)});
+
+    options.xDomain = x("Mean Grain Size")
+    options.scale = x4
+    options.lineStyle = classes.meanGrainLine
+    options.headerText = "Mean Grain Size (phi)"
+    options.lineColor = "blue"    
+
+
+    let drawMeanGrain = this.drawLineChart(meanGrainLine, grain_size, options)
+
+    // Draw Grain Size Distribution
+	  let x5 = d3.scaleLinear().domain([0,100]).rangeRound([0,x.bandwidth()])
+
+	  options.xDomain = x("Grain Size Distribution")
+	  options.scale = x5
+    options.headerText = "Grain Size Distribution (x/100%)"
+    options.lineColor = "yellow"    
+
+
+	  let drawGrainDistribution = this.drawGrainDistribution(grain_size, options)
+
+	  return (
+
+	  	<svg className="column-svg" height={svgDimensions.height} width={svgDimensions.width}>
+	  		<g className="column-container" transform={"translate(" + margins.left + ", " + margins.top + ")"}>
+		  		{drawLithology}
+		  		{drawGrainDistribution}
+	  			{drawDensity}
+	  			{drawMagnetism}
+	  			{drawMeanGrain}
+	  			<Axes
+	  				orient = {"Left"}
+	  				scale={y}
+	  				translateX = {0}
+	  				translateY= {0}
+	  				margins = {margins}
+	  				svgDimensions = {svgDimensions}
+	  				ticks = {20}
+	  				dash = {true}
+	  				showText = {true}
+	  			/> 			   				  			 			
+	  		</g>
+	  	</svg>
+	  );  
+	}
+
+	drawLithology(data, options){
+		const {x, y, halfBandwidth} = options;
 
 	  function getLithColor(lithology){
 	  	if (lithology === "Clay & Silt"){
@@ -300,10 +402,9 @@ class StratColumn extends Component {
 	  }
 
 		// Populating lithologyArray. This array will contain required info to 
-		// draw the bars.
 	  let lithologyArray = []
 
-	  strata_set.map((d,i)=>{  	
+	  data.map((d,i)=>{  	
 	  	let obj = {
 	  		width: x.bandwidth(),
 	  		height: y(parseFloat(d.thickness)),
@@ -316,149 +417,28 @@ class StratColumn extends Component {
 	  	lithologyArray.push(obj);
 	  });
 
-
-		// Drawing Density Line
-	  let x2 = d3.scaleLinear().domain([1, 2.65]).rangeRound([0,x.bandwidth()]);
-	  let densityLine = d3.line()
-	  	.defined(function(d){return d.den1 !== null})
-	    .x(function(d) {return x2(d.den1)})
-	    .y(function(d) {return y(d.depth)});
-
-
-	  // Drawing magnetic susceptability line
-	  let x3 = d3.scaleLinear().domain([0, 100]).rangeRound([0,x.bandwidth()]);
-	  
-	  let magneticLine = d3.line()
-	  	.defined(function(d) {return d.ms1 !== null})	  
-	    .x(function(d) {return x3(d.ms1)})
-	    .y(function(d) {return y(d.depth)});
-
-
-	  // Draw mean grain size line
-	  let x4 = d3.scaleLinear().domain([10.0,0]).rangeRound([0,x.bandwidth()])
-
-	  let meanGrainLine = d3.line()
-	    .defined(function(d) {return d.mean_grain_size !== null})
-	    .x(function(d) {return x4(d.mean_grain_size)})
-	    .y(function(d) {return y(d.depth)});
-
-    let options = {
-      xDomain: null,
-      scale: null,
-      svgDimensions: svgDimensions,
-      margins: margins,
-      height: height,
-      width: width,
-      lineStyle: null,
-      ticks: 5,
-      y: y,
-      showText: true,
-      backgroundColor: "transparent",
-    }
-
-    options.xDomain = x("Wet Bulk Density")
-    options.scale = x2
-    options.lineStyle = classes.denLine
-    // options.backgroundColor = "rgba(255, 0, 0, 0.05)" // red
-
-
- 
-    let drawDensity = this.drawLineChart(densityLine, mscl, options)
- 
-    options.xDomain = x("Magnetic Susceptivility")
-    options.scale = x3
-    options.lineStyle = classes.magLine
-    // options.backgroundColor = "rgba(0, 255, 0, 0.05)" // green    
- 
-    let drawMagnetism = this.drawLineChart(magneticLine, mscl, options)
-
-    options.xDomain = x("Mean Grain Size")
-    options.scale = x4
-    options.lineStyle = classes.meanGrainLine
-    // options.backgroundColor = "rgba(0, 0, 255, 0.05)" // blue
-    // options.ticks = 10
-    let drawMeanGrain = this.drawLineChart(meanGrainLine, grain_size, options)
-
-    // Prepare grain size distribution data
-	  let x5 = d3.scaleLinear().domain([0,100]).rangeRound([0,x.bandwidth()])
-
-	  options.xDomain = x("Grain Size Distribution")
-	  options.scale = x5
-    // options.backgroundColor = "rgba(255, 255, 0, 0.15)" // yellow
-
-
-	  let drawGrainDistribution = this.drawGrainDistribution(grain_size, options)
-
-
-	  let halfBandwidth = (x.bandwidth()/2)
-
-	  return (
-
-	  	<svg className="column-svg" height={svgDimensions.height} width={svgDimensions.width}>
-	  		<g className="column-container" transform={"translate(" + margins.left + ", " + margins.top + ")"}>
-		  		<g className="layers contaienr">
-		  			{lithologyArray.map((d,i) => (
-			  			<g className="layer-group" key={"layer-group-" + i}transform={d.transform}>
-			  					<rect className={"bar " + classes.bars} fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
-			  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
-			  					<rect 
-			  						className={"bar " + classes.bars} 
-			  						fill={"transparent"} 
-			  						width={d.width} 
-			  						height={d.height} 
-			  						x={d.x}
-			  						onMouseMove = {(e)=>(this.handleOnMouseMove(e,d.data))}
-			  						onMouseOut = {()=>(this.handleOnMouseOut())}
-			  					></rect>
-
-			  			</g>
-		  			))}
-		  		</g>
-		  		<g className="headers-container">
-		  			<g transform={"translate(" + x("Lithology") + " ,0)"}>
-		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Lithology</text>	  					  				
-		  			</g>
-		  			<g transform={"translate(" + x("Wet Bulk Density") + " ,0)"}>
-		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Wet Bulk Density (g/cm3)</text>
-		  				  		
-		  				<line x1={5} x2={x.bandwidth()-5} stroke="red" y1={-10} y2={-10}></line>
-		  			</g>
-		  			<g transform={"translate(" + x("Magnetic Susceptivility") + " ,0)"}>
-		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Magnetic Susceptivility (SI)</text>
-		  				  						  				
-		  				<line x1={5} x2={x.bandwidth()-5} stroke="green" y1={-10} y2={-10}></line>		  				  				
-		  			</g>	
-		  			<g transform={"translate(" + x("Mean Grain Size") + " ,0)"}>
-		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Mean Grain Size (phi)</text>
-		  				  			
-		  				<line x1={5} x2={x.bandwidth()-5} stroke="blue" y1={-10} y2={-10}></line>
-		  			</g>	
-		  			<g transform={"translate(" + x("Grain Size Distribution") + " ,0)"}>
-		  				<text className={classes.header} dy={-32} x={halfBandwidth}>Grain Size Distribution</text>
-		  				<text className={classes.header} dy={-18} x={halfBandwidth}>(x/100%)</text>
-		  				  						  				
-		  				<line x1={5} x2={x.bandwidth()-5} stroke="yellow" y1={-10} y2={-10}></line>		  				  				
-		  			</g>		  				  			  				  			
-		  		</g>
-		  		{drawGrainDistribution}
-	  			{drawDensity}
-	  			{drawMagnetism}
-	  			{drawMeanGrain}
-
-	  			<Axes
-	  				orient = {"Left"}
-	  				scale={y}
-	  				translateX = {0}
-	  				translateY= {0}
-	  				margins = {margins}
-	  				svgDimensions = {svgDimensions}
-	  				ticks = {20}
-	  				dash = {true}
-	  				showText = {true}
-	  			/> 			   				  			 			
-	  		</g>
-	  	</svg>
-	  );  
+		return (
+  		<g className="layers-container">
+  			<g className = "chart-header" transform={"translate(" + x("Lithology") + " ,0)"}>
+  				<text className={classes.header} dy={-32} x={halfBandwidth}>Lithology</text>	  					  				
+  			</g>  		
+  			{lithologyArray.map((d,i) => (
+	  			<g className="layer-group" key={"layer-group-" + i}transform={d.transform}>
+	  					<rect className={"bar " + classes.bars} fill={d.fill} width={d.width} height={d.height} x={d.x}></rect>
+	  					<rect className={"bar " + classes.bars} fill={d.patternFill} width={d.width} height={d.height} x={d.x}></rect>
+	  					<rect 
+	  						className={"bar " + classes.bars} 
+	  						fill={"transparent"} 
+	  						width={d.width} 
+	  						height={d.height} 
+	  						x={d.x}
+	  						onMouseMove = {(e)=>(this.handleOnMouseMove(e,d.data))}
+	  						onMouseOut = {()=>(this.handleOnMouseOut())}
+	  					></rect>
+	  			</g>
+  			))}
+  		</g>
+		)
 	}
 
 	drawGrainBars(datapoint, options) {
@@ -541,7 +521,7 @@ class StratColumn extends Component {
  	}
 
   drawGrainDistribution(data, options){
-  	const {xDomain, scale, height, margins, svgDimensions, ticks, y, backgroundColor} = options
+  	const {xDomain, scale, height, margins, svgDimensions, ticks, y, backgroundColor, halfBandwidth} = options
 
   	/* I need to calculate the 'thickness' of each interval in order to give the rects the proper height. 
 			Note that depth is equivalent to upper_boundary
@@ -573,7 +553,13 @@ class StratColumn extends Component {
 					</g>	
 					<g className="tick" opacity="1" transform={"translate(" + scale.range()[1] + ",0)"}>						
 						<line stroke="#000" y2="1100"></line>				  				
-					</g>											
+					</g>	
+	  			<g className="chart-header">
+	  				<text className={classes.header} dy={-32} x={halfBandwidth}>Grain Size Distribution</text>
+	  				<text className={classes.header} dy={-18} x={halfBandwidth}>(x/100%)</text>
+	  				  						  				
+	  				<line x1={5} x2={(scale.range()[1])-5} stroke="yellow" y1={-10} y2={-10}></line>		  				  				
+	  			</g>																
 				</g>  		
 	  		{data.map( (d,i) => (
   				<g className="grain-dist-chart" key={"grain-dist-" + i} transform={"translate(" + xDomain + " ," + y(parseFloat(d.depth)) + ")"}>
@@ -585,7 +571,7 @@ class StratColumn extends Component {
   }
 
   drawLineChart(valueLine, pointData, options){
-  	const {xDomain, scale, height, margins, svgDimensions, lineStyle, ticks, showText, backgroundColor} = options
+  	const {xDomain, scale, height, margins, svgDimensions, lineStyle, ticks, showText, backgroundColor, halfBandwidth, headerText, lineColor} = options
   	// sort pointData by depth!
 		let sortedData = pointData.sort((a, b) => parseFloat(a.depth) - parseFloat(b.depth));
 		// debugger;
@@ -593,6 +579,11 @@ class StratColumn extends Component {
   	return (
   		<g className="line-chart">
   			<g className="line-chart-group" transform={"translate(" + xDomain + " ,0)"}>
+		  		<g className="chart-header">
+	  				<text className={classes.header} dy={-32} x={halfBandwidth}>{headerText}</text>
+	  				  		
+	  				<line x1={5} x2={(scale.range()[1]) - 5} stroke={lineColor} y1={-10} y2={-10}></line>
+	  			</g>  		
   				<rect height={height} width={scale.range()[1]} fill={backgroundColor}></rect>
   				<path className={lineStyle} d={valueLine(sortedData)}></path>
   			</g>
