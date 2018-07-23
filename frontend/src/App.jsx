@@ -8,6 +8,7 @@ import NotFound from './components/NotFound'
 import SurveysContainer from './containers/SurveysContainer'
 import SurveyContainer from './containers/SurveyContainer'
 import CoresContainer from './containers/CoresContainer'
+import ArcGis from './containers/ArcGis'
 
 import {withRouter} from 'react-router';
 
@@ -21,6 +22,8 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/cores" component={CoresContainer} />
               <Route exact path="/surveys" component={SurveysContainer} />
+              <Route exact path="/arcgis" component={ArcGis} />
+
               <Route exact path="/surveys/:id" component={SurveyContainer}/>
               <Route component={NotFound} />
             </Switch>

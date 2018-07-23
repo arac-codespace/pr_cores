@@ -46,6 +46,10 @@ const styles = {
 		extend: "lines",
 		stroke: "blue"
 	},
+	grainDistributionLine: {
+		extend: "lines",
+		stroke: "yellow"
+	},
 	header: {
 		textAnchor:"middle",
 		fontSize: "0.65rem"
@@ -260,7 +264,6 @@ class StratColumn extends Component {
       backgroundColor: "transparent",
       halfBandwidth: halfBandwidth,
       headerText: null,
-      lineColor: null
     }
 
 		// Drawing Density Line
@@ -274,7 +277,6 @@ class StratColumn extends Component {
     options.scale = x2
     options.lineStyle = classes.denLine
     options.headerText = "Wet Bulk Density (cm3)"
-    options.lineColor = "red"
  
     let drawDensity = this.drawLineChart(densityLine, mscl, options)
 
@@ -291,7 +293,6 @@ class StratColumn extends Component {
     options.scale = x3
     options.lineStyle = classes.magLine
     options.headerText = "Magnetic Susceptivility (SI)"
-    options.lineColor = "green"
 
  
     let drawMagnetism = this.drawLineChart(magneticLine, mscl, options)
@@ -308,7 +309,6 @@ class StratColumn extends Component {
     options.scale = x4
     options.lineStyle = classes.meanGrainLine
     options.headerText = "Mean Grain Size (phi)"
-    options.lineColor = "blue"    
 
 
     let drawMeanGrain = this.drawLineChart(meanGrainLine, grain_size, options)
@@ -319,8 +319,7 @@ class StratColumn extends Component {
 	  options.xDomain = x("Grain Size Distribution")
 	  options.scale = x5
     options.headerText = "Grain Size Distribution (x/100%)"
-    options.lineColor = "yellow"    
-
+    options.lineStyle = classes.grainDistributionLine
 
 	  let drawGrainDistribution = this.drawGrainDistribution(grain_size, options)
 
@@ -571,7 +570,7 @@ class StratColumn extends Component {
   }
 
   drawLineChart(valueLine, pointData, options){
-  	const {xDomain, scale, height, margins, svgDimensions, lineStyle, ticks, showText, backgroundColor, halfBandwidth, headerText, lineColor} = options
+  	const {xDomain, scale, height, margins, svgDimensions, lineStyle, ticks, showText, backgroundColor, halfBandwidth, headerText} = options
   	// sort pointData by depth!
 		let sortedData = pointData.sort((a, b) => parseFloat(a.depth) - parseFloat(b.depth));
 		// debugger;
@@ -582,7 +581,7 @@ class StratColumn extends Component {
 		  		<g className="chart-header">
 	  				<text className={classes.header} dy={-32} x={halfBandwidth}>{headerText}</text>
 	  				  		
-	  				<line x1={5} x2={(scale.range()[1]) - 5} stroke={lineColor} y1={-10} y2={-10}></line>
+	  				<line className={lineStyle} x1={5} x2={(scale.range()[1]) - 5} y1={-10} y2={-10}></line>
 	  			</g>  		
   				<rect height={height} width={scale.range()[1]} fill={backgroundColor}></rect>
   				<path className={lineStyle} d={valueLine(sortedData)}></path>
