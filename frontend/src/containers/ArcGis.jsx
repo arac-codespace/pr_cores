@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
+import {Scene, loadModules } from 'react-arcgis';
+import ArcColumn from '../components/ArcColumn';
+
 
 class ArcGis extends Component {
 
-	componentDidMount(){
-		let map;
-		map = new esri.Map("mapDiv", {
-			center: [18.2208328, -66.5901489],
-			zoom: 3,
-			basemap: "streets"
-		});
-	}
 	render() {
-		return (
-			<div>
-				<div id="mapDiv"></div>
-			</div>
-		);
+    console.log(<ArcColumn/>)
+    return (
+      <Scene
+        style={{ width: '100vw', height: '100vh' }}
+        mapProperties={{ basemap: 'hybrid' }}
+        viewProperties={{
+            // It's lng, lat for some reason...
+            center: [-66.105721 , 18.2208328],
+            zoom: 10
+        }}
+      > 
+        <ArcColumn/>
+      </Scene>  
+    )
 	}
 }
 
