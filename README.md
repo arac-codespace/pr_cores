@@ -1,24 +1,29 @@
 # Experiment - Creating visualizations for core data
-- https://pubs.usgs.gov/of/2014/1227/ofr2014-1227-data_catalog.html
+- Data: https://pubs.usgs.gov/of/2014/1227/ofr2014-1227-data_catalog.html
+
+<img src=https://i.imgur.com/Z5yUGAn.png>
+
+---
+# Description:
+This project uses Django + React + D3 frameworks/libraries to create a visual representation of the geologic data collected from ocean surveys near the island of Puerto Rico.  The data structure is based around survey SJ008's available data, and it includes models for Lithology, GrainSize and Core Logging data among others.  The only dataset included on this application for now is the SJ008 dataset.  I'll be adding and testing datasets from other surveys in the future.  
+
+This application uses the Django Framework to serve the data recorded in the database to React in JSON format.  D3 is only given DOM control when rendering the chart axes, the rest of the time D3 is used only for its functions while React is in charge of drawing the dom according to D3's "instructions".
 
 ---
 
-# Todos:
-- Prepare database structure
-- Feed core data to database
-- Serve it through the Django API
-- Fetch it with react
-- Do stuff with it...
+# Comments:
+I actually intended to use a 3D JS library in an attempt to display the spacial arrangement of the core data on a map.  Unfortunately, my computer's not quite strong enough to deal with 3D visualizations so I'll put this project on hold.
 
+---
 # References:
 
 Setup React + Django etc
 http://v1k45.com/blog/modern-django-part-1-setting-up-django-and-react/
 
-//SVG to Component
+SVG to Component
 https://svgr.now.sh/
 
-//D3
+D3
 https://github.com/freddyrangel/playing-with-react-and-d3
 https://hackernoon.com/how-and-why-to-use-d3-with-react-d239eb1ea274
 https://medium.com/@caspg/responsive-chart-with-react-and-d3v4-afd717e57583
@@ -46,87 +51,3 @@ https://www.ngdc.noaa.gov/geosamples/leg.jsp?leg=SJ008
 Sample Map and other
 https://maps.ngdc.noaa.gov/viewers/sample_index/index.html?institution=DSDP
 https://www.ngdc.noaa.gov/geosamples/listsamples.jsp look for conrad rc0808 or 09 cruise
-
-
-- CoreDescription
-  - Smear Slides
-  - Grain Size
-  - Location
-  - Multi Sensor Core Logger
-  - Age Dates
-
-Allow for future expedition data..
-
----
-# BrainStorm Data Structure
-
-- Publication
-  - samples_referenced 
- 
-- Sample (Extend class)
-  - cores_publication (ManyToMany)
-  - sample_no
-  - survey (O2O)
-  - date_coll
-  - depth
-  - lat
-  - lng
-  - field_activity
-  - collected_by
-  
-- Survey:
-  - SurveyId
-  - Ship/Platform
-
-- Core(Sample)
-  - length(cm)
-  - core_type
-  - core_condition
-  - analyst
-  - location 
-  - sections
-  - liner_length
-  - core_length
-
-- Strata
-  - core_id (ManyToOne)
-  - color? - missing/ambiguous info?
-  - thickness
-  - description
-  - fossils
-  - lithology
-  - unconformities
-
-- Fossils (might use PaleoDB for illustrations, etc...)
-  - name
-  - alt_name
-  - abundance
-  - strata_id (ManyToOne)
-
-- Lithology
-  - strata_lithology (ManytoMany)
-  - lithology_name
-
-- Unconformities
-  - strata_unconformity (ManyToMany)
-  - position (from 0 cm)
-  - description?
-  - unconformity_type?
-
-- UnconformityType?
-  - name
-  - img_file_name?
-  - unconformities_unconformity_type (ManyToMany)
-
-
-- Bag(Sample)
-  - description
-  
-
-
-  MSCL (MultiSensorCoreData)
-  XRF (XRayFluorescence)
-  Radiograph
-  GrainSize
-  RadioCarbo
-  SmearSlide
