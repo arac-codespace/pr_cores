@@ -12,7 +12,7 @@ This application uses the Django Framework to serve the data recorded in the dat
 ---
 
 # Comments:
-I actually intended to use a 3D JS library in an attempt to display the spacial arrangement of the core data on a map.  Unfortunately, my computer's not quite strong enough to deal with 3D visualizations so I'll put this project on hold.
+I actually intended to use a 3D library in an attempt to display the spacial arrangement of the core data on a map.  Unfortunately, my computer's not quite strong enough to deal with 3D visualizations so I'll put this project on hold.
 
 ---
 # References:
